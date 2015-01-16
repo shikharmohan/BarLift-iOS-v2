@@ -1,2 +1,2 @@
 # BarLift-iOS-v2
-Drink spontaneously. New version, redesign
+Drink spontaneously, New version, redesign
