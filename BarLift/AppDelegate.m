@@ -26,7 +26,6 @@
 
 
     [PFFacebookUtils initializeFacebook];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
     
     // Override point for customization after application launch.

@@ -40,9 +40,24 @@
     logo.center = CGPointMake(self.view.center.x, 100);
     logo.alpha = 0.0;
     [self.view addSubview:logo];
+
+    UIButton *login = [[UIButton alloc] initWithFrame:CGRectMake(self.view.center.x/4, self.view.center.y+125, self.view.center.x+75, self.view.center.y/4)];
+    UIImage *background = [UIImage imageNamed:@"Facebook@2x.png"];
+    [login setTitle:@"Login With Facebook" forState:UIControlStateNormal];
+    [login setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    login.alpha = 0.0;
+    
+    [login setBackgroundImage:background forState:UIControlStateNormal];
+
+    [self.view addSubview:login];
+    
     [UIView animateWithDuration:2.0 animations:^{
         logo.alpha = 1.0;
     }];
+    [UIView animateWithDuration:3.5 animations:^{
+        login.alpha = 1.0;
+    }];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -43,6 +43,7 @@
 		01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */; };
 		01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */; };
 		01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */; };
+		01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711B11A6CD677001C29B7 /* Facebook@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		01D711B11A6CD677001C29B7 /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01D711B11A6CD677001C29B7 /* Facebook@2x.png */,
 				01D711A61A6CC87B001C29B7 /* barliftlogo.png */,
 				01D711A31A6CC827001C29B7 /* login_background.gif */,
 			);
@@ -336,6 +339,7 @@
 			files = (
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				0166EC7E1A6995C40016E679 /* Main.storyboard in Resources */,
+				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
 				01D711A71A6CC87B001C29B7 /* barliftlogo.png in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
 			);
