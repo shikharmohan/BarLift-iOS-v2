@@ -10,10 +10,9 @@
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
 		0166EC751A6995C40016E679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC741A6995C40016E679 /* AppDelegate.m */; };
 		0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC761A6995C40016E679 /* BarLift.xcdatamodeld */; };
-		0166EC7B1A6995C40016E679 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC7A1A6995C40016E679 /* ViewController.m */; };
+		0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */; };
 		0166EC7E1A6995C40016E679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7C1A6995C40016E679 /* Main.storyboard */; };
 		0166EC801A6995C40016E679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7F1A6995C40016E679 /* Images.xcassets */; };
-		0166EC831A6995C40016E679 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC811A6995C40016E679 /* LaunchScreen.xib */; };
 		0166EC8F1A6995C40016E679 /* BarLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC8E1A6995C40016E679 /* BarLiftTests.m */; };
 		01D70FAB1A6B6B77001C29B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA51A6B6B5B001C29B7 /* Bolts.framework */; };
 		01D70FAC1A6B6B77001C29B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA61A6B6B5B001C29B7 /* Parse.framework */; };
@@ -39,6 +38,11 @@
 		01D70FC01A6B6B81001C29B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F881A6B6A8C001C29B7 /* UIKit.framework */; };
 		01D70FC21A6B6B8C001C29B7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FC11A6B6B8C001C29B7 /* libsqlite3.0.dylib */; };
 		01D711A21A6B6DE5001C29B7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D711A11A6B6DE5001C29B7 /* FacebookSDK.framework */; };
+		01D711A41A6CC827001C29B7 /* login_background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01D711A31A6CC827001C29B7 /* login_background.gif */; };
+		01D711A71A6CC87B001C29B7 /* barliftlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711A61A6CC87B001C29B7 /* barliftlogo.png */; };
+		01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */; };
+		01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */; };
+		01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +62,10 @@
 		0166EC731A6995C40016E679 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0166EC741A6995C40016E679 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0166EC771A6995C40016E679 /* BarLift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BarLift.xcdatamodel; sourceTree = "<group>"; };
-		0166EC791A6995C40016E679 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0166EC7A1A6995C40016E679 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0166EC791A6995C40016E679 /* BLTLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLTLoginViewController.h; sourceTree = "<group>"; };
+		0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLTLoginViewController.m; sourceTree = "<group>"; };
 		0166EC7D1A6995C40016E679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0166EC7F1A6995C40016E679 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0166EC821A6995C40016E679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0166EC881A6995C40016E679 /* BarLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC8D1A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC8E1A6995C40016E679 /* BarLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarLiftTests.m; sourceTree = "<group>"; };
@@ -90,6 +93,14 @@
 		01D70FA91A6B6B5B001C29B7 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		01D70FC11A6B6B8C001C29B7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		01D711A11A6B6DE5001C29B7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		01D711A31A6CC827001C29B7 /* login_background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login_background.gif; sourceTree = "<group>"; };
+		01D711A61A6CC87B001C29B7 /* barliftlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = barliftlogo.png; path = ../../../../BarLift/BarLift/barliftlogo.png; sourceTree = "<group>"; };
+		01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTUserDetailViewController.h; sourceTree = "<group>"; };
+		01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTUserDetailViewController.m; sourceTree = "<group>"; };
+		01D711AB1A6CCD94001C29B7 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +151,7 @@
 				0166EC6E1A6995C40016E679 /* BarLift */,
 				0166EC8B1A6995C40016E679 /* BarLiftTests */,
 				0166EC6D1A6995C40016E679 /* Products */,
+				01D711A51A6CC82F001C29B7 /* Assets */,
 				01D70FA41A6B6AC9001C29B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -158,11 +170,16 @@
 			children = (
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
-				0166EC791A6995C40016E679 /* ViewController.h */,
-				0166EC7A1A6995C40016E679 /* ViewController.m */,
+				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
+				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
+				01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */,
+				01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */,
+				01D711AB1A6CCD94001C29B7 /* FLAnimatedImage.h */,
+				01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */,
+				01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */,
+				01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */,
 				0166EC7C1A6995C40016E679 /* Main.storyboard */,
 				0166EC7F1A6995C40016E679 /* Images.xcassets */,
-				0166EC811A6995C40016E679 /* LaunchScreen.xib */,
 				0166EC761A6995C40016E679 /* BarLift.xcdatamodeld */,
 				0166EC6F1A6995C40016E679 /* Supporting Files */,
 			);
@@ -224,6 +241,16 @@
 				01D70F881A6B6A8C001C29B7 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01D711A51A6CC82F001C29B7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				01D711A61A6CC87B001C29B7 /* barliftlogo.png */,
+				01D711A31A6CC827001C29B7 /* login_background.gif */,
+			);
+			name = Assets;
+			path = BarLift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +334,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				0166EC7E1A6995C40016E679 /* Main.storyboard in Resources */,
-				0166EC831A6995C40016E679 /* LaunchScreen.xib in Resources */,
+				01D711A71A6CC87B001C29B7 /* barliftlogo.png in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */,
+				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
+				01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
-				0166EC7B1A6995C40016E679 /* ViewController.m in Sources */,
+				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,14 +390,6 @@
 				0166EC7D1A6995C40016E679 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0166EC811A6995C40016E679 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0166EC821A6995C40016E679 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

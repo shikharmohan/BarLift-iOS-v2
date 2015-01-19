@@ -12,6 +12,7 @@
 #import <ParseCrashReporting/ParseCrashReporting.h>
 #import <FacebookSDK/FacebookSDK.h>
 
+
 @interface AppDelegate ()
 
 @end
@@ -22,9 +23,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"5DZi1FrdZcwBKXIxMplWsqYu3cEEumlmFDB1kKnC"
     clientKey:@"tzrpMCtTU3FWlZAZUHFXBHObk4i9WW5AxAYKHx3E"];
-    [Parse enableLocalDatastore];
-    [ParseCrashReporting enable];
+
+
     [PFFacebookUtils initializeFacebook];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     
     // Override point for customization after application launch.
     return YES;
