@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -15,12 +17,136 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sHc-AJ-0ld" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ot-a1-yJU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Login With Facebook" backgroundImage="Facebook.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginToFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uDP-aZ-E8x"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barliftlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iGq-61-Jvp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-6s-9Qs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="2Qf-R9-wQ0"/>
+                                    <constraint firstAttribute="height" constant="27" id="V2t-ot-HAG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="About BarLift">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Qf-R9-wQ0"/>
+                                        <exclude reference="V2t-ot-HAG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2Qf-R9-wQ0"/>
+                                        <include reference="V2t-ot-HAG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="aboutBarLift:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y4L-Jc-SB7"/>
+                                    <segue destination="dsx-Zz-gI6" kind="presentation" identifier="toAbout" modalPresentationStyle="currentContext" id="toP-Bt-enW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="iGq-61-Jvp" secondAttribute="centerX" id="6kc-j6-G7O"/>
+                            <constraint firstAttribute="centerX" secondItem="1Ot-a1-yJU" secondAttribute="centerX" id="DJd-NR-UvR"/>
+                            <constraint firstAttribute="centerY" secondItem="1Ot-a1-yJU" secondAttribute="centerY" constant="-200" id="Dby-yQ-M9M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sHc-AJ-0ld" secondAttribute="trailing" constant="-16" id="Kza-nJ-Rob"/>
+                            <constraint firstItem="sHc-AJ-0ld" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="MZt-dC-mFX"/>
+                            <constraint firstAttribute="centerX" secondItem="Ynm-6s-9Qs" secondAttribute="centerX" id="aGK-ef-sXr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Ynm-6s-9Qs" secondAttribute="centerY" constant="-245" id="bAT-z8-Y7C"/>
+                            <constraint firstItem="sHc-AJ-0ld" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="gJt-nw-B4r"/>
+                            <constraint firstAttribute="centerY" secondItem="iGq-61-Jvp" secondAttribute="centerY" constant="75" id="kEm-p6-usp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sHc-AJ-0ld" secondAttribute="bottom" id="uLF-0D-Qrb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sHc-AJ-0ld"/>
+                                <exclude reference="1Ot-a1-yJU"/>
+                                <exclude reference="iGq-61-Jvp"/>
+                                <exclude reference="Ynm-6s-9Qs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="uLF-0D-Qrb"/>
+                                <exclude reference="DJd-NR-UvR"/>
+                                <exclude reference="Dby-yQ-M9M"/>
+                                <exclude reference="aGK-ef-sXr"/>
+                                <exclude reference="bAT-z8-Y7C"/>
+                                <exclude reference="6kc-j6-G7O"/>
+                                <exclude reference="kEm-p6-usp"/>
+                                <exclude reference="Kza-nJ-Rob"/>
+                                <exclude reference="MZt-dC-mFX"/>
+                                <exclude reference="gJt-nw-B4r"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sHc-AJ-0ld"/>
+                                <include reference="1Ot-a1-yJU"/>
+                                <include reference="iGq-61-Jvp"/>
+                                <include reference="Ynm-6s-9Qs"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="uLF-0D-Qrb"/>
+                                <include reference="DJd-NR-UvR"/>
+                                <include reference="Dby-yQ-M9M"/>
+                                <include reference="aGK-ef-sXr"/>
+                                <include reference="bAT-z8-Y7C"/>
+                                <include reference="6kc-j6-G7O"/>
+                                <include reference="kEm-p6-usp"/>
+                                <include reference="Kza-nJ-Rob"/>
+                                <include reference="MZt-dC-mFX"/>
+                                <include reference="gJt-nw-B4r"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="sHc-AJ-0ld" id="AHO-Mq-ywU"/>
+                        <outlet property="login" destination="1Ot-a1-yJU" id="uOG-kB-u3u"/>
+                        <outlet property="logo" destination="iGq-61-Jvp" id="zLO-gh-aYm"/>
+                        <segue destination="qAZ-eA-qaF" kind="show" identifier="toWelcome" id="uyd-QA-4KU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="246"/>
+            <point key="canvasLocation" x="-177" y="4.5"/>
+        </scene>
+        <!--Surfboard View Controller-->
+        <scene sceneID="ahA-br-9y0">
+            <objects>
+                <viewController id="dsx-Zz-gI6" customClass="SRFSurfboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0jk-q5-2nW"/>
+                        <viewControllerLayoutGuide type="bottom" id="fZB-uK-xRy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nC2-2u-mO1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTY-xJ-bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="687.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dtI-aB-97u">
@@ -38,7 +164,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDL-G9-i3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="242"/>
+            <point key="canvasLocation" x="777" y="-327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Facebook.png" width="200" height="25"/>
+        <image name="barliftlogo.png" width="280" height="129"/>
+    </resources>
 </document>

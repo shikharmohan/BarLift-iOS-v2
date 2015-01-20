@@ -44,6 +44,37 @@
 		01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */; };
 		01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */; };
 		01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711B11A6CD677001C29B7 /* Facebook@2x.png */; };
+		01D711C51A6E0BE7001C29B7 /* UIButton+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711B71A6E0BE7001C29B7 /* UIButton+IndexPath.m */; };
+		01D711C61A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711BA1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m */; };
+		01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D711BB1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib */; };
+		01D711C81A6E0BE7001C29B7 /* SRFSurfboardPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711BE1A6E0BE7001C29B7 /* SRFSurfboardPanel.m */; };
+		01D711C91A6E0BE7001C29B7 /* SRFSurfboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711C41A6E0BE7001C29B7 /* SRFSurfboardViewController.m */; };
+		01D711EC1A6E0E61001C29B7 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CA1A6E0E61001C29B7 /* panels.json */; };
+		01D711ED1A6E0E61001C29B7 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CC1A6E0E61001C29B7 /* arrow.png */; };
+		01D711EE1A6E0E61001C29B7 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CD1A6E0E61001C29B7 /* arrow@2x.png */; };
+		01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CE1A6E0E61001C29B7 /* Contents.json */; };
+		01D711F01A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D01A6E0E61001C29B7 /* Contents.json */; };
+		01D711F11A6E0E61001C29B7 /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D11A6E0E61001C29B7 /* github.png */; };
+		01D711F21A6E0E61001C29B7 /* github@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D21A6E0E61001C29B7 /* github@2x.png */; };
+		01D711F31A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D41A6E0E61001C29B7 /* Contents.json */; };
+		01D711F41A6E0E61001C29B7 /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D51A6E0E61001C29B7 /* happy.png */; };
+		01D711F51A6E0E61001C29B7 /* happy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D61A6E0E61001C29B7 /* happy@2x.png */; };
+		01D711F61A6E0E61001C29B7 /* happy@2x.psd in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D71A6E0E61001C29B7 /* happy@2x.psd */; };
+		01D711F71A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D91A6E0E61001C29B7 /* Contents.json */; };
+		01D711F81A6E0E61001C29B7 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711DA1A6E0E61001C29B7 /* iPhone.png */; };
+		01D711F91A6E0E61001C29B7 /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711DB1A6E0E61001C29B7 /* iPhone@2x.png */; };
+		01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711DD1A6E0E61001C29B7 /* Contents.json */; };
+		01D711FB1A6E0E61001C29B7 /* panels.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711DE1A6E0E61001C29B7 /* panels.png */; };
+		01D711FC1A6E0E61001C29B7 /* panels@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711DF1A6E0E61001C29B7 /* panels@2x.png */; };
+		01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E11A6E0E61001C29B7 /* Contents.json */; };
+		01D711FE1A6E0E61001C29B7 /* surfer.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E21A6E0E61001C29B7 /* surfer.png */; };
+		01D711FF1A6E0E61001C29B7 /* surfer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E31A6E0E61001C29B7 /* surfer@2x.png */; };
+		01D712001A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E51A6E0E61001C29B7 /* Contents.json */; };
+		01D712011A6E0E61001C29B7 /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E61A6E0E61001C29B7 /* swipe.png */; };
+		01D712021A6E0E61001C29B7 /* swipe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E71A6E0E61001C29B7 /* swipe@2x.png */; };
+		01D712031A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711E91A6E0E61001C29B7 /* Contents.json */; };
+		01D712041A6E0E61001C29B7 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711EA1A6E0E61001C29B7 /* twitter.png */; };
+		01D712051A6E0E61001C29B7 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D711EB1A6E0E61001C29B7 /* twitter@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +134,43 @@
 		01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		01D711B11A6CD677001C29B7 /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook@2x.png"; sourceTree = "<group>"; };
+		01D711B61A6E0BE7001C29B7 /* UIButton+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+IndexPath.h"; sourceTree = "<group>"; };
+		01D711B71A6E0BE7001C29B7 /* UIButton+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+IndexPath.m"; sourceTree = "<group>"; };
+		01D711B91A6E0BE7001C29B7 /* SRFSurfboardPanelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanelCell.h; sourceTree = "<group>"; };
+		01D711BA1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanelCell.m; sourceTree = "<group>"; };
+		01D711BB1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRFSurfboardPanelCell.xib; sourceTree = "<group>"; };
+		01D711BD1A6E0BE7001C29B7 /* SRFSurfboardPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardPanel.h; sourceTree = "<group>"; };
+		01D711BE1A6E0BE7001C29B7 /* SRFSurfboardPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardPanel.m; sourceTree = "<group>"; };
+		01D711BF1A6E0BE7001C29B7 /* SRFSurfboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboard.h; sourceTree = "<group>"; };
+		01D711C11A6E0BE7001C29B7 /* SRFSurfboardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardDelegate.h; sourceTree = "<group>"; };
+		01D711C31A6E0BE7001C29B7 /* SRFSurfboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRFSurfboardViewController.h; sourceTree = "<group>"; };
+		01D711C41A6E0BE7001C29B7 /* SRFSurfboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRFSurfboardViewController.m; sourceTree = "<group>"; };
+		01D711CA1A6E0E61001C29B7 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
+		01D711CC1A6E0E61001C29B7 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		01D711CD1A6E0E61001C29B7 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		01D711CE1A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711D01A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711D11A6E0E61001C29B7 /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		01D711D21A6E0E61001C29B7 /* github@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "github@2x.png"; sourceTree = "<group>"; };
+		01D711D41A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711D51A6E0E61001C29B7 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		01D711D61A6E0E61001C29B7 /* happy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "happy@2x.png"; sourceTree = "<group>"; };
+		01D711D71A6E0E61001C29B7 /* happy@2x.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "happy@2x.psd"; sourceTree = "<group>"; };
+		01D711D91A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711DA1A6E0E61001C29B7 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		01D711DB1A6E0E61001C29B7 /* iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone@2x.png"; sourceTree = "<group>"; };
+		01D711DD1A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711DE1A6E0E61001C29B7 /* panels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panels.png; sourceTree = "<group>"; };
+		01D711DF1A6E0E61001C29B7 /* panels@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panels@2x.png"; sourceTree = "<group>"; };
+		01D711E11A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711E21A6E0E61001C29B7 /* surfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfer.png; sourceTree = "<group>"; };
+		01D711E31A6E0E61001C29B7 /* surfer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "surfer@2x.png"; sourceTree = "<group>"; };
+		01D711E51A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711E61A6E0E61001C29B7 /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		01D711E71A6E0E61001C29B7 /* swipe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe@2x.png"; sourceTree = "<group>"; };
+		01D711E91A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01D711EA1A6E0E61001C29B7 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		01D711EB1A6E0E61001C29B7 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +238,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01D711B31A6E0BE7001C29B7 /* SRFSurfboard */,
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
 				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
@@ -248,12 +317,168 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01D711CA1A6E0E61001C29B7 /* panels.json */,
+				01D711CB1A6E0E61001C29B7 /* check.imageset */,
+				01D711CF1A6E0E61001C29B7 /* github.imageset */,
+				01D711D31A6E0E61001C29B7 /* happy.imageset */,
+				01D711D81A6E0E61001C29B7 /* iPhone.imageset */,
+				01D711DC1A6E0E61001C29B7 /* panels.imageset */,
+				01D711E01A6E0E61001C29B7 /* surfer.imageset */,
+				01D711E41A6E0E61001C29B7 /* swipe.imageset */,
+				01D711E81A6E0E61001C29B7 /* twitter.imageset */,
 				01D711B11A6CD677001C29B7 /* Facebook@2x.png */,
 				01D711A61A6CC87B001C29B7 /* barliftlogo.png */,
 				01D711A31A6CC827001C29B7 /* login_background.gif */,
 			);
 			name = Assets;
 			path = BarLift;
+			sourceTree = "<group>";
+		};
+		01D711B31A6E0BE7001C29B7 /* SRFSurfboard */ = {
+			isa = PBXGroup;
+			children = (
+				01D711B41A6E0BE7001C29B7 /* Panel Cells */,
+				01D711BC1A6E0BE7001C29B7 /* Panel Data Model */,
+				01D711BF1A6E0BE7001C29B7 /* SRFSurfboard.h */,
+				01D711C01A6E0BE7001C29B7 /* Surfboard Delegate Protocol */,
+				01D711C21A6E0BE7001C29B7 /* Surfboard View Controller */,
+			);
+			path = SRFSurfboard;
+			sourceTree = "<group>";
+		};
+		01D711B41A6E0BE7001C29B7 /* Panel Cells */ = {
+			isa = PBXGroup;
+			children = (
+				01D711B51A6E0BE7001C29B7 /* Button Extension */,
+				01D711B81A6E0BE7001C29B7 /* Default Cell */,
+			);
+			path = "Panel Cells";
+			sourceTree = "<group>";
+		};
+		01D711B51A6E0BE7001C29B7 /* Button Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01D711B61A6E0BE7001C29B7 /* UIButton+IndexPath.h */,
+				01D711B71A6E0BE7001C29B7 /* UIButton+IndexPath.m */,
+			);
+			path = "Button Extension";
+			sourceTree = "<group>";
+		};
+		01D711B81A6E0BE7001C29B7 /* Default Cell */ = {
+			isa = PBXGroup;
+			children = (
+				01D711B91A6E0BE7001C29B7 /* SRFSurfboardPanelCell.h */,
+				01D711BA1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m */,
+				01D711BB1A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib */,
+			);
+			path = "Default Cell";
+			sourceTree = "<group>";
+		};
+		01D711BC1A6E0BE7001C29B7 /* Panel Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				01D711BD1A6E0BE7001C29B7 /* SRFSurfboardPanel.h */,
+				01D711BE1A6E0BE7001C29B7 /* SRFSurfboardPanel.m */,
+			);
+			path = "Panel Data Model";
+			sourceTree = "<group>";
+		};
+		01D711C01A6E0BE7001C29B7 /* Surfboard Delegate Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01D711C11A6E0BE7001C29B7 /* SRFSurfboardDelegate.h */,
+			);
+			path = "Surfboard Delegate Protocol";
+			sourceTree = "<group>";
+		};
+		01D711C21A6E0BE7001C29B7 /* Surfboard View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01D711C31A6E0BE7001C29B7 /* SRFSurfboardViewController.h */,
+				01D711C41A6E0BE7001C29B7 /* SRFSurfboardViewController.m */,
+			);
+			path = "Surfboard View Controller";
+			sourceTree = "<group>";
+		};
+		01D711CB1A6E0E61001C29B7 /* check.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711CC1A6E0E61001C29B7 /* arrow.png */,
+				01D711CD1A6E0E61001C29B7 /* arrow@2x.png */,
+				01D711CE1A6E0E61001C29B7 /* Contents.json */,
+			);
+			path = check.imageset;
+			sourceTree = "<group>";
+		};
+		01D711CF1A6E0E61001C29B7 /* github.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711D01A6E0E61001C29B7 /* Contents.json */,
+				01D711D11A6E0E61001C29B7 /* github.png */,
+				01D711D21A6E0E61001C29B7 /* github@2x.png */,
+			);
+			path = github.imageset;
+			sourceTree = "<group>";
+		};
+		01D711D31A6E0E61001C29B7 /* happy.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711D41A6E0E61001C29B7 /* Contents.json */,
+				01D711D51A6E0E61001C29B7 /* happy.png */,
+				01D711D61A6E0E61001C29B7 /* happy@2x.png */,
+				01D711D71A6E0E61001C29B7 /* happy@2x.psd */,
+			);
+			path = happy.imageset;
+			sourceTree = "<group>";
+		};
+		01D711D81A6E0E61001C29B7 /* iPhone.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711D91A6E0E61001C29B7 /* Contents.json */,
+				01D711DA1A6E0E61001C29B7 /* iPhone.png */,
+				01D711DB1A6E0E61001C29B7 /* iPhone@2x.png */,
+			);
+			path = iPhone.imageset;
+			sourceTree = "<group>";
+		};
+		01D711DC1A6E0E61001C29B7 /* panels.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711DD1A6E0E61001C29B7 /* Contents.json */,
+				01D711DE1A6E0E61001C29B7 /* panels.png */,
+				01D711DF1A6E0E61001C29B7 /* panels@2x.png */,
+			);
+			path = panels.imageset;
+			sourceTree = "<group>";
+		};
+		01D711E01A6E0E61001C29B7 /* surfer.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711E11A6E0E61001C29B7 /* Contents.json */,
+				01D711E21A6E0E61001C29B7 /* surfer.png */,
+				01D711E31A6E0E61001C29B7 /* surfer@2x.png */,
+			);
+			path = surfer.imageset;
+			sourceTree = "<group>";
+		};
+		01D711E41A6E0E61001C29B7 /* swipe.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711E51A6E0E61001C29B7 /* Contents.json */,
+				01D711E61A6E0E61001C29B7 /* swipe.png */,
+				01D711E71A6E0E61001C29B7 /* swipe@2x.png */,
+			);
+			path = swipe.imageset;
+			sourceTree = "<group>";
+		};
+		01D711E81A6E0E61001C29B7 /* twitter.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				01D711E91A6E0E61001C29B7 /* Contents.json */,
+				01D711EA1A6E0E61001C29B7 /* twitter.png */,
+				01D711EB1A6E0E61001C29B7 /* twitter@2x.png */,
+			);
+			path = twitter.imageset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +562,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D711F21A6E0E61001C29B7 /* github@2x.png in Resources */,
+				01D711FC1A6E0E61001C29B7 /* panels@2x.png in Resources */,
+				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
+				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
+				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				0166EC7E1A6995C40016E679 /* Main.storyboard in Resources */,
 				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
+				01D711F91A6E0E61001C29B7 /* iPhone@2x.png in Resources */,
 				01D711A71A6CC87B001C29B7 /* barliftlogo.png in Resources */,
+				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
+				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D712041A6E0E61001C29B7 /* twitter.png in Resources */,
+				01D711F41A6E0E61001C29B7 /* happy.png in Resources */,
+				01D712021A6E0E61001C29B7 /* swipe@2x.png in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
+				01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */,
+				01D711FF1A6E0E61001C29B7 /* surfer@2x.png in Resources */,
+				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D711F51A6E0E61001C29B7 /* happy@2x.png in Resources */,
+				01D711ED1A6E0E61001C29B7 /* arrow.png in Resources */,
+				01D711F61A6E0E61001C29B7 /* happy@2x.psd in Resources */,
+				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D711EE1A6E0E61001C29B7 /* arrow@2x.png in Resources */,
+				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
+				01D712011A6E0E61001C29B7 /* swipe.png in Resources */,
+				01D711FE1A6E0E61001C29B7 /* surfer.png in Resources */,
+				01D711F81A6E0E61001C29B7 /* iPhone.png in Resources */,
+				01D712051A6E0E61001C29B7 /* twitter@2x.png in Resources */,
+				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +612,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */,
+				01D711C51A6E0BE7001C29B7 /* UIButton+IndexPath.m in Sources */,
 				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
 				01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */,
+				01D711C91A6E0BE7001C29B7 /* SRFSurfboardViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
+				01D711C81A6E0BE7001C29B7 /* SRFSurfboardPanel.m in Sources */,
+				01D711C61A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
