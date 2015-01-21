@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.isNew">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

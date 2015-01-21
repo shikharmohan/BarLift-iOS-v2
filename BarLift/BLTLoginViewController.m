@@ -69,10 +69,11 @@
 - (IBAction)loginToFacebook:(UIButton *)sender {
     
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
     
     // Login PFUser using Facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        BOOL new = false;
         if (!user) {
             NSString *errorMessage = nil;
             if (!error) {
@@ -91,11 +92,16 @@
         } else {
             if (user.isNew) {
                 NSLog(@"User with facebook signed up and logged in!");
-                [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                new = true;
             } else {
                 NSLog(@"User with facebook logged in!");
             }
-            [self performSegueWithIdentifier:@"toDeal" sender:self];
+            if(new){
+                [self performSegueWithIdentifier:@"toWelcome" sender:self];
+            }
+            else{
+                [self performSegueWithIdentifier:@"toDeal" sender:self];
+            }
         }
     }];
 }
@@ -107,14 +113,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    SRFSurfboardViewController *surfboard = segue.destinationViewController;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"panels" ofType:@"json"];
-    NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
-    [surfboard setPanels:panels];
-    
-    surfboard.delegate = self;
-    
-    surfboard.backgroundColor = [UIColor colorWithRed:0.97 green:0.58 blue:0.24 alpha:1.00];
+    if([[segue identifier] isEqualToString:@"toAbout"]){
+        SRFSurfboardViewController *surfboard = segue.destinationViewController;
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"panels" ofType:@"json"];
+        NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
+        [surfboard setPanels:panels];
+        surfboard.delegate = self;
+        surfboard.backgroundColor = [UIColor colorWithRed:0.97 green:0.58 blue:0.24 alpha:1.00];
+    }
 }
 
 #pragma mark - SRFSurfboardDelegate
