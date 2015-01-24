@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "if ([PFUser currentUser])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString

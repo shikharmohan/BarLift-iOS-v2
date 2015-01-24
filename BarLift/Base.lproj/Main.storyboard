@@ -95,18 +95,18 @@
                                 <exclude reference="Ynm-6s-9Qs"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Kza-nJ-Rob"/>
-                                <exclude reference="MZt-dC-mFX"/>
-                                <exclude reference="gJt-nw-B4r"/>
-                                <exclude reference="6kc-j6-G7O"/>
-                                <exclude reference="kEm-p6-usp"/>
+                                <exclude reference="uLF-0D-Qrb"/>
                                 <exclude reference="DJd-NR-UvR"/>
                                 <exclude reference="Dby-yQ-M9M"/>
                                 <exclude reference="c7y-Us-ZZI"/>
                                 <exclude reference="aGK-ef-sXr"/>
                                 <exclude reference="bAT-z8-Y7C"/>
                                 <exclude reference="syv-Wn-pyK"/>
-                                <exclude reference="uLF-0D-Qrb"/>
+                                <exclude reference="6kc-j6-G7O"/>
+                                <exclude reference="kEm-p6-usp"/>
+                                <exclude reference="Kza-nJ-Rob"/>
+                                <exclude reference="MZt-dC-mFX"/>
+                                <exclude reference="gJt-nw-B4r"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -117,18 +117,18 @@
                                 <include reference="Ynm-6s-9Qs"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Kza-nJ-Rob"/>
-                                <include reference="MZt-dC-mFX"/>
-                                <include reference="gJt-nw-B4r"/>
-                                <include reference="6kc-j6-G7O"/>
-                                <include reference="kEm-p6-usp"/>
+                                <include reference="uLF-0D-Qrb"/>
                                 <include reference="DJd-NR-UvR"/>
                                 <include reference="Dby-yQ-M9M"/>
                                 <include reference="c7y-Us-ZZI"/>
                                 <include reference="aGK-ef-sXr"/>
                                 <include reference="bAT-z8-Y7C"/>
                                 <include reference="syv-Wn-pyK"/>
-                                <include reference="uLF-0D-Qrb"/>
+                                <include reference="6kc-j6-G7O"/>
+                                <include reference="kEm-p6-usp"/>
+                                <include reference="Kza-nJ-Rob"/>
+                                <include reference="MZt-dC-mFX"/>
+                                <include reference="gJt-nw-B4r"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,17 +144,42 @@
             </objects>
             <point key="canvasLocation" x="-177" y="4.5"/>
         </scene>
-        <!--View Controller-->
+        <!--User Detail View Controller-->
         <scene sceneID="PX6-Cr-ePh">
             <objects>
-                <viewController id="xah-HF-YJf" sceneMemberID="viewController">
+                <viewController id="xah-HF-YJf" customClass="BLTUserDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M8X-xR-8bb"/>
                         <viewControllerLayoutGuide type="bottom" id="esu-1k-Ypf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AUo-01-qfC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existing User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNi-yD-5Kf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="134" y="73" width="101" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZNi-yD-5Kf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZNi-yD-5Kf"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p08-dI-hPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uq-F1-LcY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uq-F1-LcY">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -200,7 +225,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="69" width="31" height="21"/>
+                                    <rect key="frame" x="46" y="69" width="76" height="21"/>
                                 </variation>
                             </label>
                         </subviews>

@@ -7,6 +7,8 @@
 //
 
 #import "BLTUserDetailViewController.h"
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface BLTUserDetailViewController ()
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
