@@ -25,8 +25,30 @@
     clientKey:@"tzrpMCtTU3FWlZAZUHFXBHObk4i9WW5AxAYKHx3E"];
 
 
-    [PFFacebookUtils initializeFacebook];
-
+    [PFFacebookUtils initializeFacebook];    
+    
+    CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    if (iOSScreenSize.height == 568){
+        UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"iPhone4" bundle:nil];
+        UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
+    if (iOSScreenSize.height == 667){
+        UIStoryboard *iPhone47Storyboard = [UIStoryboard storyboardWithName:@"iPhone47" bundle:nil];
+        UIViewController *initialViewController = [iPhone47Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
+    if (iOSScreenSize.height == 736){
+        UIStoryboard *iPhone55Storyboard = [UIStoryboard storyboardWithName:@"iPhone55" bundle:nil];
+        UIViewController *initialViewController = [iPhone55Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
     
     // Override point for customization after application launch.
     return YES;

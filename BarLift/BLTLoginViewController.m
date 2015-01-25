@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSMutableData *imageData;
 - (IBAction)aboutBarLift:(UIButton *)sender;
 - (IBAction)loginToFacebook:(UIButton *)sender;
+@property (strong,nonatomic) UIImage *profPic;
 
 @end
 
@@ -30,9 +31,10 @@
     [super viewWillAppear:animated];
     
     // Check if user is cached and linked to Facebook, if so, bypass login
-    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self performSegueWithIdentifier:@"toDeal" sender:self];
-    }
+//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+//        [self updateUserInformation];
+//        [self performSegueWithIdentifier:@"toDeal" sender:self];
+//    }
 }
 
 
@@ -94,10 +96,13 @@
             [self updateUserInformation];
             if (user.isNew) {
                 NSLog(@"User with facebook signed up and logged in!");
+                [self performSegueWithIdentifier:@"toWelcome" sender:self];
                 new = true;
             } else {
                 NSLog(@"User with facebook logged in!");
+                [self performSegueWithIdentifier:@"toDeal" sender:self];
             }
+
         }
     }];
 }
@@ -109,9 +114,7 @@
             NSDictionary *userDictionary = (NSDictionary *)result;
             //create URL
             NSString *facebookID = userDictionary[@"id"];
-            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=normal&return_ssl_resources=1", facebookID]];
-            
-            
+            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
             NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity:8];
             if(userDictionary[@"name"]){
                 userProfile[@"name"] = userDictionary[@"name"];
@@ -153,16 +156,34 @@
             [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(succeeded){
                     NSLog(@"User saved successfully");
+                    if ([[PFUser currentUser][@"new"] isEqualToNumber:@1]) {
+                        NSLog(@"User with facebook signed up and logged in!");
+                        [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                    } else {
+                        NSLog(@"User with facebook logged in!");
+                        [self performSegueWithIdentifier:@"toDeal" sender:self];
+                    }
                 }
                 else{
                     NSLog(@"User not saved%@", error);
                 }
             }];
-            
+
             [self requestImage];
         }
         else{
             NSLog(@"Error in Facebook Request %@", error);
+        }
+    }];
+    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // result will contain an array with your user's friends in the "data" key
+            NSArray *friendObjects = [result objectForKey:@"data"];
+            NSMutableArray *friendIds = [NSMutableArray arrayWithCapacity:friendObjects.count];
+            // Create a list of friends' Facebook IDs
+            for (NSDictionary *friendObject in friendObjects) {
+                [friendIds addObject:[friendObject objectForKey:@"id"]];
+            }
         }
     }];
 }
@@ -223,8 +244,8 @@
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    UIImage *profileImage = [UIImage imageWithData:self.imageData];
-    [self uploadPFFileToParse:profileImage];
+    UIImage *profilePicture = [UIImage imageWithData:self.imageData];
+    [self uploadPFFileToParse:profilePicture];
     
 }
 

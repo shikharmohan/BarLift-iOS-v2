@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BLTUserDetailViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UIImageView *profilePicture;
 @end

@@ -11,15 +11,25 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface BLTUserDetailViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
 
 @implementation BLTUserDetailViewController
-
+@synthesize profilePicture;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    self.nameLabel.text = [NSString stringWithFormat:@"Hello, %@", [PFUser currentUser][@"profile"][@"name"]];
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [PFUser currentUser][@"profile"][@"pictureURL"]]];
+        if ( data == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [profilePicture initWithImage:[UIImage imageWithData:data scale:1.0]];
+            profilePicture.layer.cornerRadius = 120;
+        });
+    });
     
 }
 
