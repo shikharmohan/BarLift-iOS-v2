@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Or0-7b-a8q">
+            <objects>
+                <viewController id="zbd-2e-Cvv" customClass="BLTLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gy2-BY-v5N"/>
+                        <viewControllerLayoutGuide type="bottom" id="PL8-Yb-vry"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dpd-dz-WTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-cM-ovc" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barliftlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-Zm-psR">
+                                <rect key="frame" x="40" y="108" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6l-tT-UAh">
+                                <rect key="frame" x="104" y="442" width="113" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="About BarLift">
+                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutBarLift:" destination="zbd-2e-Cvv" eventType="touchUpInside" id="6p0-zC-Ni1"/>
+                                    <segue destination="lek-Wm-I1u" kind="modal" identifier="toAbout" id="dkd-P8-wPS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-tI-bu1">
+                                <rect key="frame" x="57" y="351" width="207" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Login With Facebook" backgroundImage="Facebook.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginToFacebook:" destination="zbd-2e-Cvv" eventType="touchUpInside" id="rK9-Is-yo4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="iIo-cM-ovc" id="h0X-gA-GX9"/>
+                        <outlet property="login" destination="gn7-tI-bu1" id="9mo-24-qfh"/>
+                        <outlet property="logo" destination="FKa-Zm-psR" id="7EF-3E-qPn"/>
+                        <segue destination="V21-rO-u3N" kind="modal" identifier="toWelcome" id="Tc3-aL-PSX"/>
+                        <segue destination="jdt-b0-7AP" kind="modal" identifier="toDeal" id="TID-3r-qNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frl-0N-fsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="350"/>
+        </scene>
+        <!--Surfboard View Controller-->
+        <scene sceneID="3wM-av-Pdg">
+            <objects>
+                <viewController id="lek-Wm-I1u" customClass="SRFSurfboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mj-AA-zVs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ksx-Xv-hXe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k3o-UV-kPU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bfs-FI-hIJ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZI-ac-Jlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="1074"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="LDA-Em-45g">
+            <objects>
+                <viewController id="jdt-b0-7AP" customClass="BLTUserDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VDn-Xz-gWI"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5p-QR-jvu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xBH-0B-X8C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8K-v5-nIE">
+                                <rect key="frame" x="16" y="55" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-Dr-Wcc" customClass="PFImageView">
+                                <rect key="frame" x="40" y="144" width="240" height="192"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q0w-f4-o4s"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="b8K-v5-nIE" id="cIE-Dx-iY9"/>
+                        <outlet property="profilePicture" destination="bHv-Dr-Wcc" id="Q4F-Ta-4f8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjw-oK-S4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="679"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="fgv-wl-GG0">
+            <objects>
+                <viewController id="V21-rO-u3N" customClass="BLTUserDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3IP-zo-3bm"/>
+                        <viewControllerLayoutGuide type="bottom" id="nSa-JA-coc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CvX-AD-NE4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yvq-lu-ksX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZm-yw-H9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="679" y="60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Facebook.png" width="200" height="25"/>
+        <image name="barliftlogo.png" width="280" height="129"/>
+    </resources>
+</document>

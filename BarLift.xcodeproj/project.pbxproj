@@ -13,6 +13,7 @@
 		0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */; };
 		0166EC801A6995C40016E679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7F1A6995C40016E679 /* Images.xcassets */; };
 		0166EC8F1A6995C40016E679 /* BarLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC8E1A6995C40016E679 /* BarLiftTests.m */; };
+		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01D70FAB1A6B6B77001C29B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA51A6B6B5B001C29B7 /* Bolts.framework */; };
 		01D70FAC1A6B6B77001C29B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA61A6B6B5B001C29B7 /* Parse.framework */; };
 		01D70FAD1A6B6B77001C29B7 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA71A6B6B5B001C29B7 /* ParseCrashReporting.framework */; };
@@ -102,6 +103,7 @@
 		0166EC881A6995C40016E679 /* BarLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC8D1A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC8E1A6995C40016E679 /* BarLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarLiftTests.m; sourceTree = "<group>"; };
+		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01D70F781A6B6A8C001C29B7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		01D70F791A6B6A8C001C29B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01D70F7A1A6B6A8C001C29B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -254,6 +256,7 @@
 				01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */,
 				01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */,
 				01D7120D1A747537001C29B7 /* iPhone4.storyboard */,
+				01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */,
 				01D7120F1A747544001C29B7 /* iPhone47.storyboard */,
 				01D712111A74754F001C29B7 /* iPhone55.storyboard */,
 				0166EC7F1A6995C40016E679 /* Images.xcassets */,
@@ -573,6 +576,7 @@
 				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
 				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
+				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
 				01D7120C1A7450B4001C29B7 /* barliftlogo.png in Resources */,

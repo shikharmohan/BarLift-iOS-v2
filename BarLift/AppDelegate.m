@@ -28,6 +28,13 @@
     [PFFacebookUtils initializeFacebook];    
     
     CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    if (iOSScreenSize.height == 480){
+        UIStoryboard *iPhone35Storyboard = [UIStoryboard storyboardWithName:@"iPhone35" bundle:nil];
+        UIViewController *initialViewController = [iPhone35Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
     if (iOSScreenSize.height == 568){
         UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"iPhone4" bundle:nil];
         UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
