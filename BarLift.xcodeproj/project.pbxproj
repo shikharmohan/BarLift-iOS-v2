@@ -78,6 +78,7 @@
 		01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120D1A747537001C29B7 /* iPhone4.storyboard */; };
 		01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120F1A747544001C29B7 /* iPhone47.storyboard */; };
 		01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D712111A74754F001C29B7 /* iPhone55.storyboard */; };
+		01EBDB631A81535200A9E175 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB621A81535200A9E175 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,8 @@
 		01D7120D1A747537001C29B7 /* iPhone4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4.storyboard; sourceTree = "<group>"; };
 		01D7120F1A747544001C29B7 /* iPhone47.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone47.storyboard; sourceTree = "<group>"; };
 		01D712111A74754F001C29B7 /* iPhone55.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone55.storyboard; sourceTree = "<group>"; };
+		01EBDB611A81535200A9E175 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		01EBDB621A81535200A9E175 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01EBDB601A81533800A9E175 /* Reachability */,
 				01D711B31A6E0BE7001C29B7 /* SRFSurfboard */,
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
@@ -490,6 +494,15 @@
 			path = twitter.imageset;
 			sourceTree = "<group>";
 		};
+		01EBDB601A81533800A9E175 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				01EBDB611A81535200A9E175 /* Reachability.h */,
+				01EBDB621A81535200A9E175 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -633,6 +646,7 @@
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				01D711C81A6E0BE7001C29B7 /* SRFSurfboardPanel.m in Sources */,
 				01D711C61A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m in Sources */,
+				01EBDB631A81535200A9E175 /* Reachability.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

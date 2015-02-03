@@ -26,7 +26,7 @@
                                 <rect key="frame" x="104" y="442" width="113" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="About BarLift">
-                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83231026789999996" green="0.47741636399999998" blue="0.127396758" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZI-ac-Jlc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="1074"/>
+            <point key="canvasLocation" x="119" y="945"/>
         </scene>
         <!--User Detail View Controller-->
         <scene sceneID="LDA-Em-45g">

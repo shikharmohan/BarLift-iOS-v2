@@ -11,6 +11,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "BLTUserDetailViewController.h"
 #import "FLAnimatedImage.h"
+#import "Reachability.h"
 #import "SRFSurfboard.h"
 
 @interface BLTLoginViewController () <SRFSurfboardDelegate>
@@ -21,6 +22,8 @@
 - (IBAction)aboutBarLift:(UIButton *)sender;
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
+@property (strong, nonatomic) Reachability *internetReachableFoo;
+
 
 @end
 
@@ -30,11 +33,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    // Check if user is cached and linked to Facebook, if so, bypass login
-//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-//        [self updateUserInformation];
-//        [self performSegueWithIdentifier:@"toDeal" sender:self];
-//    }
+     //Check if user is cached and linked to Facebook, if so, bypass login
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self updateUserInformation];
+        [self performSegueWithIdentifier:@"toDeal" sender:self];
+    }
 }
 
 
@@ -156,16 +159,13 @@
             [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(succeeded){
                     NSLog(@"User saved successfully");
-                    if ([[PFUser currentUser][@"new"] isEqualToNumber:@1]) {
-                        NSLog(@"User with facebook signed up and logged in!");
-                        [self performSegueWithIdentifier:@"toWelcome" sender:self];
-                    } else {
-                        NSLog(@"User with facebook logged in!");
+                    NSLog(@"User with facebook logged in!");
+                    if ( [[PFUser currentUser][@"new"] isEqualToNumber:@0]){
                         [self performSegueWithIdentifier:@"toDeal" sender:self];
                     }
                 }
                 else{
-                    NSLog(@"User not saved%@", error);
+                    NSLog(@"User not saved %@", error);
                 }
             }];
 
@@ -205,10 +205,15 @@
             [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(succeeded){
                     NSLog(@"Profile picture was saved successfully");
+                    if ([[PFUser currentUser][@"new"] isEqualToNumber:@1]) {
+                        NSLog(@"User with facebook signed up and logged in!");
+                        [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                    }
                 }
                 else{
                     NSLog(@"Picture not saved: %@", error);
                 }
+
             }];
         }
     }];
@@ -282,6 +287,35 @@
 - (void)surfboard:(SRFSurfboardViewController *)surfboard didShowPanelAtIndex:(NSInteger)index
 {
     //    NSLog(@"Index: %i", index);
+}
+
+#pragma mark - Reachability
+// Checks if we have an internet connection or not
+- (void)testInternetConnection
+{
+    self.internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is reachable
+    self.internetReachableFoo.reachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Yayyy, we have the interwebs!");
+        });
+    };
+    
+    // Internet is not reachable
+    self.internetReachableFoo.unreachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Network Connection Issue" message:@"Please check your connection and try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+            NSLog(@"Someone broke the internet :(");
+        });
+    };
+    
+    [self.internetReachableFoo startNotifier];
 }
 
 @end
