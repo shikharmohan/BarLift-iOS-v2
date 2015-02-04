@@ -79,6 +79,18 @@
 		01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120F1A747544001C29B7 /* iPhone47.storyboard */; };
 		01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D712111A74754F001C29B7 /* iPhone55.storyboard */; };
 		01EBDB631A81535200A9E175 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB621A81535200A9E175 /* Reachability.m */; };
+		01EBDB651A81A24000A9E175 /* barlift-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB641A81A24000A9E175 /* barlift-logo.png */; };
+		01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB671A81A2DE00A9E175 /* Contents.json */; };
+		01EBDB731A81A2DF00A9E175 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB681A81A2DE00A9E175 /* Icon-40.png */; };
+		01EBDB741A81A2DF00A9E175 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB691A81A2DF00A9E175 /* Icon-40@2x.png */; };
+		01EBDB751A81A2DF00A9E175 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6A1A81A2DF00A9E175 /* Icon-40@3x.png */; };
+		01EBDB761A81A2DF00A9E175 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6B1A81A2DF00A9E175 /* Icon-60@2x.png */; };
+		01EBDB771A81A2DF00A9E175 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6C1A81A2DF00A9E175 /* Icon-60@3x.png */; };
+		01EBDB781A81A2DF00A9E175 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6D1A81A2DF00A9E175 /* Icon-76.png */; };
+		01EBDB791A81A2DF00A9E175 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6E1A81A2DF00A9E175 /* Icon-76@2x.png */; };
+		01EBDB7A1A81A2DF00A9E175 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6F1A81A2DF00A9E175 /* Icon-Small.png */; };
+		01EBDB7B1A81A2DF00A9E175 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB701A81A2DF00A9E175 /* Icon-Small@2x.png */; };
+		01EBDB7C1A81A2DF00A9E175 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +192,18 @@
 		01D712111A74754F001C29B7 /* iPhone55.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone55.storyboard; sourceTree = "<group>"; };
 		01EBDB611A81535200A9E175 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		01EBDB621A81535200A9E175 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		01EBDB641A81A24000A9E175 /* barlift-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barlift-logo.png"; path = "../../../../Stuff/BarLift/BarLift/barlift-logo.png"; sourceTree = "<group>"; };
+		01EBDB671A81A2DE00A9E175 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		01EBDB681A81A2DE00A9E175 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		01EBDB691A81A2DF00A9E175 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		01EBDB6A1A81A2DF00A9E175 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		01EBDB6B1A81A2DF00A9E175 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		01EBDB6C1A81A2DF00A9E175 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		01EBDB6D1A81A2DF00A9E175 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		01EBDB6E1A81A2DF00A9E175 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		01EBDB6F1A81A2DF00A9E175 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		01EBDB701A81A2DF00A9E175 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +354,7 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01EBDB661A81A2DE00A9E175 /* AppIcon.appiconset */,
 				01D711CA1A6E0E61001C29B7 /* panels.json */,
 				01D711CB1A6E0E61001C29B7 /* check.imageset */,
 				01D711CF1A6E0E61001C29B7 /* github.imageset */,
@@ -340,6 +365,7 @@
 				01D711E41A6E0E61001C29B7 /* swipe.imageset */,
 				01D711E81A6E0E61001C29B7 /* twitter.imageset */,
 				01D711B11A6CD677001C29B7 /* Facebook@2x.png */,
+				01EBDB641A81A24000A9E175 /* barlift-logo.png */,
 				01D7120B1A7450B4001C29B7 /* barliftlogo.png */,
 				01D711A31A6CC827001C29B7 /* login_background.gif */,
 			);
@@ -503,6 +529,24 @@
 			name = Reachability;
 			sourceTree = "<group>";
 		};
+		01EBDB661A81A2DE00A9E175 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				01EBDB671A81A2DE00A9E175 /* Contents.json */,
+				01EBDB681A81A2DE00A9E175 /* Icon-40.png */,
+				01EBDB691A81A2DF00A9E175 /* Icon-40@2x.png */,
+				01EBDB6A1A81A2DF00A9E175 /* Icon-40@3x.png */,
+				01EBDB6B1A81A2DF00A9E175 /* Icon-60@2x.png */,
+				01EBDB6C1A81A2DF00A9E175 /* Icon-60@3x.png */,
+				01EBDB6D1A81A2DF00A9E175 /* Icon-76.png */,
+				01EBDB6E1A81A2DF00A9E175 /* Icon-76@2x.png */,
+				01EBDB6F1A81A2DF00A9E175 /* Icon-Small.png */,
+				01EBDB701A81A2DF00A9E175 /* Icon-Small@2x.png */,
+				01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -587,20 +631,30 @@
 			files = (
 				01D711F21A6E0E61001C29B7 /* github@2x.png in Resources */,
 				01D711FC1A6E0E61001C29B7 /* panels@2x.png in Resources */,
+				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
+				01EBDB781A81A2DF00A9E175 /* Icon-76.png in Resources */,
 				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
+				01EBDB7A1A81A2DF00A9E175 /* Icon-Small.png in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
+				01EBDB741A81A2DF00A9E175 /* Icon-40@2x.png in Resources */,
 				01D7120C1A7450B4001C29B7 /* barliftlogo.png in Resources */,
+				01EBDB7B1A81A2DF00A9E175 /* Icon-Small@2x.png in Resources */,
+				01EBDB7C1A81A2DF00A9E175 /* Icon-Small@3x.png in Resources */,
+				01EBDB651A81A24000A9E175 /* barlift-logo.png in Resources */,
 				01D711F91A6E0E61001C29B7 /* iPhone@2x.png in Resources */,
 				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
+				01EBDB751A81A2DF00A9E175 /* Icon-40@3x.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D712041A6E0E61001C29B7 /* twitter.png in Resources */,
+				01EBDB771A81A2DF00A9E175 /* Icon-60@3x.png in Resources */,
 				01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */,
 				01D711F41A6E0E61001C29B7 /* happy.png in Resources */,
+				01EBDB731A81A2DF00A9E175 /* Icon-40.png in Resources */,
 				01D712021A6E0E61001C29B7 /* swipe@2x.png in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
 				01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */,
@@ -609,12 +663,14 @@
 				01D711F51A6E0E61001C29B7 /* happy@2x.png in Resources */,
 				01D711ED1A6E0E61001C29B7 /* arrow.png in Resources */,
 				01D711F61A6E0E61001C29B7 /* happy@2x.psd in Resources */,
+				01EBDB761A81A2DF00A9E175 /* Icon-60@2x.png in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
 				01D711EE1A6E0E61001C29B7 /* arrow@2x.png in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
+				01EBDB791A81A2DF00A9E175 /* Icon-76@2x.png in Resources */,
 				01D712011A6E0E61001C29B7 /* swipe.png in Resources */,
 				01D711FE1A6E0E61001C29B7 /* surfer.png in Resources */,
 				01D711F81A6E0E61001C29B7 /* iPhone.png in Resources */,
