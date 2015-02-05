@@ -91,6 +91,8 @@
 		01EBDB7A1A81A2DF00A9E175 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB6F1A81A2DF00A9E175 /* Icon-Small.png */; };
 		01EBDB7B1A81A2DF00A9E175 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB701A81A2DF00A9E175 /* Icon-Small@2x.png */; };
 		01EBDB7C1A81A2DF00A9E175 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */; };
+		01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */; };
+		01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB831A830B5B00A9E175 /* BLTDealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +206,10 @@
 		01EBDB6F1A81A2DF00A9E175 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		01EBDB701A81A2DF00A9E175 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		01EBDB7D1A83023900A9E175 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		01EBDB821A830B5B00A9E175 /* BLTDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealViewController.h; sourceTree = "<group>"; };
+		01EBDB831A830B5B00A9E175 /* BLTDealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,9 +277,11 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01EBDB811A830A6500A9E175 /* DealViewController */,
 				01EBDB601A81533800A9E175 /* Reachability */,
 				01D711B31A6E0BE7001C29B7 /* SRFSurfboard */,
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
+				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
 				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
 				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
@@ -547,6 +555,24 @@
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
+		01EBDB801A8302D400A9E175 /* SWRRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01EBDB7D1A83023900A9E175 /* SWRevealViewController.h */,
+				01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */,
+			);
+			name = SWRRevealViewController;
+			sourceTree = "<group>";
+		};
+		01EBDB811A830A6500A9E175 /* DealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01EBDB821A830B5B00A9E175 /* BLTDealViewController.h */,
+				01EBDB831A830B5B00A9E175 /* BLTDealViewController.m */,
+			);
+			name = DealViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,10 +719,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
 				01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */,
 				01D711C51A6E0BE7001C29B7 /* UIButton+IndexPath.m in Sources */,
 				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
+				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
 				01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */,
 				01D711C91A6E0BE7001C29B7 /* SRFSurfboardViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
