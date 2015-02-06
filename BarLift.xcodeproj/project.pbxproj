@@ -93,6 +93,9 @@
 		01EBDB7C1A81A2DF00A9E175 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB711A81A2DF00A9E175 /* Icon-Small@3x.png */; };
 		01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */; };
 		01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB831A830B5B00A9E175 /* BLTDealViewController.m */; };
+		01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */; };
+		01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB8D1A831AEC00A9E175 /* menu-32.png */; };
+		01EBDB901A83364A00A9E175 /* update-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB8F1A83364A00A9E175 /* update-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +213,10 @@
 		01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		01EBDB821A830B5B00A9E175 /* BLTDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealViewController.h; sourceTree = "<group>"; };
 		01EBDB831A830B5B00A9E175 /* BLTDealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealViewController.m; sourceTree = "<group>"; };
+		01EBDB851A83134B00A9E175 /* BLTSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSidebarViewController.h; sourceTree = "<group>"; };
+		01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSidebarViewController.m; sourceTree = "<group>"; };
+		01EBDB8D1A831AEC00A9E175 /* menu-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-32.png"; sourceTree = "<group>"; };
+		01EBDB8F1A83364A00A9E175 /* update-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +284,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01EBDB881A83134F00A9E175 /* Sidebar */,
 				01EBDB811A830A6500A9E175 /* DealViewController */,
 				01EBDB601A81533800A9E175 /* Reachability */,
 				01D711B31A6E0BE7001C29B7 /* SRFSurfboard */,
@@ -362,6 +370,8 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01EBDB8D1A831AEC00A9E175 /* menu-32.png */,
+				01EBDB8F1A83364A00A9E175 /* update-32.png */,
 				01EBDB661A81A2DE00A9E175 /* AppIcon.appiconset */,
 				01D711CA1A6E0E61001C29B7 /* panels.json */,
 				01D711CB1A6E0E61001C29B7 /* check.imageset */,
@@ -573,6 +583,15 @@
 			name = DealViewController;
 			sourceTree = "<group>";
 		};
+		01EBDB881A83134F00A9E175 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				01EBDB851A83134B00A9E175 /* BLTSidebarViewController.h */,
+				01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +679,7 @@
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
 				01EBDB781A81A2DF00A9E175 /* Icon-76.png in Resources */,
+				01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */,
 				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
@@ -700,6 +720,7 @@
 				01D712011A6E0E61001C29B7 /* swipe.png in Resources */,
 				01D711FE1A6E0E61001C29B7 /* surfer.png in Resources */,
 				01D711F81A6E0E61001C29B7 /* iPhone.png in Resources */,
+				01EBDB901A83364A00A9E175 /* update-32.png in Resources */,
 				01D712051A6E0E61001C29B7 /* twitter@2x.png in Resources */,
 				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
 			);
@@ -726,6 +747,7 @@
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
 				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
 				01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */,
+				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
 				01D711C91A6E0BE7001C29B7 /* SRFSurfboardViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,

@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BLTLoginViewController : UIViewController <NSURLConnectionDataDelegate>
-
+@interface BLTLoginViewController : UIViewController 
 
 @end
 

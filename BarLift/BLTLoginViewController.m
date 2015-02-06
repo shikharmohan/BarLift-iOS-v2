@@ -23,7 +23,7 @@
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
 @property (strong, nonatomic) Reachability *internetReachableFoo;
-
+@property BOOL new;
 
 @end
 
@@ -33,11 +33,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-     //Check if user is cached and linked to Facebook, if so, bypass login
-    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self updateUserInformation];
-        [self performSegueWithIdentifier:@"toDeal" sender:self];
-    }
+//     //Check if user is cached and linked to Facebook, if so, bypass login
+//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+//        [self updateUserInformation];
+//        [self performSegueWithIdentifier:@"toDeal" sender:self];
+//    }
 }
 
 
@@ -76,182 +76,137 @@
     
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+            self.new = false;
+            if (!user) {
+                NSString *errorMessage = nil;
+                if (!error) {
+                    NSLog(@"Uh oh. The user cancelled the Facebook login.");
+                    errorMessage = @"Uh oh. The user cancelled the Facebook login.";
+                } else {
+                    NSLog(@"Uh oh. An error occurred: %@", error);
+                    errorMessage = [error localizedDescription];
+                }
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
+                                                                message:errorMessage
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"Dismiss", nil];
+                [alert show];
+            } else {
+                [self updateUserInformation];
+                if (user.isNew) {
+                    NSLog(@"User with facebook signed up and logged in!");
+                    self.new = true;
+                } else {
+                    NSLog(@"User with facebook logged in!");
+                }
+                
+            }
+        }];
+    });
     
+    
+    // Add a handler function for when the entire group completes
+    // It's possible that this will happen immediately if the other methods have already finished
+    dispatch_group_notify(group, queue, ^{
+        NSLog(@"Facebook functions finsihed");
+    });
     // Login PFUser using Facebook
-    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        BOOL new = false;
-        if (!user) {
-            NSString *errorMessage = nil;
-            if (!error) {
-                NSLog(@"Uh oh. The user cancelled the Facebook login.");
-                errorMessage = @"Uh oh. The user cancelled the Facebook login.";
-            } else {
-                NSLog(@"Uh oh. An error occurred: %@", error);
-                errorMessage = [error localizedDescription];
-            }
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
-                                                            message:errorMessage
-                                                           delegate:nil
-                                                  cancelButtonTitle:nil
-                                                  otherButtonTitles:@"Dismiss", nil];
-            [alert show];
-        } else {
-            [self updateUserInformation];
-            if (user.isNew) {
-                NSLog(@"User with facebook signed up and logged in!");
-                [self performSegueWithIdentifier:@"toWelcome" sender:self];
-                new = true;
-            } else {
-                NSLog(@"User with facebook logged in!");
-                [self performSegueWithIdentifier:@"toDeal" sender:self];
-            }
-
-        }
-    }];
 }
 -(void) updateUserInformation
 {
-    FBRequest *request = [FBRequest requestForMe];
-    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if(!error){
-            NSDictionary *userDictionary = (NSDictionary *)result;
-            //create URL
-            NSString *facebookID = userDictionary[@"id"];
-            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-            NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity:8];
-            if(userDictionary[@"name"]){
-                userProfile[@"name"] = userDictionary[@"name"];
-            }
-            if(userDictionary[@"email"]){
-                userProfile[@"email"] = userDictionary[@"email"];
-            }
-            if(userDictionary[@"first_name"]){
-                userProfile[@"first_name"] = userDictionary[@"first_name"];
-            }
-            if(userDictionary[@"location"][@"name"]){
-                userProfile[@"location"] = userDictionary[@"location"][@"name"];
-            }
-            if(userDictionary[@"gender"]){
-                userProfile[@"gender"] = userDictionary[@"gender"];
-            }
-            if(userDictionary[@"birthday"]){
-                userProfile[@"birthday"] = userDictionary[@"birthday"];
-            }
-            if(userDictionary[@"id"]){
-                userProfile[@"fb_id"] = userDictionary[@"id"];
-            }
-            if([pictureURL absoluteString]){
-                userProfile[@"pictureURL"] = [pictureURL absoluteString];
-            }
-            if([[PFUser currentUser] isNew]){
-                [PFUser currentUser][@"new"] = @1;
-            }
-            else{
-                [PFUser currentUser][@"new"] = @0;
-            }
-            [[PFUser currentUser] setObject:userProfile[@"fb_id"] forKey:@"fb_id"];
-            
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
-            PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
-            [acl setPublicReadAccess:YES];
-            [[PFUser currentUser] setObject:acl forKey:@"ACL"];
-            
-            [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if(succeeded){
-                    NSLog(@"User saved successfully");
-                    NSLog(@"User with facebook logged in!");
-                    if ( [[PFUser currentUser][@"new"] isEqualToNumber:@0]){
-                        [self performSegueWithIdentifier:@"toDeal" sender:self];
-                    }
+    dispatch_queue_t queue_1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group_1 = dispatch_group_create();
+    dispatch_group_async(group_1, queue_1, ^{
+        FBRequest *request = [FBRequest requestForMe];
+        [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if(!error){
+                NSDictionary *userDictionary = (NSDictionary *)result;
+                //create URL
+                NSString *facebookID = userDictionary[@"id"];
+                NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+                NSMutableDictionary *userProfile = [[NSMutableDictionary alloc] initWithCapacity:8];
+                if(userDictionary[@"name"]){
+                    userProfile[@"name"] = userDictionary[@"name"];
+                }
+                if(userDictionary[@"email"]){
+                    userProfile[@"email"] = userDictionary[@"email"];
+                }
+                if(userDictionary[@"first_name"]){
+                    userProfile[@"first_name"] = userDictionary[@"first_name"];
+                }
+                if(userDictionary[@"location"][@"name"]){
+                    userProfile[@"location"] = userDictionary[@"location"][@"name"];
+                }
+                if(userDictionary[@"gender"]){
+                    userProfile[@"gender"] = userDictionary[@"gender"];
+                }
+                if(userDictionary[@"birthday"]){
+                    userProfile[@"birthday"] = userDictionary[@"birthday"];
+                }
+                if(userDictionary[@"id"]){
+                    userProfile[@"fb_id"] = userDictionary[@"id"];
+                }
+                if([pictureURL absoluteString]){
+                    userProfile[@"pictureURL"] = [pictureURL absoluteString];
+                }
+                if([[PFUser currentUser] isNew]){
+                    [PFUser currentUser][@"new"] = @1;
                 }
                 else{
-                    NSLog(@"User not saved %@", error);
+                    [PFUser currentUser][@"new"] = @0;
                 }
-            }];
-
-            [self requestImage];
+                [[PFUser currentUser] setObject:userProfile[@"fb_id"] forKey:@"fb_id"];
+                
+                [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+                PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
+                [acl setPublicReadAccess:YES];
+                [[PFUser currentUser] setObject:acl forKey:@"ACL"];
+                
+                [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded){
+                        NSLog(@"User saved successfully");
+                        NSLog(@"User with facebook logged in!");
+                    }
+                    else{
+                        NSLog(@"User not saved %@", error);
+                    }
+                }];
+            }
+            else{
+                NSLog(@"Error in Facebook Request %@", error);
+            }
+        }];
+        [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+            if (!error) {
+                // result will contain an array with your user's friends in the "data" key
+                NSArray *friendObjects = [result objectForKey:@"data"];
+                NSMutableArray *friends = [NSMutableArray arrayWithCapacity:friendObjects.count];
+                // Create a list of friends' Facebook IDs
+                for (NSDictionary *friendObject in friendObjects) {
+                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
+                    [dict setObject:friendObject[@"id"] forKey:@"fb_id"];
+                    [dict setObject:friendObject[@"name"] forKey:@"name"];
+                    [friends addObject:dict];
+                }
+                [[PFUser currentUser] setObject:friends forKey:@"friends"];
+                [[PFUser currentUser] saveInBackground];
+            }
+        }];
+    });
+    dispatch_group_notify(group_1, queue_1, ^{
+        NSLog(@"update finished");
+        if(self.new){
+            [self performSegueWithIdentifier:@"toWelcome" sender:self];
         }
         else{
-            NSLog(@"Error in Facebook Request %@", error);
+            [self performSegueWithIdentifier:@"toDeal" sender:self];
         }
-    }];
-    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error) {
-            // result will contain an array with your user's friends in the "data" key
-            NSArray *friendObjects = [result objectForKey:@"data"];
-            NSMutableArray *friendIds = [NSMutableArray arrayWithCapacity:friendObjects.count];
-            // Create a list of friends' Facebook IDs
-            for (NSDictionary *friendObject in friendObjects) {
-                [friendIds addObject:[friendObject objectForKey:@"id"]];
-            }
-        }
-    }];
-}
-
--(void)uploadPFFileToParse:(UIImage *)image
-{
-    NSLog(@"upload called");
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.8);
-    if(!imageData){
-        NSLog(@"Image Data not found");
-        return;
-    }
-    PFFile *photoFile = [PFFile fileWithData:imageData];
-    [photoFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded){
-            PFObject *photo = [PFObject objectWithClassName:@"ProfilePhoto"];
-            [photo setObject:[PFUser currentUser] forKey:@"user"];
-            [photo setObject:photoFile forKey:@"profile_image"];
-            [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if(succeeded){
-                    NSLog(@"Profile picture was saved successfully");
-                    if ([[PFUser currentUser][@"new"] isEqualToNumber:@1]) {
-                        NSLog(@"User with facebook signed up and logged in!");
-                        [self performSegueWithIdentifier:@"toWelcome" sender:self];
-                    }
-                }
-                else{
-                    NSLog(@"Picture not saved: %@", error);
-                }
-
-            }];
-        }
-    }];
-}
-
-- (void) requestImage
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"ProfilePhoto"];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-        if(number  == 0)
-        {
-            PFUser *user =[PFUser currentUser];
-            self.imageData = [[NSMutableData alloc] init];
-            NSURL *profilePictureURL = [NSURL URLWithString:user[@"profile"][@"pictureURL"]];
-            NSURLRequest *urlRequest= [NSURLRequest requestWithURL:profilePictureURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:4.0f];
-            NSURLConnection *urlConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
-            if(!urlConnection){
-                NSLog(@"failed to download picture");
-            }
-            else{
-                NSLog(@"pic received");
-            }
-        }
-    }];
-
-}
-
-- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [self.imageData appendData:data];
-}
-
-- (void) connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    UIImage *profilePicture = [UIImage imageWithData:self.imageData];
-    [self uploadPFFileToParse:profilePicture];
-    
+    });
 }
 
 

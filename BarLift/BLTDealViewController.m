@@ -16,6 +16,10 @@
 
 @implementation BLTDealViewController
 
+- (void) viewWillAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(updateUI) name: @"UpdateUINotification" object: nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -25,7 +29,14 @@
         [self.sidebarButton setAction: @selector( rightRevealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
     // Do any additional setup after loading the view.
+}
+
+
+- (void) updateUI {
+
+
 }
 
 - (void)didReceiveMemoryWarning {
