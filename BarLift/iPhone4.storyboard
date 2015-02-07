@@ -163,6 +163,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="wlo-Xv-Ww5" eventType="touchUpInside" id="gIs-hq-gVe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,7 +231,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="highlightedColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="LBx-be-7tF">
                                         <rect key="frame" x="52" y="62" width="253" height="35"/>
@@ -247,6 +250,9 @@
                                 <state key="normal" title="I'm Going">
                                     <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goingButtonPressed:" destination="Met-o4-vJe" eventType="touchUpInside" id="VWV-MI-Yk2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hx7-gG-ELQ">
                                 <rect key="frame" x="118" y="425" width="85" height="21"/>
@@ -256,6 +262,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="Met-o4-vJe" eventType="touchUpInside" id="uU0-yg-Jw4"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" id="52f-Rt-df6">
                                 <rect key="frame" x="23" y="414" width="275" height="3"/>
@@ -286,9 +295,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" id="25E-yB-mJi">
-                                                    <rect key="frame" x="8" y="80" width="86" height="12"/>
+                                                    <rect key="frame" x="8" y="75" width="86" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -316,11 +325,12 @@
                         <barButtonItem key="leftBarButtonItem" image="update-32.png" id="Od6-Gq-zMl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu-32.png" id="pP2-dP-pU9">
+                        <barButtonItem key="rightBarButtonItem" image="menu-32.png" id="pP2-dP-pU9">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundView" destination="oxb-VB-iuB" id="qTW-cc-5r0"/>
                         <outlet property="barAddress" destination="LBx-be-7tF" id="sK9-bz-yCT"/>
                         <outlet property="barName" destination="uZx-cW-duU" id="2Kf-WN-3lo"/>
                         <outlet property="dealName" destination="Gdj-8e-Ll1" id="4Ia-Se-hrz"/>

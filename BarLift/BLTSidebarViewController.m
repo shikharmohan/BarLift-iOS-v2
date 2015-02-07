@@ -8,6 +8,8 @@
 
 #import "BLTSidebarViewController.h"
 #import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+
 
 @interface BLTSidebarViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profPic;
@@ -34,6 +36,19 @@
 
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)logoutButtonPressed:(UIButton *)sender {
+    if ([PFUser currentUser]) {
+        [[PFFacebookUtils session] closeAndClearTokenInformation];
+        [PFUser logOut];
+    } else {
+        NSLog(@"currentUser: %@", [PFUser currentUser]);
+    }
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

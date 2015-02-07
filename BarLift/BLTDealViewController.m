@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *barAddress;
 @property (weak, nonatomic) IBOutlet UIButton *goingButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @property (weak, nonatomic) PFObject *currentDeal;
 @end
 
@@ -41,7 +42,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    friendsArray = [NSArray arrayWithObjects: [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], nil];
+    friendsArray = [NSArray arrayWithObjects: [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], nil];
 
     
     //create ui with deal
@@ -57,6 +58,7 @@
     
     [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:@{@"location": @"Northwestern"} block:^(id object, NSError *error) {
         if(!error){
+            self.currentDeal = (PFObject *) object[0];
             self.dealName.text = object[0][@"name"];
             self.barName.text = object[0][@"user"][@"bar_name"];
             self.barAddress.text = object[0][@"user"][@"address"];
@@ -68,6 +70,52 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Going Button
+- (IBAction)goingButtonPressed:(UIButton *)sender {
+    [UIView transitionWithView:self.backgroundView duration:3.5f options:UIViewAnimationOptionTransitionNone animations:^{
+        
+        [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
+    }completion:^(BOOL finished) {
+        
+    }];
+    self.goingButton.tintColor = [UIColor grayColor];
+    self.goingButton.enabled = NO;
+    
+}
+
+- (IBAction)shareButtonPressed:(UIButton *)sender {
+    
+    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
+    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
+    
+    NSArray *objectsToShare = @[textToShare, myWebsite];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+//    
+//    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+//                                   UIActivityTypePrint,
+//                                   UIActivityTypeAssignToContact,
+//                                   UIActivityTypeSaveToCameraRoll,
+//                                   UIActivityTypeAddToReadingList,
+//                                   UIActivityTypePostToFlickr,
+//                                   UIActivityTypePostToVimeo];
+//    
+//    activityVC.excludedActivityTypes = excludeActivities;
+//    
+    [self presentViewController:activityVC animated:YES completion:nil];
+    if ([activityVC respondsToSelector:@selector(popoverPresentationController)])
+    {
+        // iOS 8+
+        UIPopoverPresentationController *presentationController = [activityVC popoverPresentationController];
+        
+        presentationController.sourceView = sender; // if button or change to self.view.
+    }
+}
+
+
+
 
 #pragma mark - Collection View Methods
 
@@ -98,6 +146,8 @@
     });
     return cell;
 }
+
+
 
 /*
 #pragma mark - Navigation
