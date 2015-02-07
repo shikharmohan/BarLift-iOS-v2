@@ -76,9 +76,6 @@
     
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_group_async(group, queue, ^{
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
             self.new = false;
             if (!user) {
@@ -107,21 +104,16 @@
                 
             }
         }];
-    });
+
     
     
     // Add a handler function for when the entire group completes
     // It's possible that this will happen immediately if the other methods have already finished
-    dispatch_group_notify(group, queue, ^{
-        NSLog(@"Facebook functions finsihed");
-    });
+    
     // Login PFUser using Facebook
 }
 -(void) updateUserInformation
 {
-    dispatch_queue_t queue_1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_group_t group_1 = dispatch_group_create();
-    dispatch_group_async(group_1, queue_1, ^{
         FBRequest *request = [FBRequest requestForMe];
         [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
             if(!error){
@@ -171,6 +163,29 @@
                     if(succeeded){
                         NSLog(@"User saved successfully");
                         NSLog(@"User with facebook logged in!");
+                        [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                            if (!error) {
+                                // result will contain an array with your user's friends in the "data" key
+                                NSArray *friendObjects = [result objectForKey:@"data"];
+                                NSMutableArray *friends = [NSMutableArray arrayWithCapacity:friendObjects.count];
+                                // Create a list of friends' Facebook IDs
+                                for (NSDictionary *friendObject in friendObjects) {
+                                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
+                                    [dict setObject:friendObject[@"id"] forKey:@"fb_id"];
+                                    [dict setObject:friendObject[@"name"] forKey:@"name"];
+                                    [friends addObject:dict];
+                                }
+                                [[PFUser currentUser] setObject:friends forKey:@"friends"];
+                                [[PFUser currentUser] saveInBackground];
+                                NSLog(@"Got friends");
+                                if(self.new){
+                                    [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                                }
+                                else{
+                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
+                                }
+                            }
+                        }];
                     }
                     else{
                         NSLog(@"User not saved %@", error);
@@ -181,32 +196,7 @@
                 NSLog(@"Error in Facebook Request %@", error);
             }
         }];
-        [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-            if (!error) {
-                // result will contain an array with your user's friends in the "data" key
-                NSArray *friendObjects = [result objectForKey:@"data"];
-                NSMutableArray *friends = [NSMutableArray arrayWithCapacity:friendObjects.count];
-                // Create a list of friends' Facebook IDs
-                for (NSDictionary *friendObject in friendObjects) {
-                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
-                    [dict setObject:friendObject[@"id"] forKey:@"fb_id"];
-                    [dict setObject:friendObject[@"name"] forKey:@"name"];
-                    [friends addObject:dict];
-                }
-                [[PFUser currentUser] setObject:friends forKey:@"friends"];
-                [[PFUser currentUser] saveInBackground];
-            }
-        }];
-    });
-    dispatch_group_notify(group_1, queue_1, ^{
-        NSLog(@"update finished");
-        if(self.new){
-            [self performSegueWithIdentifier:@"toWelcome" sender:self];
-        }
-        else{
-            [self performSegueWithIdentifier:@"toDeal" sender:self];
-        }
-    });
+
 }
 
 

@@ -8,20 +8,21 @@
 
 #import "BLTDealViewController.h"
 #import "SWRevealViewController.h"
-
+#import <Parse/Parse.h>
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-
+@property (weak, nonatomic) PFObject *currentDeal;
 @end
 
 @implementation BLTDealViewController
 
 - (void) viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(updateUI) name: @"UpdateUINotification" object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(createUI) name: @"UpdateUINotification" object: nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -30,13 +31,23 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
+    //create ui with deal
+    [self createUI];
+    
     // Do any additional setup after loading the view.
 }
 
 
-- (void) updateUI {
-
-
+- (void) createUI {
+    //deal created here
+//    [PFCloud callFunctionInBackground:@"getCurrentDeal"
+//                       withParameters:@{@"location": [PFUser currentUser][@"university_name"]}
+//                                block:^(NSString *result, NSError *error) {
+//                                    if (!error) {
+//                                        // result is @"Hello world!"
+//                                        NSLog(@"%@", result);
+//                                    }
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

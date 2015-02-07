@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.isNew">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__39-[BLTSidebarViewController viewDidLoad]_block_invoke:BLTSidebarViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "picture">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -11,10 +27,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
+         contextName = "-[BLTSidebarViewController viewDidLoad]:BLTSidebarViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "user.isNew">
+               value = "self.profPic.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

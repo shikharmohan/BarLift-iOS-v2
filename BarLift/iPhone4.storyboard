@@ -210,18 +210,13 @@
                     <view key="view" contentMode="scaleToFill" id="Gjk-oZ-s8c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfw-1D-QEX">
-                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="BarLift" id="ZVA-sW-Gjd">
                         <barButtonItem key="leftBarButtonItem" image="update-32.png" id="Od6-Gq-zMl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="menu-32.png" id="pP2-dP-pU9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="menu-32.png" id="pP2-dP-pU9">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
