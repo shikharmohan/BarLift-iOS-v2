@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BLTDealViewController : UIViewController
+@interface BLTDealViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end

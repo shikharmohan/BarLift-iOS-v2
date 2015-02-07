@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__33-[BLTDealViewController createUI]_block_invoke:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "object[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString
