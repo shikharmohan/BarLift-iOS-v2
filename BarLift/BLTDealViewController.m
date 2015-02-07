@@ -40,14 +40,16 @@
 
 - (void) createUI {
     //deal created here
-//    [PFCloud callFunctionInBackground:@"getCurrentDeal"
-//                       withParameters:@{@"location": [PFUser currentUser][@"university_name"]}
-//                                block:^(NSString *result, NSError *error) {
-//                                    if (!error) {
-//                                        // result is @"Hello world!"
-//                                        NSLog(@"%@", result);
-//                                    }
-//    }];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
+    
+    [PFCloud callFunctionInBackground:@"getCurrentDeal"
+                       withParameters:@{@"location": @"Northwestern"}
+                                block:^(NSString *result, NSError *error) {
+                                    if (!error) {
+                                        // result is @"Hello world!"
+                                        NSLog(@"%@", result);
+                                    }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
