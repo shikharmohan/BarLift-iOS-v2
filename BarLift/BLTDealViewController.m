@@ -89,16 +89,16 @@
 
 #pragma mark - Going Button
 - (IBAction)goingButtonPressed:(UIButton *)sender {
-    [UIView transitionWithView:self.backgroundView duration:3.5f options:UIViewAnimationOptionTransitionNone animations:^{
-        
-        [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
-    }completion:^(BOOL finished) {
-        
-    }];
-    self.goingButton.tintColor = [UIColor grayColor];
     [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict block:^(id object, NSError *error) {
         if(!error){
             NSLog(@"%@", object);
+            self.goingButton.enabled = NO;
+            [self.goingButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [UIView transitionWithView:self.backgroundView duration:2.5f options:UIViewAnimationOptionTransitionNone animations:^{
+                [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
+            }completion:^(BOOL finished) {
+                
+            }];
         }
     }];
 }

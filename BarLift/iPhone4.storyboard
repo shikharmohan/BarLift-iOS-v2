@@ -48,6 +48,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="v2e-vj-ouR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="2TI-1H-8pm" id="nlX-mx-ef2"/>
@@ -135,10 +136,13 @@
                                 <rect key="frame" x="75" y="370" width="229" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                <state key="normal" title="INVITE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="CALL UBER">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="callUberPressed:" destination="wlo-Xv-Ww5" eventType="touchUpInside" id="7Ra-oD-gc1"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" id="2xf-De-LUo">
                                 <rect key="frame" x="75" y="420" width="245" height="3"/>
@@ -165,12 +169,14 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="wlo-Xv-Ww5" eventType="touchUpInside" id="gIs-hq-gVe"/>
+                                    <segue destination="s9u-qE-TNu" kind="modal" identifier="toLogin" id="aft-rz-cmX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="callUberButton" destination="bgZ-Bl-F9j" id="5hI-pz-Ith"/>
                         <outlet property="name" destination="935-4J-V4w" id="nUj-SJ-sFR"/>
                         <outlet property="profPic" destination="CXo-7o-hAE" id="iBH-Lm-yPb"/>
                     </connections>

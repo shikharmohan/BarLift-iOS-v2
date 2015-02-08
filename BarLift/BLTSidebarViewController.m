@@ -14,6 +14,7 @@
 @interface BLTSidebarViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profPic;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIButton *callUberButton;
 
 @end
 
@@ -45,7 +46,7 @@
         NSLog(@"currentUser: %@", [PFUser currentUser]);
     }
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"toLogin" sender:self];
     
 }
 
@@ -53,6 +54,37 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)callUberPressed:(UIButton *)sender {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"uber://"]]) {
+        [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:@{@"location":@"Northwestern"} block:^(id object, NSError *error) {
+            if(!error){
+                NSString *address = object[0][@"user"][@"address"];
+                NSString *newString = [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+                NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=v_LwNpt8BzPKedHILykv2m2-9o8BbvsW&action=setPickup&pickup[formatted_address]=%@", newString]];
+                [[UIApplication sharedApplication] openURL:url];
+            }
+            else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Couldn't Get Information"
+                                                                message:@"Address was not retrieved or processed."
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"Dismiss", nil];
+            }
+
+        }];
+        
+    }
+    else {
+        // No Uber app! Open Mobile Website.
+        NSURL* appStoreURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8"];
+        [[UIApplication sharedApplication] openURL:appStoreURL];
+    }
+
+
 }
 
 /*

@@ -33,11 +33,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-//     //Check if user is cached and linked to Facebook, if so, bypass login
-//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-//        [self updateUserInformation];
-//        [self performSegueWithIdentifier:@"toDeal" sender:self];
-//    }
+     //Check if user is cached and linked to Facebook, if so, bypass login
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self updateUserInformation];
+    }
 }
 
 
