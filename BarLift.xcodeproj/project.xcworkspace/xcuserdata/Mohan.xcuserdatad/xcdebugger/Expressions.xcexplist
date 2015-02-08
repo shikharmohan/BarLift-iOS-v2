@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[BLTSidebarViewController viewDidLoad]:BLTSidebarViewController.m">
+         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.profPic.image">
+               value = "user.isNew">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "if ([PFUser currentUser])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -19,18 +35,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "user.isNew">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "__39-[BLTSidebarViewController viewDidLoad]_block_invoke:BLTSidebarViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "picture">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealViewController viewDidLoad]:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTSidebarViewController viewDidLoad]:BLTSidebarViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.profPic.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -43,10 +67,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
+         contextName = "__33-[BLTDealViewController createUI]_block_invoke_2:BLTDealViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "if ([PFUser currentUser])">
+               value = "object">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

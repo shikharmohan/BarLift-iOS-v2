@@ -18,12 +18,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *goingButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) PFObject *currentDeal;
 @end
 
 @implementation BLTDealViewController
 {
-    NSArray *friendsArray;
+    NSMutableArray *friendsArray;
+    NSMutableDictionary *dict;
+
 
 }
 
@@ -42,9 +45,12 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    friendsArray = [NSArray arrayWithObjects: [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Shikhar Mohan", @"10153138455222223", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], [NSArray arrayWithObjects: @"Zak Allen", @"10206051829519092", nil], nil];
 
-    
+    dict = [[NSMutableDictionary alloc] initWithCapacity:3];
+    [dict setObject:[PFUser currentUser][@"university_name"] forKey:@"location"];
+    [dict setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
+    [dict setObject:[[PFUser currentUser] objectId] forKey:@"user_objectId"];
+
     //create ui with deal
     [self createUI];
     
@@ -54,14 +60,23 @@
 
 - (void) createUI {
     //deal created here
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
-    
-    [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:@{@"location": @"Northwestern"} block:^(id object, NSError *error) {
+    friendsArray = [[NSMutableArray alloc] initWithCapacity:2];
+
+    [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:dict block:^(id object, NSError *error) {
         if(!error){
             self.currentDeal = (PFObject *) object[0];
             self.dealName.text = object[0][@"name"];
             self.barName.text = object[0][@"user"][@"bar_name"];
             self.barAddress.text = object[0][@"user"][@"address"];
+            [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
+            [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
+                if(!error){
+                    for (NSDictionary *obj in object){
+                        [friendsArray addObject:obj];
+                    }
+                    [self.collectionView reloadData];
+                }
+            }];
         }
     }];
 }
@@ -81,8 +96,11 @@
         
     }];
     self.goingButton.tintColor = [UIColor grayColor];
-    self.goingButton.enabled = NO;
-    
+    [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict block:^(id object, NSError *error) {
+        if(!error){
+            NSLog(@"%@", object);
+        }
+    }];
 }
 
 - (IBAction)shareButtonPressed:(UIButton *)sender {

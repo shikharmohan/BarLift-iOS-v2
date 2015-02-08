@@ -148,6 +148,7 @@
                 }
                 if([[PFUser currentUser] isNew]){
                     [PFUser currentUser][@"new"] = @1;
+                    [PFUser currentUser][@"deals_redeemed"] = @0;
                 }
                 else{
                     [PFUser currentUser][@"new"] = @0;
@@ -158,7 +159,7 @@
                 PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
                 [acl setPublicReadAccess:YES];
                 [[PFUser currentUser] setObject:acl forKey:@"ACL"];
-                
+                [[PFUser currentUser] setObject:@"Northwestern" forKey:@"university_name"];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded){
                         NSLog(@"User saved successfully");
