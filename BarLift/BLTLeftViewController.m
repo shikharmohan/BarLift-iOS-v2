@@ -12,6 +12,7 @@
 @interface BLTLeftViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) JFMinimalNotification *minimalNotification;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
 
 @end
 
@@ -24,10 +25,20 @@
     [super viewDidLoad];
     friendsArray = [PFUser currentUser][@"friends"];
     // Do any additional setup after loading the view.
-    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
+    
+    //Close Button
+    
+    self.closeButton.layer.cornerRadius = 2;
+    self.closeButton.layer.borderWidth = 1;
+    self.closeButton.layer.borderColor = [UIColor whiteColor].CGColor;
+
+    PFQuery *query = [PFInstallation query];
+    [PFInstallation currentInstallation];
+    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleDefault
                                                                       title:@"You just zapped a friend!"
                                                                    subTitle:@"Have a great night!"];
-    [self.minimalNotification setFrame:CGRectMake(0, 508, 120, 60)];
+    
+    [self.minimalNotification setFrame:CGRectMake(0, 0, 320, 100)];
     
     /**
      * Set the desired font for the title and sub-title labels
@@ -74,6 +85,8 @@
             return;
         dispatch_async(dispatch_get_main_queue(), ^{
             [friendPic initWithImage:[UIImage imageWithData:data scale:1.0]];
+            friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
+            friendPic.clipsToBounds = YES;
         });
     });
     return cell;
@@ -86,12 +99,17 @@
     UILabel *str = (UILabel *)[cell viewWithTag:6];
     NSString *text = str.text;
     //Minimal Notification
+
     [self.minimalNotification show];
     [self performSelector:@selector(dismissNotification) withObject:nil afterDelay:2.5];
 
 }
 - (void) dismissNotification {
     [self.minimalNotification dismiss];
+}
+- (IBAction)closeButtonPressed:(UIButton *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+
 }
 
 

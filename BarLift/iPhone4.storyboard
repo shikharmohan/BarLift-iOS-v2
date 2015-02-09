@@ -89,7 +89,6 @@
                     <connections>
                         <segue destination="Rr1-uE-SsW" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ET0-Dc-siI"/>
                         <segue destination="wlo-Xv-Ww5" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="tOl-kp-K5x"/>
-                        <segue destination="fKB-n8-2uV" kind="custom" identifier="sw_left" customClass="SWRevealViewControllerSegueSetController" id="cg7-k6-mmK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc1-LY-BBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -333,7 +332,7 @@
                         <barButtonItem key="leftBarButtonItem" image="groups-32.png" id="Od6-Gq-zMl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="shareButtonPressed:" destination="Met-o4-vJe" id="s9W-8u-Ol1"/>
+                                <action selector="shareButtonPressed:" destination="Met-o4-vJe" id="LWB-ZU-ZUD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="menu-32.png" id="pP2-dP-pU9">
@@ -368,19 +367,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZAP YOUR FRIENDS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XzA-0M-YRd">
-                                <rect key="frame" x="5" y="42" width="249" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZAP YOUR FRIENDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XzA-0M-YRd">
+                                <rect key="frame" x="36" y="42" width="249" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="elh-vG-ic6">
-                                <rect key="frame" x="0.0" y="103" width="200" height="445"/>
+                                <rect key="frame" x="0.0" y="103" width="320" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.4941176471" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XTx-R7-NA3">
-                                    <size key="itemSize" width="168" height="151"/>
+                                    <size key="itemSize" width="147" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -390,13 +389,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="168" height="151"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vqY-bI-ZnC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="168" height="151"/>
+                                                    <rect key="frame" x="31" y="8" width="85" height="79"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="04S-wO-mMT">
+                                                    <rect key="frame" x="8" y="100" width="131" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -407,9 +413,24 @@
                                     <outlet property="delegate" destination="fKB-n8-2uV" id="muR-Yd-r0q"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="87H-c5-FfT">
+                                <rect key="frame" x="101" y="497" width="119" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="fKB-n8-2uV" eventType="touchUpInside" id="mbM-tJ-lFo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.4941176471" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="87H-c5-FfT" id="Ke4-nI-cfA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPQ-JG-Hkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

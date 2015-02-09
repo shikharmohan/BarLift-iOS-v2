@@ -177,6 +177,10 @@
                                 }
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
+                                [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
+                                [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                                [[PFInstallation currentInstallation] saveInBackground];
+
                                 NSLog(@"Got friends");
                                 if(self.new){
                                     [self performSegueWithIdentifier:@"toDeal" sender:self];
