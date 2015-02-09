@@ -101,7 +101,15 @@
 
 
 -(void) labelTap{
-    
+    if ([[UIApplication sharedApplication] canOpenURL:
+         [NSURL URLWithString:@"comgooglemaps://"]]) {
+        
+        NSString *addr = [self.barAddress.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        [[UIApplication sharedApplication] openURL:
+         [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%@",addr]]];
+    } else {
+        NSLog(@"Can't use comgooglemaps://");
+    }
 
 }
 
