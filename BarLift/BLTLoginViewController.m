@@ -179,7 +179,7 @@
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
                                 if(self.new){
-                                    [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
                                 }
                                 else{
                                     [self performSegueWithIdentifier:@"toDeal" sender:self];

@@ -20,6 +20,7 @@
 		016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E01A889282001A27FF /* NSInvocation+Constructors.m */; };
 		016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E21A889282001A27FF /* UIColor+JFMinimalNotificationColors.m */; };
 		016729E91A889282001A27FF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E41A889282001A27FF /* UIView+Round.m */; };
+		016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729EA1A889626001A27FF /* lightning_bolt-32.png */; };
 		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
@@ -143,6 +144,7 @@
 		016729E21A889282001A27FF /* UIColor+JFMinimalNotificationColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JFMinimalNotificationColors.m"; sourceTree = "<group>"; };
 		016729E31A889282001A27FF /* UIView+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Round.h"; sourceTree = "<group>"; };
 		016729E41A889282001A27FF /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
+		016729EA1A889626001A27FF /* lightning_bolt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightning_bolt-32.png"; sourceTree = "<group>"; };
 		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				016729EA1A889626001A27FF /* lightning_bolt-32.png */,
 				01C0EA471A85D98900DBF49E /* near_me-25.png */,
 				016729D41A887A6A001A27FF /* groups-32.png */,
 				01EBDB8D1A831AEC00A9E175 /* menu-32.png */,
@@ -743,6 +746,7 @@
 				01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
+				016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */,
 				01EBDB741A81A2DF00A9E175 /* Icon-40@2x.png in Resources */,
 				01D7120C1A7450B4001C29B7 /* barliftlogo.png in Resources */,
 				01EBDB7B1A81A2DF00A9E175 /* Icon-Small@2x.png in Resources */,

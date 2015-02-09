@@ -80,6 +80,9 @@
             <PersistentString
                value = "object">
             </PersistentString>
+            <PersistentString
+               value = "self.collectionView.frame.size.height">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
    </ContextStates>

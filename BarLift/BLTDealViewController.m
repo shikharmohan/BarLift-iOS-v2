@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 @property (weak, nonatomic) PFObject *currentDeal;
+@property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
 @property (weak, nonatomic) JFMinimalNotification *minimalNotification;
 @end
 
@@ -31,7 +32,7 @@
 {
     NSMutableArray *friendsArray;
     NSMutableDictionary *dict;
-
+    CGSize iOSScreenSize;
 
 }
 
@@ -42,16 +43,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.scroller setScrollEnabled:YES];
+    iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    if (iOSScreenSize.height == 568){
     [self.scroller setContentSize:CGSizeMake(320, 640)];
-    
+    }
+    if (iOSScreenSize.height == 667){
+    [self.scroller setContentSize:CGSizeMake(375, 500)];
+    }
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
         [self.sidebarButton setTarget: self.revealViewController];
         [self.sidebarButton setAction: @selector( rightRevealToggle: )];
-        [self.shareButton setTarget:self.revealViewController];
-        [self.shareButton setAction:@selector(revealToggle:)];
+//        [self.shareButton setTarget:self.revealViewController];
+//        [self.shareButton setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
@@ -74,7 +80,7 @@
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
     [self.barAddress addGestureRecognizer:tapGesture];
-    
+    [self.locationIcon addGestureRecognizer:tapGesture];
     
     //Minimal Notification
     self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
@@ -127,17 +133,27 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for (NSDictionary *obj in object){
-                        [friendsArray addObject:obj];
+                    for(int i = 0; i < 20; i++) {
+                        for (NSDictionary *obj in object){
+                            [friendsArray addObject:obj];
+                        }
                     }
+
                     int len = [friendsArray count];
                     float rows = len / 3;
                     float padding = rows*105;
                     [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
                                                              self.collectionView.frame.origin.y,
                                                              self.collectionView.frame.size.width,padding+193)];
-                    [self.scroller setContentSize:CGSizeMake(320, 640+padding)];
+                    
+                    if(iOSScreenSize.height == 568){
+                        [self.scroller setContentSize:CGSizeMake(320, 640+padding)];
+                    }
+                    if(iOSScreenSize.height == 667){
+                        [self.scroller setContentSize:CGSizeMake(320, 500+padding)];
+                    }
                     [self.collectionView reloadData];
+                    
                 }
             }];
         }
@@ -173,34 +189,27 @@
     [self.minimalNotification dismiss];
 }
 
-//- (IBAction)shareButtonPressed:(id)sender {
-//    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
-//    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
-//    
-//    NSArray *objectsToShare = @[textToShare, myWebsite];
-//    
-//    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-//    
-//    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
-//                                   UIActivityTypeMail,
-//                                   UIActivityTypePrint,
-//                                   UIActivityTypeAssignToContact,
-//                                   UIActivityTypeSaveToCameraRoll,
-//                                   UIActivityTypeAddToReadingList,
-//                                   UIActivityTypePostToFlickr,
-//                                   UIActivityTypePostToVimeo];
-//    
-//    activityVC.excludedActivityTypes = excludeActivities;
-//    
-//    [self presentViewController:activityVC animated:YES completion:nil];
-//    if ([activityVC respondsToSelector:@selector(popoverPresentationController)])
-//    {
-//        // iOS 8+
-//        UIPopoverPresentationController *presentationController = [activityVC popoverPresentationController];
-//        
-//        presentationController.sourceView = sender; // if button or change to self.view.
-//    }
-//}
+- (IBAction)shareButtonPressed:(id)sender {
+    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
+    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
+    
+    NSArray *objectsToShare = @[textToShare, myWebsite];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    NSLog(@"Share button pressed");
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypeMail,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 
 

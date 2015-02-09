@@ -8,9 +8,10 @@
 
 #import "BLTLeftViewController.h"
 #import <Parse/Parse.h>
-
+#import "JFMinimalNotification.h"
 @interface BLTLeftViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) JFMinimalNotification *minimalNotification;
 
 @end
 
@@ -23,6 +24,26 @@
     [super viewDidLoad];
     friendsArray = [PFUser currentUser][@"friends"];
     // Do any additional setup after loading the view.
+    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
+                                                                      title:@"You just zapped a friend!"
+                                                                   subTitle:@"Have a great night!"];
+    [self.minimalNotification setFrame:CGRectMake(0, 508, 120, 60)];
+    
+    /**
+     * Set the desired font for the title and sub-title labels
+     * Default is System Normal
+     */
+    UIFont* titleFont = [UIFont fontWithName:@"STHeitiK-Light" size:22];
+    [self.minimalNotification setTitleFont:titleFont];
+    UIFont* subTitleFont = [UIFont fontWithName:@"STHeitiK-Light" size:16];
+    [self.minimalNotification setSubTitleFont:subTitleFont];
+    
+    /**
+     * Add the notification to a view
+     */
+    [self.view addSubview:self.minimalNotification];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +63,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell2" forIndexPath:indexPath];
     UILabel *friendName = (UILabel *) [cell viewWithTag:6];
     UIImageView *friendPic = (UIImageView *) [cell viewWithTag:7];
     friendName.text = [[friendsArray objectAtIndex:indexPath.row] objectForKey:@"name"];
@@ -53,14 +74,25 @@
             return;
         dispatch_async(dispatch_get_main_queue(), ^{
             [friendPic initWithImage:[UIImage imageWithData:data scale:1.0]];
-            friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
-            friendPic.clipsToBounds = YES;
         });
     });
     return cell;
 }
 
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    UILabel *str = (UILabel *)[cell viewWithTag:6];
+    NSString *text = str.text;
+    //Minimal Notification
+    [self.minimalNotification show];
+    [self performSelector:@selector(dismissNotification) withObject:nil afterDelay:2.5];
+
+}
+- (void) dismissNotification {
+    [self.minimalNotification dismiss];
+}
 
 
 /*

@@ -125,10 +125,6 @@
     [PFPush handlePush:userInfo];
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-    
-
-}
 
 #pragma mark - Core Data stack
 
