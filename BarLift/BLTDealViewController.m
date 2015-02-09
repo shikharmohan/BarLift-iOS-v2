@@ -47,10 +47,12 @@
     {
         [self.sidebarButton setTarget: self.revealViewController];
         [self.sidebarButton setAction: @selector( rightRevealToggle: )];
+        [self.shareButton setTarget:self.revealViewController];
+        [self.shareButton setAction:@selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    
+
     self.goingButton.layer.cornerRadius = 2;
     self.goingButton.layer.borderWidth = 1;
     self.goingButton.layer.borderColor = [UIColor colorWithRed:0.984 green:0.4941 blue:0.0745 alpha:1].CGColor;
@@ -64,9 +66,20 @@
     //create ui with deal
     [self createUI];
     
+    
+    //Address-> Maps
+    UITapGestureRecognizer *tapGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+    [self.barAddress addGestureRecognizer:tapGesture];
+    
     // Do any additional setup after loading the view.
 }
 
+
+-(void) labelTap{
+    
+
+}
 
 - (void) createUI {
     //deal created here
@@ -121,34 +134,34 @@
         }
     }];
 }
-- (IBAction)shareButtonPressed:(id)sender {
-    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
-    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
-    
-    NSArray *objectsToShare = @[textToShare, myWebsite];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-    
-    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
-                                   UIActivityTypeMail,
-                                   UIActivityTypePrint,
-                                   UIActivityTypeAssignToContact,
-                                   UIActivityTypeSaveToCameraRoll,
-                                   UIActivityTypeAddToReadingList,
-                                   UIActivityTypePostToFlickr,
-                                   UIActivityTypePostToVimeo];
-    
-    activityVC.excludedActivityTypes = excludeActivities;
-    
-    [self presentViewController:activityVC animated:YES completion:nil];
-    if ([activityVC respondsToSelector:@selector(popoverPresentationController)])
-    {
-        // iOS 8+
-        UIPopoverPresentationController *presentationController = [activityVC popoverPresentationController];
-        
-        presentationController.sourceView = sender; // if button or change to self.view.
-    }
-}
+//- (IBAction)shareButtonPressed:(id)sender {
+//    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
+//    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
+//    
+//    NSArray *objectsToShare = @[textToShare, myWebsite];
+//    
+//    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+//    
+//    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+//                                   UIActivityTypeMail,
+//                                   UIActivityTypePrint,
+//                                   UIActivityTypeAssignToContact,
+//                                   UIActivityTypeSaveToCameraRoll,
+//                                   UIActivityTypeAddToReadingList,
+//                                   UIActivityTypePostToFlickr,
+//                                   UIActivityTypePostToVimeo];
+//    
+//    activityVC.excludedActivityTypes = excludeActivities;
+//    
+//    [self presentViewController:activityVC animated:YES completion:nil];
+//    if ([activityVC respondsToSelector:@selector(popoverPresentationController)])
+//    {
+//        // iOS 8+
+//        UIPopoverPresentationController *presentationController = [activityVC popoverPresentationController];
+//        
+//        presentationController.sourceView = sender; // if button or change to self.view.
+//    }
+//}
 
 
 

@@ -14,6 +14,7 @@
 		0166EC801A6995C40016E679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7F1A6995C40016E679 /* Images.xcassets */; };
 		0166EC8F1A6995C40016E679 /* BarLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC8E1A6995C40016E679 /* BarLiftTests.m */; };
 		016729D51A887A6A001A27FF /* groups-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729D41A887A6A001A27FF /* groups-32.png */; };
+		016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729D81A888463001A27FF /* BLTLeftViewController.m */; };
 		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
@@ -125,6 +126,8 @@
 		0166EC8D1A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC8E1A6995C40016E679 /* BarLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarLiftTests.m; sourceTree = "<group>"; };
 		016729D41A887A6A001A27FF /* groups-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-32.png"; sourceTree = "<group>"; };
+		016729D71A888463001A27FF /* BLTLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTLeftViewController.h; sourceTree = "<group>"; };
+		016729D81A888463001A27FF /* BLTLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTLeftViewController.m; sourceTree = "<group>"; };
 		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
@@ -340,6 +343,15 @@
 				0166EC8D1A6995C40016E679 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		016729D61A88843F001A27FF /* Right Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				016729D71A888463001A27FF /* BLTLeftViewController.h */,
+				016729D81A888463001A27FF /* BLTLeftViewController.m */,
+			);
+			name = "Right Sidebar";
 			sourceTree = "<group>";
 		};
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
@@ -595,6 +607,7 @@
 		01EBDB881A83134F00A9E175 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				016729D61A88843F001A27FF /* Right Sidebar */,
 				01EBDB851A83134B00A9E175 /* BLTSidebarViewController.h */,
 				01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */,
 			);
@@ -766,6 +779,7 @@
 				01D711C81A6E0BE7001C29B7 /* SRFSurfboardPanel.m in Sources */,
 				01D711C61A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m in Sources */,
 				01EBDB631A81535200A9E175 /* Reachability.m in Sources */,
+				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
