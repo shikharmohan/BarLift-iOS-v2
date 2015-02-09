@@ -11,7 +11,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <ParseCrashReporting/ParseCrashReporting.h>
 #import <FacebookSDK/FacebookSDK.h>
-
+//#import "Mixpanel.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    //[self setupMixpanel];
     [Parse setApplicationId:@"5DZi1FrdZcwBKXIxMplWsqYu3cEEumlmFDB1kKnC"
     clientKey:@"tzrpMCtTU3FWlZAZUHFXBHObk4i9WW5AxAYKHx3E"];
 
@@ -71,6 +71,24 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+/*- (void)setupMixpanel {
+    // Initialize Mixpanel
+    Mixpanel *mixpanel = [Mixpanel sharedInstanceWithToken:@"1f02c2cfc86e3a68a485c0fab0c17c34"];
+    
+    // Identify
+    NSString *mixpanelUUID = [[NSUserDefaults standardUserDefaults] objectForKey:@"MixpanelUUID"];
+    
+    if (!mixpanelUUID) {
+        mixpanelUUID = [[NSUUID UUID] UUIDString];
+        [[NSUserDefaults standardUserDefaults] setObject:mixpanelUUID forKey:@"MixpanelUUID"];
+    }
+    
+    [mixpanel identify:mixpanelUUID];
+    NSDictionary *properties = @{@"APIVersion": @"0.1"};
+    [mixpanel registerSuperProperties:properties];
+
+} */
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

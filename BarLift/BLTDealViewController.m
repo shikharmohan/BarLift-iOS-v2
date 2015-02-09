@@ -10,7 +10,7 @@
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
 #import "JFMinimalNotification.h"
-
+//#import "Mixpanel.h"
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (weak, nonatomic) IBOutlet UIImageView *dealTypeImageView;
@@ -82,25 +82,6 @@
     [self.barAddress addGestureRecognizer:tapGesture];
     [self.locationIcon addGestureRecognizer:tapGesture];
     
-    //Minimal Notification
-    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
-                                                                      title:@"You have just RSVP'd to the deal"
-                                                                   subTitle:@"Have a great night!"];
-    
-    /**
-     * Set the desired font for the title and sub-title labels
-     * Default is System Normal
-     */
-    UIFont* titleFont = [UIFont fontWithName:@"STHeitiK-Light" size:22];
-    [self.minimalNotification setTitleFont:titleFont];
-    UIFont* subTitleFont = [UIFont fontWithName:@"STHeitiK-Light" size:16];
-    [self.minimalNotification setSubTitleFont:subTitleFont];
-    
-    /**
-     * Add the notification to a view
-     */
-    [self.view addSubview:self.minimalNotification];
-
     
     // Do any additional setup after loading the view.
 }
@@ -141,13 +122,20 @@
 
                     int len = [friendsArray count];
                     float rows = len / 3;
-                    float padding = rows*100;
+                    float padding = (rows-1)*115;
+                    if(padding <0){
+                        padding = 0;
+                    }
+                    if(len %3 == 1 || len%3 == 2){
+                        padding += 115;
+                    }
                     [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
                                                              self.collectionView.frame.origin.y,
-                                                             self.collectionView.frame.size.width,padding+193)];
+                                                             self.collectionView.frame.size.width,padding+115)];
                     
+                    NSLog(@"%f", self.collectionView.frame.size.height);
                     if(iOSScreenSize.height == 568){
-                        [self.scroller setContentSize:CGSizeMake(320, 568+padding)];
+                        [self.scroller setContentSize:CGSizeMake(320, 620+padding)];
                     }
                     if(iOSScreenSize.height == 667){
                         [self.scroller setContentSize:CGSizeMake(375, 500+padding)];
@@ -180,6 +168,8 @@
                     self.goingButton.enabled = NO;
                     [self.minimalNotification show];
                     [self performSelector:@selector(dismissNotification) withObject:nil afterDelay:2.5];
+//                NSDictionary *properties = @{@"date" : [NSDate date]};
+//                [[Mixpanel sharedInstance] track:@"RSVP_event" properties:properties];
             }];
         }
     }];
@@ -207,7 +197,9 @@
                                    UIActivityTypePostToVimeo];
     
     activityVC.excludedActivityTypes = excludeActivities;
-    
+//    NSDictionary *properties = @{@"date" : [NSDate date]};
+//    [[Mixpanel sharedInstance] track:@"Share_event" properties:properties];
+
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 
