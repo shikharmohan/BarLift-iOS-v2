@@ -9,6 +9,8 @@
 #import "BLTDealViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
+#import "JFMinimalNotification.h"
+
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (weak, nonatomic) IBOutlet UIImageView *dealTypeImageView;
@@ -22,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 @property (weak, nonatomic) PFObject *currentDeal;
+@property (weak, nonatomic) JFMinimalNotification *minimalNotification;
 @end
 
 @implementation BLTDealViewController
@@ -71,6 +74,27 @@
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
     [self.barAddress addGestureRecognizer:tapGesture];
+    
+    
+    //Minimal Notification
+    self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
+                                                                      title:@"You have just RSVP'd to the deal"
+                                                                   subTitle:@"Have a great night!"];
+    
+    /**
+     * Set the desired font for the title and sub-title labels
+     * Default is System Normal
+     */
+    UIFont* titleFont = [UIFont fontWithName:@"STHeitiK-Light" size:22];
+    [self.minimalNotification setTitleFont:titleFont];
+    UIFont* subTitleFont = [UIFont fontWithName:@"STHeitiK-Light" size:16];
+    [self.minimalNotification setSubTitleFont:subTitleFont];
+    
+    /**
+     * Add the notification to a view
+     */
+    [self.view addSubview:self.minimalNotification];
+
     
     // Do any additional setup after loading the view.
 }
@@ -130,10 +154,17 @@
                 [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
             }completion:^(BOOL finished) {
                     self.goingButton.enabled = NO;
+                    [self.minimalNotification show];
+                    [self performSelector:@selector(dismissNotification) withObject:nil afterDelay:2.5];
             }];
         }
     }];
 }
+
+- (void) dismissNotification {
+    [self.minimalNotification dismiss];
+}
+
 //- (IBAction)shareButtonPressed:(id)sender {
 //    NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
 //    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
