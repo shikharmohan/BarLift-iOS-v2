@@ -44,10 +44,10 @@
     [self.scroller setScrollEnabled:YES];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSScreenSize.height == 568){
-    [self.scroller setContentSize:CGSizeMake(320, 640)];
+    [self.scroller setContentSize:CGSizeMake(320, 620)];
     }
     if (iOSScreenSize.height == 667){
-    [self.scroller setContentSize:CGSizeMake(375, 500)];
+    [self.scroller setContentSize:CGSizeMake(375, 600)];
     }
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -113,7 +113,7 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 9; i++) {
+                    for(int i = 0; i < 14; i++) {
                         for (NSDictionary *obj in object){
                             [friendsArray addObject:obj];
                         }
@@ -121,23 +121,41 @@
 
                     int len = [friendsArray count];
                     float rows = len / 3;
-                    float padding = (rows-1)*115;
-                    if(padding <0){
-                        padding = 0;
-                    }
-                    if(len %3 == 1 || len%3 == 2){
-                        padding += 115;
-                    }
-                    [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
-                                                             self.collectionView.frame.origin.y,
-                                                             self.collectionView.frame.size.width,padding+115)];
                     
                     NSLog(@"%f", self.collectionView.frame.size.height);
                     if(iOSScreenSize.height == 568){
+                        float padding = (rows-1)*115;
+                        if(padding <0){
+                            padding = 0;
+                        }
+                        if(len %3 == 1 || len%3 == 2){
+                            padding += 115;
+                        }
+                        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
+                                                                 self.collectionView.frame.origin.y,
+                                                                 self.collectionView.frame.size.width,padding+115)];
                         [self.scroller setContentSize:CGSizeMake(320, 620+padding)];
                     }
                     if(iOSScreenSize.height == 667){
-                        [self.scroller setContentSize:CGSizeMake(375, 500+padding)];
+                        float padding = rows*115;
+                        if(rows == 1){
+                            padding = 130;
+                        }
+                        if(padding < 0){
+                            padding = 0;
+                        }
+                        if(rows > 1 &&(len %3 == 1 || len%3 == 2)){
+                            padding += 115;
+                        }
+                        if(padding > 200){
+                            padding -= 115;
+                        }
+                        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
+                                                                 self.collectionView.frame.origin.y,
+                                                                 self.collectionView.frame.size.width,padding+200)];
+                        NSLog(@"%f", self.collectionView.frame.size.height);
+
+                        [self.scroller setContentSize:CGSizeMake(375, 600+padding)];
                     }
                     [self.collectionView reloadData];
                     
