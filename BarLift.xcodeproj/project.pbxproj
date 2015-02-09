@@ -13,6 +13,7 @@
 		0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */; };
 		0166EC801A6995C40016E679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7F1A6995C40016E679 /* Images.xcassets */; };
 		0166EC8F1A6995C40016E679 /* BarLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC8E1A6995C40016E679 /* BarLiftTests.m */; };
+		016729D51A887A6A001A27FF /* groups-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729D41A887A6A001A27FF /* groups-32.png */; };
 		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
@@ -123,6 +124,7 @@
 		0166EC881A6995C40016E679 /* BarLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC8D1A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC8E1A6995C40016E679 /* BarLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarLiftTests.m; sourceTree = "<group>"; };
+		016729D41A887A6A001A27FF /* groups-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-32.png"; sourceTree = "<group>"; };
 		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				01C0EA471A85D98900DBF49E /* near_me-25.png */,
+				016729D41A887A6A001A27FF /* groups-32.png */,
 				01EBDB8D1A831AEC00A9E175 /* menu-32.png */,
 				01EBDB8F1A83364A00A9E175 /* update-32.png */,
 				01C0EA491A866D9700DBF49E /* cocktail-100.png */,
@@ -686,6 +689,7 @@
 				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
 				01EBDB781A81A2DF00A9E175 /* Icon-76.png in Resources */,
 				01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */,
+				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,

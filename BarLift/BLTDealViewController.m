@@ -16,11 +16,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *barName;
 @property (weak, nonatomic) IBOutlet UILabel *barAddress;
 @property (weak, nonatomic) IBOutlet UIButton *goingButton;
-@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 @property (weak, nonatomic) PFObject *currentDeal;
 @end
 
@@ -55,9 +55,6 @@
     self.goingButton.layer.borderWidth = 1;
     self.goingButton.layer.borderColor = [UIColor colorWithRed:0.984 green:0.4941 blue:0.0745 alpha:1].CGColor;
 
-    self.shareButton.layer.cornerRadius = 2;
-    self.shareButton.layer.borderWidth = 1;
-    self.shareButton.layer.borderColor = [UIColor whiteColor].CGColor;
     
     dict = [[NSMutableDictionary alloc] initWithCapacity:3];
     [dict setObject:[PFUser currentUser][@"university_name"] forKey:@"location"];
@@ -86,7 +83,7 @@
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
                     for (NSDictionary *obj in object){
-                            [friendsArray addObject:obj];
+                        [friendsArray addObject:obj];
                     }
                     int len = [friendsArray count];
                     float rows = len / 3;
@@ -124,17 +121,16 @@
         }
     }];
 }
-
-- (IBAction)shareButtonPressed:(UIButton *)sender {
-    
+- (IBAction)shareButtonPressed:(id)sender {
     NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
     NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
     
     NSArray *objectsToShare = @[textToShare, myWebsite];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-
+    
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypeMail,
                                    UIActivityTypePrint,
                                    UIActivityTypeAssignToContact,
                                    UIActivityTypeSaveToCameraRoll,
