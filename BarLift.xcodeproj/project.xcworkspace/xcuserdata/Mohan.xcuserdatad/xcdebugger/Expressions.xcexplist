@@ -6,7 +6,7 @@
          contextName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_3:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;user&quot;]">
+               value = "[PFInstallation currentInstallation]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

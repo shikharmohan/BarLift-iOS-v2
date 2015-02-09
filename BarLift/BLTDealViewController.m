@@ -172,7 +172,7 @@
         if(!error){
             NSLog(@"%@", object);
             [self.goingButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-            [UIView transitionWithView:self.backgroundView duration:1.5f options:UIViewAnimationOptionTransitionNone animations:^{
+            [UIView transitionWithView:self.backgroundView duration:1f options:UIViewAnimationOptionTransitionNone animations:^{
                 [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
                 [self.goingButton setTitleColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1] forState:UIControlStateNormal];
                 [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
