@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 @property (weak, nonatomic) PFObject *currentDeal;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
-@property (weak, nonatomic) JFMinimalNotification *minimalNotification;
 @end
 
 @implementation BLTDealViewController
@@ -166,8 +165,6 @@
                 [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
             }completion:^(BOOL finished) {
                     self.goingButton.enabled = NO;
-                    [self.minimalNotification show];
-                    [self performSelector:@selector(dismissNotification) withObject:nil afterDelay:2.5];
 //                NSDictionary *properties = @{@"date" : [NSDate date]};
 //                [[Mixpanel sharedInstance] track:@"RSVP_event" properties:properties];
             }];
@@ -175,9 +172,7 @@
     }];
 }
 
-- (void) dismissNotification {
-    [self.minimalNotification dismiss];
-}
+
 
 - (IBAction)shareButtonPressed:(id)sender {
     NSString *textToShare = [NSString stringWithFormat:@"%@ at %@ tonight! Download BarLift at", self.dealName.text, self.barName.text];
