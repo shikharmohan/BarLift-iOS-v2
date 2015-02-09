@@ -86,8 +86,15 @@
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
                     for (NSDictionary *obj in object){
-                        [friendsArray addObject:obj];
+                            [friendsArray addObject:obj];
                     }
+                    int len = [friendsArray count];
+                    float rows = len / 3;
+                    float padding = rows*105;
+                    [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
+                                                             self.collectionView.frame.origin.y,
+                                                             self.collectionView.frame.size.width,padding+193)];
+                    [self.scroller setContentSize:CGSizeMake(320, 640+padding)];
                     [self.collectionView reloadData];
                 }
             }];
