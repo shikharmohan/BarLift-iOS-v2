@@ -133,7 +133,7 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 20; i++) {
+                    for(int i = 0; i < 9; i++) {
                         for (NSDictionary *obj in object){
                             [friendsArray addObject:obj];
                         }
@@ -141,16 +141,16 @@
 
                     int len = [friendsArray count];
                     float rows = len / 3;
-                    float padding = rows*105;
+                    float padding = rows*100;
                     [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
                                                              self.collectionView.frame.origin.y,
                                                              self.collectionView.frame.size.width,padding+193)];
                     
                     if(iOSScreenSize.height == 568){
-                        [self.scroller setContentSize:CGSizeMake(320, 640+padding)];
+                        [self.scroller setContentSize:CGSizeMake(320, 568+padding)];
                     }
                     if(iOSScreenSize.height == 667){
-                        [self.scroller setContentSize:CGSizeMake(320, 500+padding)];
+                        [self.scroller setContentSize:CGSizeMake(375, 500+padding)];
                     }
                     [self.collectionView reloadData];
                     
@@ -172,7 +172,7 @@
         if(!error){
             NSLog(@"%@", object);
             [self.goingButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-            [UIView transitionWithView:self.backgroundView duration:1f options:UIViewAnimationOptionTransitionNone animations:^{
+            [UIView transitionWithView:self.backgroundView duration:1.0f options:UIViewAnimationOptionTransitionNone animations:^{
                 [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
                 [self.goingButton setTitleColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1] forState:UIControlStateNormal];
                 [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
