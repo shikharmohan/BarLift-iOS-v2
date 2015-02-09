@@ -22,53 +22,6 @@
 		016729E91A889282001A27FF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E41A889282001A27FF /* UIView+Round.m */; };
 		016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729EA1A889626001A27FF /* lightning_bolt-32.png */; };
 		016729ED1A891D13001A27FF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016729EC1A891D13001A27FF /* CoreTelephony.framework */; };
-		01672AC31A891D5A001A27FF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 016729EF1A891D59001A27FF /* .gitignore */; };
-		01672AC41A891D5A001A27FF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 016729F01A891D59001A27FF /* .travis.yml */; };
-		01672AC51A891D5A001A27FF /* CHANGES in Resources */ = {isa = PBXBuildFile; fileRef = 016729F11A891D59001A27FF /* CHANGES */; };
-		01672AC61A891D5A001A27FF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729F61A891D59001A27FF /* index.html */; };
-		01672AC71A891D5A001A27FF /* toc.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729F71A891D59001A27FF /* toc.html */; };
-		01672AC81A891D5A001A27FF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729F91A891D59001A27FF /* index.html */; };
-		01672AC91A891D5A001A27FF /* toc.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729FA1A891D59001A27FF /* toc.html */; };
-		01672ACA1A891D5A001A27FF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729FB1A891D59001A27FF /* index.html */; };
-		01672ACB1A891D5A001A27FF /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729FE1A891D59001A27FF /* index.html */; };
-		01672ACC1A891D5A001A27FF /* toc.html in Resources */ = {isa = PBXBuildFile; fileRef = 016729FF1A891D59001A27FF /* toc.html */; };
-		01672ACD1A891D5A001A27FF /* toc.html in Resources */ = {isa = PBXBuildFile; fileRef = 01672A001A891D59001A27FF /* toc.html */; };
-		01672ACE1A891D5A001A27FF /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A021A891D59001A27FF /* copy.png */; };
-		01672ACF1A891D5A001A27FF /* project.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A031A891D59001A27FF /* project.png */; };
-		01672AD01A891D5A001A27FF /* fix_syntax.py in Resources */ = {isa = PBXBuildFile; fileRef = 01672A041A891D59001A27FF /* fix_syntax.py */; };
-		01672AD11A891D5A001A27FF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 01672A061A891D59001A27FF /* .gitignore */; };
-		01672AD21A891D5A001A27FF /* ABTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A081A891D59001A27FF /* ABTestingTests.m */; };
-		01672AD31A891D5A001A27FF /* checkerboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01672A091A891D59001A27FF /* checkerboard.jpg */; };
-		01672AD41A891D5A001A27FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01672A0A1A891D59001A27FF /* Info.plist */; };
-		01672AD51A891D5A001A27FF /* test_decide_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 01672A0B1A891D59001A27FF /* test_decide_response.json */; };
-		01672AD61A891D5A001A27FF /* test_decide_response_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 01672A0C1A891D59001A27FF /* test_decide_response_2.json */; };
-		01672AD71A891D5A001A27FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A0D1A891D59001A27FF /* Default-568h@2x.png */; };
-		01672AD81A891D5A001A27FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01672A0F1A891D59001A27FF /* InfoPlist.strings */; };
-		01672AD91A891D5A001A27FF /* EventBindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A121A891D59001A27FF /* EventBindingTests.m */; };
-		01672ADA1A891D5A001A27FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A151A891D59001A27FF /* AppDelegate.m */; };
-		01672ADB1A891D5A001A27FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A161A891D59001A27FF /* Default-568h@2x.png */; };
-		01672ADC1A891D5A001A27FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01672A171A891D59001A27FF /* InfoPlist.strings */; };
-		01672ADD1A891D5A001A27FF /* HelloMixpanel-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01672A191A891D59001A27FF /* HelloMixpanel-Info.plist */; };
-		01672ADE1A891D5A001A27FF /* HelloMixpanel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01672A1B1A891D59001A27FF /* HelloMixpanel.storyboard */; };
-		01672ADF1A891D5A001A27FF /* HelloMixpanel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01672A1C1A891D59001A27FF /* HelloMixpanel.xcassets */; };
-		01672AE01A891D5A001A27FF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A1E1A891D59001A27FF /* HomeViewController.m */; };
-		01672AE11A891D5A001A27FF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A1F1A891D59001A27FF /* Icon-72.png */; };
-		01672AE21A891D5A001A27FF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A201A891D59001A27FF /* Icon.png */; };
-		01672AE31A891D5A001A27FF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01672A211A891D59001A27FF /* Icon@2x.png */; };
-		01672AE41A891D5A001A27FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A221A891D59001A27FF /* main.m */; };
-		01672AE51A891D5A001A27FF /* MPTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A241A891D59001A27FF /* MPTimingViewController.m */; };
-		01672AE61A891D5A001A27FF /* SecretTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A261A891D59001A27FF /* SecretTableViewCell.m */; };
-		01672AE71A891D5A001A27FF /* SecretWhisperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A281A891D59001A27FF /* SecretWhisperViewController.m */; };
-		01672AE81A891D5A001A27FF /* SomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A2A1A891D59001A27FF /* SomeTableViewController.m */; };
-		01672AE91A891D5A001A27FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A2C1A891D59001A27FF /* ViewController.m */; };
-		01672AEA1A891D5A001A27FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01672A311A891D59001A27FF /* InfoPlist.strings */; };
-		01672AEB1A891D5A001A27FF /* HelloMixpanelTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01672A331A891D59001A27FF /* HelloMixpanelTests-Info.plist */; };
-		01672AEC1A891D5A001A27FF /* HelloMixpanelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A341A891D59001A27FF /* HelloMixpanelTests.m */; };
-		01672AED1A891D5A001A27FF /* MixpanelDummyDecideConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A361A891D59001A27FF /* MixpanelDummyDecideConnection.m */; };
-		01672AEE1A891D5A001A27FF /* MixpanelDummyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A381A891D59001A27FF /* MixpanelDummyHTTPConnection.m */; };
-		01672AEF1A891D5A001A27FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 01672A391A891D59001A27FF /* Podfile */; };
-		01672AF01A891D5A001A27FF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01672A3A1A891D59001A27FF /* Settings.bundle */; };
-		01672AF11A891D5A001A27FF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 01672A3B1A891D59001A27FF /* LICENSE */; };
 		01672AF21A891D5A001A27FF /* _MPTweakBindObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672A3E1A891D59001A27FF /* _MPTweakBindObserver.m */; };
 		01672AF31A891D5A001A27FF /* libMPCategoryHelpers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01672A3F1A891D59001A27FF /* libMPCategoryHelpers.a */; };
 		01672AF41A891D5A001A27FF /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01672A401A891D59001A27FF /* Media.xcassets */; };
@@ -140,12 +93,6 @@
 		01672B361A891D5A001A27FF /* UIColor+MPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672AB51A891D5A001A27FF /* UIColor+MPColor.m */; };
 		01672B371A891D5A001A27FF /* UIImage+MPAverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672AB71A891D5A001A27FF /* UIImage+MPAverageColor.m */; };
 		01672B381A891D5A001A27FF /* UIImage+MPImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 01672AB91A891D5A001A27FF /* UIImage+MPImageEffects.m */; };
-		01672B391A891D5A001A27FF /* Mixpanel.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 01672ABA1A891D5A001A27FF /* Mixpanel.podspec */; };
-		01672B3A1A891D5A001A27FF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 01672ABB1A891D5A001A27FF /* README.md */; };
-		01672B3B1A891D5A001A27FF /* add-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01672ABD1A891D5A001A27FF /* add-key.sh */; };
-		01672B3C1A891D5A001A27FF /* dist.cer.enc in Resources */ = {isa = PBXBuildFile; fileRef = 01672ABF1A891D5A001A27FF /* dist.cer.enc */; };
-		01672B3D1A891D5A001A27FF /* dist.p12.enc in Resources */ = {isa = PBXBuildFile; fileRef = 01672AC01A891D5A001A27FF /* dist.p12.enc */; };
-		01672B3E1A891D5A001A27FF /* HelloMixpanel_Ad_Hoc.mobileprovision.enc in Resources */ = {isa = PBXBuildFile; fileRef = 01672AC21A891D5A001A27FF /* HelloMixpanel_Ad_Hoc.mobileprovision.enc */; };
 		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
@@ -241,34 +188,6 @@
 			remoteGlobalIDString = 0166EC6B1A6995C40016E679;
 			remoteInfo = BarLift;
 		};
-		01672B431A891D5B001A27FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2808F98D1610EFE3005772B7;
-			remoteInfo = HelloMixpanel;
-		};
-		01672B451A891D5B001A27FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2808F9B11610EFE4005772B7;
-			remoteInfo = HelloMixpanelTests;
-		};
-		01672B471A891D5B001A27FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 055FA710194A6B010080A709;
-			remoteInfo = ABTestingTests;
-		};
-		01672B491A891D5B001A27FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 187939EF19A2A7F400CC4FBE;
-			remoteInfo = EventBindingTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -299,65 +218,6 @@
 		016729E41A889282001A27FF /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
 		016729EA1A889626001A27FF /* lightning_bolt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightning_bolt-32.png"; sourceTree = "<group>"; };
 		016729EC1A891D13001A27FF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		016729EF1A891D59001A27FF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		016729F01A891D59001A27FF /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		016729F11A891D59001A27FF /* CHANGES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
-		016729F61A891D59001A27FF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		016729F71A891D59001A27FF /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = toc.html; sourceTree = "<group>"; };
-		016729F91A891D59001A27FF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		016729FA1A891D59001A27FF /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = toc.html; sourceTree = "<group>"; };
-		016729FB1A891D59001A27FF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		016729FE1A891D59001A27FF /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = index.html; sourceTree = "<group>"; };
-		016729FF1A891D59001A27FF /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = toc.html; sourceTree = "<group>"; };
-		01672A001A891D59001A27FF /* toc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = toc.html; sourceTree = "<group>"; };
-		01672A021A891D59001A27FF /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copy.png; sourceTree = "<group>"; };
-		01672A031A891D59001A27FF /* project.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = project.png; sourceTree = "<group>"; };
-		01672A041A891D59001A27FF /* fix_syntax.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = fix_syntax.py; sourceTree = "<group>"; };
-		01672A061A891D59001A27FF /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		01672A081A891D59001A27FF /* ABTestingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTestingTests.m; sourceTree = "<group>"; };
-		01672A091A891D59001A27FF /* checkerboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkerboard.jpg; sourceTree = "<group>"; };
-		01672A0A1A891D59001A27FF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01672A0B1A891D59001A27FF /* test_decide_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_decide_response.json; sourceTree = "<group>"; };
-		01672A0C1A891D59001A27FF /* test_decide_response_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_decide_response_2.json; sourceTree = "<group>"; };
-		01672A0D1A891D59001A27FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		01672A101A891D59001A27FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		01672A111A891D59001A27FF /* EventBindingTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventBindingTests-Prefix.pch"; sourceTree = "<group>"; };
-		01672A121A891D59001A27FF /* EventBindingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBindingTests.m; sourceTree = "<group>"; };
-		01672A141A891D59001A27FF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		01672A151A891D59001A27FF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01672A161A891D59001A27FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		01672A181A891D59001A27FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		01672A191A891D59001A27FF /* HelloMixpanel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloMixpanel-Info.plist"; sourceTree = "<group>"; };
-		01672A1A1A891D59001A27FF /* HelloMixpanel-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloMixpanel-Prefix.pch"; sourceTree = "<group>"; };
-		01672A1B1A891D59001A27FF /* HelloMixpanel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HelloMixpanel.storyboard; sourceTree = "<group>"; };
-		01672A1C1A891D59001A27FF /* HelloMixpanel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HelloMixpanel.xcassets; sourceTree = "<group>"; };
-		01672A1D1A891D59001A27FF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		01672A1E1A891D59001A27FF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		01672A1F1A891D59001A27FF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		01672A201A891D59001A27FF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		01672A211A891D59001A27FF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		01672A221A891D59001A27FF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01672A231A891D59001A27FF /* MPTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTimingViewController.h; sourceTree = "<group>"; };
-		01672A241A891D59001A27FF /* MPTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTimingViewController.m; sourceTree = "<group>"; };
-		01672A251A891D59001A27FF /* SecretTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretTableViewCell.h; sourceTree = "<group>"; };
-		01672A261A891D59001A27FF /* SecretTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretTableViewCell.m; sourceTree = "<group>"; };
-		01672A271A891D59001A27FF /* SecretWhisperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretWhisperViewController.h; sourceTree = "<group>"; };
-		01672A281A891D59001A27FF /* SecretWhisperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretWhisperViewController.m; sourceTree = "<group>"; };
-		01672A291A891D59001A27FF /* SomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeTableViewController.h; sourceTree = "<group>"; };
-		01672A2A1A891D59001A27FF /* SomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeTableViewController.m; sourceTree = "<group>"; };
-		01672A2B1A891D59001A27FF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01672A2C1A891D59001A27FF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = HelloMixpanel.xcodeproj; sourceTree = "<group>"; };
-		01672A321A891D59001A27FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		01672A331A891D59001A27FF /* HelloMixpanelTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloMixpanelTests-Info.plist"; sourceTree = "<group>"; };
-		01672A341A891D59001A27FF /* HelloMixpanelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloMixpanelTests.m; sourceTree = "<group>"; };
-		01672A351A891D59001A27FF /* MixpanelDummyDecideConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelDummyDecideConnection.h; sourceTree = "<group>"; };
-		01672A361A891D59001A27FF /* MixpanelDummyDecideConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelDummyDecideConnection.m; sourceTree = "<group>"; };
-		01672A371A891D59001A27FF /* MixpanelDummyHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixpanelDummyHTTPConnection.h; sourceTree = "<group>"; };
-		01672A381A891D59001A27FF /* MixpanelDummyHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixpanelDummyHTTPConnection.m; sourceTree = "<group>"; };
-		01672A391A891D59001A27FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		01672A3A1A891D59001A27FF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		01672A3B1A891D59001A27FF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		01672A3D1A891D59001A27FF /* _MPTweakBindObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _MPTweakBindObserver.h; sourceTree = "<group>"; };
 		01672A3E1A891D59001A27FF /* _MPTweakBindObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _MPTweakBindObserver.m; sourceTree = "<group>"; };
 		01672A3F1A891D59001A27FF /* libMPCategoryHelpers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMPCategoryHelpers.a; sourceTree = "<group>"; };
@@ -483,12 +343,6 @@
 		01672AB71A891D5A001A27FF /* UIImage+MPAverageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPAverageColor.m"; sourceTree = "<group>"; };
 		01672AB81A891D5A001A27FF /* UIImage+MPImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MPImageEffects.h"; sourceTree = "<group>"; };
 		01672AB91A891D5A001A27FF /* UIImage+MPImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPImageEffects.m"; sourceTree = "<group>"; };
-		01672ABA1A891D5A001A27FF /* Mixpanel.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mixpanel.podspec; sourceTree = "<group>"; };
-		01672ABB1A891D5A001A27FF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		01672ABD1A891D5A001A27FF /* add-key.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "add-key.sh"; sourceTree = "<group>"; };
-		01672ABF1A891D5A001A27FF /* dist.cer.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dist.cer.enc; sourceTree = "<group>"; };
-		01672AC01A891D5A001A27FF /* dist.p12.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dist.p12.enc; sourceTree = "<group>"; };
-		01672AC21A891D5A001A27FF /* HelloMixpanel_Ad_Hoc.mobileprovision.enc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HelloMixpanel_Ad_Hoc.mobileprovision.enc; sourceTree = "<group>"; };
 		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
@@ -656,7 +510,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
-				016729EE1A891D59001A27FF /* mixpanel-iphone-master */,
+				01672A3C1A891D59001A27FF /* Mixpanel */,
 				016729DA1A889282001A27FF /* JFMinimalNotification */,
 				01EBDB881A83134F00A9E175 /* Sidebar */,
 				01EBDB811A830A6500A9E175 /* DealViewController */,
@@ -734,192 +588,6 @@
 				016729E41A889282001A27FF /* UIView+Round.m */,
 			);
 			path = JFMinimalNotification;
-			sourceTree = "<group>";
-		};
-		016729EE1A891D59001A27FF /* mixpanel-iphone-master */ = {
-			isa = PBXGroup;
-			children = (
-				016729EF1A891D59001A27FF /* .gitignore */,
-				016729F01A891D59001A27FF /* .travis.yml */,
-				016729F11A891D59001A27FF /* CHANGES */,
-				016729F21A891D59001A27FF /* Docs */,
-				01672A041A891D59001A27FF /* fix_syntax.py */,
-				01672A051A891D59001A27FF /* HelloMixpanel */,
-				01672A3B1A891D59001A27FF /* LICENSE */,
-				01672A3C1A891D59001A27FF /* Mixpanel */,
-				01672ABA1A891D5A001A27FF /* Mixpanel.podspec */,
-				01672ABB1A891D5A001A27FF /* README.md */,
-				01672ABC1A891D5A001A27FF /* scripts */,
-			);
-			name = "mixpanel-iphone-master";
-			path = "../../../../../Downloads/mixpanel-iphone-master";
-			sourceTree = "<group>";
-		};
-		016729F21A891D59001A27FF /* Docs */ = {
-			isa = PBXGroup;
-			children = (
-				016729F31A891D59001A27FF /* HeaderDoc */,
-				01672A011A891D59001A27FF /* Images */,
-			);
-			path = Docs;
-			sourceTree = "<group>";
-		};
-		016729F31A891D59001A27FF /* HeaderDoc */ = {
-			isa = PBXGroup;
-			children = (
-				016729F41A891D59001A27FF /* Classes */,
-				016729FB1A891D59001A27FF /* index.html */,
-				016729FC1A891D59001A27FF /* Protocols */,
-				01672A001A891D59001A27FF /* toc.html */,
-			);
-			path = HeaderDoc;
-			sourceTree = "<group>";
-		};
-		016729F41A891D59001A27FF /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				016729F51A891D59001A27FF /* Mixpanel */,
-				016729F81A891D59001A27FF /* MixpanelPeople */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		016729F51A891D59001A27FF /* Mixpanel */ = {
-			isa = PBXGroup;
-			children = (
-				016729F61A891D59001A27FF /* index.html */,
-				016729F71A891D59001A27FF /* toc.html */,
-			);
-			path = Mixpanel;
-			sourceTree = "<group>";
-		};
-		016729F81A891D59001A27FF /* MixpanelPeople */ = {
-			isa = PBXGroup;
-			children = (
-				016729F91A891D59001A27FF /* index.html */,
-				016729FA1A891D59001A27FF /* toc.html */,
-			);
-			path = MixpanelPeople;
-			sourceTree = "<group>";
-		};
-		016729FC1A891D59001A27FF /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				016729FD1A891D59001A27FF /* MixpanelDelegate */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		016729FD1A891D59001A27FF /* MixpanelDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				016729FE1A891D59001A27FF /* index.html */,
-				016729FF1A891D59001A27FF /* toc.html */,
-			);
-			path = MixpanelDelegate;
-			sourceTree = "<group>";
-		};
-		01672A011A891D59001A27FF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				01672A021A891D59001A27FF /* copy.png */,
-				01672A031A891D59001A27FF /* project.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		01672A051A891D59001A27FF /* HelloMixpanel */ = {
-			isa = PBXGroup;
-			children = (
-				01672A061A891D59001A27FF /* .gitignore */,
-				01672A071A891D59001A27FF /* ABTestingTests */,
-				01672A0D1A891D59001A27FF /* Default-568h@2x.png */,
-				01672A0E1A891D59001A27FF /* EventBindingTests */,
-				01672A131A891D59001A27FF /* HelloMixpanel */,
-				01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */,
-				01672A301A891D59001A27FF /* HelloMixpanelTests */,
-				01672A391A891D59001A27FF /* Podfile */,
-				01672A3A1A891D59001A27FF /* Settings.bundle */,
-			);
-			path = HelloMixpanel;
-			sourceTree = "<group>";
-		};
-		01672A071A891D59001A27FF /* ABTestingTests */ = {
-			isa = PBXGroup;
-			children = (
-				01672A081A891D59001A27FF /* ABTestingTests.m */,
-				01672A091A891D59001A27FF /* checkerboard.jpg */,
-				01672A0A1A891D59001A27FF /* Info.plist */,
-				01672A0B1A891D59001A27FF /* test_decide_response.json */,
-				01672A0C1A891D59001A27FF /* test_decide_response_2.json */,
-			);
-			path = ABTestingTests;
-			sourceTree = "<group>";
-		};
-		01672A0E1A891D59001A27FF /* EventBindingTests */ = {
-			isa = PBXGroup;
-			children = (
-				01672A0F1A891D59001A27FF /* InfoPlist.strings */,
-				01672A111A891D59001A27FF /* EventBindingTests-Prefix.pch */,
-				01672A121A891D59001A27FF /* EventBindingTests.m */,
-			);
-			path = EventBindingTests;
-			sourceTree = "<group>";
-		};
-		01672A131A891D59001A27FF /* HelloMixpanel */ = {
-			isa = PBXGroup;
-			children = (
-				01672A141A891D59001A27FF /* AppDelegate.h */,
-				01672A151A891D59001A27FF /* AppDelegate.m */,
-				01672A161A891D59001A27FF /* Default-568h@2x.png */,
-				01672A171A891D59001A27FF /* InfoPlist.strings */,
-				01672A191A891D59001A27FF /* HelloMixpanel-Info.plist */,
-				01672A1A1A891D59001A27FF /* HelloMixpanel-Prefix.pch */,
-				01672A1B1A891D59001A27FF /* HelloMixpanel.storyboard */,
-				01672A1C1A891D59001A27FF /* HelloMixpanel.xcassets */,
-				01672A1D1A891D59001A27FF /* HomeViewController.h */,
-				01672A1E1A891D59001A27FF /* HomeViewController.m */,
-				01672A1F1A891D59001A27FF /* Icon-72.png */,
-				01672A201A891D59001A27FF /* Icon.png */,
-				01672A211A891D59001A27FF /* Icon@2x.png */,
-				01672A221A891D59001A27FF /* main.m */,
-				01672A231A891D59001A27FF /* MPTimingViewController.h */,
-				01672A241A891D59001A27FF /* MPTimingViewController.m */,
-				01672A251A891D59001A27FF /* SecretTableViewCell.h */,
-				01672A261A891D59001A27FF /* SecretTableViewCell.m */,
-				01672A271A891D59001A27FF /* SecretWhisperViewController.h */,
-				01672A281A891D59001A27FF /* SecretWhisperViewController.m */,
-				01672A291A891D59001A27FF /* SomeTableViewController.h */,
-				01672A2A1A891D59001A27FF /* SomeTableViewController.m */,
-				01672A2B1A891D59001A27FF /* ViewController.h */,
-				01672A2C1A891D59001A27FF /* ViewController.m */,
-			);
-			path = HelloMixpanel;
-			sourceTree = "<group>";
-		};
-		01672A2E1A891D59001A27FF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				01672B441A891D5B001A27FF /* HelloMixpanel.app */,
-				01672B461A891D5B001A27FF /* HelloMixpanelTests.xctest */,
-				01672B481A891D5B001A27FF /* ABTestingTests.xctest */,
-				01672B4A1A891D5B001A27FF /* EventBindingTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		01672A301A891D59001A27FF /* HelloMixpanelTests */ = {
-			isa = PBXGroup;
-			children = (
-				01672A311A891D59001A27FF /* InfoPlist.strings */,
-				01672A331A891D59001A27FF /* HelloMixpanelTests-Info.plist */,
-				01672A341A891D59001A27FF /* HelloMixpanelTests.m */,
-				01672A351A891D59001A27FF /* MixpanelDummyDecideConnection.h */,
-				01672A361A891D59001A27FF /* MixpanelDummyDecideConnection.m */,
-				01672A371A891D59001A27FF /* MixpanelDummyHTTPConnection.h */,
-				01672A381A891D59001A27FF /* MixpanelDummyHTTPConnection.m */,
-			);
-			path = HelloMixpanelTests;
 			sourceTree = "<group>";
 		};
 		01672A3C1A891D59001A27FF /* Mixpanel */ = {
@@ -1051,34 +719,8 @@
 				01672AB81A891D5A001A27FF /* UIImage+MPImageEffects.h */,
 				01672AB91A891D5A001A27FF /* UIImage+MPImageEffects.m */,
 			);
-			path = Mixpanel;
-			sourceTree = "<group>";
-		};
-		01672ABC1A891D5A001A27FF /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				01672ABD1A891D5A001A27FF /* add-key.sh */,
-				01672ABE1A891D5A001A27FF /* certs */,
-				01672AC11A891D5A001A27FF /* profile */,
-			);
-			path = scripts;
-			sourceTree = "<group>";
-		};
-		01672ABE1A891D5A001A27FF /* certs */ = {
-			isa = PBXGroup;
-			children = (
-				01672ABF1A891D5A001A27FF /* dist.cer.enc */,
-				01672AC01A891D5A001A27FF /* dist.p12.enc */,
-			);
-			path = certs;
-			sourceTree = "<group>";
-		};
-		01672AC11A891D5A001A27FF /* profile */ = {
-			isa = PBXGroup;
-			children = (
-				01672AC21A891D5A001A27FF /* HelloMixpanel_Ad_Hoc.mobileprovision.enc */,
-			);
-			path = profile;
+			name = Mixpanel;
+			path = "../../../../../Downloads/mixpanel-iphone-master/Mixpanel";
 			sourceTree = "<group>";
 		};
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
@@ -1412,12 +1054,6 @@
 			mainGroup = 0166EC631A6995C40016E679;
 			productRefGroup = 0166EC6D1A6995C40016E679 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 01672A2E1A891D59001A27FF /* Products */;
-					ProjectRef = 01672A2D1A891D59001A27FF /* HelloMixpanel.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0166EC6B1A6995C40016E679 /* BarLift */,
@@ -1426,138 +1062,68 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		01672B441A891D5B001A27FF /* HelloMixpanel.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = HelloMixpanel.app;
-			remoteRef = 01672B431A891D5B001A27FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		01672B461A891D5B001A27FF /* HelloMixpanelTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = HelloMixpanelTests.xctest;
-			remoteRef = 01672B451A891D5B001A27FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		01672B481A891D5B001A27FF /* ABTestingTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ABTestingTests.xctest;
-			remoteRef = 01672B471A891D5B001A27FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		01672B4A1A891D5B001A27FF /* EventBindingTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EventBindingTests.xctest;
-			remoteRef = 01672B491A891D5B001A27FF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		0166EC6A1A6995C40016E679 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01672AEF1A891D5A001A27FF /* Podfile in Resources */,
 				01D711F21A6E0E61001C29B7 /* github@2x.png in Resources */,
 				01D711FC1A6E0E61001C29B7 /* panels@2x.png in Resources */,
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				01D711F11A6E0E61001C29B7 /* github.png in Resources */,
-				01672AD11A891D5A001A27FF /* .gitignore in Resources */,
-				01672AD81A891D5A001A27FF /* InfoPlist.strings in Resources */,
 				01EBDB781A81A2DF00A9E175 /* Icon-76.png in Resources */,
-				01672AC41A891D5A001A27FF /* .travis.yml in Resources */,
 				01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */,
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				01D711FB1A6E0E61001C29B7 /* panels.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
-				01672AEB1A891D5A001A27FF /* HelloMixpanelTests-Info.plist in Resources */,
 				01EBDB7A1A81A2DF00A9E175 /* Icon-Small.png in Resources */,
 				01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */,
-				01672B3D1A891D5A001A27FF /* dist.p12.enc in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711B21A6CD677001C29B7 /* Facebook@2x.png in Resources */,
-				01672AC71A891D5A001A27FF /* toc.html in Resources */,
 				016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */,
-				01672AC91A891D5A001A27FF /* toc.html in Resources */,
 				01EBDB741A81A2DF00A9E175 /* Icon-40@2x.png in Resources */,
 				01D7120C1A7450B4001C29B7 /* barliftlogo.png in Resources */,
 				01EBDB7B1A81A2DF00A9E175 /* Icon-Small@2x.png in Resources */,
-				01672ADB1A891D5A001A27FF /* Default-568h@2x.png in Resources */,
-				01672AF01A891D5A001A27FF /* Settings.bundle in Resources */,
 				01EBDB7C1A81A2DF00A9E175 /* Icon-Small@3x.png in Resources */,
 				01EBDB651A81A24000A9E175 /* barlift-logo.png in Resources */,
 				01D711F91A6E0E61001C29B7 /* iPhone@2x.png in Resources */,
-				01672AE21A891D5A001A27FF /* Icon.png in Resources */,
-				01672ADE1A891D5A001A27FF /* HelloMixpanel.storyboard in Resources */,
-				01672AD31A891D5A001A27FF /* checkerboard.jpg in Resources */,
 				01672B0D1A891D5A001A27FF /* MPCloseBtn@2x.png in Resources */,
-				01672AF11A891D5A001A27FF /* LICENSE in Resources */,
-				01672AD51A891D5A001A27FF /* test_decide_response.json in Resources */,
-				01672ADC1A891D5A001A27FF /* InfoPlist.strings in Resources */,
 				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
 				01EBDB751A81A2DF00A9E175 /* Icon-40@3x.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
-				01672AC81A891D5A001A27FF /* index.html in Resources */,
-				01672B3C1A891D5A001A27FF /* dist.cer.enc in Resources */,
 				01D712041A6E0E61001C29B7 /* twitter.png in Resources */,
 				01EBDB771A81A2DF00A9E175 /* Icon-60@3x.png in Resources */,
-				01672B3E1A891D5A001A27FF /* HelloMixpanel_Ad_Hoc.mobileprovision.enc in Resources */,
 				01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */,
 				01D711F41A6E0E61001C29B7 /* happy.png in Resources */,
 				01EBDB731A81A2DF00A9E175 /* Icon-40.png in Resources */,
 				01672B351A891D5A001A27FF /* test_variant.json in Resources */,
 				01D712021A6E0E61001C29B7 /* swipe@2x.png in Resources */,
-				01672AD71A891D5A001A27FF /* Default-568h@2x.png in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
-				01672ACA1A891D5A001A27FF /* index.html in Resources */,
-				01672ACF1A891D5A001A27FF /* project.png in Resources */,
 				01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */,
 				01D711FF1A6E0E61001C29B7 /* surfer@2x.png in Resources */,
-				01672AC31A891D5A001A27FF /* .gitignore in Resources */,
-				01672AC61A891D5A001A27FF /* index.html in Resources */,
-				01672B391A891D5A001A27FF /* Mixpanel.podspec in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
 				01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */,
-				01672ADF1A891D5A001A27FF /* HelloMixpanel.xcassets in Resources */,
-				01672AD01A891D5A001A27FF /* fix_syntax.py in Resources */,
 				01D711F51A6E0E61001C29B7 /* happy@2x.png in Resources */,
-				01672AD41A891D5A001A27FF /* Info.plist in Resources */,
 				01D711ED1A6E0E61001C29B7 /* arrow.png in Resources */,
 				01672B141A891D5A001A27FF /* MPNotification.storyboard in Resources */,
 				01672B341A891D5A001A27FF /* snapshot_config.json in Resources */,
-				01672AC51A891D5A001A27FF /* CHANGES in Resources */,
 				01D711F61A6E0E61001C29B7 /* happy@2x.psd in Resources */,
 				01EBDB761A81A2DF00A9E175 /* Icon-60@2x.png in Resources */,
-				01672AEA1A891D5A001A27FF /* InfoPlist.strings in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
-				01672AE11A891D5A001A27FF /* Icon-72.png in Resources */,
-				01672ACD1A891D5A001A27FF /* toc.html in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
-				01672ADD1A891D5A001A27FF /* HelloMixpanel-Info.plist in Resources */,
-				01672ACE1A891D5A001A27FF /* copy.png in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
 				01D711EE1A6E0E61001C29B7 /* arrow@2x.png in Resources */,
 				01672B211A891D5A001A27FF /* MPSurvey.storyboard in Resources */,
-				01672ACB1A891D5A001A27FF /* index.html in Resources */,
-				01672B3B1A891D5A001A27FF /* add-key.sh in Resources */,
-				01672AE31A891D5A001A27FF /* Icon@2x.png in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
-				01672AD61A891D5A001A27FF /* test_decide_response_2.json in Resources */,
 				01EBDB791A81A2DF00A9E175 /* Icon-76@2x.png in Resources */,
 				01D712011A6E0E61001C29B7 /* swipe.png in Resources */,
 				01D711FE1A6E0E61001C29B7 /* surfer.png in Resources */,
 				01672AF41A891D5A001A27FF /* Media.xcassets in Resources */,
 				01672B0C1A891D5A001A27FF /* MPCloseBtn.png in Resources */,
 				01D711F81A6E0E61001C29B7 /* iPhone.png in Resources */,
-				01672ACC1A891D5A001A27FF /* toc.html in Resources */,
 				01EBDB901A83364A00A9E175 /* update-32.png in Resources */,
 				01D712051A6E0E61001C29B7 /* twitter@2x.png in Resources */,
 				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -1581,15 +1147,12 @@
 				01672B301A891D5A001A27FF /* MPVariant.m in Sources */,
 				01672B1F1A891D5A001A27FF /* MPSequenceGenerator.m in Sources */,
 				01672B111A891D5A001A27FF /* MPEnumDescription.m in Sources */,
-				01672AE41A891D5A001A27FF /* main.m in Sources */,
 				01672AF81A891D5A001A27FF /* MPABTestDesignerChangeResponseMessage.m in Sources */,
 				016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */,
 				01672B161A891D5A001A27FF /* MPNSAttributedStringToNSDictionaryValueTransformer.m in Sources */,
 				01672B381A891D5A001A27FF /* UIImage+MPImageEffects.m in Sources */,
-				01672AEE1A891D5A001A27FF /* MixpanelDummyHTTPConnection.m in Sources */,
 				01672AF21A891D5A001A27FF /* _MPTweakBindObserver.m in Sources */,
 				01672B2C1A891D5A001A27FF /* MPUIEdgeInsetsToNSDictionaryValueTransformer.m in Sources */,
-				01672AED1A891D5A001A27FF /* MixpanelDummyDecideConnection.m in Sources */,
 				01672B171A891D5A001A27FF /* MPNSNumberToCGFloatValueTransformer.m in Sources */,
 				01672B1C1A891D5A001A27FF /* MPObjectSerializerContext.m in Sources */,
 				01672B361A891D5A001A27FF /* UIColor+MPColor.m in Sources */,
@@ -1602,7 +1165,6 @@
 				01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */,
 				01672B2B1A891D5A001A27FF /* MPUIControlBinding.m in Sources */,
 				01672AF51A891D5A001A27FF /* Mixpanel.m in Sources */,
-				01672AE01A891D5A001A27FF /* HomeViewController.m in Sources */,
 				01672B2E1A891D5A001A27FF /* MPUIImageToNSDictionaryValueTransformer.m in Sources */,
 				01672B001A891D5A001A27FF /* MPABTestDesignerSnapshotResponseMessage.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
@@ -1613,15 +1175,12 @@
 				01672B051A891D5A001A27FF /* MPCATransform3DToNSDictionaryValueTransformer.m in Sources */,
 				01672B021A891D5A001A27FF /* MPABTestDesignerTweakResponseMessage.m in Sources */,
 				01672B191A891D5A001A27FF /* MPObjectSelector.m in Sources */,
-				01672AE71A891D5A001A27FF /* SecretWhisperViewController.m in Sources */,
 				01672B2A1A891D5A001A27FF /* MPUIColorToNSStringValueTransformer.m in Sources */,
 				01672AF91A891D5A001A27FF /* MPABTestDesignerClearRequestMessage.m in Sources */,
 				01672B221A891D5A001A27FF /* MPSurveyNavigationController.m in Sources */,
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
 				01672B121A891D5A001A27FF /* MPEventBinding.m in Sources */,
 				01672B071A891D5A001A27FF /* MPCGColorRefToNSStringValueTransformer.m in Sources */,
-				01672AE61A891D5A001A27FF /* SecretTableViewCell.m in Sources */,
-				01672AE81A891D5A001A27FF /* SomeTableViewController.m in Sources */,
 				01672AF71A891D5A001A27FF /* MPABTestDesignerChangeRequestMessage.m in Sources */,
 				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
 				01672AFE1A891D5A001A27FF /* MPABTestDesignerDisconnectMessage.m in Sources */,
@@ -1640,14 +1199,10 @@
 				01672B1E1A891D5A001A27FF /* MPPropertyDescription.m in Sources */,
 				01672B091A891D5A001A27FF /* MPCGRectToNSDictionaryValueTransformer.m in Sources */,
 				01672B1A1A891D5A001A27FF /* MPObjectSerializer.m in Sources */,
-				01672AD91A891D5A001A27FF /* EventBindingTests.m in Sources */,
 				01672B081A891D5A001A27FF /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
 				01672AFD1A891D5A001A27FF /* MPABTestDesignerDeviceInfoResponseMessage.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
-				01672B3A1A891D5A001A27FF /* README.md in Sources */,
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
-				01672AEC1A891D5A001A27FF /* HelloMixpanelTests.m in Sources */,
-				01672AE51A891D5A001A27FF /* MPTimingViewController.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				01672B181A891D5A001A27FF /* MPObjectIdentityProvider.m in Sources */,
 				01672B311A891D5A001A27FF /* MPWebSocket.m in Sources */,
@@ -1658,7 +1213,6 @@
 				01D711C81A6E0BE7001C29B7 /* SRFSurfboardPanel.m in Sources */,
 				01672AFC1A891D5A001A27FF /* MPABTestDesignerDeviceInfoRequestMessage.m in Sources */,
 				01672B331A891D5A001A27FF /* NSInvocation+MPHelpers.m in Sources */,
-				01672AE91A891D5A001A27FF /* ViewController.m in Sources */,
 				01672B0F1A891D5A001A27FF /* MPDesignerEventBindingResponseMesssage.m in Sources */,
 				01D711C61A6E0BE7001C29B7 /* SRFSurfboardPanelCell.m in Sources */,
 				01672AFB1A891D5A001A27FF /* MPABTestDesignerConnection.m in Sources */,
@@ -1671,11 +1225,9 @@
 				01672B321A891D5A001A27FF /* NSData+MPBase64.m in Sources */,
 				01672B291A891D5A001A27FF /* MPTypeDescription.m in Sources */,
 				01672B011A891D5A001A27FF /* MPABTestDesignerTweakRequestMessage.m in Sources */,
-				01672ADA1A891D5A001A27FF /* AppDelegate.m in Sources */,
 				01672B0B1A891D5A001A27FF /* MPClassDescription.m in Sources */,
 				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,
-				01672AD21A891D5A001A27FF /* ABTestingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1696,33 +1248,6 @@
 			targetProxy = 0166EC891A6995C40016E679 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		01672A0F1A891D59001A27FF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01672A101A891D59001A27FF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		01672A171A891D59001A27FF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01672A181A891D59001A27FF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		01672A311A891D59001A27FF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01672A321A891D59001A27FF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0166EC901A6995C40016E679 /* Debug */ = {
