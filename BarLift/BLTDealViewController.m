@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) PFObject *currentDeal;
 @end
 
@@ -36,6 +38,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.scroller setScrollEnabled:YES];
+    [self.scroller setContentSize:CGSizeMake(320, 640)];
+    
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -45,7 +50,15 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
+    
+    self.goingButton.layer.cornerRadius = 2;
+    self.goingButton.layer.borderWidth = 1;
+    self.goingButton.layer.borderColor = [UIColor colorWithRed:0.984 green:0.4941 blue:0.0745 alpha:1].CGColor;
 
+    self.shareButton.layer.cornerRadius = 2;
+    self.shareButton.layer.borderWidth = 1;
+    self.shareButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
     dict = [[NSMutableDictionary alloc] initWithCapacity:3];
     [dict setObject:[PFUser currentUser][@"university_name"] forKey:@"location"];
     [dict setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
@@ -65,6 +78,7 @@
     [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:dict block:^(id object, NSError *error) {
         if(!error){
             self.currentDeal = (PFObject *) object[0];
+            self.descriptionLabel.text = object[0][@"description"];
             self.dealName.text = object[0][@"name"];
             self.barName.text = object[0][@"user"][@"bar_name"];
             self.barAddress.text = object[0][@"user"][@"address"];
@@ -92,12 +106,13 @@
     [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict block:^(id object, NSError *error) {
         if(!error){
             NSLog(@"%@", object);
-            self.goingButton.enabled = NO;
             [self.goingButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-            [UIView transitionWithView:self.backgroundView duration:2.5f options:UIViewAnimationOptionTransitionNone animations:^{
+            [UIView transitionWithView:self.backgroundView duration:1.5f options:UIViewAnimationOptionTransitionNone animations:^{
                 [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
+                [self.goingButton setTitleColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1] forState:UIControlStateNormal];
+                [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
             }completion:^(BOOL finished) {
-                
+                    self.goingButton.enabled = NO;
             }];
         }
     }];
@@ -111,17 +126,17 @@
     NSArray *objectsToShare = @[textToShare, myWebsite];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-//    
-//    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
-//                                   UIActivityTypePrint,
-//                                   UIActivityTypeAssignToContact,
-//                                   UIActivityTypeSaveToCameraRoll,
-//                                   UIActivityTypeAddToReadingList,
-//                                   UIActivityTypePostToFlickr,
-//                                   UIActivityTypePostToVimeo];
-//    
-//    activityVC.excludedActivityTypes = excludeActivities;
-//    
+
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    
     [self presentViewController:activityVC animated:YES completion:nil];
     if ([activityVC respondsToSelector:@selector(popoverPresentationController)])
     {
