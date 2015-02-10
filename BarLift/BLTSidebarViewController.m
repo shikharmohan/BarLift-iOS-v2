@@ -9,6 +9,8 @@
 #import "BLTSidebarViewController.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface BLTSidebarViewController ()
@@ -23,17 +25,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.name.text = [NSString stringWithFormat:@"%@", [PFUser currentUser][@"profile"][@"name"]];
-
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [PFUser currentUser][@"profile"][@"pictureURL"]]];
-        if ( data == nil )
-            return;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.profPic initWithImage:[UIImage imageWithData:data scale:1.0]];
-            self.profPic.layer.cornerRadius = self.profPic.frame.size.width / 2;
-            self.profPic.clipsToBounds = YES;
-        });
-    });
+    [self.profPic sd_setImageWithURL:[NSURL URLWithString: [PFUser currentUser][@"profile"][@"pictureURL"]]];
+    self.profPic.contentMode = UIViewContentModeScaleAspectFill;
+    self.profPic.layer.cornerRadius = self.profPic.frame.size.width / 2;
+    self.profPic.layer.masksToBounds = YES;
+    self.profPic.layer.borderWidth = 0;
+    self.profPic.clipsToBounds = YES;
+    //    dispatch_async(dispatch_get_global_queue(0,0), ^{
+//        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [PFUser currentUser][@"profile"][@"pictureURL"]]];
+//        if ( data == nil )
+//            return;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.profPic initWithImage:[UIImage imageWithData:data scale:1.0]];
+//            self.profPic.layer.cornerRadius = self.profPic.frame.size.width / 2;
+//            self.profPic.clipsToBounds = YES;
+//        });
+//    });
 
     // Do any additional setup after loading the view.
 }

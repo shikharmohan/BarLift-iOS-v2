@@ -262,10 +262,12 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     UILabel *friendName = (UILabel *) [cell viewWithTag:2];
     UIImageView *friendPic = (UIImageView *) [cell viewWithTag:1];
-    friendName.text = [[friendsArray objectAtIndex:indexPath.row] objectAtIndex:0];
+    NSString *firstName = [[[[friendsArray objectAtIndex:indexPath.row] objectAtIndex:0] componentsSeparatedByString:@" "] objectAtIndex:0];
+    NSString *lastNameInit = [[[[[friendsArray objectAtIndex:indexPath.row] objectAtIndex:0] componentsSeparatedByString:@" "] objectAtIndex:1] substringToIndex:1];
+    friendName.text = [NSString stringWithFormat:@"%@ %@.", firstName, lastNameInit];
     NSString *fb_id = [[friendsArray objectAtIndex:indexPath.row] objectAtIndex:1];
     [friendPic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
-    friendPic.contentMode = UIViewContentModeScaleAspectFit;
+    friendPic.contentMode = UIViewContentModeScaleAspectFill;
     friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
     friendPic.clipsToBounds = YES;
 //    dispatch_async(dispatch_get_global_queue(0,0), ^{
