@@ -22,6 +22,7 @@
 		016729E91A889282001A27FF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E41A889282001A27FF /* UIView+Round.m */; };
 		016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729EA1A889626001A27FF /* lightning_bolt-32.png */; };
 		016729ED1A891D13001A27FF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016729EC1A891D13001A27FF /* CoreTelephony.framework */; };
+		01A252EB1A8962A800BED121 /* upload-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A252EA1A8962A800BED121 /* upload-32.png */; };
 		01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
@@ -147,6 +148,7 @@
 		016729E41A889282001A27FF /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
 		016729EA1A889626001A27FF /* lightning_bolt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightning_bolt-32.png"; sourceTree = "<group>"; };
 		016729EC1A891D13001A27FF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		01A252EA1A8962A800BED121 /* upload-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "upload-32.png"; path = "../../../../../Downloads/upload-32.png"; sourceTree = "<group>"; };
 		01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone35.storyboard; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				01C0EA471A85D98900DBF49E /* near_me-25.png */,
 				016729D41A887A6A001A27FF /* groups-32.png */,
 				01EBDB8F1A83364A00A9E175 /* update-32.png */,
+				01A252EA1A8962A800BED121 /* upload-32.png */,
 				01EBDB8D1A831AEC00A9E175 /* menu-32.png */,
 				01C0EA491A866D9700DBF49E /* cocktail-100.png */,
 				01EBDB661A81A2DE00A9E175 /* AppIcon.appiconset */,
@@ -771,6 +774,7 @@
 				01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */,
 				01D711FF1A6E0E61001C29B7 /* surfer@2x.png in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
+				01A252EB1A8962A800BED121 /* upload-32.png in Resources */,
 				01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */,
 				01D711F51A6E0E61001C29B7 /* happy@2x.png in Resources */,
 				01D711ED1A6E0E61001C29B7 /* arrow.png in Resources */,
@@ -866,8 +870,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shikhar Mohan (V7HT6L2HHU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shikhar Mohan (V7HT6L2HHU)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -909,8 +913,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shikhar Mohan (V7HT6L2HHU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shikhar Mohan (V7HT6L2HHU)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

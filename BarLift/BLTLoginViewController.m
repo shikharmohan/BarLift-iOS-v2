@@ -23,6 +23,7 @@
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
 @property (strong, nonatomic) Reachability *internetReachableFoo;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property BOOL new;
 
 @end
@@ -43,6 +44,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    self.indicator.hidden = YES;
+    [self testInternetConnection];
+    
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://31.media.tumblr.com/c48378e8ce8f0e29ea7d3198df4decef/tumblr_n7wk45d38O1tvkgeto1_500.gif"]]];
     self.imageView.animatedImage = image;
 
@@ -73,9 +77,15 @@
 
 - (IBAction)loginToFacebook:(UIButton *)sender {
     
+    
+    self.indicator.hidden = NO;
+    [self.indicator startAnimating];
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+            [self.indicator stopAnimating];
+            self.indicator.hidden = YES;
+
             self.new = false;
             if (!user) {
                 NSString *errorMessage = nil;

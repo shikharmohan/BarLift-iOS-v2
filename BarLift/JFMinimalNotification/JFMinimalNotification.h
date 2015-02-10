@@ -177,6 +177,6 @@ typedef void (^JFMinimalNotificationTouchHandler)(void);
 - (void)willShowNotification:(JFMinimalNotification*)notification;
 - (void)didShowNotification:(JFMinimalNotification*)notification;
 - (void)willDisimissNotification:(JFMinimalNotification*)notification;
-- (void)didDismissNotification:(JFMinimalNotification*)notification;
+- (void)didDismissNotifications:(JFMinimalNotification*)notification;
 
 @end

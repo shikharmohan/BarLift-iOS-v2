@@ -220,8 +220,8 @@ static CGFloat const kNotificationAccessoryPadding = 10.0f;
     [UIView animateWithDuration:0.6f delay:0.0f usingSpringWithDamping:0.7f initialSpringVelocity:0.3f options:UIViewAnimationOptionAllowAnimatedContent animations:^{
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(didDismissNotification:)]) {
-            [self.delegate didDismissNotification:self];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(didDismissNotifications:)]) {
+            [self.delegate didDismissNotifications:self];
         }
     }];
 }

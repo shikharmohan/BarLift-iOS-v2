@@ -45,6 +45,10 @@
                                 <rect key="frame" x="67" y="145" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="5lT-pZ-Ffq">
+                                <rect key="frame" x="177" y="386" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -52,6 +56,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="JDP-nt-Kaw" id="HSE-GQ-iXo"/>
+                        <outlet property="indicator" destination="5lT-pZ-Ffq" id="LOj-IX-doT"/>
                         <outlet property="login" destination="aB2-es-6zc" id="c4M-e8-g9z"/>
                         <outlet property="logo" destination="tt8-bN-KPt" id="YAO-oE-WSh"/>
                         <segue destination="HI8-hh-DJR" kind="modal" identifier="toWelcome" id="sAy-ja-kp5"/>
@@ -76,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPD-h5-ENG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="1074"/>
+            <point key="canvasLocation" x="161.5" y="1195.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="cbj-vF-MCT">
@@ -333,7 +338,7 @@
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="BarLift" id="MAa-7w-x6a">
-                        <barButtonItem key="leftBarButtonItem" image="groups-32.png" id="362-lf-1XF">
+                        <barButtonItem key="leftBarButtonItem" image="upload-32.png" id="362-lf-1XF">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="shareButtonPressed:" destination="66W-zV-3as" id="Es5-O6-GCX"/>
@@ -356,6 +361,7 @@
                         <outlet property="goingButton" destination="G5B-xe-aPC" id="BFI-k2-n1e"/>
                         <outlet property="locationIcon" destination="nig-oJ-XFT" id="VFN-g8-XJw"/>
                         <outlet property="scroller" destination="eH1-4k-hb6" id="lrV-Wf-VOB"/>
+                        <outlet property="shareButton" destination="362-lf-1XF" id="vPB-EG-x58"/>
                         <outlet property="sidebarButton" destination="BD6-Jd-3gE" id="i1X-b0-9ms"/>
                     </connections>
                 </viewController>
@@ -450,9 +456,9 @@
         <image name="barlift-logo.png" width="64" height="60"/>
         <image name="barliftlogo.png" width="280" height="129"/>
         <image name="cocktail-100.png" width="100" height="100"/>
-        <image name="groups-32.png" width="32" height="32"/>
         <image name="menu-32.png" width="32" height="32"/>
         <image name="near_me-25.png" width="25" height="25"/>
+        <image name="upload-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -32,6 +32,7 @@
     NSMutableArray *friendsArray;
     NSMutableDictionary *dict;
     CGSize iOSScreenSize;
+    NSArray *myProfile;
 
 }
 
@@ -41,6 +42,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    myProfile = [NSArray arrayWithObjects:[PFUser currentUser][@"profile"][@"name"], [PFUser currentUser][@"profile"][@"fb_id"], nil];
     [self.scroller setScrollEnabled:YES];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSScreenSize.height == 568){
@@ -78,7 +81,10 @@
     //Address-> Maps
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
-    [self.barAddress addGestureRecognizer:tapGesture];
+    UITapGestureRecognizer *tapGesture1 =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+
+    [self.barAddress addGestureRecognizer:tapGesture1];
     [self.locationIcon addGestureRecognizer:tapGesture];
     
     
@@ -113,56 +119,72 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 14; i++) {
-                        for (NSDictionary *obj in object){
-                            [friendsArray addObject:obj];
+                    for(int i = 0; i < 1; i++) {
+                        for (NSArray *obj in object){
+                            if([myProfile isEqualToArray:obj]){
+                                NSLog(@"Already Going");
+                                [UIView transitionWithView:self.backgroundView duration:1.0f options:UIViewAnimationOptionTransitionNone animations:^{
+                                    [self.backgroundView setBackgroundColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1]];
+                                    [self.goingButton setTitleColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1] forState:UIControlStateNormal];
+                                    [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
+                                }completion:^(BOOL finished) {
+                                    self.goingButton.enabled = NO;
+                                }];
+                                [friendsArray addObject:obj];
+                            }
+                            else{
+                                [friendsArray addObject:obj];
+                            }
                         }
                     }
-
-                    int len = [friendsArray count];
-                    float rows = len / 3;
-                    
-                    NSLog(@"%f", self.collectionView.frame.size.height);
-                    if(iOSScreenSize.height == 568){
-                        float padding = (rows-1)*115;
-                        if(padding <0){
-                            padding = 0;
-                        }
-                        if(len %3 == 1 || len%3 == 2){
-                            padding += 115;
-                        }
-                        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
-                                                                 self.collectionView.frame.origin.y,
-                                                                 self.collectionView.frame.size.width,padding+115)];
-                        [self.scroller setContentSize:CGSizeMake(320, 620+padding)];
-                    }
-                    if(iOSScreenSize.height == 667){
-                        float padding = rows*115;
-                        if(rows == 1){
-                            padding = 130;
-                        }
-                        if(padding < 0){
-                            padding = 0;
-                        }
-                        if(rows > 1 &&(len %3 == 1 || len%3 == 2)){
-                            padding += 115;
-                        }
-                        if(padding > 200){
-                            padding -= 115;
-                        }
-                        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
-                                                                 self.collectionView.frame.origin.y,
-                                                                 self.collectionView.frame.size.width,padding+200)];
-                        NSLog(@"%f", self.collectionView.frame.size.height);
-
-                        [self.scroller setContentSize:CGSizeMake(375, 600+padding)];
-                    }
-                    [self.collectionView reloadData];
-                    
+                    [self resizeCollectionView];
                 }
             }];
         }
     }];
+}
+
+-(void) resizeCollectionView {
+    int len = [friendsArray count];
+    float rows = len / 3;
+    
+    NSLog(@"%f", self.collectionView.frame.size.height);
+    if(iOSScreenSize.height == 568){
+        float padding = (rows-1)*115;
+        if(padding <0){
+            padding = 0;
+        }
+        if(rows >= 1 && (len %3 == 1 || len%3 == 2)){
+            padding += 115;
+        }
+        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
+                                                 self.collectionView.frame.origin.y,
+                                                 self.collectionView.frame.size.width,padding+115)];
+        [self.scroller setContentSize:CGSizeMake(320, 620+padding)];
+    }
+    if(iOSScreenSize.height == 667){
+        float padding = rows*115;
+        if(rows == 1){
+            padding = 130;
+        }
+        if(padding < 0){
+            padding = 0;
+        }
+        if(rows > 1 &&(len %3 == 1 || len%3 == 2)){
+            padding += 115;
+        }
+        if(padding > 200){
+            padding -= 115;
+        }
+        [self.collectionView setFrame:CGRectMake(self.collectionView.frame.origin.x,
+                                                 self.collectionView.frame.origin.y,
+                                                 self.collectionView.frame.size.width,padding+200)];
+        NSLog(@"%f", self.collectionView.frame.size.height);
+        
+        [self.scroller setContentSize:CGSizeMake(375, 600+padding)];
+    }
+    [self.collectionView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -183,6 +205,10 @@
                 [self.goingButton.layer setBorderColor:[UIColor colorWithRed:0.1804 green:0.8 blue:0.4431 alpha:1].CGColor];
             }completion:^(BOOL finished) {
                     self.goingButton.enabled = NO;
+                if([friendsArray indexOfObject:myProfile] == -1){
+                    [friendsArray insertObject:myProfile atIndex:0];
+                    [self resizeCollectionView];
+                }
 //                NSDictionary *properties = @{@"date" : [NSDate date]};
 //                [[Mixpanel sharedInstance] track:@"RSVP_event" properties:properties];
             }];

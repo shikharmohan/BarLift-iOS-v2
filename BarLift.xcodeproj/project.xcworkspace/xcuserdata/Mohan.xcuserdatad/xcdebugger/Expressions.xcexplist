@@ -11,10 +11,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "main:main.m">
+         contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser]">
+               value = "[PFUser currentUser][@&quot;friends&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__44-[BLTDealViewController goingButtonPressed:]_block_invoke180:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser][@&quot;profile&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[friendsArray indexOfObject:obj]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,37 +41,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "if ([PFUser currentUser])">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
-            </PersistentString>
-            <PersistentString
-               value = "[PFUser currentUser][@&quot;friends&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTDealViewController shareButtonPressed:]:BLTDealViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.currentDeal">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "__39-[BLTSidebarViewController viewDidLoad]_block_invoke:BLTSidebarViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "picture">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,10 +65,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTDealViewController viewDidLoad]:BLTDealViewController.m">
+         contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser]">
+               value = "if ([PFUser currentUser])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealViewController shareButtonPressed:]:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentDeal">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -82,6 +85,14 @@
          <PersistentStrings>
             <PersistentString
                value = "object[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealViewController viewDidLoad]:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

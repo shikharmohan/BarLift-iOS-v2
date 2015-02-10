@@ -44,11 +44,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445190999.01265"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-shouldPerformSegueWithIdentifier:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -60,11 +60,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445190999.01265"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-shouldPerformSegueWithIdentifier:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -76,11 +76,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445190999.01265"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "@implementation BLTLoginViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -92,11 +92,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445190999.01265"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "@implementation BLTLoginViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -156,11 +156,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445190999.01265"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "-updateUserInformation"
             landmarkType = "5">
          </BreakpointContent>
@@ -172,11 +172,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445069701.824622"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-updateUserInformation"
             landmarkType = "5">
          </BreakpointContent>
@@ -188,11 +188,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "@implementation BLTDealViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "-shareButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445162957.73224"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445162957.73224"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "-shareButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "@implementation BLTDealViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "@implementation BLTDealViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445162957.73224"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -394,27 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "-createUI"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -442,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTLoginViewController.m"
-            timestampString = "445191226.247539"
+            timestampString = "445215201.54656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "-updateUserInformation"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +442,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445208368.837516"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "-goingButtonPressed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarLift/BLTDealViewController.m"
+            timestampString = "445215137.061183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "-goingButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -474,27 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445205703.002856"
+            timestampString = "445215137.061183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-createUI"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarLift/BLTDealViewController.m"
-            timestampString = "445205605.233449"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-createUI"
             landmarkType = "5">
          </BreakpointContent>
