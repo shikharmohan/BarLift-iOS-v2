@@ -10,6 +10,8 @@
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
 #import "JFMinimalNotification.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 //#import "Mixpanel.h"
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
@@ -130,7 +132,7 @@
                                 }completion:^(BOOL finished) {
                                     self.goingButton.enabled = NO;
                                 }];
-                                [friendsArray addObject:obj];
+                                //[friendsArray addObject:obj];
                             }
                             else{
                                 [friendsArray addObject:obj];
@@ -206,7 +208,7 @@
             }completion:^(BOOL finished) {
                     self.goingButton.enabled = NO;
                 if([friendsArray indexOfObject:myProfile] == -1){
-                    [friendsArray insertObject:myProfile atIndex:0];
+                  //  [friendsArray insertObject:myProfile atIndex:0];
                     [self resizeCollectionView];
                 }
 //                NSDictionary *properties = @{@"date" : [NSDate date]};
@@ -262,16 +264,20 @@
     UIImageView *friendPic = (UIImageView *) [cell viewWithTag:1];
     friendName.text = [[friendsArray objectAtIndex:indexPath.row] objectAtIndex:0];
     NSString *fb_id = [[friendsArray objectAtIndex:indexPath.row] objectAtIndex:1];
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
-        if ( data == nil )
-            return;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [friendPic initWithImage:[UIImage imageWithData:data scale:1.0]];
-            friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
-            friendPic.clipsToBounds = YES;
-        });
-    });
+    [friendPic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+    friendPic.contentMode = UIViewContentModeScaleAspectFit;
+    friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
+    friendPic.clipsToBounds = YES;
+//    dispatch_async(dispatch_get_global_queue(0,0), ^{
+//        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+//        if ( data == nil )
+//            return;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [friendPic initWithImage:[UIImage imageWithData:data scale:1.0]];
+//            friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
+//            friendPic.clipsToBounds = YES;
+//        });
+//    });
     return cell;
 }
 
