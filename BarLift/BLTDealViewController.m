@@ -16,7 +16,6 @@
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (weak, nonatomic) IBOutlet UIImageView *dealTypeImageView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UILabel *barName;
 @property (weak, nonatomic) IBOutlet UILabel *barAddress;
 @property (weak, nonatomic) IBOutlet UIButton *goingButton;
@@ -24,8 +23,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
 @property (weak, nonatomic) PFObject *currentDeal;
+@property (weak, nonatomic) IBOutlet UIView *friendsView;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
 @end
 
@@ -45,6 +45,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //load background image
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"bg@2x.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+    //friend view shadow
+    
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.friendsView.bounds];
+    self.friendsView.layer.masksToBounds = NO;
+    self.friendsView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.friendsView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    self.friendsView.layer.shadowOpacity = 0.5f;
+    self.friendsView.layer.shadowPath = shadowPath.CGPath;
+    
+    
+    
     myProfile = [NSArray arrayWithObjects:[PFUser currentUser][@"profile"][@"name"], [PFUser currentUser][@"profile"][@"fb_id"], nil];
     [self.scroller setScrollEnabled:YES];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
@@ -58,10 +77,7 @@
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
-        [self.sidebarButton setTarget: self.revealViewController];
-        [self.sidebarButton setAction: @selector( rightRevealToggle: )];
-//        [self.shareButton setTarget:self.revealViewController];
-//        [self.shareButton setAction:@selector(revealToggle:)];
+        [self.sidebarButton addTarget:self.revealViewController action:@selector( rightRevealToggle: ) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     

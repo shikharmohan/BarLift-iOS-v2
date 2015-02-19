@@ -3,6 +3,18 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </mutableArray>
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="J83-c5-H4z">
@@ -178,7 +190,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98431372549019602" green="0.49411764705882355" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.38039215686274508" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="callUberButton" destination="bgZ-Bl-F9j" id="5hI-pz-Ith"/>
@@ -193,7 +205,7 @@
         <!--Navigation Controller-->
         <scene sceneID="GBo-PA-8S6">
             <objects>
-                <navigationController id="Rr1-uE-SsW" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="Rr1-uE-SsW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aXE-PF-zxn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -202,6 +214,9 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zFp-xv-GIs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Met-o4-vJe" kind="relationship" relationship="rootViewController" id="63h-AE-ThD"/>
                     </connections>
@@ -215,72 +230,68 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Met-o4-vJe" customClass="BLTDealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gjk-oZ-s8c">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="oxb-VB-iuB">
-                                <rect key="frame" x="0.0" y="64" width="320" height="116"/>
+                            <view contentMode="scaleToFill" id="v8g-oY-N02" customClass="BLTNavigationView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="near_me-25.png" highlighted="YES" id="Gg6-kz-lEB">
-                                        <rect key="frame" x="19" y="67" width="25" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tOA-T8-0v8">
+                                        <rect key="frame" x="279" y="6" width="23" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="24" id="uZx-cW-duU">
-                                        <rect key="frame" x="8" y="8" width="305" height="61"/>
+                                        <state key="normal" backgroundImage="menu-32">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BarLift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="on9-lG-n4Q">
+                                        <rect key="frame" x="26" y="15" width="105" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <color key="highlightedColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </label>
-                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="LBx-be-7tF">
-                                        <rect key="frame" x="52" y="62" width="253" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.38039215686274508" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Cqy-5p-pna">
-                                <rect key="frame" x="0.0" y="180" width="320" height="568"/>
+                            <view contentMode="scaleToFill" id="QAq-nL-Rfd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.38039215686274508" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7fA-CS-pdl" customClass="BLTDealView">
+                                <rect key="frame" x="10" y="212" width="300" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktail-100" id="XNG-mU-dG9">
-                                        <rect key="frame" x="195" y="16" width="107" height="101"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" id="OeE-2a-nrJ">
+                                        <rect key="frame" x="8" y="8" width="284" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="52f-Rt-df6">
-                                        <rect key="frame" x="23" y="228" width="275" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who's Going:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="on9-lG-n4Q">
-                                        <rect key="frame" x="8" y="316" width="105" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="33"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deal Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="0ge-v3-PfE">
-                                        <rect key="frame" x="23" y="140" width="275" height="80"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" id="Ny5-BH-jh3">
+                                        <rect key="frame" x="32" y="59" width="237" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Gdj-8e-Ll1">
-                                        <rect key="frame" x="11" y="8" width="176" height="118"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="martini@3x.png" id="XNG-mU-dG9">
+                                <rect key="frame" x="31" y="118" width="65" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="3yO-2N-cA2">
+                                <rect key="frame" x="0.0" y="432" width="320" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" id="BW8-Hq-P11">
-                                        <rect key="frame" x="0.0" y="345" width="320" height="193"/>
+                                        <rect key="frame" x="0.0" y="34" width="320" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentInset" minX="0.0" minY="0.0" maxX="0.0" maxY="100"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="WKH-cx-gD8">
                                             <size key="itemSize" width="102" height="100"/>
@@ -317,21 +328,25 @@
                                             <outlet property="delegate" destination="Met-o4-vJe" id="v9T-Tg-8Kw"/>
                                         </connections>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="anX-Mu-LMW">
-                                        <rect key="frame" x="44" y="252" width="232" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RcJ-It-8wA">
+                                        <rect key="frame" x="38" y="0.0" width="245" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="33"/>
-                                        <state key="normal" title="I'M GOING">
-                                            <color key="titleColor" red="0.98431372549019602" green="0.49411764705882355" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goingButtonPressed:" destination="Met-o4-vJe" eventType="touchUpInside" id="VWV-MI-Yk2"/>
-                                        </connections>
-                                    </button>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                            </scrollView>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Gdj-8e-Ll1">
+                                <rect key="frame" x="121" y="91" width="176" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="BarLift" id="ZVA-sW-Gjd">
                         <barButtonItem key="leftBarButtonItem" image="upload-32.png" id="Od6-Gq-zMl">
@@ -345,24 +360,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="640"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="backgroundView" destination="oxb-VB-iuB" id="qTW-cc-5r0"/>
-                        <outlet property="barAddress" destination="LBx-be-7tF" id="sK9-bz-yCT"/>
-                        <outlet property="barName" destination="uZx-cW-duU" id="2Kf-WN-3lo"/>
+                        <outlet property="barAddress" destination="Ny5-BH-jh3" id="zPc-Zm-hSy"/>
+                        <outlet property="barName" destination="OeE-2a-nrJ" id="XRO-9a-YCr"/>
                         <outlet property="collectionView" destination="BW8-Hq-P11" id="20U-VM-b6j"/>
                         <outlet property="dealName" destination="Gdj-8e-Ll1" id="4Ia-Se-hrz"/>
                         <outlet property="dealTypeImageView" destination="XNG-mU-dG9" id="f8b-SU-Vm5"/>
-                        <outlet property="descriptionLabel" destination="0ge-v3-PfE" id="n4j-uG-upE"/>
-                        <outlet property="goingButton" destination="anX-Mu-LMW" id="zRq-5c-9cp"/>
-                        <outlet property="locationIcon" destination="Gg6-kz-lEB" id="VvM-xF-ZfW"/>
-                        <outlet property="scroller" destination="Cqy-5p-pna" id="ih5-nE-fE5"/>
-                        <outlet property="sidebarButton" destination="pP2-dP-pU9" id="0eA-2s-kCE"/>
+                        <outlet property="friendsView" destination="3yO-2N-cA2" id="6VD-kJ-zLa"/>
+                        <outlet property="sidebarButton" destination="tOA-T8-0v8" id="te4-5n-Sxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps1-2W-8RI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="937"/>
+            <point key="canvasLocation" x="1634" y="1038"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="aET-1p-KfN">
@@ -471,9 +482,8 @@
         <image name="Facebook.png" width="200" height="25"/>
         <image name="barlift-logo.png" width="64" height="60"/>
         <image name="barliftlogo.png" width="280" height="129"/>
-        <image name="cocktail-100" width="100" height="100"/>
+        <image name="martini@3x.png" width="216" height="216"/>
         <image name="menu-32" width="32" height="32"/>
-        <image name="near_me-25.png" width="25" height="25"/>
         <image name="upload-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
