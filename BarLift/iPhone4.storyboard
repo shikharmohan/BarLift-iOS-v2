@@ -54,7 +54,6 @@
                                 </state>
                                 <connections>
                                     <action selector="aboutBarLift:" destination="s9u-qE-TNu" eventType="touchUpInside" id="DG9-n9-ETb"/>
-                                    <segue destination="fVz-Hd-EfQ" kind="modal" identifier="toAbout" id="1Fh-gP-4js"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="81e-2R-k8k">
@@ -78,21 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D4-BC-6V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161.59999999999999" y="379.61333333333334"/>
-        </scene>
-        <!--Surfboard View Controller-->
-        <scene sceneID="Y3K-fN-y29">
-            <objects>
-                <viewController id="fVz-Hd-EfQ" customClass="SRFSurfboardViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bKi-GZ-SbH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6C6-cN-jXx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ed-nJ-oen" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="161" y="1074"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9m1-qI-Azx">

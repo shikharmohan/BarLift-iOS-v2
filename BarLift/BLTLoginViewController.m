@@ -12,9 +12,8 @@
 #import "BLTUserDetailViewController.h"
 #import "FLAnimatedImage.h"
 #import "Reachability.h"
-#import "SRFSurfboard.h"
 
-@interface BLTLoginViewController () <SRFSurfboardDelegate>
+@interface BLTLoginViewController ()
 @property (strong, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIButton *login;
@@ -221,31 +220,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"toAbout"]){
-        SRFSurfboardViewController *surfboard = segue.destinationViewController;
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"panels" ofType:@"json"];
-        NSArray *panels = [SRFSurfboardViewController panelsFromConfigurationAtPath:path];
-        [surfboard setPanels:panels];
-        surfboard.delegate = self;
-        surfboard.backgroundColor = [UIColor colorWithRed:0.97 green:0.58 blue:0.24 alpha:1.00];
-    }
-}
-
-#pragma mark - SRFSurfboardDelegate
-
-/** ---
- *  @name SRFSurfboardDelegate
- *  ---
- */
-
-- (void)surfboard:(SRFSurfboardViewController *)surfboard didTapButtonAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)surfboard:(SRFSurfboardViewController *)surfboard didShowPanelAtIndex:(NSInteger)index
-{
-    //    NSLog(@"Index: %i", index);
+    
 }
 
 #pragma mark - Reachability
