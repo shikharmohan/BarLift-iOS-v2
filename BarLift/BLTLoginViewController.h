@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BLTLoginViewController : UIViewController 
+#import "BLTIntroPagesViewController.h"
+@interface BLTLoginViewController : UIViewController  <UIPageViewControllerDataSource>
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageTitles;
+@property (strong, nonatomic) NSArray *pageSubtitles;
+@property (strong, nonatomic) NSArray *pageImages;
 
 @end
 

@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIButton *login;
+@property (weak, nonatomic) IBOutlet UIButton *aboutBarLift;
 @property (strong, nonatomic) NSMutableData *imageData;
 - (IBAction)aboutBarLift:(UIButton *)sender;
 - (IBAction)loginToFacebook:(UIButton *)sender;
@@ -56,6 +57,9 @@
         NSLog(@"There IS internet connection");
     }
     
+    
+    
+    
     NSString *filePath;
     if(iOSScreenSize.height == 568){
         filePath = [[NSBundle mainBundle] pathForResource:@"bgblack4" ofType:@"gif"];
@@ -71,7 +75,9 @@
     [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     webViewBG.userInteractionEnabled = NO;
     [self.view addSubview:webViewBG];
-    
+    [self.view addSubview:self.aboutBarLift];
+    [self.view addSubview:self.login];
+    [self.view addSubview:self.indicator];
     self.indicator.hidden = YES;
     
 

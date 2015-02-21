@@ -6,6 +6,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
         </mutableArray>
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
@@ -68,6 +69,7 @@
                     <navigationItem key="navigationItem" id="v2e-vj-ouR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="aboutBarLift" destination="XZb-c9-Ulv" id="nt3-1h-ckh"/>
                         <outlet property="indicator" destination="81e-2R-k8k" id="dC6-2K-CfL"/>
                         <outlet property="login" destination="ElY-JF-yjh" id="iiK-Er-kZ4"/>
                         <outlet property="logo" destination="PEy-7p-FTG" id="ERR-3a-eEb"/>
@@ -78,6 +80,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D4-BC-6V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="379"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="CFi-ZS-INY">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="J86-EB-eLt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yp-CJ-PSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="1216"/>
+        </scene>
+        <!--Intro Pages View Controller-->
+        <scene sceneID="6pS-3Z-cf8">
+            <objects>
+                <viewController storyboardIdentifier="PageContentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0Q-0h-UZ7" customClass="BLTIntroPagesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Pl-ga-NQh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appdesign-Slide2.jpg" id="mRO-kh-eCs">
+                                <rect key="frame" x="0.0" y="239" width="320" height="269"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myv-og-xTk">
+                                <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Login With Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="c0Q-0h-UZ7" eventType="touchUpInside" id="niQ-lc-0ge"/>
+                                    <action selector="loginToFacebook:" destination="s9u-qE-TNu" eventType="touchUpInside" id="Yc6-4x-joO"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="y1e-aC-YpH">
+                                <rect key="frame" x="124" y="184" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r9l-FU-fQd">
+                                <rect key="frame" x="25" y="101" width="270" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8V-N8-Kbl">
+                                <rect key="frame" x="25" y="51" width="270" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="myv-og-xTk" id="gmL-Pu-ZUY"/>
+                        <outlet property="pageControl" destination="y1e-aC-YpH" id="5Kd-dr-iVz"/>
+                        <outlet property="slideImageView" destination="mRO-kh-eCs" id="gta-dl-8n8"/>
+                        <outlet property="subtitleLabel" destination="r9l-FU-fQd" id="Bv4-Kc-bul"/>
+                        <outlet property="titleLabel" destination="c8V-N8-Kbl" id="7FX-8w-7Lr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVn-0y-JDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="1216"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9m1-qI-Azx">
@@ -474,6 +544,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appdesign-Slide2.jpg" width="640" height="600"/>
         <image name="bltlogo@3x.png" width="100" height="100"/>
         <image name="hamburger@3x.png" width="99" height="68"/>
         <image name="martini@3x.png" width="216" height="216"/>
