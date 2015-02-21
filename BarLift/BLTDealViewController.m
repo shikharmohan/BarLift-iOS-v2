@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *sidebarButton;
 @property (weak, nonatomic) PFObject *currentDeal;
 @property (weak, nonatomic) IBOutlet UIView *friendsView;
+@property (weak, nonatomic) IBOutlet UILabel *goingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *locationIcon;
 @end
 
@@ -35,7 +36,7 @@
     NSMutableDictionary *dict;
     CGSize iOSScreenSize;
     NSArray *myProfile;
-
+    BOOL panelUp;
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -45,6 +46,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     //load background image
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"bg@2x.png"] drawInRect:self.view.bounds];
@@ -53,26 +56,11 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 
-    //friend view shadow
-    
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.friendsView.bounds];
-    self.friendsView.layer.masksToBounds = NO;
-    self.friendsView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.friendsView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    self.friendsView.layer.shadowOpacity = 0.5f;
-    self.friendsView.layer.shadowPath = shadowPath.CGPath;
-    
-    
     
     myProfile = [NSArray arrayWithObjects:[PFUser currentUser][@"profile"][@"name"], [PFUser currentUser][@"profile"][@"fb_id"], nil];
-    [self.scroller setScrollEnabled:YES];
+    [self.collectionView setScrollEnabled:NO];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
-    if (iOSScreenSize.height == 568){
-    [self.scroller setContentSize:CGSizeMake(320, 620)];
-    }
-    if (iOSScreenSize.height == 667){
-    [self.scroller setContentSize:CGSizeMake(375, 600)];
-    }
+
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -104,10 +92,68 @@
 
     [self.barAddress addGestureRecognizer:tapGesture1];
     [self.locationIcon addGestureRecognizer:tapGesture];
+    //friend view shadow
     
+    panelUp = NO;
+    UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandFriends)];
+    [self.friendsView addGestureRecognizer:singleTapGestureRecognizer];
+    // drop shadow
+    [self.friendsView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.friendsView.layer setShadowOpacity:0.8];
+    [self.friendsView.layer setShadowRadius:3.0];
+    [self.friendsView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
     
     // Do any additional setup after loading the view.
 }
+
+-(void)expandFriends{
+    [UIView transitionWithView:self.friendsView duration:0.4f options:UIViewAnimationOptionCurveEaseIn animations:^{
+        if(panelUp){
+            [self fadeInContent];
+            CGRect frame = self.friendsView.frame;
+            frame.size.height = 150;
+            frame.origin.y = iOSScreenSize.height*.76;
+            self.friendsView.frame = frame;
+            [self.collectionView setScrollEnabled:NO];
+            [self.goingLabel setFont:[UIFont systemFontOfSize:16]];
+            [self.collectionView setContentOffset:CGPointZero animated:YES];
+            panelUp = NO;
+        }
+        else{
+            [self fadeOutContent];
+            CGRect frame = self.friendsView.frame;
+            frame.size.height = 493;
+            frame.origin.y = 75;
+            self.friendsView.frame = frame;
+            [self.collectionView setScrollEnabled:YES];
+            CGRect cvFrame = self.collectionView.frame;
+            cvFrame.size.height = 473;
+            self.collectionView.frame = cvFrame;
+            [self.goingLabel setFont:[UIFont systemFontOfSize:25]];
+            panelUp = YES;
+        }
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+
+
+}
+
+-(void) fadeInContent{
+    [self.dealName setAlpha:1.0f];
+    [self.barAddress setAlpha:1.0f];
+    [self.barName setAlpha:1.0f];
+    [self.dealTypeImageView setAlpha:1.0f];
+}
+
+-(void)fadeOutContent{
+    [self.dealName setAlpha:0.0f];
+    [self.barAddress setAlpha:0.0f];
+    [self.barName setAlpha:0.0f];
+    [self.dealTypeImageView setAlpha:0.0f];
+}
+
 
 
 -(void) labelTap{
@@ -137,7 +183,7 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 1; i++) {
+                    for(int i = 0; i < 30; i++) {
                         for (NSArray *obj in object){
                             if([myProfile isEqualToArray:obj]){
                                 NSLog(@"Already Going");
@@ -155,7 +201,8 @@
                             }
                         }
                     }
-                    [self resizeCollectionView];
+                    [self.collectionView reloadData];
+                    //[self resizeCollectionView];
                 }
             }];
         }
