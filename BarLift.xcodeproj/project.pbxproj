@@ -69,6 +69,9 @@
 		01A62E531A990524004FD855 /* bltlogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E521A990524004FD855 /* bltlogo@2x.png */; };
 		01A62E551A99052D004FD855 /* bltlogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E541A99052D004FD855 /* bltlogo@3x.png */; };
 		01A62E571A990578004FD855 /* hamburger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E561A990578004FD855 /* hamburger@3x.png */; };
+		01A62E5D1A993862004FD855 /* bgblack4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E5C1A993862004FD855 /* bgblack4.gif */; };
+		01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E5E1A993ABC004FD855 /* bgblack47.gif */; };
+		01A62E611A993BC0004FD855 /* bgblack55.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E601A993BC0004FD855 /* bgblack55.gif */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
 		01D70FAB1A6B6B77001C29B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA51A6B6B5B001C29B7 /* Bolts.framework */; };
@@ -230,6 +233,9 @@
 		01A62E521A990524004FD855 /* bltlogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bltlogo@2x.png"; path = "bltlogo.xcassets/bltlogo.imageset/bltlogo@2x.png"; sourceTree = "<group>"; };
 		01A62E541A99052D004FD855 /* bltlogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bltlogo@3x.png"; path = "bltlogo.xcassets/bltlogo.imageset/bltlogo@3x.png"; sourceTree = "<group>"; };
 		01A62E561A990578004FD855 /* hamburger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@3x.png"; sourceTree = "<group>"; };
+		01A62E5C1A993862004FD855 /* bgblack4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bgblack4.gif; sourceTree = "<group>"; };
+		01A62E5E1A993ABC004FD855 /* bgblack47.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bgblack47.gif; sourceTree = "<group>"; };
+		01A62E601A993BC0004FD855 /* bgblack55.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bgblack55.gif; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
 		01D70F781A6B6A8C001C29B7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -509,6 +515,9 @@
 		01A62E0F1A95DBD8004FD855 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				01A62E5C1A993862004FD855 /* bgblack4.gif */,
+				01A62E601A993BC0004FD855 /* bgblack55.gif */,
+				01A62E5E1A993ABC004FD855 /* bgblack47.gif */,
 				01A62E101A95DC2E004FD855 /* Lato2OFL */,
 			);
 			name = Fonts;
@@ -876,6 +885,7 @@
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				01A62E2B1A95DC2E004FD855 /* Lato-Heavy.ttf in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
+				01A62E611A993BC0004FD855 /* bgblack55.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
 				01A62E311A95DC2E004FD855 /* Lato-MediumItalic.ttf in Resources */,
 				01A62E381A95DC2E004FD855 /* README.txt in Resources */,
@@ -896,6 +906,7 @@
 				01A62E081A95CD53004FD855 /* bg@2x.png in Resources */,
 				01A62E551A99052D004FD855 /* bltlogo@3x.png in Resources */,
 				01A62E2D1A95DC2E004FD855 /* Lato-Italic.ttf in Resources */,
+				01A62E5D1A993862004FD855 /* bgblack4.gif in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
 				01D711C71A6E0BE7001C29B7 /* SRFSurfboardPanelCell.xib in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -908,6 +919,7 @@
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
+				01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */,
 				01A62E291A95DC2E004FD855 /* Lato-Hairline.ttf in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
 				01A62E271A95DC2E004FD855 /* Lato-Bold.ttf in Resources */,

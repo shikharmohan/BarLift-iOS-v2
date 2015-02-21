@@ -111,7 +111,7 @@
         if(panelUp){
             [self fadeInContent];
             CGRect frame = self.friendsView.frame;
-            frame.size.height = 150;
+            frame.size.height = iOSScreenSize.height*.264;
             frame.origin.y = iOSScreenSize.height*.76;
             self.friendsView.frame = frame;
             [self.collectionView setScrollEnabled:NO];
@@ -122,12 +122,12 @@
         else{
             [self fadeOutContent];
             CGRect frame = self.friendsView.frame;
-            frame.size.height = 493;
-            frame.origin.y = 75;
+            frame.size.height = iOSScreenSize.height*.867;
+            frame.origin.y = iOSScreenSize.height*0.132;
             self.friendsView.frame = frame;
             [self.collectionView setScrollEnabled:YES];
             CGRect cvFrame = self.collectionView.frame;
-            cvFrame.size.height = 473;
+            cvFrame.size.height = iOSScreenSize.height*0.83;
             self.collectionView.frame = cvFrame;
             [self.goingLabel setFont:[UIFont systemFontOfSize:25]];
             panelUp = YES;

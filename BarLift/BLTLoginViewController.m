@@ -27,7 +27,11 @@
 
 @end
 
-@implementation BLTLoginViewController
+@implementation BLTLoginViewController{
+    CGSize iOSScreenSize;
+
+}
+
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,12 +46,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    self.indicator.hidden = YES;
-    [self testInternetConnection];
+    iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        NSLog(@"There IS NO internet connection");
+        self.imageView.animatedImage = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:@"bgblack4.gif"]];
+    } else {
+        NSLog(@"There IS internet connection");
+    }
     
-    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://31.media.tumblr.com/c48378e8ce8f0e29ea7d3198df4decef/tumblr_n7wk45d38O1tvkgeto1_500.gif"]]];
-    self.imageView.animatedImage = image;
+    NSString *filePath;
+    if(iOSScreenSize.height == 568){
+        filePath = [[NSBundle mainBundle] pathForResource:@"bgblack4" ofType:@"gif"];
+    }
+    else if (iOSScreenSize.height == 667){
+        filePath = [[NSBundle mainBundle] pathForResource:@"bgblack47" ofType:@"gif"];
+    }
+    else if (iOSScreenSize.height == 736){
+        filePath = [[NSBundle mainBundle] pathForResource:@"bgblack55" ofType:@"gif"];
+    }
+    NSData *gif = [NSData dataWithContentsOfFile:filePath];
+    UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:self.view.frame];
+    [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    webViewBG.userInteractionEnabled = NO;
+    [self.view addSubview:webViewBG];
+    
+    self.indicator.hidden = YES;
+    
+
 
     self.logo.alpha = 0.0;
     self.login.alpha = 0.0;
