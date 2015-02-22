@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface BLTIntroPagesViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIImageView *slideImageView;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property NSUInteger pageIndex;
+@property NSString *titleText;
+@property NSString *imageFile;
+@property NSString *subtitleText;
 @end

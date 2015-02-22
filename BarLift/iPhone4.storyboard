@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="s9u-qE-TNu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="hiH-S1-9DQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -19,13 +19,14 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="J83-c5-H4z">
             <objects>
-                <viewController id="s9u-qE-TNu" customClass="BLTLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s9u-qE-TNu" customClass="BLTLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="niX-fk-XYd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,27 +35,11 @@
                                 <rect key="frame" x="40" y="53" width="232" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XZb-c9-Ulv">
-                                <rect key="frame" x="104" y="475" width="113" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="About BarLift">
-                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="aboutBarLift:" destination="s9u-qE-TNu" eventType="touchUpInside" id="DG9-n9-ETb"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="81e-2R-k8k">
-                                <rect key="frame" x="150" y="330" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ElY-JF-yjh">
                                 <rect key="frame" x="0.0" y="513" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                 <state key="normal" title="Login With Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,13 +48,17 @@
                                     <action selector="loginToFacebook:" destination="s9u-qE-TNu" eventType="touchUpInside" id="tBu-PH-Qk3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="81e-2R-k8k">
+                                <rect key="frame" x="138" y="316" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2e-vj-ouR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="aboutBarLift" destination="XZb-c9-Ulv" id="nt3-1h-ckh"/>
                         <outlet property="indicator" destination="81e-2R-k8k" id="dC6-2K-CfL"/>
                         <outlet property="login" destination="ElY-JF-yjh" id="iiK-Er-kZ4"/>
                         <outlet property="logo" destination="PEy-7p-FTG" id="ERR-3a-eEb"/>
@@ -79,29 +68,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D4-BC-6V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="379"/>
+            <point key="canvasLocation" x="143" y="147"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="CFi-ZS-INY">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="J86-EB-eLt" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="J86-EB-eLt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yp-CJ-PSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="1216"/>
+            <point key="canvasLocation" x="277" y="2276"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="tKT-sy-Ms1">
+            <objects>
+                <viewController id="hiH-S1-9DQ" customClass="BLTIntroViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMw-GF-dvT" userLabel="View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="ZPH-z6-fik">
+                                <rect key="frame" x="135" y="472" width="51" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="ZPH-z6-fik" id="YWF-bP-uPj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrB-qX-12e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269" y="1650"/>
         </scene>
         <!--Intro Pages View Controller-->
         <scene sceneID="6pS-3Z-cf8">
             <objects>
-                <viewController storyboardIdentifier="PageContentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0Q-0h-UZ7" customClass="BLTIntroPagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0Q-0h-UZ7" customClass="BLTIntroPagesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Pl-ga-NQh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appdesign-Slide2.jpg" id="mRO-kh-eCs">
-                                <rect key="frame" x="0.0" y="239" width="320" height="269"/>
+                                <rect key="frame" x="0.0" y="170" width="320" height="269"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myv-og-xTk">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="myv-og-xTk">
                                 <rect key="frame" x="0.0" y="513" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,11 +129,6 @@
                                     <action selector="loginToFacebook:" destination="s9u-qE-TNu" eventType="touchUpInside" id="Yc6-4x-joO"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="y1e-aC-YpH">
-                                <rect key="frame" x="124" y="184" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r9l-FU-fQd">
                                 <rect key="frame" x="25" y="101" width="270" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,27 +136,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c8V-N8-Kbl">
-                                <rect key="frame" x="25" y="51" width="270" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="25" id="c8V-N8-Kbl">
+                                <rect key="frame" x="25" y="51" width="270" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="Bsu-Fi-i2K">
+                                <rect key="frame" x="142" y="442" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="Bsu-Fi-i2K" id="UXB-Ve-Ayd"/>
                         <outlet property="loginButton" destination="myv-og-xTk" id="gmL-Pu-ZUY"/>
-                        <outlet property="pageControl" destination="y1e-aC-YpH" id="5Kd-dr-iVz"/>
                         <outlet property="slideImageView" destination="mRO-kh-eCs" id="gta-dl-8n8"/>
                         <outlet property="subtitleLabel" destination="r9l-FU-fQd" id="Bv4-Kc-bul"/>
                         <outlet property="titleLabel" destination="c8V-N8-Kbl" id="7FX-8w-7Lr"/>
+                        <segue destination="0Qp-3k-3kR" kind="modal" identifier="welcomeSegue" id="xrb-IS-rkI"/>
+                        <segue destination="aAm-rN-Ly2" kind="modal" identifier="dealSegue" id="NB2-Ik-AvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVn-0y-JDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="1216"/>
+            <point key="canvasLocation" x="753" y="1502"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9m1-qI-Azx">
@@ -165,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc1-LY-BBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679" y="761"/>
+            <point key="canvasLocation" x="161" y="1017"/>
         </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="AHJ-VZ-Fc4">
@@ -235,7 +251,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="wlo-Xv-Ww5" eventType="touchUpInside" id="gIs-hq-gVe"/>
-                                    <segue destination="s9u-qE-TNu" kind="modal" identifier="toLogin" id="aft-rz-cmX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cS5-mT-RXW">
@@ -248,13 +263,20 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="M85-Q2-kwC">
+                                <rect key="frame" x="142" y="218" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="callUberButton" destination="bgZ-Bl-F9j" id="5hI-pz-Ith"/>
+                        <outlet property="indicator" destination="M85-Q2-kwC" id="NbO-9t-hpY"/>
                         <outlet property="name" destination="935-4J-V4w" id="nUj-SJ-sFR"/>
                         <outlet property="profPic" destination="CXo-7o-hAE" id="iBH-Lm-yPb"/>
+                        <segue destination="hiH-S1-9DQ" kind="modal" identifier="toLogin" id="3Nf-XP-u4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoH-L7-nfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,7 +304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tF-c5-K58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="940"/>
+            <point key="canvasLocation" x="1228" y="1150"/>
         </scene>
         <!--BarLift-->
         <scene sceneID="2CE-Zq-q36">
@@ -556,4 +578,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="xrb-IS-rkI"/>
+        <segue reference="NB2-Ik-AvM"/>
+    </inferredMetricsTieBreakers>
 </document>

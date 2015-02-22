@@ -16,6 +16,7 @@
 @interface BLTSidebarViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profPic;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UIButton *callUberButton;
 
 @end
@@ -46,9 +47,13 @@
 }
 
 - (IBAction)logoutButtonPressed:(UIButton *)sender {
+    self.indicator.hidden = NO;
+    [self.view bringSubviewToFront:self.indicator];
+    [self.indicator startAnimating];
     if ([PFUser currentUser]) {
         [[PFFacebookUtils session] closeAndClearTokenInformation];
         [PFUser logOut];
+        [self.indicator stopAnimating];
     } else {
         NSLog(@"currentUser: %@", [PFUser currentUser]);
     }

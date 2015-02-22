@@ -10,11 +10,9 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "BLTUserDetailViewController.h"
-#import "FLAnimatedImage.h"
 #import "Reachability.h"
 
 @interface BLTLoginViewController ()
-@property (strong, nonatomic) IBOutlet FLAnimatedImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *aboutBarLift;
@@ -52,7 +50,12 @@
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
         NSLog(@"There IS NO internet connection");
-        self.imageView.animatedImage = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:@"bgblack4.gif"]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Connection Issue"
+                                                        message:@"Please connect to a network and try again."
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"Dismiss", nil];
+        [alert show];
     } else {
         NSLog(@"There IS internet connection");
     }
@@ -111,6 +114,7 @@
     
     
     self.indicator.hidden = NO;
+    [self.view bringSubviewToFront:self.indicator];
     [self.indicator startAnimating];
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
