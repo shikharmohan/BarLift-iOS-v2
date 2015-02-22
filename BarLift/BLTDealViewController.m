@@ -183,7 +183,7 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 30; i++) {
+                    for(int i = 0; i < 1; i++) {
                         for (NSArray *obj in object){
                             if([myProfile isEqualToArray:obj]){
                                 NSLog(@"Already Going");

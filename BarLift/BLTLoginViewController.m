@@ -20,8 +20,10 @@
 - (IBAction)aboutBarLift:(UIButton *)sender;
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (strong, nonatomic) Reachability *internetReachableFoo;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property BOOL new;
 
 @end
@@ -79,8 +81,11 @@
     webViewBG.userInteractionEnabled = NO;
     [self.view addSubview:webViewBG];
     [self.view addSubview:self.aboutBarLift];
+    [self.view addSubview:self.logo];
     [self.view addSubview:self.login];
     [self.view addSubview:self.indicator];
+    [self.view addSubview:self.welcomeLabel];
+    [self.view addSubview:self.subtitleLabel];
     self.indicator.hidden = YES;
     
 
@@ -229,10 +234,10 @@
 
                                 NSLog(@"Got friends");
                                 if(self.new){
-                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
+                                    [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }
                                 else{
-                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
+                                    [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }
                             }
                         }];

@@ -7,6 +7,8 @@
         <mutableArray key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
+            <string>Lato-Bold</string>
         </mutableArray>
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
@@ -31,8 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bltlogo@3x.png" id="PEy-7p-FTG">
-                                <rect key="frame" x="40" y="53" width="232" height="211"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barlift-login-logo.png" id="PEy-7p-FTG">
+                                <rect key="frame" x="105" y="111" width="111" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ElY-JF-yjh">
@@ -49,10 +51,24 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="81e-2R-k8k">
-                                <rect key="frame" x="138" y="316" width="37" height="37"/>
+                                <rect key="frame" x="142" y="385" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're glad to have you on board, swipe right to learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pS3-Cz-3tE">
+                                <rect key="frame" x="22" y="323" width="277" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BarLift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fqb-ZM-ffj">
+                                <rect key="frame" x="52" y="250" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -62,6 +78,8 @@
                         <outlet property="indicator" destination="81e-2R-k8k" id="dC6-2K-CfL"/>
                         <outlet property="login" destination="ElY-JF-yjh" id="iiK-Er-kZ4"/>
                         <outlet property="logo" destination="PEy-7p-FTG" id="ERR-3a-eEb"/>
+                        <outlet property="subtitleLabel" destination="pS3-Cz-3tE" id="2He-pd-duk"/>
+                        <outlet property="welcomeLabel" destination="Fqb-ZM-ffj" id="yxN-bY-20w"/>
                         <segue destination="0Qp-3k-3kR" kind="modal" identifier="toWelcome" id="FCB-hV-QXi"/>
                         <segue destination="aAm-rN-Ly2" kind="modal" identifier="toDeal" id="NTW-rl-BBV"/>
                     </connections>
@@ -363,6 +381,11 @@
                                         <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="TC9-Uq-G9z">
+                                        <rect key="frame" x="132" y="117" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -547,18 +570,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="53I-Lx-o8s">
-                                <rect key="frame" x="122" y="115" width="76" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" id="73F-a9-W5p" customClass="RKCardView">
+                                <rect key="frame" x="10" y="58" width="300" height="470"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23921568627450981" green="0.29411764705882354" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="rTf-DL-dtQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cardView" destination="73F-a9-W5p" id="e1o-gC-iSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkk-up-bpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -566,6 +590,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Barlift-login-logo.png" width="1024" height="1024"/>
         <image name="appdesign-Slide2.jpg" width="640" height="600"/>
         <image name="bltlogo@3x.png" width="100" height="100"/>
         <image name="hamburger@3x.png" width="99" height="68"/>
@@ -579,7 +604,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xrb-IS-rkI"/>
-        <segue reference="NB2-Ik-AvM"/>
+        <segue reference="NTW-rl-BBV"/>
+        <segue reference="FCB-hV-QXi"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -83,6 +83,10 @@
 		01A62E761A9945E4004FD855 /* appdesign-Slide4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6D1A9945E4004FD855 /* appdesign-Slide4@2x.jpg */; };
 		01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */; };
 		01A62E7A1A99496C004FD855 /* BLTIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E791A99496C004FD855 /* BLTIntroViewController.m */; };
+		01A62E7D1A998548004FD855 /* AMViralSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E7C1A998548004FD855 /* AMViralSwitch.m */; };
+		01A62E7F1A9989B5004FD855 /* Barlift-login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */; };
+		01A62E851A998FEC004FD855 /* RKCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E841A998FEC004FD855 /* RKCardView.m */; };
+		01A62E8A1A99962B004FD855 /* BG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E891A99962B004FD855 /* BG1.png */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
 		01D70FAB1A6B6B77001C29B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA51A6B6B5B001C29B7 /* Bolts.framework */; };
@@ -111,8 +115,6 @@
 		01D711A21A6B6DE5001C29B7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D711A11A6B6DE5001C29B7 /* FacebookSDK.framework */; };
 		01D711A41A6CC827001C29B7 /* login_background.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01D711A31A6CC827001C29B7 /* login_background.gif */; };
 		01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */; };
-		01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */; };
-		01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */; };
 		01D711EC1A6E0E61001C29B7 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CA1A6E0E61001C29B7 /* panels.json */; };
 		01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711CE1A6E0E61001C29B7 /* Contents.json */; };
 		01D711F01A6E0E61001C29B7 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D711D01A6E0E61001C29B7 /* Contents.json */; };
@@ -255,6 +257,12 @@
 		01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "appdesign-Slide4@3x.jpg"; sourceTree = "<group>"; };
 		01A62E781A99496C004FD855 /* BLTIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTIntroViewController.h; sourceTree = "<group>"; };
 		01A62E791A99496C004FD855 /* BLTIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTIntroViewController.m; sourceTree = "<group>"; };
+		01A62E7B1A998548004FD855 /* AMViralSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMViralSwitch.h; sourceTree = "<group>"; };
+		01A62E7C1A998548004FD855 /* AMViralSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMViralSwitch.m; sourceTree = "<group>"; };
+		01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barlift-login-logo.png"; sourceTree = "<group>"; };
+		01A62E831A998FEC004FD855 /* RKCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCardView.h; sourceTree = "<group>"; };
+		01A62E841A998FEC004FD855 /* RKCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCardView.m; sourceTree = "<group>"; };
+		01A62E891A99962B004FD855 /* BG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG1.png; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
 		01D70F781A6B6A8C001C29B7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -284,10 +292,6 @@
 		01D711A31A6CC827001C29B7 /* login_background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = login_background.gif; sourceTree = "<group>"; };
 		01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTUserDetailViewController.h; sourceTree = "<group>"; };
 		01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTUserDetailViewController.m; sourceTree = "<group>"; };
-		01D711AB1A6CCD94001C29B7 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
-		01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
-		01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
-		01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		01D711CA1A6E0E61001C29B7 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
 		01D711CE1A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		01D711D01A6E0E61001C29B7 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -390,18 +394,10 @@
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
 				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
-				01A62E621A994589004FD855 /* BLTIntroPagesViewController.h */,
-				01A62E631A994589004FD855 /* BLTIntroPagesViewController.m */,
-				01A62E781A99496C004FD855 /* BLTIntroViewController.h */,
-				01A62E791A99496C004FD855 /* BLTIntroViewController.m */,
-				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
-				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
+				01A62E861A9990F9004FD855 /* Intro Pages */,
+				01A62E801A998F9F004FD855 /* Helper Libraries */,
 				01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */,
 				01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */,
-				01D711AB1A6CCD94001C29B7 /* FLAnimatedImage.h */,
-				01D711AC1A6CCD94001C29B7 /* FLAnimatedImage.m */,
-				01D711AE1A6CCDA5001C29B7 /* FLAnimatedImageView.h */,
-				01D711AF1A6CCDA5001C29B7 /* FLAnimatedImageView.m */,
 				01D7120D1A747537001C29B7 /* iPhone4.storyboard */,
 				01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */,
 				01D7120F1A747544001C29B7 /* iPhone47.storyboard */,
@@ -577,6 +573,46 @@
 			name = "Slide Images";
 			sourceTree = "<group>";
 		};
+		01A62E801A998F9F004FD855 /* Helper Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				01A62E821A998FD4004FD855 /* CardView */,
+				01A62E811A998FB1004FD855 /* ViralSwitch */,
+			);
+			name = "Helper Libraries";
+			sourceTree = "<group>";
+		};
+		01A62E811A998FB1004FD855 /* ViralSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				01A62E7B1A998548004FD855 /* AMViralSwitch.h */,
+				01A62E7C1A998548004FD855 /* AMViralSwitch.m */,
+			);
+			name = ViralSwitch;
+			sourceTree = "<group>";
+		};
+		01A62E821A998FD4004FD855 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				01A62E831A998FEC004FD855 /* RKCardView.h */,
+				01A62E841A998FEC004FD855 /* RKCardView.m */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
+		01A62E861A9990F9004FD855 /* Intro Pages */ = {
+			isa = PBXGroup;
+			children = (
+				01A62E621A994589004FD855 /* BLTIntroPagesViewController.h */,
+				01A62E631A994589004FD855 /* BLTIntroPagesViewController.m */,
+				01A62E781A99496C004FD855 /* BLTIntroViewController.h */,
+				01A62E791A99496C004FD855 /* BLTIntroViewController.m */,
+				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
+				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
+			);
+			name = "Intro Pages";
+			sourceTree = "<group>";
+		};
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +648,8 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01A62E891A99962B004FD855 /* BG1.png */,
+				01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */,
 				01A62E651A9945D4004FD855 /* Slide Images */,
 				01A62E0F1A95DBD8004FD855 /* Fonts */,
 				016729EA1A889626001A27FF /* lightning_bolt-32.png */,
@@ -862,6 +900,7 @@
 				01A62E2A1A95DC2E004FD855 /* Lato-HairlineItalic.ttf in Resources */,
 				01A62E281A95DC2E004FD855 /* Lato-BoldItalic.ttf in Resources */,
 				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
+				01A62E8A1A99962B004FD855 /* BG1.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01A62E701A9945E4004FD855 /* appdesign-Slide2@2x.jpg in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -885,6 +924,7 @@
 				01A62E751A9945E4004FD855 /* appdesign-Slide4@1x.jpg in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
+				01A62E7F1A9989B5004FD855 /* Barlift-login-logo.png in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
 				01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */,
 				01A62E291A95DC2E004FD855 /* Lato-Hairline.ttf in Resources */,
@@ -919,8 +959,8 @@
 				019F13EC1A89ABA20099B3CF /* SDWebImageDecoder.m in Sources */,
 				016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */,
 				019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */,
+				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
 				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
-				01D711B01A6CCDA5001C29B7 /* FLAnimatedImageView.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
 				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
 				019F13EB1A89ABA20099B3CF /* SDWebImageCompat.m in Sources */,
@@ -933,7 +973,6 @@
 				019F13F61A89ABA20099B3CF /* UIImageView+WebCache.m in Sources */,
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
 				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
-				01D711AD1A6CCD94001C29B7 /* FLAnimatedImage.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
@@ -950,6 +989,7 @@
 				01A62E021A95A768004FD855 /* BLTNavigationView.m in Sources */,
 				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
 				019F13F71A89ABA20099B3CF /* UIView+WebCacheOperation.m in Sources */,
+				01A62E7D1A998548004FD855 /* AMViralSwitch.m in Sources */,
 				01A62E641A994589004FD855 /* BLTIntroPagesViewController.m in Sources */,
 				019F13F51A89ABA20099B3CF /* UIImageView+HighlightedWebCache.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,

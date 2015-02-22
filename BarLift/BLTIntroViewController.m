@@ -63,6 +63,7 @@
     }
     if(index == 0){
         BLTLoginViewController *loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginController"];
+        loginController.pageIndex = 0;
         return loginController;
     }
 
@@ -81,6 +82,8 @@
 {
     NSUInteger index = ((BLTIntroPagesViewController*) viewController).pageIndex;
      [self.pageControl setCurrentPage:index];
+    [self.pageControl updateCurrentPageDisplay];
+
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -97,6 +100,7 @@
         return nil;
     }
       [self.pageControl setCurrentPage:index];
+    [self.pageControl updateCurrentPageDisplay];
     index++;
     if (index == [self.pageTitles count]) {
         return nil;

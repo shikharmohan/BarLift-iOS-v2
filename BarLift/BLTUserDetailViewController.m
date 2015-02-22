@@ -9,9 +9,11 @@
 #import "BLTUserDetailViewController.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-
+#import "RKCardView.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 @interface BLTUserDetailViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet RKCardView *cardView;
 
 @end
 
@@ -20,16 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.nameLabel.text = [NSString stringWithFormat:@"Hello, %@", [PFUser currentUser][@"profile"][@"name"]];
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [PFUser currentUser][@"profile"][@"pictureURL"]]];
-        if ( data == nil )
-            return;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [profilePicture initWithImage:[UIImage imageWithData:data scale:1.0]];
-            profilePicture.layer.cornerRadius = 120;
-        });
-    });
+    [self.cardView.profileImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+    self.cardView.coverImageView.image = [UIImage imageNamed:@"BG1.png"];
+    self.cardView.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    self.cardView.titleLabel.text = [NSString stringWithFormat:@"%@", [PFUser currentUser][@"profile"][@"name"]];
+    self.cardView.layer.cornerRadius = 5;
+    //[self.cardView addBlur]; // comment this out if you don't want blur
+    [self.cardView addShadow]; // comment this out if you don't want a shadow
     
 }
 
