@@ -83,10 +83,12 @@
 		01A62E761A9945E4004FD855 /* appdesign-Slide4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6D1A9945E4004FD855 /* appdesign-Slide4@2x.jpg */; };
 		01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */; };
 		01A62E7A1A99496C004FD855 /* BLTIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E791A99496C004FD855 /* BLTIntroViewController.m */; };
-		01A62E7D1A998548004FD855 /* AMViralSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E7C1A998548004FD855 /* AMViralSwitch.m */; };
 		01A62E7F1A9989B5004FD855 /* Barlift-login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */; };
 		01A62E851A998FEC004FD855 /* RKCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E841A998FEC004FD855 /* RKCardView.m */; };
 		01A62E8A1A99962B004FD855 /* BG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E891A99962B004FD855 /* BG1.png */; };
+		01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E8D1A99A861004FD855 /* ActionSheetStringPicker.m */; };
+		01A62E911A99A89A004FD855 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E901A99A89A004FD855 /* AbstractActionSheetPicker.m */; };
+		01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E931A99A905004FD855 /* SWActionSheet.m */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
 		01D70FAB1A6B6B77001C29B7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA51A6B6B5B001C29B7 /* Bolts.framework */; };
@@ -257,12 +259,16 @@
 		01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "appdesign-Slide4@3x.jpg"; sourceTree = "<group>"; };
 		01A62E781A99496C004FD855 /* BLTIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTIntroViewController.h; sourceTree = "<group>"; };
 		01A62E791A99496C004FD855 /* BLTIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTIntroViewController.m; sourceTree = "<group>"; };
-		01A62E7B1A998548004FD855 /* AMViralSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMViralSwitch.h; sourceTree = "<group>"; };
-		01A62E7C1A998548004FD855 /* AMViralSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMViralSwitch.m; sourceTree = "<group>"; };
 		01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barlift-login-logo.png"; sourceTree = "<group>"; };
 		01A62E831A998FEC004FD855 /* RKCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCardView.h; sourceTree = "<group>"; };
 		01A62E841A998FEC004FD855 /* RKCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCardView.m; sourceTree = "<group>"; };
 		01A62E891A99962B004FD855 /* BG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG1.png; sourceTree = "<group>"; };
+		01A62E8C1A99A861004FD855 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		01A62E8D1A99A861004FD855 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		01A62E8F1A99A89A004FD855 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		01A62E901A99A89A004FD855 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		01A62E921A99A905004FD855 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		01A62E931A99A905004FD855 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
 		01D70F781A6B6A8C001C29B7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -576,19 +582,10 @@
 		01A62E801A998F9F004FD855 /* Helper Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				01A62E8B1A99A846004FD855 /* ActionPicker */,
 				01A62E821A998FD4004FD855 /* CardView */,
-				01A62E811A998FB1004FD855 /* ViralSwitch */,
 			);
 			name = "Helper Libraries";
-			sourceTree = "<group>";
-		};
-		01A62E811A998FB1004FD855 /* ViralSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				01A62E7B1A998548004FD855 /* AMViralSwitch.h */,
-				01A62E7C1A998548004FD855 /* AMViralSwitch.m */,
-			);
-			name = ViralSwitch;
 			sourceTree = "<group>";
 		};
 		01A62E821A998FD4004FD855 /* CardView */ = {
@@ -611,6 +608,19 @@
 				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
 			);
 			name = "Intro Pages";
+			sourceTree = "<group>";
+		};
+		01A62E8B1A99A846004FD855 /* ActionPicker */ = {
+			isa = PBXGroup;
+			children = (
+				01A62E8C1A99A861004FD855 /* ActionSheetStringPicker.h */,
+				01A62E921A99A905004FD855 /* SWActionSheet.h */,
+				01A62E931A99A905004FD855 /* SWActionSheet.m */,
+				01A62E8F1A99A89A004FD855 /* AbstractActionSheetPicker.h */,
+				01A62E901A99A89A004FD855 /* AbstractActionSheetPicker.m */,
+				01A62E8D1A99A861004FD855 /* ActionSheetStringPicker.m */,
+			);
+			name = ActionPicker;
 			sourceTree = "<group>";
 		};
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
@@ -977,19 +987,21 @@
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				01A62E0E1A95CF37004FD855 /* BLTDealView.m in Sources */,
+				01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */,
 				019F13EE1A89ABA20099B3CF /* SDWebImageDownloaderOperation.m in Sources */,
+				01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */,
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				019F13F01A89ABA20099B3CF /* SDWebImagePrefetcher.m in Sources */,
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,
 				019F13EF1A89ABA20099B3CF /* SDWebImageManager.m in Sources */,
 				019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */,
+				01A62E911A99A89A004FD855 /* AbstractActionSheetPicker.m in Sources */,
 				016729E61A889282001A27FF /* JFMinimalNotificationArt.m in Sources */,
 				01EBDB631A81535200A9E175 /* Reachability.m in Sources */,
 				01A62E021A95A768004FD855 /* BLTNavigationView.m in Sources */,
 				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
 				019F13F71A89ABA20099B3CF /* UIView+WebCacheOperation.m in Sources */,
-				01A62E7D1A998548004FD855 /* AMViralSwitch.m in Sources */,
 				01A62E641A994589004FD855 /* BLTIntroPagesViewController.m in Sources */,
 				019F13F51A89ABA20099B3CF /* UIImageView+HighlightedWebCache.m in Sources */,
 				0166EC721A6995C40016E679 /* main.m in Sources */,

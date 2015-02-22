@@ -11,24 +11,36 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "RKCardView.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import "ActionSheetStringPicker.h"
 @interface BLTUserDetailViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet RKCardView *cardView;
-
+@property (weak, nonatomic) IBOutlet UIView *pushView;
+@property (weak, nonatomic) IBOutlet UISwitch *pushSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *pushLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UITextField *teamTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nightTextField;
+@property BOOL notifOn;
 @end
 
 @implementation BLTUserDetailViewController
 @synthesize profilePicture;
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //profile card
     [self.cardView.profileImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
     self.cardView.coverImageView.image = [UIImage imageNamed:@"BG1.png"];
     self.cardView.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     self.cardView.titleLabel.text = [NSString stringWithFormat:@"%@", [PFUser currentUser][@"profile"][@"name"]];
     self.cardView.layer.cornerRadius = 5;
-    //[self.cardView addBlur]; // comment this out if you don't want blur
-    [self.cardView addShadow]; // comment this out if you don't want a shadow
+    [self.cardView addShadow];
+    [self.cardView addSubview:self.pushView];
+    //viral switch
+    
     
 }
 
@@ -46,5 +58,84 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (IBAction)saveButtonPressed:(id)sender {
+    if(self.pushSwitch.on){
+    //ask for push permissions
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [[UIApplication sharedApplication]  registerUserNotificationSettings:settings];
+        [[UIApplication sharedApplication]  registerForRemoteNotifications];
+        self.notifOn = YES;
+    }
+    else{
+        if(self.notifOn == YES){
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Turn off notifications" message:@"In order to turn off push notifications, please go to Settings -> Notifications -> BarLift." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+        self.notifOn = NO;
+    }
+    NSString *teamName = self.teamTextField.text;
+    NSString *numberTimes = self.nightTextField.text;
+    NSLog(@"%@", numberTimes);
+    [[PFUser currentUser] setObject:teamName forKey:@"dm_team"];
+    [[PFUser currentUser] setObject:numberTimes forKey:@"num_nights"];
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded){
+            [self performSegueWithIdentifier:@"profileToDeal" sender:self];
+        }
+        else{
+            NSLog(@"%@", error);
+        }
+    }];
+    
+}
+
+- (IBAction)teamNameEdit:(id)sender {
+    NSArray *names = [NSArray arrayWithObjects:@"Team A", @"Team B", @"Team C", @"Team D", @"Team E", @"Team F",  @"Team G", @"Team H", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"DM Team Name"
+                                            rows:names
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@", picker);
+                                           NSLog(@"Selected Index: %ld", (long)selectedIndex);
+                                           NSLog(@"Selected Value: %@", selectedValue);
+                                           [self.teamTextField setText:[NSString stringWithFormat:@"%@", selectedValue]];
+
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                         [self.teamTextField resignFirstResponder];
+
+                                     }
+                                          origin:sender];
+}
+
+- (IBAction)numberNightEdit:(id)sender {
+    NSArray *nights = [NSArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5",  @"6", @"7", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Number Of Nights"
+                                            rows:nights
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@", picker);
+                                           NSLog(@"Selected Index: %ld", (long)selectedIndex);
+                                           NSLog(@"Selected Value: %@", selectedValue);
+                                           [self.nightTextField setText:[NSString stringWithFormat:@"%@", selectedValue]];
+                                           [self.nightTextField resignFirstResponder];
+                                           
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                     }
+                                          origin:sender];
+    // You can also use self.view if you don't have a sender
+}
+
 
 @end
