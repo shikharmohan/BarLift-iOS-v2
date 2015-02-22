@@ -124,6 +124,9 @@
             CGRect frame = self.friendsView.frame;
             frame.size.height = iOSScreenSize.height*.867;
             frame.origin.y = iOSScreenSize.height*0.132;
+            if(iOSScreenSize.height == 480){
+                frame.origin.y = iOSScreenSize.height*.15;
+            }
             self.friendsView.frame = frame;
             [self.collectionView setScrollEnabled:YES];
             CGRect cvFrame = self.collectionView.frame;

@@ -233,6 +233,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0Qp-3k-3kR" kind="modal" identifier="toProfile" id="sir-3W-OV2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bgZ-Bl-F9j">
                                 <rect key="frame" x="75" y="370" width="229" height="42"/>
@@ -591,9 +594,6 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KnP-B0-uJI">
                                                 <rect key="frame" x="232" y="24" width="51" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="pushOn:" destination="0Qp-3k-3kR" eventType="valueChanged" id="6K1-E5-4MX"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -694,7 +694,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xrb-IS-rkI"/>
         <segue reference="QdG-SC-vsx"/>
+        <segue reference="sir-3W-OV2"/>
     </inferredMetricsTieBreakers>
 </document>

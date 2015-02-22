@@ -38,10 +38,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-     //Check if user is cached and linked to Facebook, if so, bypass login
-    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self updateUserInformation];
-    }
+//     //Check if user is cached and linked to Facebook, if so, bypass login
+//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+//        [self updateUserInformation];
+//    }
 }
 
 
@@ -66,6 +66,9 @@
     
     
     NSString *filePath;
+    if(iOSScreenSize.height == 480){
+        filePath = [[NSBundle mainBundle] pathForResource:@"bgblack4" ofType:@"gif"];
+    }
     if(iOSScreenSize.height == 568){
         filePath = [[NSBundle mainBundle] pathForResource:@"bgblack4" ofType:@"gif"];
     }

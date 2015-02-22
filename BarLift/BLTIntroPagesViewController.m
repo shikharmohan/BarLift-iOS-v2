@@ -165,10 +165,10 @@
                             
                             NSLog(@"Got friends");
                             if(self.new){
-                                [self performSegueWithIdentifier:@"dealSegue" sender:self];
+                                [self performSegueWithIdentifier:@"welcomeSegue" sender:self];
                             }
                             else{
-                                [self performSegueWithIdentifier:@"dealSegue" sender:self];
+                                [self performSegueWithIdentifier:@"welcomeSegue" sender:self];
                             }
                         }
                     }];

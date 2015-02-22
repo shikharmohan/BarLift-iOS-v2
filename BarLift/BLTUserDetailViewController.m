@@ -39,6 +39,24 @@
     self.cardView.layer.cornerRadius = 5;
     [self.cardView addShadow];
     [self.cardView addSubview:self.pushView];
+    
+    if([PFUser currentUser][@"dm_team"]){
+        self.teamTextField.text = [PFUser currentUser][@"dm_team"];
+    }
+    if([PFUser currentUser][@"num_nights"]){
+        self.nightTextField.text = [PFUser currentUser][@"num_nights"];
+    }
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"notNew"] == nil){
+        self.pushSwitch.on = YES;
+    }
+    else if([[NSUserDefaults standardUserDefaults] boolForKey:@"notifOn"] == NO){
+        self.pushSwitch.on = NO;
+    }
+    else if([[NSUserDefaults standardUserDefaults] boolForKey:@"notifOn"]){
+        self.pushSwitch.on = YES;
+    }
+
     //viral switch
     
     
@@ -70,15 +88,18 @@
                                                                                  categories:nil];
         [[UIApplication sharedApplication]  registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication]  registerForRemoteNotifications];
-        self.notifOn = YES;
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"notifOn"];
     }
     else{
         if(self.notifOn == YES){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Turn off notifications" message:@"In order to turn off push notifications, please go to Settings -> Notifications -> BarLift." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
             [alertView show];
         }
-        self.notifOn = NO;
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"notifOn"];
     }
+    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"notNew"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     NSString *teamName = self.teamTextField.text;
     NSString *numberTimes = self.nightTextField.text;
     NSLog(@"%@", numberTimes);
@@ -102,11 +123,8 @@
                                             rows:names
                                 initialSelection:0
                                        doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
-                                           NSLog(@"Picker: %@", picker);
-                                           NSLog(@"Selected Index: %ld", (long)selectedIndex);
-                                           NSLog(@"Selected Value: %@", selectedValue);
                                            [self.teamTextField setText:[NSString stringWithFormat:@"%@", selectedValue]];
-
+                                           [self.teamTextField resignFirstResponder];
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
@@ -123,15 +141,14 @@
                                             rows:nights
                                 initialSelection:0
                                        doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
-                                           NSLog(@"Picker: %@", picker);
-                                           NSLog(@"Selected Index: %ld", (long)selectedIndex);
-                                           NSLog(@"Selected Value: %@", selectedValue);
                                            [self.nightTextField setText:[NSString stringWithFormat:@"%@", selectedValue]];
                                            [self.nightTextField resignFirstResponder];
                                            
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
+                                         [self.nightTextField resignFirstResponder];
+
                                      }
                                           origin:sender];
     // You can also use self.view if you don't have a sender
