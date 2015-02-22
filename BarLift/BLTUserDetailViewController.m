@@ -33,6 +33,7 @@
     
     //profile card
     [self.cardView.profileImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+    self.cardView.profileImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.cardView.coverImageView.image = [UIImage imageNamed:@"BG1.png"];
     self.cardView.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     self.cardView.titleLabel.text = [NSString stringWithFormat:@"%@", [PFUser currentUser][@"profile"][@"name"]];
