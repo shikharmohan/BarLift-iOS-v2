@@ -100,14 +100,14 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfs-0X-brm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268.5" y="2370.5"/>
+            <point key="canvasLocation" x="188.5" y="2454.5"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="1f3-4g-ECY">
             <objects>
                 <viewController id="B0w-Y4-D1z" customClass="BLTIntroViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="idu-6c-Bmh" userLabel="View">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="JyL-Aj-n0r">
@@ -119,6 +119,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pageControl" destination="JyL-Aj-n0r" id="XwB-2E-10e"/>
                     </connections>
