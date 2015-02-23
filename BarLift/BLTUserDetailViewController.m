@@ -92,10 +92,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"notifOn"];
     }
     else{
-        if(self.notifOn == YES){
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Turn off notifications" message:@"In order to turn off push notifications, please go to Settings -> Notifications -> BarLift." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Instructions to turn off notifications" message:@"In order to turn off push notifications, please go to Settings -> Notifications -> BarLift." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
             [alertView show];
-        }
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"notifOn"];
     }
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"notNew"];
@@ -159,7 +157,7 @@
                       @"IPS Israel",
                       @"Substance Free",
                       @"The Seagulls",
-                      @"May & O",
+                      @"May and O",
                       @"Sigma Psi Zeta",
                       @"Friends",
                       @"Phi Sigma Pi", nil];

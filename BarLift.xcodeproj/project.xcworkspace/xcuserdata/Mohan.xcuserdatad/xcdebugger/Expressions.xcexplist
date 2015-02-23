@@ -14,12 +14,15 @@
          contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
-            </PersistentString>
-            <PersistentString
                value = "[PFUser currentUser][@&quot;friends&quot;]">
             </PersistentString>
+            <PersistentString
+               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTNudgeViewController collectionView:cellForItemAtIndexPath:]:BLTNudgeViewController.m">
       </ContextState>
       <ContextState
          contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
@@ -65,6 +68,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[BLTNudgeViewController collectionView:didSelectItemAtIndexPath:]:BLTNudgeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[BLTUserDetailViewController viewDidLoad]:BLTUserDetailViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -81,6 +92,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__33-[BLTDealViewController createUI]_block_invoke:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "object[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[BLTDealViewController shareButtonPressed:]:BLTDealViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -89,10 +108,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__33-[BLTDealViewController createUI]_block_invoke:BLTDealViewController.m">
+         contextName = "-[BLTNudgeViewController viewDidLoad]:BLTNudgeViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "object[0]">
+               value = "[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;nudged&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

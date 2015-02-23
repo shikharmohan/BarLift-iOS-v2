@@ -635,7 +635,7 @@ NSTimer *durationTimer;
             break;
 
         case Info:
-            viewColor = UIColorFromRGB(0x2866BF);
+            viewColor = UIColorFromRGB(0xE8613D);
             iconImage = SCLAlertViewStyleKit.imageOfInfo;
             break;
 

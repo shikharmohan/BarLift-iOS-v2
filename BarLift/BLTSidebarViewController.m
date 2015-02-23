@@ -76,7 +76,7 @@
                 NSString *address = object[0][@"user"][@"address"];
                 NSString *newString = [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-                NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=v_LwNpt8BzPKedHILykv2m2-9o8BbvsW&action=setPickup&pickup[formatted_address]=%@", newString]];
+                NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=v_LwNpt8BzPKedHILykv2m2-9o8BbvsW&action=setPickup&dropoff[formatted_address]=%@", newString]];
                 [[UIApplication sharedApplication] openURL:url];
             }
             else{
@@ -97,6 +97,32 @@
     }
 
 
+}
+- (IBAction)shareButtonPressed:(id)sender {
+    NSString *textToShare = @"There's an awesome deal tonight through BarLift, you can download it at www.barliftapp.com";
+    NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
+    
+    NSArray *objectsToShare = @[textToShare, myWebsite];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    NSLog(@"Share button pressed");
+    NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                   UIActivityTypeMail,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    activityVC.excludedActivityTypes = excludeActivities;
+    //    NSDictionary *properties = @{@"date" : [NSDate date]};
+    //    [[Mixpanel sharedInstance] track:@"Share_event" properties:properties];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+
+    
+    
 }
 
 /*

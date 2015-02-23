@@ -168,7 +168,7 @@
                                 [self performSegueWithIdentifier:@"welcomeSegue" sender:self];
                             }
                             else{
-                                [self performSegueWithIdentifier:@"welcomeSegue" sender:self];
+                                [self performSegueWithIdentifier:@"dealSegue" sender:self];
                             }
                         }
                     }];

@@ -25,7 +25,6 @@
 		0166EC801A6995C40016E679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0166EC7F1A6995C40016E679 /* Images.xcassets */; };
 		0166EC8F1A6995C40016E679 /* BarLiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC8E1A6995C40016E679 /* BarLiftTests.m */; };
 		016729D51A887A6A001A27FF /* groups-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729D41A887A6A001A27FF /* groups-32.png */; };
-		016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729D81A888463001A27FF /* BLTLeftViewController.m */; };
 		016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729DC1A889282001A27FF /* JFMinimalNotification.m */; };
 		016729E61A889282001A27FF /* JFMinimalNotificationArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729DE1A889282001A27FF /* JFMinimalNotificationArt.m */; };
 		016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E01A889282001A27FF /* NSInvocation+Constructors.m */; };
@@ -154,6 +153,8 @@
 		01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE261A9AD27300BEC23D /* SCLAlertViewStyleKit.m */; };
 		01F2CE2E1A9AD27300BEC23D /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE281A9AD27300BEC23D /* SCLButton.m */; };
 		01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */; };
+		01F2CE321A9AE6F200BEC23D /* BLTNudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */; };
+		01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2CE331A9AF23C00BEC23D /* close-3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,8 +192,6 @@
 		0166EC8D1A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC8E1A6995C40016E679 /* BarLiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarLiftTests.m; sourceTree = "<group>"; };
 		016729D41A887A6A001A27FF /* groups-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-32.png"; sourceTree = "<group>"; };
-		016729D71A888463001A27FF /* BLTLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTLeftViewController.h; sourceTree = "<group>"; };
-		016729D81A888463001A27FF /* BLTLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTLeftViewController.m; sourceTree = "<group>"; };
 		016729DB1A889282001A27FF /* JFMinimalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotification.h; sourceTree = "<group>"; };
 		016729DC1A889282001A27FF /* JFMinimalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMinimalNotification.m; sourceTree = "<group>"; };
 		016729DD1A889282001A27FF /* JFMinimalNotificationArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotificationArt.h; sourceTree = "<group>"; };
@@ -361,6 +360,9 @@
 		01F2CE281A9AD27300BEC23D /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
 		01F2CE291A9AD27300BEC23D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		01F2CE301A9AE6F200BEC23D /* BLTNudgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTNudgeViewController.h; sourceTree = "<group>"; };
+		01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTNudgeViewController.m; sourceTree = "<group>"; };
+		01F2CE331A9AF23C00BEC23D /* close-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +450,10 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01A62E861A9990F9004FD855 /* Intro Pages */,
+				01A62E801A998F9F004FD855 /* Helper Libraries */,
+				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
+				01EBDB601A81533800A9E175 /* Reachability */,
 				01F2CE201A9AD27300BEC23D /* SCLAlertView */,
 				01A62E0B1A95CF23004FD855 /* BLTDealView */,
 				01A62DFF1A95A740004FD855 /* BLTNavigationView */,
@@ -455,14 +461,12 @@
 				016729DA1A889282001A27FF /* JFMinimalNotification */,
 				01EBDB881A83134F00A9E175 /* Sidebar */,
 				01EBDB811A830A6500A9E175 /* DealViewController */,
-				01EBDB601A81533800A9E175 /* Reachability */,
 				0166EC731A6995C40016E679 /* AppDelegate.h */,
-				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
-				01A62E861A9990F9004FD855 /* Intro Pages */,
-				01A62E801A998F9F004FD855 /* Helper Libraries */,
 				01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */,
 				01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */,
+				01F2CE301A9AE6F200BEC23D /* BLTNudgeViewController.h */,
+				01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */,
 				01D7120D1A747537001C29B7 /* iPhone4.storyboard */,
 				01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */,
 				01D7120F1A747544001C29B7 /* iPhone47.storyboard */,
@@ -498,15 +502,6 @@
 				0166EC8D1A6995C40016E679 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		016729D61A88843F001A27FF /* Right Sidebar */ = {
-			isa = PBXGroup;
-			children = (
-				016729D71A888463001A27FF /* BLTLeftViewController.h */,
-				016729D81A888463001A27FF /* BLTLeftViewController.m */,
-			);
-			name = "Right Sidebar";
 			sourceTree = "<group>";
 		};
 		016729DA1A889282001A27FF /* JFMinimalNotification */ = {
@@ -717,6 +712,7 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01F2CE331A9AF23C00BEC23D /* close-3x.png */,
 				011D22E51A9AAEE90082143E /* Buttons */,
 				01A62E891A99962B004FD855 /* BG1.png */,
 				011D22E01A9A5E060082143E /* Barlift-login-logo.png */,
@@ -855,7 +851,6 @@
 		01EBDB881A83134F00A9E175 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
-				016729D61A88843F001A27FF /* Right Sidebar */,
 				01EBDB851A83134B00A9E175 /* BLTSidebarViewController.h */,
 				01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */,
 			);
@@ -1030,6 +1025,7 @@
 				01A62E361A95DC2E004FD855 /* Lato-ThinItalic.ttf in Resources */,
 				01A62E6F1A9945E4004FD855 /* appdesign-Slide2@1x.jpg in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
+				01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */,
 				01A62E041A95CB5F004FD855 /* background.xcassets in Resources */,
 				01A62E731A9945E4004FD855 /* appdesign-Slide3@2x.jpg in Resources */,
 				01A62E321A95DC2E004FD855 /* Lato-Regular.ttf in Resources */,
@@ -1073,6 +1069,7 @@
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
 				019F13F61A89ABA20099B3CF /* UIImageView+WebCache.m in Sources */,
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
+				01F2CE321A9AE6F200BEC23D /* BLTNudgeViewController.m in Sources */,
 				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
@@ -1094,7 +1091,6 @@
 				01F2CE2E1A9AD27300BEC23D /* SCLButton.m in Sources */,
 				01EBDB631A81535200A9E175 /* Reachability.m in Sources */,
 				01A62E021A95A768004FD855 /* BLTNavigationView.m in Sources */,
-				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
 				019F13F71A89ABA20099B3CF /* UIView+WebCacheOperation.m in Sources */,
 				01A62E641A994589004FD855 /* BLTIntroPagesViewController.m in Sources */,
 				019F13F51A89ABA20099B3CF /* UIImageView+HighlightedWebCache.m in Sources */,

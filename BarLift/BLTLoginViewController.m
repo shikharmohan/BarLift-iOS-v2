@@ -240,7 +240,7 @@
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }
                                 else{
-                                    [self performSegueWithIdentifier:@"toWelcome" sender:self];
+                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
                                 }
                             }
                         }];

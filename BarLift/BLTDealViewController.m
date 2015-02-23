@@ -13,6 +13,7 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
 #import "SCLAlertView.h"
+#import "BLTDealView.h"
 //#import "Mixpanel.h"
 @interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
@@ -33,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIView *nudgeView;
 @property (weak, nonatomic) IBOutlet UIButton *nudgeButton;
 @property (weak, nonatomic) IBOutlet UIButton *purchaseDrinks;
+@property (weak, nonatomic) IBOutlet BLTDealView *dealView;
 @property (strong, nonatomic) UIButton *nudge;
 @property (nonatomic) BOOL going;
 @end
@@ -65,8 +67,11 @@
 
     
     myProfile = [NSArray arrayWithObjects:[PFUser currentUser][@"profile"][@"name"], [PFUser currentUser][@"profile"][@"fb_id"], nil];
-    [self.collectionView setScrollEnabled:NO];
+    
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    if(iOSScreenSize.height != 736){
+        [self.collectionView setScrollEnabled:NO];
+    }
 
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -97,7 +102,8 @@
     [self.barAddress addGestureRecognizer:tapGesture1];
     [self.locationIcon addGestureRecognizer:tapGesture];
     
-    
+    self.barAddress.userInteractionEnabled = YES;
+    self.locationIcon.userInteractionEnabled = YES;
     //friend view shadow
     
     panelUp = NO;
@@ -115,7 +121,7 @@
 
     
     CABasicAnimation *theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-    theAnimation.duration=0.3;
+    theAnimation.duration=1.0;
     theAnimation.repeatCount=HUGE_VALF;
     theAnimation.autoreverses=YES;
     theAnimation.fromValue=[NSNumber numberWithFloat:1.0f];
@@ -127,52 +133,62 @@
 }
 
 -(void)expandFriends{
-    [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
-        if(panelUp){
-            [self fadeInContent];
-            CGRect frame = self.friendsView.frame;
-            frame.size.height = iOSScreenSize.height*.292;
-            frame.origin.y = iOSScreenSize.height*.802;
-            self.friendsView.frame = frame;
-            [self.collectionView setScrollEnabled:NO];
-            [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                [self.goingLabel setFont:[UIFont systemFontOfSize:16]];
-            } completion:^(BOOL finished) {
-                
-            }];
-            [self.collectionView setContentOffset:CGPointZero animated:YES];
-            panelUp = NO;
-        }
-        else{
-            [self fadeOutContent];
-            CGRect frame = self.friendsView.frame;
-            frame.size.height = iOSScreenSize.height*.867;
-            frame.origin.y = iOSScreenSize.height*0.132;
-            if(iOSScreenSize.height == 480){
-                frame.origin.y = iOSScreenSize.height*.15;
+    if(iOSScreenSize.height != 736){
+        [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
+            if(panelUp){
+                [self fadeInContent];
+                CGRect frame = self.friendsView.frame;
+                frame.size.height = iOSScreenSize.height*.292;
+                frame.origin.y = iOSScreenSize.height*.8309;
+                if(iOSScreenSize.height == 667)
+                {
+                    frame.origin.y -= 30;
+                    frame.size.height += 30;
+                }
+                self.friendsView.frame = frame;
+                [self.collectionView setScrollEnabled:NO];
+                [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    [self.goingLabel setFont:[UIFont systemFontOfSize:16]];
+                } completion:^(BOOL finished) {
+                    
+                }];
+                [self.collectionView setContentOffset:CGPointZero animated:YES];
+                panelUp = NO;
             }
-            self.friendsView.frame = frame;
-            [self.collectionView setScrollEnabled:YES];
-            CGRect cvFrame = self.collectionView.frame;
-            cvFrame.size.height = iOSScreenSize.height*0.65;
-            self.collectionView.frame = cvFrame;
-            [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
-                [self.goingLabel setFont:[UIFont systemFontOfSize:23]];
-            } completion:^(BOOL finished) {
-            }];
-            panelUp = YES;
-            [self.friendsView addSubview:_nudge];
-            CGRect buttonFrame = self.nudgeView.frame;
-            buttonFrame.origin.y = self.collectionView.frame.size.height+self.collectionView.frame.origin.y;
-            self.nudgeView.frame = buttonFrame;
+            else{
+                [self fadeOutContent];
+                CGRect frame = self.friendsView.frame;
+                frame.size.height = iOSScreenSize.height*.867;
+                frame.origin.y = iOSScreenSize.height*0.132;
+                if(iOSScreenSize.height == 480){
+                    frame.origin.y = iOSScreenSize.height*.15;
+                }
+                self.friendsView.frame = frame;
+                [self.collectionView setScrollEnabled:YES];
+                CGRect cvFrame = self.collectionView.frame;
+                cvFrame.size.height = iOSScreenSize.height*0.65;
+                if(iOSScreenSize.height == 667){
+                    cvFrame.size.height += 30;
+                }
+                self.collectionView.frame = cvFrame;
+                [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    [self.goingLabel setFont:[UIFont systemFontOfSize:23]];
+                } completion:^(BOOL finished) {
+                }];
+                panelUp = YES;
+                [self.friendsView addSubview:_nudge];
+                CGRect buttonFrame = self.nudgeView.frame;
+                buttonFrame.origin.y = self.collectionView.frame.size.height+self.collectionView.frame.origin.y;
+                self.nudgeView.frame = buttonFrame;
+                
+                
+            }
             
+        } completion:^(BOOL finished) {
             
-        }
-        
-    } completion:^(BOOL finished) {
-        
-    }];
-
+        }];
+    
+    }
 
 }
 
@@ -181,6 +197,8 @@
     [self.barAddress setAlpha:1.0f];
     [self.barName setAlpha:1.0f];
     [self.dealTypeImageView setAlpha:1.0f];
+    self.dealView.hidden = NO;
+
 }
 
 -(void)fadeOutContent{
@@ -188,6 +206,8 @@
     [self.barAddress setAlpha:0.0f];
     [self.barName setAlpha:0.0f];
     [self.dealTypeImageView setAlpha:0.0f];
+    self.dealView.hidden = YES;
+
 }
 
 
@@ -221,7 +241,7 @@
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
-                    for(int i = 0; i < 30; i++) {
+                    for(int i = 0; i < 1; i++) {
                         for (NSArray *obj in object){
                             if([myProfile isEqualToArray:obj]){
                                 NSLog(@"Already Going");
@@ -450,9 +470,7 @@
     };
 
 
-    [alert showCustom:self image:[UIImage imageNamed:@"dealinfo-3x.png"] color:[UIColor clearColor] title:@"Purchase Drinks" subTitle:@"Hey there, we haven't added this feature yet but would you be interested in something like this?" closeButtonTitle:@"Done" duration:0.0f];
-    alert.title =@"Purchase Drinks";
-    alert show
+    [alert showCustom:self image:[UIImage imageNamed:@"dealinfo-3x.png"] color:[UIColor clearColor] title:@"Purchase Drinks" subTitle:@"Hey there, we haven't added this feature yet but would you be interested in purchasing drinks through the app in the future?" closeButtonTitle:@"" duration:0.0f];
     
  // Notice
 
