@@ -14,10 +14,18 @@
          contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser][@&quot;friends&quot;]">
+               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
             </PersistentString>
             <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
+               value = "[PFUser currentUser][@&quot;friends&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.isNew">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -29,14 +37,6 @@
             </PersistentString>
             <PersistentString
                value = "[friendsArray indexOfObject:obj]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "user.isNew">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -69,6 +69,14 @@
          <PersistentStrings>
             <PersistentString
                value = "if ([PFUser currentUser])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__38-[BLTDealViewController expandFriends]_block_invoke:BLTDealViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "layer.shadowOpacity">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

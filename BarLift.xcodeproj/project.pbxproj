@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011D22E11A9A5E060082143E /* Barlift-login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E01A9A5E060082143E /* Barlift-login-logo.png */; };
+		011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E61A9AAEE90082143E /* bg-3x.jpg */; };
+		011D22F21A9AAEE90082143E /* dealinfo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E71A9AAEE90082143E /* dealinfo-3x.png */; };
+		011D22F31A9AAEE90082143E /* goingslider-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E81A9AAEE90082143E /* goingslider-3x.png */; };
+		011D22F41A9AAEE90082143E /* hamburger-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E91A9AAEE90082143E /* hamburger-3x.png */; };
+		011D22F51A9AAEE90082143E /* interested1-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EA1A9AAEE90082143E /* interested1-3x.png */; };
+		011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EB1A9AAEE90082143E /* interested2-3x.png */; };
+		011D22F71A9AAEE90082143E /* interested3-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EC1A9AAEE90082143E /* interested3-3x.png */; };
+		011D22F81A9AAEE90082143E /* logo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22ED1A9AAEE90082143E /* logo-3x.png */; };
+		011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EE1A9AAEE90082143E /* martiniv2-3x.png */; };
+		011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */; };
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
 		0166EC751A6995C40016E679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC741A6995C40016E679 /* AppDelegate.m */; };
 		0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC761A6995C40016E679 /* BarLift.xcdatamodeld */; };
@@ -83,7 +94,6 @@
 		01A62E761A9945E4004FD855 /* appdesign-Slide4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6D1A9945E4004FD855 /* appdesign-Slide4@2x.jpg */; };
 		01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */; };
 		01A62E7A1A99496C004FD855 /* BLTIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E791A99496C004FD855 /* BLTIntroViewController.m */; };
-		01A62E7F1A9989B5004FD855 /* Barlift-login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */; };
 		01A62E851A998FEC004FD855 /* RKCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E841A998FEC004FD855 /* RKCardView.m */; };
 		01A62E8A1A99962B004FD855 /* BG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A62E891A99962B004FD855 /* BG1.png */; };
 		01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E8D1A99A861004FD855 /* ActionSheetStringPicker.m */; };
@@ -137,6 +147,13 @@
 		01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */; };
 		01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB8D1A831AEC00A9E175 /* menu-32.png */; };
 		01EBDB901A83364A00A9E175 /* update-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB8F1A83364A00A9E175 /* update-32.png */; };
+		01F2CE1D1A9AC2CF00BEC23D /* nudge-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2CE1C1A9AC2CF00BEC23D /* nudge-3x.png */; };
+		01F2CE1F1A9AC6B500BEC23D /* locationarrow-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2CE1E1A9AC6B500BEC23D /* locationarrow-3x.png */; };
+		01F2CE2B1A9AD27300BEC23D /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE221A9AD27300BEC23D /* SCLAlertView.m */; };
+		01F2CE2C1A9AD27300BEC23D /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE241A9AD27300BEC23D /* SCLAlertViewResponder.m */; };
+		01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE261A9AD27300BEC23D /* SCLAlertViewStyleKit.m */; };
+		01F2CE2E1A9AD27300BEC23D /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE281A9AD27300BEC23D /* SCLButton.m */; };
+		01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +167,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011D22E01A9A5E060082143E /* Barlift-login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barlift-login-logo.png"; sourceTree = "<group>"; };
+		011D22E61A9AAEE90082143E /* bg-3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-3x.jpg"; sourceTree = "<group>"; };
+		011D22E71A9AAEE90082143E /* dealinfo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dealinfo-3x.png"; sourceTree = "<group>"; };
+		011D22E81A9AAEE90082143E /* goingslider-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goingslider-3x.png"; sourceTree = "<group>"; };
+		011D22E91A9AAEE90082143E /* hamburger-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger-3x.png"; sourceTree = "<group>"; };
+		011D22EA1A9AAEE90082143E /* interested1-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interested1-3x.png"; sourceTree = "<group>"; };
+		011D22EB1A9AAEE90082143E /* interested2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interested2-3x.png"; sourceTree = "<group>"; };
+		011D22EC1A9AAEE90082143E /* interested3-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "interested3-3x.png"; sourceTree = "<group>"; };
+		011D22ED1A9AAEE90082143E /* logo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-3x.png"; sourceTree = "<group>"; };
+		011D22EE1A9AAEE90082143E /* martiniv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "martiniv2-3x.png"; sourceTree = "<group>"; };
+		011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purchasedrinks-3x.png"; sourceTree = "<group>"; };
 		0166EC6C1A6995C40016E679 /* BarLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC701A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC711A6995C40016E679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -259,7 +287,6 @@
 		01A62E6E1A9945E4004FD855 /* appdesign-Slide4@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "appdesign-Slide4@3x.jpg"; sourceTree = "<group>"; };
 		01A62E781A99496C004FD855 /* BLTIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTIntroViewController.h; sourceTree = "<group>"; };
 		01A62E791A99496C004FD855 /* BLTIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTIntroViewController.m; sourceTree = "<group>"; };
-		01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barlift-login-logo.png"; sourceTree = "<group>"; };
 		01A62E831A998FEC004FD855 /* RKCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCardView.h; sourceTree = "<group>"; };
 		01A62E841A998FEC004FD855 /* RKCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCardView.m; sourceTree = "<group>"; };
 		01A62E891A99962B004FD855 /* BG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG1.png; sourceTree = "<group>"; };
@@ -322,6 +349,18 @@
 		01EBDB861A83134B00A9E175 /* BLTSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSidebarViewController.m; sourceTree = "<group>"; };
 		01EBDB8D1A831AEC00A9E175 /* menu-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-32.png"; sourceTree = "<group>"; };
 		01EBDB8F1A83364A00A9E175 /* update-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "update-32.png"; sourceTree = "<group>"; };
+		01F2CE1C1A9AC2CF00BEC23D /* nudge-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nudge-3x.png"; sourceTree = "<group>"; };
+		01F2CE1E1A9AC6B500BEC23D /* locationarrow-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationarrow-3x.png"; sourceTree = "<group>"; };
+		01F2CE211A9AD27300BEC23D /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		01F2CE221A9AD27300BEC23D /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		01F2CE231A9AD27300BEC23D /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		01F2CE241A9AD27300BEC23D /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		01F2CE251A9AD27300BEC23D /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		01F2CE261A9AD27300BEC23D /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		01F2CE271A9AD27300BEC23D /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		01F2CE281A9AD27300BEC23D /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		01F2CE291A9AD27300BEC23D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +406,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011D22E51A9AAEE90082143E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				011D22E61A9AAEE90082143E /* bg-3x.jpg */,
+				011D22E71A9AAEE90082143E /* dealinfo-3x.png */,
+				01F2CE1C1A9AC2CF00BEC23D /* nudge-3x.png */,
+				01F2CE1E1A9AC6B500BEC23D /* locationarrow-3x.png */,
+				011D22E81A9AAEE90082143E /* goingslider-3x.png */,
+				011D22E91A9AAEE90082143E /* hamburger-3x.png */,
+				011D22EA1A9AAEE90082143E /* interested1-3x.png */,
+				011D22EB1A9AAEE90082143E /* interested2-3x.png */,
+				011D22EC1A9AAEE90082143E /* interested3-3x.png */,
+				011D22ED1A9AAEE90082143E /* logo-3x.png */,
+				011D22EE1A9AAEE90082143E /* martiniv2-3x.png */,
+				011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		0166EC631A6995C40016E679 = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +448,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01F2CE201A9AD27300BEC23D /* SCLAlertView */,
 				01A62E0B1A95CF23004FD855 /* BLTDealView */,
 				01A62DFF1A95A740004FD855 /* BLTNavigationView */,
 				019F13C61A89ABA20099B3CF /* SDWebImage */,
@@ -658,8 +717,9 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				011D22E51A9AAEE90082143E /* Buttons */,
 				01A62E891A99962B004FD855 /* BG1.png */,
-				01A62E7E1A9989B5004FD855 /* Barlift-login-logo.png */,
+				011D22E01A9A5E060082143E /* Barlift-login-logo.png */,
 				01A62E651A9945D4004FD855 /* Slide Images */,
 				01A62E0F1A95DBD8004FD855 /* Fonts */,
 				016729EA1A889626001A27FF /* lightning_bolt-32.png */,
@@ -802,6 +862,23 @@
 			name = Sidebar;
 			sourceTree = "<group>";
 		};
+		01F2CE201A9AD27300BEC23D /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				01F2CE211A9AD27300BEC23D /* SCLAlertView.h */,
+				01F2CE221A9AD27300BEC23D /* SCLAlertView.m */,
+				01F2CE231A9AD27300BEC23D /* SCLAlertViewResponder.h */,
+				01F2CE241A9AD27300BEC23D /* SCLAlertViewResponder.m */,
+				01F2CE251A9AD27300BEC23D /* SCLAlertViewStyleKit.h */,
+				01F2CE261A9AD27300BEC23D /* SCLAlertViewStyleKit.m */,
+				01F2CE271A9AD27300BEC23D /* SCLButton.h */,
+				01F2CE281A9AD27300BEC23D /* SCLButton.m */,
+				01F2CE291A9AD27300BEC23D /* UIImage+ImageEffects.h */,
+				01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */,
+			);
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -887,6 +964,9 @@
 				01A62E571A990578004FD855 /* hamburger@3x.png in Resources */,
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				01A62E061A95CB6D004FD855 /* bg@3x.jpg in Resources */,
+				011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */,
+				011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */,
+				011D22E11A9A5E060082143E /* Barlift-login-logo.png in Resources */,
 				01A62E531A990524004FD855 /* bltlogo@2x.png in Resources */,
 				01A62E301A95DC2E004FD855 /* Lato-Medium.ttf in Resources */,
 				01A62E741A9945E4004FD855 /* appdesign-Slide3@3x.jpg in Resources */,
@@ -894,8 +974,10 @@
 				01A62E251A95DC2E004FD855 /* Lato-Black.ttf in Resources */,
 				01A62E341A95DC2E004FD855 /* Lato-SemiboldItalic.ttf in Resources */,
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
+				011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */,
 				01A62E2B1A95DC2E004FD855 /* Lato-Heavy.ttf in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
+				01F2CE1F1A9AC6B500BEC23D /* locationarrow-3x.png in Resources */,
 				01A62E611A993BC0004FD855 /* bgblack55.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
 				01A62E311A95DC2E004FD855 /* Lato-MediumItalic.ttf in Resources */,
@@ -911,11 +993,14 @@
 				01A62E281A95DC2E004FD855 /* Lato-BoldItalic.ttf in Resources */,
 				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
 				01A62E8A1A99962B004FD855 /* BG1.png in Resources */,
+				011D22F21A9AAEE90082143E /* dealinfo-3x.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01A62E701A9945E4004FD855 /* appdesign-Slide2@2x.jpg in Resources */,
+				01F2CE1D1A9AC2CF00BEC23D /* nudge-3x.png in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */,
 				01A62E0A1A95CDCE004FD855 /* martini@3x.png in Resources */,
+				011D22F51A9AAEE90082143E /* interested1-3x.png in Resources */,
 				01A62E261A95DC2E004FD855 /* Lato-BlackItalic.ttf in Resources */,
 				01A62E081A95CD53004FD855 /* bg@2x.png in Resources */,
 				01A62E551A99052D004FD855 /* bltlogo@3x.png in Resources */,
@@ -933,12 +1018,14 @@
 				01A62E2E1A95DC2E004FD855 /* Lato-Light.ttf in Resources */,
 				01A62E751A9945E4004FD855 /* appdesign-Slide4@1x.jpg in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
+				011D22F41A9AAEE90082143E /* hamburger-3x.png in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
-				01A62E7F1A9989B5004FD855 /* Barlift-login-logo.png in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
 				01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */,
+				011D22F81A9AAEE90082143E /* logo-3x.png in Resources */,
 				01A62E291A95DC2E004FD855 /* Lato-Hairline.ttf in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
+				011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */,
 				01A62E271A95DC2E004FD855 /* Lato-Bold.ttf in Resources */,
 				01A62E361A95DC2E004FD855 /* Lato-ThinItalic.ttf in Resources */,
 				01A62E6F1A9945E4004FD855 /* appdesign-Slide2@1x.jpg in Resources */,
@@ -946,9 +1033,11 @@
 				01A62E041A95CB5F004FD855 /* background.xcassets in Resources */,
 				01A62E731A9945E4004FD855 /* appdesign-Slide3@2x.jpg in Resources */,
 				01A62E321A95DC2E004FD855 /* Lato-Regular.ttf in Resources */,
+				011D22F31A9AAEE90082143E /* goingslider-3x.png in Resources */,
 				01EBDB901A83364A00A9E175 /* update-32.png in Resources */,
 				01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */,
 				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
+				011D22F71A9AAEE90082143E /* interested3-3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -967,8 +1056,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				019F13EC1A89ABA20099B3CF /* SDWebImageDecoder.m in Sources */,
+				01F2CE2C1A9AD27300BEC23D /* SCLAlertViewResponder.m in Sources */,
 				016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */,
 				019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */,
+				01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */,
 				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
 				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
@@ -988,6 +1079,7 @@
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				01A62E0E1A95CF37004FD855 /* BLTDealView.m in Sources */,
 				01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */,
+				01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */,
 				019F13EE1A89ABA20099B3CF /* SDWebImageDownloaderOperation.m in Sources */,
 				01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */,
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
@@ -996,8 +1088,10 @@
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,
 				019F13EF1A89ABA20099B3CF /* SDWebImageManager.m in Sources */,
 				019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */,
+				01F2CE2B1A9AD27300BEC23D /* SCLAlertView.m in Sources */,
 				01A62E911A99A89A004FD855 /* AbstractActionSheetPicker.m in Sources */,
 				016729E61A889282001A27FF /* JFMinimalNotificationArt.m in Sources */,
+				01F2CE2E1A9AD27300BEC23D /* SCLButton.m in Sources */,
 				01EBDB631A81535200A9E175 /* Reachability.m in Sources */,
 				01A62E021A95A768004FD855 /* BLTNavigationView.m in Sources */,
 				016729D91A888463001A27FF /* BLTLeftViewController.m in Sources */,
