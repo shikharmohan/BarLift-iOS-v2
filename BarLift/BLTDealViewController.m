@@ -259,6 +259,10 @@
                             }
                         }
                     }
+                    
+                    NSOrderedSet *mySet = [[NSOrderedSet alloc] initWithArray:friendsArray];
+                    friendsArray = [[NSMutableArray alloc] initWithArray:[mySet array]];
+
                     [self.collectionView reloadData];
                     [self.indicator stopAnimating];
                     //[self resizeCollectionView];
