@@ -18,6 +18,9 @@
 		011D22F81A9AAEE90082143E /* logo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22ED1A9AAEE90082143E /* logo-3x.png */; };
 		011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EE1A9AAEE90082143E /* martiniv2-3x.png */; };
 		011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */; };
+		015AF9721A9D7CC200163480 /* BLTNudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AF9711A9D7CC200163480 /* BLTNudgeViewController.m */; };
+		015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF9751A9D832A00163480 /* nudgeicon-3x.png */; };
+		015AF97A1A9DA8C000163480 /* DataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AF9791A9DA8C000163480 /* DataClass.m */; };
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
 		0166EC751A6995C40016E679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC741A6995C40016E679 /* AppDelegate.m */; };
 		0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC761A6995C40016E679 /* BarLift.xcdatamodeld */; };
@@ -153,11 +156,9 @@
 		01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE261A9AD27300BEC23D /* SCLAlertViewStyleKit.m */; };
 		01F2CE2E1A9AD27300BEC23D /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE281A9AD27300BEC23D /* SCLButton.m */; };
 		01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */; };
-		01F2CE321A9AE6F200BEC23D /* BLTNudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */; };
 		01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2CE331A9AF23C00BEC23D /* close-3x.png */; };
 		01F3BEB31A9C757B0043F2C2 /* add121.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F3BEB21A9C757B0043F2C2 /* add121.png */; };
 		01F3BEB51A9C761B0043F2C2 /* rounded61.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F3BEB41A9C761B0043F2C2 /* rounded61.png */; };
-		01F3BEB91A9D0FC90043F2C2 /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F3BEB81A9D0FC90043F2C2 /* PullableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,11 @@
 		011D22ED1A9AAEE90082143E /* logo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-3x.png"; sourceTree = "<group>"; };
 		011D22EE1A9AAEE90082143E /* martiniv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "martiniv2-3x.png"; sourceTree = "<group>"; };
 		011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purchasedrinks-3x.png"; sourceTree = "<group>"; };
+		015AF9701A9D7CC200163480 /* BLTNudgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTNudgeViewController.h; sourceTree = "<group>"; };
+		015AF9711A9D7CC200163480 /* BLTNudgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTNudgeViewController.m; sourceTree = "<group>"; };
+		015AF9751A9D832A00163480 /* nudgeicon-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nudgeicon-3x.png"; sourceTree = "<group>"; };
+		015AF9781A9DA8C000163480 /* DataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataClass.h; sourceTree = "<group>"; };
+		015AF9791A9DA8C000163480 /* DataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClass.m; sourceTree = "<group>"; };
 		0166EC6C1A6995C40016E679 /* BarLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC701A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC711A6995C40016E679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -363,13 +369,9 @@
 		01F2CE281A9AD27300BEC23D /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
 		01F2CE291A9AD27300BEC23D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		01F2CE301A9AE6F200BEC23D /* BLTNudgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTNudgeViewController.h; sourceTree = "<group>"; };
-		01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTNudgeViewController.m; sourceTree = "<group>"; };
 		01F2CE331A9AF23C00BEC23D /* close-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-3x.png"; sourceTree = "<group>"; };
 		01F3BEB21A9C757B0043F2C2 /* add121.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add121.png; sourceTree = "<group>"; };
 		01F3BEB41A9C761B0043F2C2 /* rounded61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded61.png; sourceTree = "<group>"; };
-		01F3BEB71A9D0FC90043F2C2 /* PullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullableView.h; sourceTree = "<group>"; };
-		01F3BEB81A9D0FC90043F2C2 /* PullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +436,24 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		015AF96F1A9D7CA300163480 /* Nudge Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				015AF9701A9D7CC200163480 /* BLTNudgeViewController.h */,
+				015AF9711A9D7CC200163480 /* BLTNudgeViewController.m */,
+			);
+			name = "Nudge Sidebar";
+			sourceTree = "<group>";
+		};
+		015AF9771A9DA8AE00163480 /* Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				015AF9781A9DA8C000163480 /* DataClass.h */,
+				015AF9791A9DA8C000163480 /* DataClass.m */,
+			);
+			name = "Data Class";
+			sourceTree = "<group>";
+		};
 		0166EC631A6995C40016E679 = {
 			isa = PBXGroup;
 			children = (
@@ -457,7 +477,8 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
-				01F3BEB61A9D0FAF0043F2C2 /* Pull View */,
+				015AF9771A9DA8AE00163480 /* Data Class */,
+				015AF96F1A9D7CA300163480 /* Nudge Sidebar */,
 				01A62E861A9990F9004FD855 /* Intro Pages */,
 				01A62E801A998F9F004FD855 /* Helper Libraries */,
 				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
@@ -473,8 +494,6 @@
 				0166EC741A6995C40016E679 /* AppDelegate.m */,
 				01D711A81A6CC958001C29B7 /* BLTUserDetailViewController.h */,
 				01D711A91A6CC958001C29B7 /* BLTUserDetailViewController.m */,
-				01F2CE301A9AE6F200BEC23D /* BLTNudgeViewController.h */,
-				01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */,
 				01D7120D1A747537001C29B7 /* iPhone4.storyboard */,
 				01A31D0E1A76C0260095B3EE /* iPhone35.storyboard */,
 				01D7120F1A747544001C29B7 /* iPhone47.storyboard */,
@@ -720,6 +739,7 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				015AF9751A9D832A00163480 /* nudgeicon-3x.png */,
 				01F3BEB41A9C761B0043F2C2 /* rounded61.png */,
 				01F3BEB21A9C757B0043F2C2 /* add121.png */,
 				01F2CE331A9AF23C00BEC23D /* close-3x.png */,
@@ -884,15 +904,6 @@
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
-		01F3BEB61A9D0FAF0043F2C2 /* Pull View */ = {
-			isa = PBXGroup;
-			children = (
-				01F3BEB71A9D0FC90043F2C2 /* PullableView.h */,
-				01F3BEB81A9D0FC90043F2C2 /* PullableView.m */,
-			);
-			name = "Pull View";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -977,6 +988,7 @@
 			files = (
 				01A62E571A990578004FD855 /* hamburger@3x.png in Resources */,
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
+				015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */,
 				01A62E061A95CB6D004FD855 /* bg@3x.jpg in Resources */,
 				011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */,
 				011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */,
@@ -1078,6 +1090,7 @@
 				019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */,
 				01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */,
 				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
+				015AF97A1A9DA8C000163480 /* DataClass.m in Sources */,
 				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
 				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
@@ -1087,10 +1100,10 @@
 				01A62E7A1A99496C004FD855 /* BLTIntroViewController.m in Sources */,
 				019F13F21A89ABA20099B3CF /* UIImage+GIF.m in Sources */,
 				019F13ED1A89ABA20099B3CF /* SDWebImageDownloader.m in Sources */,
+				015AF9721A9D7CC200163480 /* BLTNudgeViewController.m in Sources */,
 				0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */,
 				019F13F61A89ABA20099B3CF /* UIImageView+WebCache.m in Sources */,
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
-				01F2CE321A9AE6F200BEC23D /* BLTNudgeViewController.m in Sources */,
 				01EBDB841A830B5B00A9E175 /* BLTDealViewController.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
@@ -1101,7 +1114,6 @@
 				019F13EE1A89ABA20099B3CF /* SDWebImageDownloaderOperation.m in Sources */,
 				01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */,
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
-				01F3BEB91A9D0FC90043F2C2 /* PullableView.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				019F13F01A89ABA20099B3CF /* SDWebImagePrefetcher.m in Sources */,
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,

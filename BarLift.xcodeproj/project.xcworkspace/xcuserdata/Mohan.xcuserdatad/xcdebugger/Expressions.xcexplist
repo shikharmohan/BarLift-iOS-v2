@@ -9,10 +9,10 @@
          contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
+               value = "[PFUser currentUser][@&quot;friends&quot;]">
             </PersistentString>
             <PersistentString
-               value = "[PFUser currentUser][@&quot;friends&quot;]">
+               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -111,7 +111,7 @@
          contextName = "-[BLTNudgeViewController viewDidLoad]:BLTNudgeViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser][@&quot;nudges_left&quot;]">
+               value = "[PFUser currentUser][@&quot;friends&quot;]">
             </PersistentString>
             <PersistentString
                value = "self.nudgeCount.text">

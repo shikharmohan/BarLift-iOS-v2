@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface BLTDealViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end

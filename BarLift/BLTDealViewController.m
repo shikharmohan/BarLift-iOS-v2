@@ -14,9 +14,10 @@
 #import "UIImageView+WebCache.h"
 #import "SCLAlertView.h"
 #import "BLTDealView.h"
-#import "PullableView.h"
+#import "DataClass.h"
+
 //#import "Mixpanel.h"
-@interface BLTDealViewController () <PullableViewDelegate>
+@interface BLTDealViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (weak, nonatomic) IBOutlet UIImageView *dealTypeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *barName;
@@ -39,6 +40,7 @@
 @property (strong, nonatomic) UIButton *nudge;
 @property (weak, nonatomic) IBOutlet UIImageView *expandButton;
 @property (nonatomic) BOOL going;
+
 @end
 
 @implementation BLTDealViewController
@@ -50,7 +52,9 @@
     BOOL panelUp;
     SCLAlertView *alert;
     NSString* desc;
+    
 }
+
 
 - (void) viewWillAppear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(createUI) name: @"UpdateUINotification" object: nil];
@@ -82,6 +86,7 @@
     if ( revealViewController )
     {
         [self.sidebarButton addTarget:self.revealViewController action:@selector( revealToggle: ) forControlEvents:UIControlEventTouchUpInside];
+        [self.nudgeButton addTarget:self.revealViewController action:@selector(rightRevealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
@@ -113,9 +118,9 @@
     panelUp = NO;
     UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandFriends)];
     [self.friendsView addGestureRecognizer:singleTapGestureRecognizer];
-    // drop shadow
-
     
+
+    // drop shadow/panel drag & slide
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
     [self.friendsView addGestureRecognizer:panGestureRecognizer];
     [self.friendsView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -123,14 +128,11 @@
     [self.friendsView.layer setShadowRadius:3.0];
     [self.friendsView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
     [self.view addSubview:self.friendsView];
-    // Do any additional setup after loading the view.
     
     
-  //  _nudge.backgroundColor = [UIColor colorWithRed:0.234f green:0.294f blue:0.388f alpha:1.0f];
-
-    
+    //animate nudge button
     CABasicAnimation *theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-    theAnimation.duration=1.0;
+    theAnimation.duration=0.6;
     theAnimation.repeatCount=HUGE_VALF;
     theAnimation.autoreverses=YES;
     theAnimation.fromValue=[NSNumber numberWithFloat:1.0f];
@@ -138,7 +140,7 @@
     [self.nudgeButton.layer addAnimation:theAnimation forKey:@"animateOpacity"]; //myButton.layer instead of
     [self.nudgeButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     
-    
+    //deal description alert
     UITapGestureRecognizer *tapGesture4 =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showDescription)];
     [self.dealTypeImageView addGestureRecognizer:tapGesture4];
@@ -279,6 +281,8 @@
             self.barName.text = object[0][@"user"][@"bar_name"];
             self.barAddress.text = object[0][@"user"][@"address"];
             [dict setObject:[object[0] objectId] forKey:@"deal_objectId"];
+            DataClass *obj=[DataClass getInstance];
+            obj.dealID= [object[0] objectId];
             [PFCloud callFunctionInBackground:@"getFriends" withParameters:dict block:^(id object, NSError *error) {
                 if(!error){
                     for(int i = 0; i < 1; i++) {
@@ -462,16 +466,6 @@
     friendPic.contentMode = UIViewContentModeScaleAspectFill;
     friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
     friendPic.clipsToBounds = YES;
-//    dispatch_async(dispatch_get_global_queue(0,0), ^{
-//        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
-//        if ( data == nil )
-//            return;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [friendPic initWithImage:[UIImage imageWithData:data scale:1.0]];
-//            friendPic.layer.cornerRadius = friendPic.frame.size.width / 2;
-//            friendPic.clipsToBounds = YES;
-//        });
-//    });
     return cell;
 }
 
@@ -524,15 +518,17 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+
 }
-*/
+
 
 @end
 
