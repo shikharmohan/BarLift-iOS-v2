@@ -81,7 +81,7 @@
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
-        [self.sidebarButton addTarget:self.revealViewController action:@selector( rightRevealToggle: ) forControlEvents:UIControlEventTouchUpInside];
+        [self.sidebarButton addTarget:self.revealViewController action:@selector( revealToggle: ) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
@@ -114,7 +114,8 @@
     UITapGestureRecognizer *singleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandFriends)];
     [self.friendsView addGestureRecognizer:singleTapGestureRecognizer];
     // drop shadow
-    CGFloat xOffset = 0;
+
+    
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
     [self.friendsView addGestureRecognizer:panGestureRecognizer];
     [self.friendsView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -152,7 +153,7 @@
     if(vel.y < 0){
         NSLog(@"%f", vel.y);
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationCurveEaseOut animations:^{
-           // [self fadeOutContent];
+           [self fadeOutContent];
             self.expandButton.image = [UIImage imageNamed:@"rounded61.png"];
             CGRect frame = self.friendsView.frame;
             frame.size.width = iOSScreenSize.width;
@@ -166,7 +167,7 @@
     else if(vel.y > 0){
         NSLog(@"%f", vel.y);
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationCurveEaseOut animations:^{
-            //[self fadeInContent];
+            [self fadeInContent];
 
             self.expandButton.image = [UIImage imageNamed:@"add121.png"];
             CGRect frame = self.friendsView.frame;
