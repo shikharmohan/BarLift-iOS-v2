@@ -446,12 +446,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="martini@3x.png" id="9QR-lg-BtJ">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="martini@3x.png" id="9QR-lg-BtJ">
                                 <rect key="frame" x="58" y="118" width="65" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Zzn-qU-Iqe">
-                                <rect key="frame" x="148" y="91" width="176" height="118"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Zzn-qU-Iqe">
+                                <rect key="frame" x="148" y="91" width="184" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -525,6 +525,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add121.png" id="iEp-N2-9gU">
+                                        <rect key="frame" x="8" y="10" width="24" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -548,8 +552,9 @@
                         <outlet property="barName" destination="hpe-9G-gfz" id="g2R-GJ-lTX"/>
                         <outlet property="collectionView" destination="1Y0-mk-Fxt" id="1K8-38-PtL"/>
                         <outlet property="dealName" destination="Zzn-qU-Iqe" id="a4G-km-YdH"/>
-                        <outlet property="dealTypeImageView" destination="9QR-lg-BtJ" id="VAP-WU-Kev"/>
+                        <outlet property="dealTypeImageView" destination="9QR-lg-BtJ" id="Lph-zJ-hdR"/>
                         <outlet property="dealView" destination="g7m-lt-I6t" id="uJ8-8A-K1Y"/>
+                        <outlet property="expandButton" destination="iEp-N2-9gU" id="MgD-EW-6VW"/>
                         <outlet property="friendsView" destination="P7i-cg-UmV" id="4a5-Jr-AIV"/>
                         <outlet property="goingButton" destination="yaZ-5V-5Su" id="xUs-vG-sPI"/>
                         <outlet property="goingLabel" destination="E4h-9f-cVf" id="iq1-i2-f6V"/>
@@ -754,6 +759,7 @@
     </scenes>
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
+        <image name="add121.png" width="512" height="512"/>
         <image name="bltlogo@3x.png" width="100" height="100"/>
         <image name="close-3x.png" width="376" height="96"/>
         <image name="hamburger@3x.png" width="99" height="68"/>

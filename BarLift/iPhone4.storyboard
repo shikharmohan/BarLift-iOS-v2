@@ -10,6 +10,9 @@
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
         </mutableArray>
+        <mutableArray key="Lato-Heavy.ttf">
+            <string>Lato-Heavy</string>
+        </mutableArray>
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
         </mutableArray>
@@ -347,7 +350,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Met-o4-vJe" customClass="BLTDealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gjk-oZ-s8c">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="v8g-oY-N02" customClass="BLTNavigationView">
@@ -438,23 +441,23 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="martini@3x.png" id="XNG-mU-dG9">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="martini@3x.png" id="XNG-mU-dG9">
                                 <rect key="frame" x="31" y="118" width="65" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Gdj-8e-Ll1">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" id="Gdj-8e-Ll1">
                                 <rect key="frame" x="121" y="91" width="176" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" id="3yO-2N-cA2">
-                                <rect key="frame" x="0.0" y="472" width="320" height="285"/>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="3yO-2N-cA2">
+                                <rect key="frame" x="0.0" y="482" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" id="BW8-Hq-P11">
-                                        <rect key="frame" x="7" y="38" width="305" height="131"/>
+                                        <rect key="frame" x="7" y="38" width="305" height="467"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentInset" minX="0.0" minY="0.0" maxX="0.0" maxY="100"/>
@@ -500,8 +503,12 @@
                                         <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" id="9lJ-e3-IrI">
-                                        <rect key="frame" x="0.0" y="159" width="320" height="91"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add121.png" id="cGq-bA-6Q8">
+                                        <rect key="frame" x="8" y="11" width="22" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view hidden="YES" contentMode="scaleToFill" id="9lJ-e3-IrI">
+                                        <rect key="frame" x="-1" y="414" width="321" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e3M-Xl-Upq">
@@ -535,14 +542,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="800"/>
+                    <size key="freeformSize" width="320" height="1100"/>
                     <connections>
                         <outlet property="barAddress" destination="Ny5-BH-jh3" id="zPc-Zm-hSy"/>
                         <outlet property="barName" destination="OeE-2a-nrJ" id="XRO-9a-YCr"/>
                         <outlet property="collectionView" destination="BW8-Hq-P11" id="20U-VM-b6j"/>
                         <outlet property="dealName" destination="Gdj-8e-Ll1" id="4Ia-Se-hrz"/>
-                        <outlet property="dealTypeImageView" destination="XNG-mU-dG9" id="f8b-SU-Vm5"/>
+                        <outlet property="dealTypeImageView" destination="XNG-mU-dG9" id="N7i-fp-i0B"/>
                         <outlet property="dealView" destination="7fA-CS-pdl" id="kxj-pN-tsW"/>
+                        <outlet property="expandButton" destination="cGq-bA-6Q8" id="8XA-dp-9wI"/>
                         <outlet property="friendsView" destination="3yO-2N-cA2" id="6VD-kJ-zLa"/>
                         <outlet property="goingButton" destination="WZB-dL-kWO" id="Rrv-3a-6u9"/>
                         <outlet property="goingLabel" destination="RcJ-It-8wA" id="eIB-qd-sAO"/>
@@ -577,7 +585,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zOP-YL-zkK">
-                                <rect key="frame" x="0.0" y="63" width="320" height="432"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="uEY-fz-CVq">
@@ -622,12 +630,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oja-ej-AIQ">
+                                <rect key="frame" x="92" y="62" width="136" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="36"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="Q9y-db-fWq" id="V0M-Mm-diE"/>
                         <outlet property="collectionView" destination="zOP-YL-zkK" id="VTe-QA-5sw"/>
+                        <outlet property="nudgeCount" destination="oja-ej-AIQ" id="Tdi-d3-B6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZJ-VA-GWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -746,6 +762,7 @@
     </scenes>
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
+        <image name="add121.png" width="512" height="512"/>
         <image name="bltlogo@3x.png" width="100" height="100"/>
         <image name="close-3x.png" width="376" height="96"/>
         <image name="hamburger@3x.png" width="99" height="68"/>

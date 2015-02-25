@@ -3,26 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[BLTNudgeViewController collectionView:cellForItemAtIndexPath:]:BLTNudgeViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[PFUser currentUser][@&quot;friends&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_3:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[PFInstallation currentInstallation]">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTLeftViewController viewDidLoad]:BLTLeftViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[PFUser currentUser][@&quot;friends&quot;]">
-            </PersistentString>
-            <PersistentString
-               value = "[PFInstallation currentInstallation][@&quot;fb_id&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTNudgeViewController collectionView:cellForItemAtIndexPath:]:BLTNudgeViewController.m">
       </ContextState>
       <ContextState
          contextName = "__42-[BLTLoginViewController loginToFacebook:]_block_invoke:BLTLoginViewController.m">
@@ -110,6 +110,12 @@
       <ContextState
          contextName = "-[BLTNudgeViewController viewDidLoad]:BLTNudgeViewController.m">
          <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser][@&quot;nudges_left&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "self.nudgeCount.text">
+            </PersistentString>
             <PersistentString
                value = "[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;nudged&quot;]">
             </PersistentString>

@@ -155,6 +155,9 @@
 		01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE2A1A9AD27300BEC23D /* UIImage+ImageEffects.m */; };
 		01F2CE321A9AE6F200BEC23D /* BLTNudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */; };
 		01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F2CE331A9AF23C00BEC23D /* close-3x.png */; };
+		01F3BEB31A9C757B0043F2C2 /* add121.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F3BEB21A9C757B0043F2C2 /* add121.png */; };
+		01F3BEB51A9C761B0043F2C2 /* rounded61.png in Resources */ = {isa = PBXBuildFile; fileRef = 01F3BEB41A9C761B0043F2C2 /* rounded61.png */; };
+		01F3BEB91A9D0FC90043F2C2 /* PullableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F3BEB81A9D0FC90043F2C2 /* PullableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,6 +366,10 @@
 		01F2CE301A9AE6F200BEC23D /* BLTNudgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTNudgeViewController.h; sourceTree = "<group>"; };
 		01F2CE311A9AE6F200BEC23D /* BLTNudgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTNudgeViewController.m; sourceTree = "<group>"; };
 		01F2CE331A9AF23C00BEC23D /* close-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-3x.png"; sourceTree = "<group>"; };
+		01F3BEB21A9C757B0043F2C2 /* add121.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add121.png; sourceTree = "<group>"; };
+		01F3BEB41A9C761B0043F2C2 /* rounded61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded61.png; sourceTree = "<group>"; };
+		01F3BEB71A9D0FC90043F2C2 /* PullableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullableView.h; sourceTree = "<group>"; };
+		01F3BEB81A9D0FC90043F2C2 /* PullableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +457,7 @@
 		0166EC6E1A6995C40016E679 /* BarLift */ = {
 			isa = PBXGroup;
 			children = (
+				01F3BEB61A9D0FAF0043F2C2 /* Pull View */,
 				01A62E861A9990F9004FD855 /* Intro Pages */,
 				01A62E801A998F9F004FD855 /* Helper Libraries */,
 				01EBDB801A8302D400A9E175 /* SWRRevealViewController */,
@@ -712,6 +720,8 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01F3BEB41A9C761B0043F2C2 /* rounded61.png */,
+				01F3BEB21A9C757B0043F2C2 /* add121.png */,
 				01F2CE331A9AF23C00BEC23D /* close-3x.png */,
 				011D22E51A9AAEE90082143E /* Buttons */,
 				01A62E891A99962B004FD855 /* BG1.png */,
@@ -874,6 +884,15 @@
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
+		01F3BEB61A9D0FAF0043F2C2 /* Pull View */ = {
+			isa = PBXGroup;
+			children = (
+				01F3BEB71A9D0FC90043F2C2 /* PullableView.h */,
+				01F3BEB81A9D0FC90043F2C2 /* PullableView.m */,
+			);
+			name = "Pull View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -980,6 +999,7 @@
 				01A62E381A95DC2E004FD855 /* README.txt in Resources */,
 				01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
+				01F3BEB51A9C761B0043F2C2 /* rounded61.png in Resources */,
 				01A62E2C1A95DC2E004FD855 /* Lato-HeavyItalic.ttf in Resources */,
 				016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */,
 				01A62E351A95DC2E004FD855 /* Lato-Thin.ttf in Resources */,
@@ -990,6 +1010,7 @@
 				01A62E8A1A99962B004FD855 /* BG1.png in Resources */,
 				011D22F21A9AAEE90082143E /* dealinfo-3x.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
+				01F3BEB31A9C757B0043F2C2 /* add121.png in Resources */,
 				01A62E701A9945E4004FD855 /* appdesign-Slide2@2x.jpg in Resources */,
 				01F2CE1D1A9AC2CF00BEC23D /* nudge-3x.png in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -1080,6 +1101,7 @@
 				019F13EE1A89ABA20099B3CF /* SDWebImageDownloaderOperation.m in Sources */,
 				01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */,
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
+				01F3BEB91A9D0FC90043F2C2 /* PullableView.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				019F13F01A89ABA20099B3CF /* SDWebImagePrefetcher.m in Sources */,
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,

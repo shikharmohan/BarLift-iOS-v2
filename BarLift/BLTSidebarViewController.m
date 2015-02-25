@@ -99,7 +99,7 @@
 
 }
 - (IBAction)shareButtonPressed:(id)sender {
-    NSString *textToShare = @"There's an awesome deal tonight through BarLift, you can download it at www.barliftapp.com";
+    NSString *textToShare = @"There's an awesome deal tonight through BarLift at ";
     NSURL *myWebsite = [NSURL URLWithString:@"http://www.barliftapp.com/"];
     
     NSArray *objectsToShare = @[textToShare, myWebsite];
@@ -118,11 +118,7 @@
     activityVC.excludedActivityTypes = excludeActivities;
     //    NSDictionary *properties = @{@"date" : [NSDate date]};
     //    [[Mixpanel sharedInstance] track:@"Share_event" properties:properties];
-    
     [self presentViewController:activityVC animated:YES completion:nil];
-
-    
-    
 }
 
 /*

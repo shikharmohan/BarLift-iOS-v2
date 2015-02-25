@@ -202,6 +202,7 @@
                 if([[PFUser currentUser] isNew]){
                     [PFUser currentUser][@"new"] = @1;
                     [PFUser currentUser][@"deals_redeemed"] = @0;
+                    [PFUser currentUser][@"nudges_left"] = @10;
                 }
                 else{
                     [PFUser currentUser][@"new"] = @0;
