@@ -158,6 +158,7 @@
             frame.size.width = iOSScreenSize.width;
             frame.origin.y = 90;
             self.friendsView.frame = frame;
+            panelUp = YES;
         } completion:^(BOOL finished) {
             
         }];
@@ -172,6 +173,7 @@
             frame.size.width = iOSScreenSize.width;
             frame.origin.y = 472;
             self.friendsView.frame = frame;
+            panelUp = NO;
         } completion:^(BOOL finished) {
             
         }];
@@ -192,15 +194,7 @@
                 [self fadeInContent];
                 self.expandButton.image = [UIImage imageNamed:@"add121"];
                 CGRect frame = self.friendsView.frame;
-                frame.size.height = iOSScreenSize.height*.292;
-                frame.origin.y = iOSScreenSize.height*.8309;
-                frame.size.width = iOSScreenSize.width;
-
-                if(iOSScreenSize.height == 667)
-                {
-                    frame.origin.y -= 30;
-                    frame.size.height += 30;
-                }
+                frame.origin.y = 472;
                 self.friendsView.frame = frame;
                 [self.collectionView setScrollEnabled:NO];
                 [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -215,13 +209,7 @@
                 self.expandButton.image = [UIImage imageNamed:@"rounded61.png"];
 
                 CGRect frame = self.friendsView.frame;
-                frame.size.height = iOSScreenSize.height*.867;
-                frame.size.width = iOSScreenSize.width;
-
-                frame.origin.y = iOSScreenSize.height*0.132;
-                if(iOSScreenSize.height == 480){
-                    frame.origin.y = iOSScreenSize.height*.15;
-                }
+                frame.origin.y = 90;
                 self.friendsView.frame = frame;
                 [self.collectionView setScrollEnabled:YES];
                 [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -229,10 +217,7 @@
                 } completion:^(BOOL finished) {
                 }];
                 panelUp = YES;
-                [self.friendsView addSubview:_nudge];
-                CGRect buttonFrame = self.nudgeView.frame;
-                buttonFrame.origin.y = self.collectionView.frame.size.height+self.collectionView.frame.origin.y;
-                self.nudgeView.frame = buttonFrame;
+
                 
                 
             }
