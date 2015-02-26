@@ -10,6 +10,9 @@
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
         </mutableArray>
+        <mutableArray key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </mutableArray>
         <mutableArray key="Lato-Medium.ttf">
             <string>Lato-Medium</string>
         </mutableArray>
@@ -32,8 +35,11 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+            <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
         </mutableArray>
     </customFonts>
@@ -217,7 +223,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="Sdf-Aa-Bzm" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="B5g-d3-Hn5"/>
-                        <segue destination="ztd-zf-3cq" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="G2Z-Sd-pVE"/>
+                        <segue destination="ztd-zf-3cq" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="G2Z-Sd-pVE"/>
+                        <segue destination="agl-hr-ERY" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="fZY-B2-tYD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="027-w8-Awl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,10 +244,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oyA-Ro-8or">
-                                <rect key="frame" x="75" y="40" width="172" height="170"/>
+                                <rect key="frame" x="20" y="40" width="172" height="170"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-gG-I2P">
-                                <rect key="frame" x="79" y="482" width="229" height="42"/>
+                                <rect key="frame" x="20" y="482" width="229" height="42"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Call Uber">
@@ -252,19 +259,19 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-v1-9hN">
-                                <rect key="frame" x="79" y="542" width="337" height="1"/>
+                                <rect key="frame" x="20" y="542" width="400" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIf-DB-8my">
-                                <rect key="frame" x="79" y="467" width="337" height="1"/>
+                                <rect key="frame" x="20" y="467" width="400" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UQ-aJ-Ywa">
-                                <rect key="frame" x="77" y="387" width="337" height="1"/>
+                                <rect key="frame" x="20" y="387" width="400" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWl-gW-EeS">
-                                <rect key="frame" x="79" y="559" width="229" height="42"/>
+                                <rect key="frame" x="20" y="559" width="229" height="42"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Log Out">
@@ -276,7 +283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoA-KC-1ZC">
-                                <rect key="frame" x="79" y="407" width="229" height="42"/>
+                                <rect key="frame" x="20" y="407" width="229" height="42"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Share">
@@ -291,14 +298,8 @@
                                 <rect key="frame" x="227" y="226" width="37" height="37"/>
                                 <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-Zt-OJN">
-                                <rect key="frame" x="73" y="241" width="283" height="66"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYj-pc-Omm">
-                                <rect key="frame" x="79" y="331" width="229" height="42"/>
+                                <rect key="frame" x="20" y="331" width="229" height="42"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Profile">
@@ -309,6 +310,12 @@
                                     <segue destination="fA1-rG-f4p" kind="modal" identifier="toProfile" id="MtO-Wl-0Ic"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V4-Zt-OJN">
+                                <rect key="frame" x="20" y="241" width="229" height="66"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -323,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PO2-5M-zk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="316"/>
+            <point key="canvasLocation" x="1210" y="390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="os8-kg-GYG">
@@ -342,285 +349,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="auS-yd-G9i" kind="relationship" relationship="rootViewController" id="KU6-xB-RDE"/>
+                        <segue destination="bUT-QF-bVD" kind="relationship" relationship="rootViewController" id="Bnd-8V-Sgx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5h-rW-Q0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="1145"/>
-        </scene>
-        <!--BarLift-->
-        <scene sceneID="uKb-73-R09">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="auS-yd-G9i" customClass="BLTDealViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lB5-4a-7VG"/>
-                        <viewControllerLayoutGuide type="bottom" id="0bS-ns-uFV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="550-BS-nfm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tcp-rk-JLI" customClass="BLTNavigationView">
-                                <rect key="frame" x="0.0" y="20" width="414" height="63"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agu-9h-bXG">
-                                        <rect key="frame" x="376" y="12" width="30" height="30"/>
-                                        <color key="tintColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" backgroundImage="hamburger@3x.png">
-                                            <color key="titleShadowColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bltlogo@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="fgc-FJ-CTs">
-                                        <rect key="frame" x="19" y="7" width="36" height="37"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BarLift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEv-w3-T4P">
-                                        <rect key="frame" x="63" y="12" width="105" height="27"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bzd-4l-7IZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
-                                <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0om-bh-H3h" customClass="BLTDealView">
-                                <rect key="frame" x="16" y="224" width="382" height="280"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To be notified of future deals, make sure you have push notifications turned on " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="95h-Ka-OcX">
-                                        <rect key="frame" x="82" y="80" width="219" height="38"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click I'm interested and show this app to your server/bartender to redeem the deal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zjQ-lw-CAa">
-                                        <rect key="frame" x="73" y="191" width="237" height="38"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="yaA-VU-kwZ">
-                                        <rect key="frame" x="173" y="0.0" width="37" height="37"/>
-                                        <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </activityIndicatorView>
-                                    <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hto-eP-bkQ">
-                                        <rect key="frame" x="116" y="133" width="150" height="50"/>
-                                        <state key="normal" image="interested1-3x.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goingButtonPressed:" destination="auS-yd-G9i" eventType="touchUpInside" id="tEk-MM-LN3"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locationarrow-3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="KrS-Vw-76q">
-                                        <rect key="frame" x="53" y="91" width="15" height="15"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bar Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-VK-us1">
-                                        <rect key="frame" x="49" y="8" width="284" height="70"/>
-                                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="36"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-eM-Pbr">
-                                        <rect key="frame" x="94" y="242" width="195" height="30"/>
-                                        <state key="normal" backgroundImage="purchasedrinks-3x.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="purchaseDrinksPressed:" destination="auS-yd-G9i" eventType="touchUpInside" id="3gw-gr-ggt"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="martini@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="XVY-sQ-bDv">
-                                <rect key="frame" x="74" y="118" width="65" height="64"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="N4y-fc-ccW">
-                                <rect key="frame" x="164" y="91" width="176" height="118"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amE-4P-MrJ">
-                                <rect key="frame" x="0.0" y="500" width="414" height="273"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bzx-Ma-NRU">
-                                        <rect key="frame" x="8" y="36" width="398" height="106"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Ek6-wq-z7q">
-                                            <size key="itemSize" width="76" height="75"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="IZf-bA-5N6">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="martini@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-sP-lp2">
-                                                            <rect key="frame" x="14" y="8" width="48" height="48"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6M-eP-nvM">
-                                                            <rect key="frame" x="-5" y="56" width="86" height="24"/>
-                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="auS-yd-G9i" id="8Cb-Px-c9k"/>
-                                            <outlet property="delegate" destination="auS-yd-G9i" id="3LW-y2-FrE"/>
-                                        </connections>
-                                    </collectionView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dtr-Qw-qey">
-                                        <rect key="frame" x="0.0" y="142" width="414" height="94"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRM-TP-unI">
-                                                <rect key="frame" x="100" y="18" width="214" height="56"/>
-                                                <state key="normal" backgroundImage="nudge-3x.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="Dty-Lc-zmS" kind="modal" identifier="toNudge" id="bMM-IZ-cAW"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interested" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nG-9s-bHO">
-                                        <rect key="frame" x="110" y="8" width="195" height="25"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
-                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="BarLift" id="Kfa-Pp-2lq">
-                        <barButtonItem key="leftBarButtonItem" image="upload-32.png" id="VDp-CI-ngB">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="shareButtonPressed:" destination="auS-yd-G9i" id="Agf-po-ZGO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="menu-32" id="odl-2i-faP">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="736"/>
-                    <connections>
-                        <outlet property="barAddress" destination="95h-Ka-OcX" id="I0R-FK-Ucq"/>
-                        <outlet property="barName" destination="zfd-VK-us1" id="nvm-Ie-mZ2"/>
-                        <outlet property="collectionView" destination="Bzx-Ma-NRU" id="TkR-XS-95x"/>
-                        <outlet property="dealName" destination="N4y-fc-ccW" id="j8m-9W-uzM"/>
-                        <outlet property="dealTypeImageView" destination="XVY-sQ-bDv" id="ncH-Br-z83"/>
-                        <outlet property="dealView" destination="0om-bh-H3h" id="0cx-kr-ZBx"/>
-                        <outlet property="friendsView" destination="amE-4P-MrJ" id="p02-y2-Ajk"/>
-                        <outlet property="goingButton" destination="Hto-eP-bkQ" id="5xQ-gv-Rs2"/>
-                        <outlet property="goingLabel" destination="3nG-9s-bHO" id="hJz-UN-zYd"/>
-                        <outlet property="indicator" destination="yaA-VU-kwZ" id="37N-9J-rB1"/>
-                        <outlet property="locationIcon" destination="KrS-Vw-76q" id="sax-Q1-lV0"/>
-                        <outlet property="nudgeButton" destination="qRM-TP-unI" id="5Cm-1I-kDc"/>
-                        <outlet property="nudgeView" destination="Dtr-Qw-qey" id="6WU-eL-lnt"/>
-                        <outlet property="purchaseDrinks" destination="xQb-eM-Pbr" id="2RO-yD-Sdp"/>
-                        <outlet property="sidebarButton" destination="agu-9h-bXG" id="F6x-CZ-Zzk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qw5-Tr-qwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1647" y="1173"/>
-        </scene>
-        <!--Nudge View Controller-->
-        <scene sceneID="duF-Z2-vRn">
-            <objects>
-                <viewController id="Dty-Lc-zmS" customClass="BLTNudgeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bi7-JM-zVl"/>
-                        <viewControllerLayoutGuide type="bottom" id="ekF-af-9Od"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RFl-q5-JDQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nudge Your Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onj-Gj-b4u">
-                                <rect key="frame" x="92" y="34" width="230" height="21"/>
-                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k8j-aD-I0G">
-                                <rect key="frame" x="0.0" y="73" width="414" height="542"/>
-                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="LWf-7V-qrI">
-                                    <size key="itemSize" width="91" height="100"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="nj1-H2-o10">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="91" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="martini@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Sm-z7-sgk">
-                                                    <rect key="frame" x="14" y="8" width="62" height="63"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNg-ip-B7Z">
-                                                    <rect key="frame" x="2" y="76" width="86" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Dty-Lc-zmS" id="4Q7-u6-tEJ"/>
-                                    <outlet property="delegate" destination="Dty-Lc-zmS" id="Aio-Mi-Fmd"/>
-                                </connections>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40C-DX-SGz">
-                                <rect key="frame" x="89" y="651" width="237" height="60"/>
-                                <state key="normal" backgroundImage="close-3x.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButtonPressed:" destination="Dty-Lc-zmS" eventType="touchUpInside" id="qld-fd-hp3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="closeButton" destination="40C-DX-SGz" id="hHz-Rk-R5O"/>
-                        <outlet property="collectionView" destination="k8j-aD-I0G" id="Mrq-XK-UwR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O8f-1c-l7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2125" y="932"/>
+            <point key="canvasLocation" x="1210" y="1195"/>
         </scene>
         <!--User Detail View Controller-->
         <scene sceneID="ah0-NH-TM1">
@@ -725,18 +459,343 @@
             </objects>
             <point key="canvasLocation" x="594" y="-21"/>
         </scene>
+        <!--BarLift-->
+        <scene sceneID="aRu-lC-eOh">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bUT-QF-bVD" customClass="BLTDealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Q1-Ya-cOV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qte-sF-YFW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cLH-Ce-oQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-uI-iaL" customClass="BLTNavigationView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="63"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x18-Lm-32G">
+                                        <rect key="frame" x="8" y="4" width="30" height="30"/>
+                                        <color key="tintColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="hamburgerv2-3x.png">
+                                            <color key="titleShadowColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BarLift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHD-6P-Rmn">
+                                        <rect key="frame" x="155" y="5" width="105" height="27"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-78-Gw2">
+                                        <rect key="frame" x="381" y="0.0" width="25" height="43"/>
+                                        <state key="normal" backgroundImage="nudgeicon-3x.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVk-ix-xqp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sorry no deal, check back later." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="egP-oW-aLl">
+                                <rect key="frame" x="83" y="91" width="176" height="118"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Bw-GL-HhY">
+                                <rect key="frame" x="0.0" y="482" width="419" height="653"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r0X-zb-rkz">
+                                        <rect key="frame" x="16" y="39" width="381" height="535"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="hZt-am-uQQ">
+                                            <size key="itemSize" width="76" height="75"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="wZe-Pi-f2J">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="martini@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGY-Za-mhi">
+                                                            <rect key="frame" x="14" y="8" width="48" height="48"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvS-Ek-Tzf">
+                                                            <rect key="frame" x="-5" y="56" width="86" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bUT-QF-bVD" id="hR2-NO-8D5"/>
+                                            <outlet property="delegate" destination="bUT-QF-bVD" id="6vd-fJ-hZI"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interested" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-1T-eKu">
+                                        <rect key="frame" x="112" y="8" width="195" height="25"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="theplus-3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4U-jp-gU2">
+                                        <rect key="frame" x="16" y="11" width="22" height="20"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5W-qE-Dcm">
+                                <rect key="frame" x="267" y="117" width="65" height="65"/>
+                                <state key="normal" backgroundImage="icon-winfo-3x.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dealInfoButtonPressed:" destination="bUT-QF-bVD" eventType="touchUpInside" id="Da8-O7-v4P"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJY-4T-sy4" customClass="BLTDealView">
+                                <rect key="frame" x="16" y="212" width="382" height="279"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bar Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="02y-eD-Uno">
+                                        <rect key="frame" x="49" y="16" width="284" height="70"/>
+                                        <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="33"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To be notified of future deals, make sure you have push notifications turned on " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="MPz-ki-2ib">
+                                        <rect key="frame" x="91" y="72" width="219" height="38"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click I'm interested and show this app to your server/bartender to redeem the deal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Cgy-3H-YCx">
+                                        <rect key="frame" x="73" y="176" width="237" height="38"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EKX-kW-Sye">
+                                        <rect key="frame" x="173" y="8" width="37" height="37"/>
+                                        <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-HN-fnp">
+                                        <rect key="frame" x="116" y="118" width="150" height="50"/>
+                                        <state key="normal" image="interested1-3x.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goingButtonPressed:" destination="bUT-QF-bVD" eventType="touchUpInside" id="jDY-Re-PXx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1Z-R1-fQx">
+                                        <rect key="frame" x="94" y="222" width="195" height="30"/>
+                                        <state key="normal" backgroundImage="purchasedrinks-3x.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="purchaseDrinksPressed:" destination="bUT-QF-bVD" eventType="touchUpInside" id="gVN-Aa-Sa8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locationarrow-3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="bbS-em-JmB">
+                                        <rect key="frame" x="68" y="77" width="15" height="15"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BarLift" id="5gm-TP-Ck6">
+                        <barButtonItem key="leftBarButtonItem" image="upload-32.png" id="htp-SK-5o5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="bUT-QF-bVD" id="5Jd-fr-MBm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu-32" id="z3C-lc-3Iv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1900"/>
+                    <connections>
+                        <outlet property="barAddress" destination="MPz-ki-2ib" id="EYD-4J-4dF"/>
+                        <outlet property="barName" destination="02y-eD-Uno" id="oVX-cQ-orp"/>
+                        <outlet property="collectionView" destination="r0X-zb-rkz" id="gnm-w8-uLD"/>
+                        <outlet property="dealInfoButton" destination="q5W-qE-Dcm" id="U7P-MG-ibV"/>
+                        <outlet property="dealName" destination="egP-oW-aLl" id="aIJ-Ah-wBT"/>
+                        <outlet property="dealView" destination="TJY-4T-sy4" id="cQ4-RZ-LLE"/>
+                        <outlet property="expandButton" destination="k4U-jp-gU2" id="flW-YN-dFh"/>
+                        <outlet property="friendsView" destination="0Bw-GL-HhY" id="M8V-oO-FQA"/>
+                        <outlet property="goingButton" destination="LJV-HN-fnp" id="uDb-vV-HP9"/>
+                        <outlet property="goingLabel" destination="FQN-1T-eKu" id="OPz-kY-k7x"/>
+                        <outlet property="indicator" destination="EKX-kW-Sye" id="Fyn-Aw-Dod"/>
+                        <outlet property="locationIcon" destination="bbS-em-JmB" id="qNQ-0C-pLy"/>
+                        <outlet property="nudgeButton" destination="PjK-78-Gw2" id="ZmV-4R-nE2"/>
+                        <outlet property="purchaseDrinks" destination="K1Z-R1-fQx" id="lKT-CO-44l"/>
+                        <outlet property="sidebarButton" destination="x18-Lm-32G" id="sCN-g6-9zN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlO-pr-4nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="1732"/>
+        </scene>
+        <!--Nudge View Controller-->
+        <scene sceneID="FPb-KV-Fbl">
+            <objects>
+                <viewController id="agl-hr-ERY" customClass="BLTNudgeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5X-7g-f7z"/>
+                        <viewControllerLayoutGuide type="bottom" id="IKX-6E-RNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sdh-8t-9bJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSG-7A-nD7">
+                                <rect key="frame" x="55" y="60" width="360" height="1"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.1843137255" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3tR-kR-odk">
+                                <rect key="frame" x="55" y="100" width="359" height="567"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="S0P-y0-oxL">
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.14901960780000001" green="0.1843137255" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nudgeCell" rowHeight="56" id="oze-52-bvK">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oze-52-bvK" id="WCn-sm-X9Z">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nje-Xe-QxF">
+                                                    <rect key="frame" x="27" y="8" width="39" height="39"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUZ-xB-mO6">
+                                                    <rect key="frame" x="79" y="10" width="160" height="39"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="agl-hr-ERY" id="hO3-oM-FnN"/>
+                                    <outlet property="delegate" destination="agl-hr-ERY" id="BT6-Ac-PZZ"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCH-qA-vJU">
+                                <rect key="frame" x="55" y="0.0" width="359" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQt-jT-Cq1">
+                                        <rect key="frame" x="160" y="60" width="1" height="40"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.1843137255" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nudge your friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZF-Hi-2cq">
+                                        <rect key="frame" x="37" y="16" width="247" height="36"/>
+                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hG8-Rc-NWz">
+                                        <rect key="frame" x="0.0" y="67" width="152" height="33"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC2-ie-6i0">
+                                                <rect key="frame" x="29" y="3" width="20" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJP-6Y-qPI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's a nudge?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QH-v4-Akz">
+                                                <rect key="frame" x="57" y="1" width="100" height="27"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04b-PT-Q0U">
+                                        <rect key="frame" x="169" y="67" width="110" height="30"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLv-7E-bNn">
+                                                <rect key="frame" x="0.0" y="3" width="20" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLh-1S-Ifo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-eO-tsu">
+                                                <rect key="frame" x="28" y="2" width="83" height="21"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="countView" destination="SLv-7E-bNn" id="oj6-SF-c4E"/>
+                        <outlet property="nudgeCountLabel" destination="iLh-1S-Ifo" id="w65-da-Ow6"/>
+                        <outlet property="nudgeQuestionView" destination="hG8-Rc-NWz" id="WcU-Oo-Z9H"/>
+                        <outlet property="questionView" destination="pC2-ie-6i0" id="bPJ-dr-bJF"/>
+                        <outlet property="tableView" destination="3tR-kR-odk" id="hno-vJ-T78"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh9-Yu-R5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="1054"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
-        <image name="bltlogo@3x.png" width="100" height="100"/>
-        <image name="close-3x.png" width="376" height="96"/>
-        <image name="hamburger@3x.png" width="99" height="68"/>
+        <image name="hamburgerv2-3x.png" width="87" height="60"/>
+        <image name="icon-winfo-3x.png" width="218" height="218"/>
         <image name="interested1-3x.png" width="444" height="150"/>
         <image name="locationarrow-3x.png" width="45" height="45"/>
         <image name="martini@3x.png" width="216" height="216"/>
         <image name="menu-32" width="32" height="32"/>
-        <image name="nudge-3x.png" width="560" height="138"/>
+        <image name="nudgeicon-3x.png" width="58" height="98"/>
         <image name="purchasedrinks-3x.png" width="525" height="80"/>
+        <image name="theplus-3x.png" width="45" height="45"/>
         <image name="upload-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -746,6 +805,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="iF9-40-mi4"/>
-        <segue reference="TA7-Mk-eEm"/>
+        <segue reference="MtO-Wl-0Ic"/>
     </inferredMetricsTieBreakers>
 </document>

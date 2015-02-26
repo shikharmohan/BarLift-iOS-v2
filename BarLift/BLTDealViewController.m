@@ -18,8 +18,8 @@
 
 //#import "Mixpanel.h"
 @interface BLTDealViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *dealInfoButton;
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
-@property (weak, nonatomic) IBOutlet UIImageView *dealTypeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *barName;
 @property (weak, nonatomic) IBOutlet UILabel *barAddress;
 @property (weak, nonatomic) IBOutlet UIButton *goingButton;
@@ -143,9 +143,7 @@
     //deal description alert
     UITapGestureRecognizer *tapGesture4 =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showDescription)];
-    [self.dealTypeImageView addGestureRecognizer:tapGesture4];
     [self.dealName addGestureRecognizer:tapGesture4];
-    self.dealTypeImageView.userInteractionEnabled = YES;
     self.dealName.userInteractionEnabled = YES;
 }
 
@@ -156,12 +154,16 @@
         NSLog(@"%f", vel.y);
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationCurveEaseOut animations:^{
            [self fadeOutContent];
-            self.expandButton.image = [UIImage imageNamed:@"rounded61.png"];
+            self.expandButton.image = [UIImage imageNamed:@"thex-3x.png"];
             CGRect frame = self.friendsView.frame;
             frame.size.width = iOSScreenSize.width;
             frame.origin.y = 90;
             self.friendsView.frame = frame;
             panelUp = YES;
+            [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                [self.goingLabel setFont:[UIFont systemFontOfSize:23]];
+            } completion:^(BOOL finished) {
+            }];
         } completion:^(BOOL finished) {
             
         }];
@@ -171,12 +173,24 @@
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationCurveEaseOut animations:^{
             [self fadeInContent];
 
-            self.expandButton.image = [UIImage imageNamed:@"add121.png"];
+            self.expandButton.image = [UIImage imageNamed:@"theplus-3x.png"];
             CGRect frame = self.friendsView.frame;
             frame.size.width = iOSScreenSize.width;
-            frame.origin.y = 472;
+            frame.origin.y = 0.8309*iOSScreenSize.height;
+            if(iOSScreenSize.height == 480){
+                frame.origin.y = 450;
+            }
+            if(iOSScreenSize.height == 667){
+                frame.origin.y = 482;
+            }
             self.friendsView.frame = frame;
+            [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                [self.goingLabel setFont:[UIFont systemFontOfSize:16]];
+            } completion:^(BOOL finished) {
+                
+            }];
             panelUp = NO;
+            
         } completion:^(BOOL finished) {
             
         }];
@@ -195,9 +209,15 @@
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
             if(panelUp){
                 [self fadeInContent];
-                self.expandButton.image = [UIImage imageNamed:@"add121"];
+                self.expandButton.image = [UIImage imageNamed:@"theplus-3x.png"];
                 CGRect frame = self.friendsView.frame;
-                frame.origin.y = 472;
+                frame.origin.y = 0.8309*iOSScreenSize.height;
+                if(iOSScreenSize.height == 480){
+                    frame.origin.y = 450;
+                }
+                if(iOSScreenSize.height == 667){
+                    frame.origin.y = 482;
+                }
                 self.friendsView.frame = frame;
                 [self.collectionView setScrollEnabled:NO];
                 [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -209,7 +229,7 @@
             }
             else{
                 [self fadeOutContent];
-                self.expandButton.image = [UIImage imageNamed:@"rounded61.png"];
+                self.expandButton.image = [UIImage imageNamed:@"thex-3x.png"];
 
                 CGRect frame = self.friendsView.frame;
                 frame.origin.y = 90;
@@ -237,7 +257,7 @@
     [self.dealName setAlpha:1.0f];
     [self.barAddress setAlpha:1.0f];
     [self.barName setAlpha:1.0f];
-    [self.dealTypeImageView setAlpha:1.0f];
+    [self.dealInfoButton setAlpha:1.0f];
     self.dealView.hidden = NO;
 
 }
@@ -246,7 +266,7 @@
     [self.dealName setAlpha:0.0f];
     [self.barAddress setAlpha:0.0f];
     [self.barName setAlpha:0.0f];
-    [self.dealTypeImageView setAlpha:0.0f];
+    [self.dealInfoButton setAlpha:0.0f];
     self.dealView.hidden = YES;
 
 }
@@ -517,6 +537,10 @@
     
 }
 
+- (IBAction)dealInfoButtonPressed:(id)sender {
+    alert = [[SCLAlertView alloc] init];
+    [alert showInfo:self title:@"Deal Details" subTitle:desc closeButtonTitle:@"Ok, got it!" duration:0.0f];
+}
 
 
 #pragma mark - Navigation

@@ -21,6 +21,7 @@
 		015AF9721A9D7CC200163480 /* BLTNudgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AF9711A9D7CC200163480 /* BLTNudgeViewController.m */; };
 		015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF9751A9D832A00163480 /* nudgeicon-3x.png */; };
 		015AF97A1A9DA8C000163480 /* DataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AF9791A9DA8C000163480 /* DataClass.m */; };
+		015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */; };
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
 		0166EC751A6995C40016E679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC741A6995C40016E679 /* AppDelegate.m */; };
 		0166EC781A6995C40016E679 /* BarLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC761A6995C40016E679 /* BarLift.xcdatamodeld */; };
@@ -142,6 +143,9 @@
 		01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120D1A747537001C29B7 /* iPhone4.storyboard */; };
 		01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120F1A747544001C29B7 /* iPhone47.storyboard */; };
 		01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D712111A74754F001C29B7 /* iPhone55.storyboard */; };
+		01E63BE51A9E7B84000425F2 /* icon-winfo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE41A9E7B84000425F2 /* icon-winfo-3x.png */; };
+		01E63BE71A9E9002000425F2 /* thex-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE61A9E9002000425F2 /* thex-3x.png */; };
+		01E63BE91A9E9128000425F2 /* theplus-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE81A9E9128000425F2 /* theplus-3x.png */; };
 		01EBDB631A81535200A9E175 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB621A81535200A9E175 /* Reachability.m */; };
 		01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 01EBDB671A81A2DE00A9E175 /* Contents.json */; };
 		01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EBDB7E1A83023900A9E175 /* SWRevealViewController.m */; };
@@ -188,6 +192,7 @@
 		015AF9751A9D832A00163480 /* nudgeicon-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nudgeicon-3x.png"; sourceTree = "<group>"; };
 		015AF9781A9DA8C000163480 /* DataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataClass.h; sourceTree = "<group>"; };
 		015AF9791A9DA8C000163480 /* DataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClass.m; sourceTree = "<group>"; };
+		015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburgerv2-3x.png"; sourceTree = "<group>"; };
 		0166EC6C1A6995C40016E679 /* BarLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0166EC701A6995C40016E679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0166EC711A6995C40016E679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -346,6 +351,9 @@
 		01D7120D1A747537001C29B7 /* iPhone4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4.storyboard; sourceTree = "<group>"; };
 		01D7120F1A747544001C29B7 /* iPhone47.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone47.storyboard; sourceTree = "<group>"; };
 		01D712111A74754F001C29B7 /* iPhone55.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone55.storyboard; sourceTree = "<group>"; };
+		01E63BE41A9E7B84000425F2 /* icon-winfo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-winfo-3x.png"; sourceTree = "<group>"; };
+		01E63BE61A9E9002000425F2 /* thex-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thex-3x.png"; sourceTree = "<group>"; };
+		01E63BE81A9E9128000425F2 /* theplus-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theplus-3x.png"; sourceTree = "<group>"; };
 		01EBDB611A81535200A9E175 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		01EBDB621A81535200A9E175 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		01EBDB671A81A2DE00A9E175 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -739,6 +747,10 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01E63BE81A9E9128000425F2 /* theplus-3x.png */,
+				01E63BE61A9E9002000425F2 /* thex-3x.png */,
+				01E63BE41A9E7B84000425F2 /* icon-winfo-3x.png */,
+				015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */,
 				015AF9751A9D832A00163480 /* nudgeicon-3x.png */,
 				01F3BEB41A9C761B0043F2C2 /* rounded61.png */,
 				01F3BEB21A9C757B0043F2C2 /* add121.png */,
@@ -990,6 +1002,7 @@
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */,
 				01A62E061A95CB6D004FD855 /* bg@3x.jpg in Resources */,
+				015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */,
 				011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */,
 				011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */,
 				011D22E11A9A5E060082143E /* Barlift-login-logo.png in Resources */,
@@ -1045,6 +1058,7 @@
 				01A62E331A95DC2E004FD855 /* Lato-Semibold.ttf in Resources */,
 				01A62E2E1A95DC2E004FD855 /* Lato-Light.ttf in Resources */,
 				01A62E751A9945E4004FD855 /* appdesign-Slide4@1x.jpg in Resources */,
+				01E63BE91A9E9128000425F2 /* theplus-3x.png in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				011D22F41A9AAEE90082143E /* hamburger-3x.png in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -1052,6 +1066,7 @@
 				01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */,
 				011D22F81A9AAEE90082143E /* logo-3x.png in Resources */,
 				01A62E291A95DC2E004FD855 /* Lato-Hairline.ttf in Resources */,
+				01E63BE71A9E9002000425F2 /* thex-3x.png in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
 				011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */,
 				01A62E271A95DC2E004FD855 /* Lato-Bold.ttf in Resources */,
@@ -1059,6 +1074,7 @@
 				01A62E6F1A9945E4004FD855 /* appdesign-Slide2@1x.jpg in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
 				01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */,
+				01E63BE51A9E7B84000425F2 /* icon-winfo-3x.png in Resources */,
 				01A62E041A95CB5F004FD855 /* background.xcassets in Resources */,
 				01A62E731A9945E4004FD855 /* appdesign-Slide3@2x.jpg in Resources */,
 				01A62E321A95DC2E004FD855 /* Lato-Regular.ttf in Resources */,
