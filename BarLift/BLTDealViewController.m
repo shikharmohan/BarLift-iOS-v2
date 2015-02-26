@@ -77,9 +77,6 @@
     myProfile = [NSArray arrayWithObjects:[PFUser currentUser][@"profile"][@"name"], [PFUser currentUser][@"profile"][@"fb_id"], nil];
     
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
-    if(iOSScreenSize.height != 736){
-        [self.collectionView setScrollEnabled:NO];
-    }
 
     //sidebar stuff
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -158,6 +155,7 @@
             CGRect frame = self.friendsView.frame;
             frame.size.width = iOSScreenSize.width;
             frame.origin.y = 90;
+            [self.collectionView setScrollEnabled:YES];
             self.friendsView.frame = frame;
             panelUp = YES;
             [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -172,6 +170,7 @@
         NSLog(@"%f", vel.y);
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationCurveEaseOut animations:^{
             [self fadeInContent];
+            [self.collectionView setScrollEnabled:NO];
 
             self.expandButton.image = [UIImage imageNamed:@"theplus-3x.png"];
             CGRect frame = self.friendsView.frame;
@@ -181,7 +180,10 @@
                 frame.origin.y = 450;
             }
             if(iOSScreenSize.height == 667){
-                frame.origin.y = 482;
+                frame.origin.y = 530;
+            }
+            if(iOSScreenSize.height == 736){
+                frame.origin.y = 553;
             }
             self.friendsView.frame = frame;
             [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -205,7 +207,6 @@
 }
 
 -(void)expandFriends{
-    if(iOSScreenSize.height != 736){
         [UIView transitionWithView:self.friendsView duration:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
             if(panelUp){
                 [self fadeInContent];
@@ -216,7 +217,10 @@
                     frame.origin.y = 450;
                 }
                 if(iOSScreenSize.height == 667){
-                    frame.origin.y = 482;
+                    frame.origin.y = 530;
+                }
+                if(iOSScreenSize.height == 736){
+                    frame.origin.y = 553;
                 }
                 self.friendsView.frame = frame;
                 [self.collectionView setScrollEnabled:NO];
@@ -234,7 +238,6 @@
                 CGRect frame = self.friendsView.frame;
                 frame.origin.y = 90;
                 self.friendsView.frame = frame;
-                [self.collectionView setScrollEnabled:YES];
                 [UIView transitionWithView:self.goingLabel duration:1.5f options:UIViewAnimationOptionCurveEaseOut animations:^{
                     [self.goingLabel setFont:[UIFont systemFontOfSize:23]];
                 } completion:^(BOOL finished) {
@@ -248,9 +251,6 @@
         } completion:^(BOOL finished) {
             
         }];
-    
-    }
-
 }
 
 -(void) fadeInContent{
@@ -324,7 +324,7 @@
                         }
                     }
                     
-                    NSOrderedSet *mySet = [[NSOrderedSet alloc] initWithArray:friendsArray];
+                   NSOrderedSet *mySet = [[NSOrderedSet alloc] initWithArray:friendsArray];
                     friendsArray = [[NSMutableArray alloc] initWithArray:[mySet array]];
 
                     [self.collectionView reloadData];
