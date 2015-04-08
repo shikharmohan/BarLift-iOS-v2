@@ -1,6 +1,6 @@
 //
 //  BLTNudgeViewController.m
-//  BarLift
+//  BarLift 
 //
 //  Created by Shikhar Mohan on 2/24/15.
 //  Copyright (c) 2015 Shikhar Mohan. All rights reserved.
@@ -67,7 +67,9 @@
 
 
 - (void) getFriends {
-    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?limit=1000"];
+
+    [friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             // result will contain an array with your user's friends in the "data" key
             NSArray *friendObjects = [result objectForKey:@"data"];
@@ -77,19 +79,21 @@
                 NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
                 [dict setObject:friendObject[@"id"] forKey:@"fb_id"];
                 [dict setObject:friendObject[@"name"] forKey:@"name"];
+                [dict setObject:NO forKey:@"enabled"];
                 [friends addObject:dict];
             }
             [friendsArray setArray:friends];
             NSSortDescriptor *Sorter = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
             [friendsArray sortUsingDescriptors:[NSArray arrayWithObject:Sorter]];
 
-            [self.tableView reloadData];
             [[PFUser currentUser] setObject:friends forKey:@"friends"];
             [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if(succeeded){
                     [PFCloud callFunctionInBackground:@"loadNudges" withParameters:@{@"obj":[PFUser currentUser][@"fb_id"]} block:^(id object, NSError *error) {
                         if(!error){
                             self.nudgeCountLabel.text =[NSString stringWithFormat:@"%@", object];
+                            
+                            [self.tableView reloadData];
                         }
                     }];
                 }

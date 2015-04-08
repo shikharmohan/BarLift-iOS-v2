@@ -787,7 +787,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mfK-so-lFo">
-                                                    <rect key="frame" x="31" y="8" width="39" height="39"/>
+                                                    <rect key="frame" x="31" y="8" width="310" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>

@@ -119,13 +119,11 @@
 }
 
 - (IBAction)loginToFacebook:(UIButton *)sender {
-    
-    
     self.indicator.hidden = NO;
     [self.view bringSubviewToFront:self.indicator];
     [self.indicator startAnimating];
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends", @"user_relationships", @"user_location"];
+    NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends"];
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
             [self.indicator stopAnimating];
             self.indicator.hidden = YES;
@@ -218,7 +216,8 @@
                     if(succeeded){
                         NSLog(@"User saved successfully");
                         NSLog(@"User with facebook logged in!");
-                        [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                        FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?limit=1000"];
+                        [friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                             if (!error) {
                                 // result will contain an array with your user's friends in the "data" key
                                 NSArray *friendObjects = [result objectForKey:@"data"];
@@ -235,7 +234,7 @@
                                 [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                 [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
                                 [[PFInstallation currentInstallation] saveInBackground];
-
+                                
                                 NSLog(@"Got friends");
                                 if(self.new){
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
