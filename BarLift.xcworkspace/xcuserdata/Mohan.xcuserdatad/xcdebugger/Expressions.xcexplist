@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[YALSunnyRefreshControl calculateShift]:YALSunnyRefreshControl.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.scrollView.contentOffset.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__40-[BLTDealListViewController viewDidLoad]_block_invoke:BLTDealListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[YALSunnyRefreshControl shiftInPercents]:YALSunnyRefreshControl.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.scrollView.contentOffset.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSLockedHeaderViewController collectionView:cellForItemAtIndexPath:]:CSLockedHeaderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.textLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "[obj allValues][indexPath.row]">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[components1 weekday]">
+            </PersistentString>
+            <PersistentString
+               value = "self.sections">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sections[0]">
+            </PersistentString>
+            <PersistentString
+               value = "self.sections[0].allValues">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

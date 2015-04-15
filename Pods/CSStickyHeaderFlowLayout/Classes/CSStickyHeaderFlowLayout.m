@@ -73,7 +73,7 @@ NSString *const CSStickyHeaderParallaxHeader = @"CSStickyHeaderParallexHeader";
             }
 
             if ([indexPath item] == 0 && [indexPath section] == 0) {
-                visibleParallexHeader = YES;
+                visibleParallexHeader = NO;
             }
         }
 
@@ -84,11 +84,11 @@ NSString *const CSStickyHeaderParallaxHeader = @"CSStickyHeaderParallexHeader";
     // when the visible rect is at top of the screen, make sure we see
     // the parallex header
     if (CGRectGetMinY(rect) <= 0) {
-        visibleParallexHeader = YES;
+        visibleParallexHeader = NO;
     }
 
     if (self.parallaxHeaderAlwaysOnTop == YES) {
-        visibleParallexHeader = YES;
+        visibleParallexHeader = NO;
     }
 
 

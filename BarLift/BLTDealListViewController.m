@@ -7,31 +7,87 @@
 //
 
 #import "BLTDealListViewController.h"
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "CSStickyHeaderFlowLayout.h"
+#import "BLTSectionHeader.h"
+#import "BLTMainDealCell.h"
 
 @interface BLTDealListViewController ()
+@property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, strong) UINib *headerNib;
+@property (weak, nonatomic) IBOutlet CSStickyHeaderFlowLayout *collectionViewLayout;
 
 @end
 
 @implementation BLTDealListViewController
 
-- (void)viewDidLoad {
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.sections = @[
+                          @{@"Twitter":@"http://twitter.com"},
+                          @{@"Facebook":@"http://facebook.com"},
+                          @{@"Tumblr":@"http://tumblr.com"},
+                          @{@"Pinterest":@"http://pinterest.com"},
+                          @{@"Instagram":@"http://instagram.com"},
+                          @{@"Github":@"http://github.com"},
+                          ];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
+    
+    if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
+        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 200);
+        layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height);
+    }
+    
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return [self.sections count];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 1;
 }
-*/
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSDictionary *obj = self.sections[indexPath.section];
+    
+    BLTMainDealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dealCell"
+                                                             forIndexPath:indexPath];
+    
+    cell.textLabel.text = [[obj allValues] firstObject];
+    
+    return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        
+        NSDictionary *obj = self.sections[indexPath.section];
+        
+        BLTSectionHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                   withReuseIdentifier:@"sectionHeader"
+                                                                          forIndexPath:indexPath];
+        
+        return cell;
+    }
+    return nil;
+}
+
 
 @end
