@@ -224,23 +224,22 @@
                                 NSMutableArray *friends = [NSMutableArray arrayWithCapacity:friendObjects.count];
                                 // Create a list of friends' Facebook IDs
                                 for (NSDictionary *friendObject in friendObjects) {
-                                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
+                                    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:25];
                                     [dict setObject:friendObject[@"id"] forKey:@"fb_id"];
                                     [dict setObject:friendObject[@"name"] forKey:@"name"];
                                     [friends addObject:dict];
                                 }
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
-                                [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
-                                [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
-                                [[PFInstallation currentInstallation] saveInBackground];
-                                
                                 NSLog(@"Got friends");
                                 if(self.new){
+                                    [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
+                                    [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                                    [[PFInstallation currentInstallation] saveInBackground];
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }
                                 else{
-                                    [self performSegueWithIdentifier:@"toDeal" sender:self];
+                                    [self performSegueWithIdentifier:@"toDeals" sender:self];
                                 }
                             }
                         }];

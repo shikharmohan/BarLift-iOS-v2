@@ -4,15 +4,18 @@ PODS:
   - Mixpanel (2.7.3):
     - Mixpanel/MPCategoryHelpers (= 2.7.3)
   - Mixpanel/MPCategoryHelpers (2.7.3)
+  - UIImage+BlurredFrame (0.0.4)
 
 DEPENDENCIES:
   - AMScrollingNavbar
   - CSStickyHeaderFlowLayout
   - Mixpanel
+  - UIImage+BlurredFrame
 
 SPEC CHECKSUMS:
   AMScrollingNavbar: 3318f0cc0fd24c972d5e8c84112edcfe61529506
   CSStickyHeaderFlowLayout: a04d4bc7d6f6668073d19d22d42c27a682dd71da
   Mixpanel: 1d387d76800e07e953958c62c97fea27f13632dd
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
 
 COCOAPODS: 0.36.3

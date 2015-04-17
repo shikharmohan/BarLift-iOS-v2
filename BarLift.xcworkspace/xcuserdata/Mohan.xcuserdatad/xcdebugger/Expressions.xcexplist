@@ -31,10 +31,13 @@
                value = "cell.textLabel.text">
             </PersistentString>
             <PersistentString
-               value = "[obj allValues][indexPath.row]">
+               value = "self.dates">
             </PersistentString>
             <PersistentString
                value = "indexPath.section">
+            </PersistentString>
+            <PersistentString
+               value = "[obj allValues][indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -42,10 +45,10 @@
          contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[components1 weekday]">
+               value = "self.sections">
             </PersistentString>
             <PersistentString
-               value = "self.sections">
+               value = "[components1 weekday]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -53,10 +56,10 @@
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

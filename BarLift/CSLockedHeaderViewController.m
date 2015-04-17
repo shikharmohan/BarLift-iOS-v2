@@ -5,15 +5,18 @@
 #import "LocationCell.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-#import "YALSunnyRefreshControl.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 
 @interface CSLockedHeaderViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *sections;
 @property (nonatomic, strong) NSMutableDictionary *dates;
+@property (nonatomic, strong) NSArray *sortedKeys;
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic,strong) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionViews;
+@property (weak, nonatomic) IBOutlet UIButton *sideBarButton;
 
 @end
 
@@ -31,6 +34,9 @@
 {
     [super viewDidLoad];
 
+
+    
+    
     self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
     self.dates = [[NSMutableDictionary alloc]initWithCapacity:10];
 
@@ -54,6 +60,7 @@
 
     
     // Also insets the scroll indicator so it appears below the search bar
+    [self setProfilePicture];
     self.collectionView.alwaysBounceVertical = YES;
     [self refreshPage];
     [self.collectionView registerNib:self.headerNib
@@ -63,10 +70,41 @@
 
 -(void)test{
     NSLog(@"Hey");
-    [self.sections removeAllObjects];
-    [self.dates removeAllObjects];
+   // [self.sections removeAllObjects];
+   // [self.dates removeAllObjects];
     [self refreshPage];
     [self.refreshControl endRefreshing];
+
+}
+
+-(void) showOptions{
+
+    [self performSegueWithIdentifier:@"toOptions" sender:self];
+    
+}
+
+-(void) setProfilePicture{
+    UIImageView *pic = [[UIImageView alloc] init];
+    NSString *fb_id = [PFUser currentUser][@"fb_id"];
+    [pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+    pic.contentMode = UIViewContentModeScaleAspectFill;
+    pic.contentMode = UIViewContentModeScaleAspectFill;
+    [pic setFrame:CGRectMake(29, 10, 33, 33)];
+    pic.layer.cornerRadius = pic.frame.size.width/2;
+    pic.layer.borderWidth = 2.0;
+    pic.layer.borderColor = [UIColor whiteColor].CGColor;
+
+    pic.clipsToBounds = YES;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]
+                                         initWithTarget:self
+                                         action:@selector(showOptions)];
+    [singleTap setNumberOfTapsRequired:1];
+    pic.userInteractionEnabled = YES;
+    [pic addGestureRecognizer:singleTap];
+    UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
+    
+    [self.navigationItem setLeftBarButtonItem:imageButton];
 
 }
 
@@ -75,13 +113,14 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
     NSDate *date = [NSDate date];
     [query whereKey:@"deal_end_date" greaterThanOrEqualTo:date];
-    [query whereKey:@"community_name" equalTo:@"NU"];
-    [query orderByDescending:@"deal_start_date"];
+    [query whereKey:@"community_name" equalTo:@"Dev"];
+    [query orderByAscending:@"deal_start_date"];
     [query includeKey:@"user"];
     [query setCachePolicy:kPFCachePolicyCacheElseNetwork];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
             for(int i =0; i < [objects count]; i++){
+                PFRelation *relation = [objects[i] relationForKey:@"social"];
                 NSDate *dealDate = objects[i][@"deal_start_date"];
                 NSCalendar *cal = [NSCalendar currentCalendar];
                 NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
@@ -98,7 +137,7 @@
                     NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
                     NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
                     NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
-                    key = [NSString stringWithFormat:@"%d%d%ld", [components1 month], [components1 day], (long)[components1 year]];
+                    key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
                     NSLog(@"%@", key);
                 if([self.sections valueForKey:key] != nil) {
                     // The key existed...
@@ -118,7 +157,10 @@
 
             }
             NSLog(@"%@", self.sections);
-            [self.collectionView reloadData];
+            self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
+            //if([[self.sections allKeys] count] > 0 && [[self.dates allKeys] count] > 0){
+                [self.collectionView reloadData];
+            //}
         }
         else{
             NSLog(@"%@", error);
@@ -129,18 +171,18 @@
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [[self.dates allKeys] count];
+    return [self.sortedKeys count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[self.sections objectForKey:[[self.dates allKeys] objectAtIndex:section]] count];
+    return [[self.sections objectForKey:[self.sortedKeys objectAtIndex:section]] count];
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSDictionary *obj = [[self.dates allKeys] objectAtIndex:indexPath.section];
-    DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
+    NSDictionary *obj = [self.sortedKeys objectAtIndex:indexPath.section];
+    DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
                                                              forIndexPath:indexPath];
     cell.textLabel.text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"name"];
     return cell;
@@ -152,20 +194,22 @@
                                                           withReuseIdentifier:@"sectionHeader"
                                                                  forIndexPath:indexPath];
         
-        cell.textLabel.text = [self.dates objectForKey:[[self.dates allKeys] objectAtIndex:indexPath.section]];
+        cell.textLabel.text = [self.dates objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]] ;
         
         return cell;
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
         LocationCell *lcell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
                                                                                    forIndexPath:indexPath];
-        [lcell.textLabel setText:@"NORTHWESTERN"];
+        [lcell.textLabel setText:@"Dev"];
         
         
         return lcell;
     }
     return nil;
 }
+
+#pragma mark ScrollView Delegates
 
 
 
