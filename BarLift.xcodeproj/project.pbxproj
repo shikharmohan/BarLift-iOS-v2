@@ -50,6 +50,7 @@
 		017E11741ADEB72300306A16 /* ProfileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E11731ADEB72300306A16 /* ProfileHeader.m */; };
 		017E11761ADF230D00306A16 /* coverphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 017E11751ADF230D00306A16 /* coverphoto.png */; };
 		017ED67E1AD86D34005BD8BE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017ED67D1AD86D34005BD8BE /* Social.framework */; };
+		01865F351AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01865F341AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.m */; };
 		019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13C81A89ABA20099B3CF /* MKAnnotationView+WebCache.m */; };
 		019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13CA1A89ABA20099B3CF /* NSData+ImageContentType.m */; };
 		019F13EA1A89ABA20099B3CF /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13CC1A89ABA20099B3CF /* SDImageCache.m */; };
@@ -257,6 +258,8 @@
 		017E11731ADEB72300306A16 /* ProfileHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHeader.m; sourceTree = "<group>"; };
 		017E11751ADF230D00306A16 /* coverphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverphoto.png; sourceTree = "<group>"; };
 		017ED67D1AD86D34005BD8BE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		01865F331AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStickyParallaxHeaderViewController.h; sourceTree = "<group>"; };
+		01865F341AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStickyParallaxHeaderViewController.m; sourceTree = "<group>"; };
 		019F13C71A89ABA20099B3CF /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		019F13C81A89ABA20099B3CF /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		019F13C91A89ABA20099B3CF /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -615,6 +618,8 @@
 		017E115C1ADE246F00306A16 /* Deal View */ = {
 			isa = PBXGroup;
 			children = (
+				01865F331AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.h */,
+				01865F341AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.m */,
 				017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */,
 				017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */,
 				017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */,
@@ -1292,6 +1297,7 @@
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
 				017E116E1ADEB63800306A16 /* CardViewCell.m in Sources */,
 				017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */,
+				01865F351AE1B0720097BEB6 /* CSStickyParallaxHeaderViewController.m in Sources */,
 				01FB80411ADB0C9300767B01 /* CSLockedHeaderViewController.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */,

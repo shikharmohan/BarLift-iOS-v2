@@ -68,6 +68,12 @@
                  withReuseIdentifier:@"header"];
 }
 
+-(void) viewWillAppear:(BOOL)animated  {
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.alpha = 1;
+
+}
+
 -(void)test{
     NSLog(@"Hey");
    // [self.sections removeAllObjects];
