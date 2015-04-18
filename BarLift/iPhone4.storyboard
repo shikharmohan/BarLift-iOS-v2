@@ -588,10 +588,10 @@
             </objects>
             <point key="canvasLocation" x="3368" y="1859"/>
         </scene>
-        <!--Locked Header View Controller-->
+        <!--Deal Dashboard-->
         <scene sceneID="uvG-yw-Luq">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="k43-Jr-kha" customClass="CSLockedHeaderViewController" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="k43-Jr-kha" customClass="BLTDealDashboard" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="Dow-Ia-GFS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

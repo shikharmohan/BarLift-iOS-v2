@@ -1,4 +1,4 @@
-#import "CSLockedHeaderViewController.h"
+#import "BLTDealDashboard.h"
 #import "DealCell.h"
 #import "DealHeader.h"
 #import "CSStickyHeaderFlowLayout.h"
@@ -9,7 +9,7 @@
 #import "UIImageView+WebCache.h"
 #import "BLTDealDetailViewController.h"
 
-@interface CSLockedHeaderViewController ()
+@interface BLTDealDashboard ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
 @property (nonatomic, strong) NSMutableDictionary *sections;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation CSLockedHeaderViewController
+@implementation BLTDealDashboard
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

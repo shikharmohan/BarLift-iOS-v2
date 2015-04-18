@@ -182,7 +182,7 @@
 		01FB803E1ADB0C9300767B01 /* DealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB80381ADB0C9300767B01 /* DealCell.m */; };
 		01FB803F1ADB0C9300767B01 /* DealHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB803A1ADB0C9300767B01 /* DealHeader.m */; };
 		01FB80401ADB0C9300767B01 /* CSSearchBarHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FB803B1ADB0C9300767B01 /* CSSearchBarHeader.xib */; };
-		01FB80411ADB0C9300767B01 /* CSLockedHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB803D1ADB0C9300767B01 /* CSLockedHeaderViewController.m */; };
+		01FB80411ADB0C9300767B01 /* BLTDealDashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB803D1ADB0C9300767B01 /* BLTDealDashboard.m */; };
 		01FB80441ADB159300767B01 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FB80431ADB159300767B01 /* LocationCell.m */; };
 		62B0379FA5182B6C3E29427C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DC0EE9D8E35526029C5589 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -429,8 +429,8 @@
 		01FB80391ADB0C9300767B01 /* DealHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealHeader.h; sourceTree = "<group>"; };
 		01FB803A1ADB0C9300767B01 /* DealHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealHeader.m; sourceTree = "<group>"; };
 		01FB803B1ADB0C9300767B01 /* CSSearchBarHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSSearchBarHeader.xib; sourceTree = "<group>"; };
-		01FB803C1ADB0C9300767B01 /* CSLockedHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLockedHeaderViewController.h; sourceTree = "<group>"; };
-		01FB803D1ADB0C9300767B01 /* CSLockedHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLockedHeaderViewController.m; sourceTree = "<group>"; };
+		01FB803C1ADB0C9300767B01 /* BLTDealDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealDashboard.h; sourceTree = "<group>"; };
+		01FB803D1ADB0C9300767B01 /* BLTDealDashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDashboard.m; sourceTree = "<group>"; };
 		01FB80421ADB159300767B01 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
 		01FB80431ADB159300767B01 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 		9312A5290727BA494B058377 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1032,8 +1032,8 @@
 				01FB80421ADB159300767B01 /* LocationCell.h */,
 				01FB80431ADB159300767B01 /* LocationCell.m */,
 				01FB803B1ADB0C9300767B01 /* CSSearchBarHeader.xib */,
-				01FB803C1ADB0C9300767B01 /* CSLockedHeaderViewController.h */,
-				01FB803D1ADB0C9300767B01 /* CSLockedHeaderViewController.m */,
+				01FB803C1ADB0C9300767B01 /* BLTDealDashboard.h */,
+				01FB803D1ADB0C9300767B01 /* BLTDealDashboard.m */,
 			);
 			name = "Deal List View";
 			sourceTree = "<group>";
@@ -1306,7 +1306,7 @@
 				017E116E1ADEB63800306A16 /* CardViewCell.m in Sources */,
 				017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */,
 				01865F351AE1B0720097BEB6 /* BLTDealDetailViewController.m in Sources */,
-				01FB80411ADB0C9300767B01 /* CSLockedHeaderViewController.m in Sources */,
+				01FB80411ADB0C9300767B01 /* BLTDealDashboard.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
