@@ -36,7 +36,6 @@
 
 
     
-    
     self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
     self.dates = [[NSMutableDictionary alloc]initWithCapacity:10];
 
@@ -69,8 +68,8 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated  {
-    self.navigationController.navigationBarHidden = NO;
-    self.navigationController.navigationBar.alpha = 1;
+  //  self.navigationController.navigationBarHidden = NO;
+   // self.navigationController.navigationBar.alpha = 1;
 
 }
 
@@ -121,6 +120,7 @@
     [query whereKey:@"deal_end_date" greaterThanOrEqualTo:date];
     [query whereKey:@"community_name" equalTo:@"Dev"];
     [query orderByAscending:@"deal_start_date"];
+    [query orderByDescending:@"main"];
     [query includeKey:@"user"];
     [query setCachePolicy:kPFCachePolicyCacheElseNetwork];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -190,7 +190,12 @@
     NSDictionary *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
                                                              forIndexPath:indexPath];
-    cell.textLabel.text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"name"];
+    if([self.sections objectForKey:obj] != nil){
+        NSString *text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"name"];
+        
+        cell.dealName.text = [text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    }
+
     return cell;
 }
 

@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coverphoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="3y9-9q-T6E">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarLift BG5.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="3y9-9q-T6E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twt-q2-bnj">
@@ -90,7 +90,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="coverphoto.png" width="545" height="344"/>
+        <image name="BarLift BG5.jpeg" width="676" height="1200"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -592,18 +592,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3h-8r-wd5">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special deal:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgR-oK-0bm">
-                                            <rect key="frame" x="8" y="8" width="81" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                            <color key="textColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
-                                            <rect key="frame" x="8" y="25" width="304" height="75"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours (4pm - 1am)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-t1-VCZ">
                                             <rect key="frame" x="8" y="106" width="120" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
@@ -616,12 +604,19 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
+                                            <rect key="frame" x="8" y="8" width="304" height="75"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.90508097409999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="customSize" width="320" height="312"/>
                                 <connections>
+                                    <outlet property="dealName" destination="kep-Z2-NvA" id="XNN-OF-aem"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealDetail" id="sUi-IK-Bcz"/>
                                 </connections>
                             </collectionViewCell>
@@ -942,7 +937,7 @@
             </objects>
             <point key="canvasLocation" x="4230" y="1345"/>
         </scene>
-        <!--Always On Top-->
+        <!--World Of Beer-->
         <scene sceneID="7ho-0T-Qje">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="mPM-dA-jKn" customClass="CSStickyParallaxHeaderViewController" sceneMemberID="viewController">
@@ -996,7 +991,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Always On Top" id="yGI-X7-ceD"/>
-                    <navigationItem key="navigationItem" id="oeP-uQ-cgB"/>
+                    <navigationItem key="navigationItem" title="World Of Beer" id="oeP-uQ-cgB"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv8-6f-SPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

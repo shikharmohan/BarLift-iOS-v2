@@ -67,7 +67,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[[UIApplication sharedApplication] setStatusBarHidden:YES];
+
+    
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
@@ -90,8 +91,9 @@
 
 }
 
+
 -(void) viewWillAppear:(BOOL)animated{
-    self.navigationController.navigationBar.alpha = 0.0;
+    //self.navigationController.navigationBar.alpha = 0.0;
 
 }
 
@@ -134,9 +136,7 @@
     return nil;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
+
 
 
 
