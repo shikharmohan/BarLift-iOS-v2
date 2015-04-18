@@ -6,20 +6,27 @@
 //  Copyright (c) 2014 Jamz Tang. All rights reserved.
 //
 
-#import "CSStickyParallaxHeaderViewController.h"
+#import "BLTDealDetailViewController.h"
 #import "DealCell.h"
 #import "ProfileHeader.h"
 #import "CSStickyHeaderFlowLayout.h"
+#import "CSAlwaysOnTopHeader.h"
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 
-@interface CSStickyParallaxHeaderViewController ()
+
+@interface BLTDealDetailViewController ()
 
 @property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) UINib *headerNib;
-
+@property (nonatomic, strong) NSMutableDictionary *dealDetails;
+@property (nonatomic, strong) NSMutableArray *whosGoing;
 @end
 
-@implementation CSStickyParallaxHeaderViewController
-
+@implementation BLTDealDetailViewController
+@synthesize dealID;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -60,6 +67,7 @@
                           ];
 
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
+        
     }
     return self;
 }
@@ -68,7 +76,7 @@
 {
     [super viewDidLoad];
 
-    
+    self.dealDetails = [[NSMutableDictionary alloc] initWithCapacity:10];
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
@@ -88,7 +96,21 @@
     [self.collectionView registerNib:self.headerNib
           forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
                  withReuseIdentifier:@"header"];
-
+    //do query if deal ID exists
+    if(self.dealID != nil){
+        PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
+        [query whereKey:@"objectId" equalTo:self.dealID];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                self.dealDetails = objects[0];
+                [self.collectionView reloadData];
+            }
+            else{
+                NSLog(@"error");
+            }
+        }];
+    
+    }
 }
 
 
@@ -127,10 +149,16 @@
         return cell;
 
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
-        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+        CSAlwaysOnTopHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
-                                                                                   forIndexPath:indexPath];
-
+                                                                                forIndexPath:indexPath];
+        
+        if(self.dealDetails != nil){
+            cell.hoursLabel.text = @"6PM - 4AM";
+            cell.dealName.text = [self.dealDetails objectForKey:@"name"];
+            cell.dealID = self.dealID;
+        }
+        
         return cell;
     }
     return nil;

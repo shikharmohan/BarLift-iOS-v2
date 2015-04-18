@@ -467,6 +467,9 @@
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="nvF-57-Rfq" kind="push" identifier="toDealHistory" id="m24-Y7-udy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St0-Mj-n3n">
                                 <rect key="frame" x="0.0" y="480" width="320" height="42"/>
@@ -508,6 +511,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLJ-Oq-X1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3368" y="1081"/>
+        </scene>
+        <!--My Deals-->
+        <scene sceneID="tCm-MA-dzp">
+            <objects>
+                <viewController id="nvF-57-Rfq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="btf-bU-Qz1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ujd-GT-Ru7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zly-hn-gB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Deals" id="t1A-TY-07y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCZ-nR-GiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3806" y="1026"/>
         </scene>
         <!--Friends-->
         <scene sceneID="ugF-0U-cS2">
@@ -564,9 +586,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLD-El-JUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="1345"/>
+            <point key="canvasLocation" x="3368" y="1859"/>
         </scene>
-        <!--BarLift-->
+        <!--Locked Header View Controller-->
         <scene sceneID="uvG-yw-Luq">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="k43-Jr-kha" customClass="CSLockedHeaderViewController" sceneMemberID="viewController">
@@ -651,18 +673,19 @@
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-4r-igc">
                                     <rect key="frame" x="8" y="8" width="242" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri4-89-wEP">
                                     <rect key="frame" x="288" y="14" width="24" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
+                                <outlet property="numDeals" destination="Ri4-89-wEP" id="dSh-Zn-1Sf"/>
                                 <outlet property="textLabel" destination="dTT-4r-igc" id="hyg-8S-AVO"/>
                             </connections>
                         </collectionReusableView>
@@ -671,10 +694,25 @@
                             <outlet property="delegate" destination="k43-Jr-kha" id="6MY-Xy-CV2"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="BarLift" id="txh-0O-6j7"/>
+                    <navigationItem key="navigationItem" id="txh-0O-6j7">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZNV-HL-g4C">
+                            <rect key="frame" x="76" y="6" width="169" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All Deals"/>
+                                <segment title="My Deals"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="segmentChanged:" destination="k43-Jr-kha" eventType="valueChanged" id="7dF-LX-PDm"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Dow-Ia-GFS" id="xRD-cN-gEv"/>
                         <outlet property="collectionViews" destination="Dow-Ia-GFS" id="Ycy-zQ-6AX"/>
+                        <outlet property="segmentControl" destination="ZNV-HL-g4C" id="Apo-kd-anN"/>
                         <segue destination="kMI-FE-uy4" kind="modal" identifier="toOptions" id="JE0-Mz-fHk"/>
                     </connections>
                 </collectionViewController>
@@ -820,7 +858,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgN-Aa-mBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="711"/>
+            <point key="canvasLocation" x="3806" y="404"/>
         </scene>
         <!--Profile-->
         <scene sceneID="rB3-42-PCh">
@@ -935,12 +973,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLZ-Uh-A3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4230" y="1345"/>
+            <point key="canvasLocation" x="4234" y="1693"/>
         </scene>
-        <!--World Of Beer-->
+        <!--Always On Top-->
         <scene sceneID="7ho-0T-Qje">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="mPM-dA-jKn" customClass="CSStickyParallaxHeaderViewController" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="mPM-dA-jKn" customClass="BLTDealDetailViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="5eo-Bv-vYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -991,7 +1029,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Always On Top" id="yGI-X7-ceD"/>
-                    <navigationItem key="navigationItem" title="World Of Beer" id="oeP-uQ-cgB"/>
+                    <navigationItem key="navigationItem" id="oeP-uQ-cgB"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv8-6f-SPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1008,7 +1046,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sUi-IK-Bcz"/>
         <segue reference="sir-3W-OV2"/>
+        <segue reference="sUi-IK-Bcz"/>
     </inferredMetricsTieBreakers>
 </document>

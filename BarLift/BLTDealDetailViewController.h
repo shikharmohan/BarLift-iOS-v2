@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSStickyParallaxHeaderViewController : UICollectionViewController
-
+@interface BLTDealDetailViewController : UICollectionViewController
+@property (strong, nonatomic) NSString *dealID; 
 @end

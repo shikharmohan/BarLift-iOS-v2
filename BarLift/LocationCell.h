@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LocationCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
