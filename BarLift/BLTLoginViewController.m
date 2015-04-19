@@ -233,13 +233,21 @@
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
                                 if(self.new){
+                                    [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
                                     [[PFInstallation currentInstallation] saveInBackground];
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }
                                 else{
-                                    [self performSegueWithIdentifier:@"toDeals" sender:self];
+                                    [PFCloud callFunctionInBackground:@"resetBadges" withParameters:@{@"fb": [PFUser currentUser][@"fb_id"]} block:^(id object, NSError *error) {
+                                        if(!error){
+                                            [self performSegueWithIdentifier:@"toDeals" sender:self];
+                                        }
+                                        else{
+                                            NSLog(@"Could not reset badges");
+                                        }
+                                    }];
                                 }
                             }
                         }];

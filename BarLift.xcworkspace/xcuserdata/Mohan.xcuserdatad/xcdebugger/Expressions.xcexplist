@@ -3,24 +3,16 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[components1 weekday]">
-            </PersistentString>
-            <PersistentString
-               value = "self.sections">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -40,6 +32,20 @@
          <PersistentStrings>
             <PersistentString
                value = "self.scrollView.contentOffset.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__34-[BLTDealDashboard refreshMyDeals]_block_invoke_3:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDashboard refreshMyDeals]:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentInstallation.badge">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -64,16 +70,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSStickyParallaxHeaderViewController initWithCoder:]:CSStickyParallaxHeaderViewController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[CSLockedHeaderViewController prepareForSegue:sender:]:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[CSAlwaysOnTopHeader interestedButtonPressed:]:CSAlwaysOnTopHeader.m">
+         contextName = "-[CSStickyParallaxHeaderViewController initWithCoder:]:CSStickyParallaxHeaderViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[BLTDealDetailViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:BLTDealDetailViewController.m">
@@ -84,10 +84,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CSAlwaysOnTopHeader interestedButtonPressed:]:CSAlwaysOnTopHeader.m">
+      </ContextState>
+      <ContextState
          contextName = "-[BLTFriendListViewController convertArray]:BLTFriendListViewController.m">
       </ContextState>
       <ContextState
-         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
+         contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sections">
+            </PersistentString>
+            <PersistentString
+               value = "[components1 weekday]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>
