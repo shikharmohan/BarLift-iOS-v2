@@ -467,9 +467,6 @@
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="nvF-57-Rfq" kind="push" identifier="toDealHistory" id="m24-Y7-udy"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St0-Mj-n3n">
                                 <rect key="frame" x="0.0" y="480" width="320" height="42"/>
@@ -521,7 +518,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ujd-GT-Ru7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zly-hn-gB0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -586,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLD-El-JUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3368" y="1859"/>
+            <point key="canvasLocation" x="3806" y="1797"/>
         </scene>
         <!--Deal Dashboard-->
         <scene sceneID="uvG-yw-Luq">
@@ -598,7 +595,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7X1-3j-3HV" customClass="CSStickyHeaderFlowLayout">
-                            <size key="itemSize" width="320" height="138"/>
+                            <size key="itemSize" width="320" height="400"/>
                             <size key="headerReferenceSize" width="0.0" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -608,25 +605,22 @@
                                 <rect key="frame" x="0.0" y="114" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3h-8r-wd5">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="259"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours (4pm - 1am)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-t1-VCZ">
-                                            <rect key="frame" x="8" y="106" width="120" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                            <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koa-HJ-8we">
-                                            <rect key="frame" x="8" y="145" width="153" height="21"/>
+                                            <rect key="frame" x="8" y="89" width="153" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours (4pm - 1am)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aog-t1-VCZ">
+                                            <rect key="frame" x="8" y="145" width="120" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                            <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
                                             <rect key="frame" x="8" y="8" width="304" height="75"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -636,7 +630,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.90508097409999999" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="customSize" width="320" height="312"/>
+                                <size key="customSize" width="320" height="173"/>
                                 <connections>
                                     <outlet property="dealName" destination="kep-Z2-NvA" id="XNN-OF-aem"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealDetail" id="sUi-IK-Bcz"/>
@@ -661,7 +655,6 @@
                                 <color key="backgroundColor" white="0.90508097409999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="customSize" width="320" height="107"/>
                                 <connections>
-                                    <outlet property="textLabel" destination="rwr-oV-6He" id="6vj-i9-y5H"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealInfo" id="CvR-iZ-Azw"/>
                                 </connections>
                             </collectionViewCell>
@@ -973,7 +966,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLZ-Uh-A3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4234" y="1693"/>
+            <point key="canvasLocation" x="4235" y="1797"/>
         </scene>
         <!--Always On Top-->
         <scene sceneID="7ho-0T-Qje">

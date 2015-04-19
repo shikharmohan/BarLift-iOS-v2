@@ -39,7 +39,7 @@
 
     
     self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
-    self.dates = [[NSMutableDictionary alloc]initWithCapacity:10];
+    self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
 
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 //    self.sunnyRefreshControl = [YALSunnyRefreshControl attachToScrollView:self.collectionViews
@@ -121,75 +121,137 @@
 }
 
 -(void)refreshMyDeals{
-    self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
-    self.dates = [[NSMutableDictionary alloc]initWithCapacity:6];
-    self.sortedKeys = [[NSMutableArray alloc] initWithCapacity:6];
-    [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error1) {
-        if(!error1){
-            PFRelation *relation = [object relationForKey:@"deal_list"];
-            PFQuery *query = [relation query];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if(!error){
-                    for(int i =0; i < [objects count]; i++){
-                        PFRelation *relation2 = [objects[i] relationForKey:@"social"];
-                        PFQuery *query2 = [relation2 query];
-                        [query2 findObjectsInBackgroundWithBlock:^(NSArray *objs, NSError *error) {
-                            if(!error){
-                                [objects[i] addObject:objs forKey:@"whosGoing"];
-                                NSDate *dealDate = objects[i][@"deal_start_date"];
-                                NSCalendar *cal = [NSCalendar currentCalendar];
-                                NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
-                                NSDate *today = [cal dateFromComponents:components];
-                                NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:dealDate];
-                                NSDate *otherDate = [cal dateFromComponents:components1];
-                                
-                                NSString *key = @"";
-                                NSDateFormatter *df = [[NSDateFormatter alloc] init];
-                                NSDateComponents *comp = [cal components:NSWeekdayCalendarUnit fromDate:dealDate];
-                                NSInteger dayNum = [comp weekday]-1;
-                                NSString *day = [df weekdaySymbols][dayNum];
-                                NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
-                                NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
-                                NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
-                                NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
-                                key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
-                                NSLog(@"%@", key);
-                                if([self.sections valueForKey:key] != nil) {
-                                    // The key existed...
-                                    [[self.sections valueForKey:key] addObject:objects[i]];
-                                }
-                                else {
-                                    NSMutableArray *arr = [NSMutableArray arrayWithObjects:objects[i], nil];
-                                    [self.sections setValue:arr forKey:key];
-                                }
-                                if(![self.dates objectForKey:key]){
+    self.sections =  [[NSMutableDictionary alloc]initWithCapacity:3];
+    self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
+    self.sortedKeys = [[NSMutableArray alloc]initWithCapacity:7];
+    if([[PFUser currentUser] isDataAvailable]){
+        [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error1) {
+            if(!error1){
+                PFRelation *relation = [object relationForKey:@"deal_list"];
+                PFQuery *query = [relation query];
+                [query whereKey:@"deal_end_date" greaterThan:[NSDate date]];
+                [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                    if(!error){
+                        for(int i =0; i < [objects count]; i++){
+                            PFRelation *relation2 = [objects[i] relationForKey:@"social"];
+                            PFQuery *query2 = [relation2 query];
+                            [query2 findObjectsInBackgroundWithBlock:^(NSArray *objs, NSError *error) {
+                                if(!error){
+                                    [objects[i] addObject:objs forKey:@"whosGoing"];
+                                    NSDate *dealDate = objects[i][@"deal_start_date"];
+                                    NSCalendar *cal = [NSCalendar currentCalendar];
+                                    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+                                    NSDate *today = [cal dateFromComponents:components];
+                                    NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:dealDate];
+                                    NSDate *otherDate = [cal dateFromComponents:components1];
+                                    
+                                    NSString *key = @"";
+                                    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                                    NSDateComponents *comp = [cal components:NSWeekdayCalendarUnit fromDate:dealDate];
+                                    NSInteger dayNum = [comp weekday]-1;
+                                    NSString *day = [df weekdaySymbols][dayNum];
+                                    NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
+                                    NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
+                                    NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
                                     NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
-                                    if([today isEqualToDate:otherDate]){
-                                        name = @"Today";
+                                    key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
+                                    NSLog(@"%@", key);
+                                    if([self.sections valueForKey:key] != nil) {
+                                        // The key existed...
+                                        [[self.sections valueForKey:key] addObject:objects[i]];
                                     }
-                                    [self.dates setValue:name forKey:key];
+                                    else {
+                                        NSMutableArray *arr = [NSMutableArray arrayWithObjects:objects[i], nil];
+                                        [self.sections setValue:arr forKey:key];
+                                    }
+                                    if(![self.dates objectForKey:key]){
+                                        NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
+                                        if([today isEqualToDate:otherDate]){
+                                            name = @"Today";
+                                        }
+                                        [self.dates setValue:name forKey:key];
+                                    }
+                                        NSLog(@"%@", self.sections);
+                                        self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
+                                        //if([[self.sections allKeys] count] > 0 && [[self.dates allKeys] count] > 0){
+                                        [self.collectionView reloadData];
                                 }
-                                if(i == [objects count]-1){
-                                    NSLog(@"%@", self.sections);
-                                    self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
-                                    //if([[self.sections allKeys] count] > 0 && [[self.dates allKeys] count] > 0){
-                                    [self.collectionView reloadData];
-                                }
-                                
-                            }
-                        }];
+                            }];
+                        }
+                        //}
                     }
-                    //}
+                    else{
+                        NSLog(@"%@", error);
+                    }
+                }];
+            }
+            else{
+                NSLog(@"%@", error1);
+            }
+        }];
+    }
+    else{
+        PFRelation *relation = [[PFUser currentUser] relationForKey:@"deal_list"];
+        PFQuery *query = [relation query];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(!error){
+                for(int i =0; i < [objects count]; i++){
+                    PFRelation *relation2 = [objects[i] relationForKey:@"social"];
+                    PFQuery *query2 = [relation2 query];
+                    [query2 whereKey:@"deal_end_date" greaterThan:[NSDate date]];
+                    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objs, NSError *error) {
+                        if(!error){
+                            [objects[i] addObject:objs forKey:@"whosGoing"];
+                            NSDate *dealDate = objects[i][@"deal_start_date"];
+                            NSCalendar *cal = [NSCalendar currentCalendar];
+                            NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+                            NSDate *today = [cal dateFromComponents:components];
+                            NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:dealDate];
+                            NSDate *otherDate = [cal dateFromComponents:components1];
+                            
+                            NSString *key = @"";
+                            NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                            NSDateComponents *comp = [cal components:NSWeekdayCalendarUnit fromDate:dealDate];
+                            NSInteger dayNum = [comp weekday]-1;
+                            NSString *day = [df weekdaySymbols][dayNum];
+                            NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
+                            NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
+                            NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
+                            NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
+                            key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
+                            NSLog(@"%@", key);
+                            if([self.sections valueForKey:key] != nil) {
+                                // The key existed...
+                                [[self.sections valueForKey:key] addObject:objects[i]];
+                            }
+                            else {
+                                NSMutableArray *arr = [NSMutableArray arrayWithObjects:objects[i], nil];
+                                [self.sections setValue:arr forKey:key];
+                            }
+                            if(![self.dates objectForKey:key]){
+                                NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
+                                if([today isEqualToDate:otherDate]){
+                                    name = @"Today";
+                                }
+                                [self.dates setValue:name forKey:key];
+                            }
+                            if(i == [objects count]-1){
+                                NSLog(@"%@", self.sections);
+                                self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
+                                //if([[self.sections allKeys] count] > 0 && [[self.dates allKeys] count] > 0){
+                                [self.collectionView reloadData];
+                            }
+                            
+                        }
+                    }];
                 }
-                else{
-                    NSLog(@"%@", error);
-                }
-            }];
-        }
-        else{
-            NSLog(@"%@", error1);
-        }
-    }];
+                //}
+            }
+            else{
+                NSLog(@"%@", error);
+            }
+        }];
+    }
 }
 
 -(void)refreshAllDeals{
@@ -291,8 +353,15 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
-    DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
-                                                             forIndexPath:indexPath];
+    DealCell *cell;
+    if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
+         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
+                                                                   forIndexPath:indexPath];
+    }
+    else{
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dealCell"
+                                                                   forIndexPath:indexPath];
+    }
     if([self.sections objectForKey:obj] != nil){
         NSString *text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"name"];
         
