@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BLTDealDetailViewController : UICollectionViewController
-@property (strong, nonatomic) NSString *dealID; 
+@property (strong, nonatomic) NSString *dealID;
+@property (nonatomic, strong) NSIndexPath *reloadCell;
+
 @end

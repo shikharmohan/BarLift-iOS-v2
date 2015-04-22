@@ -7,7 +7,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
-
+#import "BLTNudgeFriendsViewController.h"
 
 @interface BLTDealDetailViewController ()
 
@@ -18,7 +18,7 @@
 @end
 
 @implementation BLTDealDetailViewController
-@synthesize dealID;
+@synthesize dealID, reloadCell;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -158,6 +158,13 @@
 
 
 
-
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    BLTNudgeFriendsViewController *vc = [segue destinationViewController];
+    [vc setDealID:self.dealID];
+    
+}
 
 @end

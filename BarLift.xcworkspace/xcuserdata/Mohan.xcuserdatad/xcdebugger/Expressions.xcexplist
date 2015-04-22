@@ -17,6 +17,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
          contextName = "-[YALSunnyRefreshControl calculateShift]:YALSunnyRefreshControl.m">
          <PersistentStrings>
             <PersistentString
@@ -32,6 +35,23 @@
          <PersistentStrings>
             <PersistentString
                value = "self.scrollView.contentOffset.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDashboard collectionView:cellForItemAtIndexPath:]:BLTDealDashboard.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell">
+            </PersistentString>
+            <PersistentString
+               value = "int_count">
+            </PersistentString>
+            <PersistentString
+               value = "[PFUser currentUser][@&quot;fb_id&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "whosGoing[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -42,6 +42,7 @@
 		016729E91A889282001A27FF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 016729E41A889282001A27FF /* UIView+Round.m */; };
 		016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729EA1A889626001A27FF /* lightning_bolt-32.png */; };
 		016729ED1A891D13001A27FF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016729EC1A891D13001A27FF /* CoreTelephony.framework */; };
+		016E65C21AE36A7100467C6B /* NudgeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016E65C11AE36A7100467C6B /* NudgeHistoryViewController.m */; };
 		017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */; };
 		017E11631ADE247B00306A16 /* CSAlwaysOnTopHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */; };
 		017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E11611ADE247B00306A16 /* BLTProfileViewController.m */; };
@@ -122,6 +123,8 @@
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
 		01D211721AE0947800F3806D /* BLTFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211711AE0947800F3806D /* BLTFriendListViewController.m */; };
 		01D211741AE0994F00F3806D /* keyboard53.png in Resources */ = {isa = PBXBuildFile; fileRef = 01D211731AE0994F00F3806D /* keyboard53.png */; };
+		01D222091AE44C5900BE4921 /* BLTNudgeFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D222081AE44C5900BE4921 /* BLTNudgeFriendsViewController.m */; };
+		01D2220D1AE5459100BE4921 /* BLTPreviewFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2220C1AE5459100BE4921 /* BLTPreviewFriendsViewController.m */; };
 		01D70FAC1A6B6B77001C29B7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA61A6B6B5B001C29B7 /* Parse.framework */; };
 		01D70FAD1A6B6B77001C29B7 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA71A6B6B5B001C29B7 /* ParseCrashReporting.framework */; };
 		01D70FAE1A6B6B77001C29B7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FA81A6B6B5B001C29B7 /* ParseFacebookUtils.framework */; };
@@ -246,6 +249,8 @@
 		016729E41A889282001A27FF /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
 		016729EA1A889626001A27FF /* lightning_bolt-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightning_bolt-32.png"; sourceTree = "<group>"; };
 		016729EC1A891D13001A27FF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		016E65C01AE36A7100467C6B /* NudgeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeHistoryViewController.h; sourceTree = "<group>"; };
+		016E65C11AE36A7100467C6B /* NudgeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NudgeHistoryViewController.m; sourceTree = "<group>"; };
 		017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAlwaysOnTopHeader.h; sourceTree = "<group>"; };
 		017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAlwaysOnTopHeader.m; sourceTree = "<group>"; };
 		017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSAlwaysOnTopHeader.xib; sourceTree = "<group>"; };
@@ -357,6 +362,10 @@
 		01D211701AE0947800F3806D /* BLTFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendListViewController.h; sourceTree = "<group>"; };
 		01D211711AE0947800F3806D /* BLTFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendListViewController.m; sourceTree = "<group>"; };
 		01D211731AE0994F00F3806D /* keyboard53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboard53.png; sourceTree = "<group>"; };
+		01D222071AE44C5900BE4921 /* BLTNudgeFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTNudgeFriendsViewController.h; sourceTree = "<group>"; };
+		01D222081AE44C5900BE4921 /* BLTNudgeFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTNudgeFriendsViewController.m; sourceTree = "<group>"; };
+		01D2220B1AE5459100BE4921 /* BLTPreviewFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTPreviewFriendsViewController.h; sourceTree = "<group>"; };
+		01D2220C1AE5459100BE4921 /* BLTPreviewFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTPreviewFriendsViewController.m; sourceTree = "<group>"; };
 		01D70F781A6B6A8C001C29B7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		01D70F791A6B6A8C001C29B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		01D70F7A1A6B6A8C001C29B7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -485,17 +494,10 @@
 		010C4DF41AD4C4E200B95B4F /* Deal List */ = {
 			isa = PBXGroup;
 			children = (
-				011A10B21AE3065200B506DD /* Deal History View */,
+				016E65BF1AE36A4A00467C6B /* Nudge History View */,
 				01FB80281ADB08BD00767B01 /* Deal List View */,
 			);
 			name = "Deal List";
-			sourceTree = "<group>";
-		};
-		011A10B21AE3065200B506DD /* Deal History View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Deal History View";
 			sourceTree = "<group>";
 		};
 		011D22E51A9AAEE90082143E /* Buttons */ = {
@@ -623,9 +625,19 @@
 			path = JFMinimalNotification;
 			sourceTree = "<group>";
 		};
+		016E65BF1AE36A4A00467C6B /* Nudge History View */ = {
+			isa = PBXGroup;
+			children = (
+				016E65C01AE36A7100467C6B /* NudgeHistoryViewController.h */,
+				016E65C11AE36A7100467C6B /* NudgeHistoryViewController.m */,
+			);
+			name = "Nudge History View";
+			sourceTree = "<group>";
+		};
 		017E115C1ADE246F00306A16 /* Deal View */ = {
 			isa = PBXGroup;
 			children = (
+				01D222061AE44BE500BE4921 /* Nudge Friends */,
 				01865F331AE1B0720097BEB6 /* BLTDealDetailViewController.h */,
 				01865F341AE1B0720097BEB6 /* BLTDealDetailViewController.m */,
 				017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */,
@@ -805,6 +817,24 @@
 				01D211711AE0947800F3806D /* BLTFriendListViewController.m */,
 			);
 			name = FriendList;
+			sourceTree = "<group>";
+		};
+		01D222061AE44BE500BE4921 /* Nudge Friends */ = {
+			isa = PBXGroup;
+			children = (
+				01D222071AE44C5900BE4921 /* BLTNudgeFriendsViewController.h */,
+				01D222081AE44C5900BE4921 /* BLTNudgeFriendsViewController.m */,
+			);
+			name = "Nudge Friends";
+			sourceTree = "<group>";
+		};
+		01D2220A1AE5455D00BE4921 /* Who' Going */ = {
+			isa = PBXGroup;
+			children = (
+				01D2220B1AE5459100BE4921 /* BLTPreviewFriendsViewController.h */,
+				01D2220C1AE5459100BE4921 /* BLTPreviewFriendsViewController.m */,
+			);
+			name = "Who' Going";
 			sourceTree = "<group>";
 		};
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
@@ -1025,6 +1055,7 @@
 		01FB80281ADB08BD00767B01 /* Deal List View */ = {
 			isa = PBXGroup;
 			children = (
+				01D2220A1AE5455D00BE4921 /* Who' Going */,
 				01FB80371ADB0C9300767B01 /* DealCell.h */,
 				01FB80381ADB0C9300767B01 /* DealCell.m */,
 				01FB80391ADB0C9300767B01 /* DealHeader.h */,
@@ -1282,6 +1313,7 @@
 				01F2CE2C1A9AD27300BEC23D /* SCLAlertViewResponder.m in Sources */,
 				016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */,
 				019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */,
+				01D2220D1AE5459100BE4921 /* BLTPreviewFriendsViewController.m in Sources */,
 				01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */,
 				01D211721AE0947800F3806D /* BLTFriendListViewController.m in Sources */,
 				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
@@ -1311,6 +1343,7 @@
 				017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
 				01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */,
+				01D222091AE44C5900BE4921 /* BLTNudgeFriendsViewController.m in Sources */,
 				01FB803E1ADB0C9300767B01 /* DealCell.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */,
@@ -1320,6 +1353,7 @@
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				019F13F01A89ABA20099B3CF /* SDWebImagePrefetcher.m in Sources */,
+				016E65C21AE36A7100467C6B /* NudgeHistoryViewController.m in Sources */,
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,
 				019F13EF1A89ABA20099B3CF /* SDWebImageManager.m in Sources */,
 				019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */,

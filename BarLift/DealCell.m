@@ -7,6 +7,7 @@
 //
 
 #import "DealCell.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @implementation DealCell
 

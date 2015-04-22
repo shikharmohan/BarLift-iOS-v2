@@ -125,11 +125,6 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
     [FBAppEvents activateApp];
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    if (currentInstallation.badge != 0) {
-        [currentInstallation setBadge:0];
-        [currentInstallation save];
-    }
     NSLog(@"hery");
 }
 

@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AMScrollingNavbar 3
 #define COCOAPODS_VERSION_PATCH_AMScrollingNavbar 4
 
+// BBBadgeBarButtonItem
+#define COCOAPODS_POD_AVAILABLE_BBBadgeBarButtonItem
+#define COCOAPODS_VERSION_MAJOR_BBBadgeBarButtonItem 1
+#define COCOAPODS_VERSION_MINOR_BBBadgeBarButtonItem 1
+#define COCOAPODS_VERSION_PATCH_BBBadgeBarButtonItem 0
+
 // CSStickyHeaderFlowLayout
 #define COCOAPODS_POD_AVAILABLE_CSStickyHeaderFlowLayout
 #define COCOAPODS_VERSION_MAJOR_CSStickyHeaderFlowLayout 0

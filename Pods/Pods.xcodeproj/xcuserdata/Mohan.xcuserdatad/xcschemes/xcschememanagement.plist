@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BBBadgeBarButtonItem.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CSStickyHeaderFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18C8FA015206FC7E2D80E843</key>
+		<key>270AE96325A30823682F414A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28FF82D06464F46E5BE00191</key>
+		<key>390B8681053B40D3B0A10B97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B70C8774B418601004745AAA</key>
+		<key>9737E555A93F6B04AB485964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C08594943345800EFDA65C11</key>
+		<key>C3348DF530FF6C352738FAB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF57B085957F7AA1ED1FEDD3</key>
+		<key>D01959D8A8C58466856AEB82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE2FD70086C55C8EEA9C9098</key>
 		<dict>
 			<key>primary</key>
 			<true/>
