@@ -10,7 +10,8 @@
 
 @interface DealHeader : UICollectionReusableView
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayLabel; 
 @property (weak, nonatomic) IBOutlet UILabel *numDeals;
 
 @end

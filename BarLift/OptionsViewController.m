@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UIButton *dismissModal;
+@property (weak, nonatomic) IBOutlet UIButton *nudgeButton;
 
 @end
 
@@ -44,8 +45,8 @@
 
     
     [self.name setText:[PFUser currentUser][@"profile"][@"name"]];
-
-
+    
+    [self.nudgeButton setTitle:[NSString stringWithFormat:@"Nudges (%ld new)",(long)[PFInstallation currentInstallation].badge] forState:UIControlStateNormal];
 
 }
 

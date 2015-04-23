@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CWStatusBarNotification.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Doppelganger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Mixpanel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>270AE96325A30823682F414A</key>
+		<key>05E7DFC85262E9CEC248C400</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>390B8681053B40D3B0A10B97</key>
+		<key>496065D964D6689E6FBEFA84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9737E555A93F6B04AB485964</key>
+		<key>6F2920BE2E854DD6F8390A1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3348DF530FF6C352738FAB3</key>
+		<key>9F7A029388276A519F94C9C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D01959D8A8C58466856AEB82</key>
+		<key>CC819B775FE4BB8A1D14F8C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE2FD70086C55C8EEA9C9098</key>
+		<key>D788AE7F651DFF862C034EE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDD6B0A82595A74FA7A270D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED3A073FBBCAB44EB14012A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

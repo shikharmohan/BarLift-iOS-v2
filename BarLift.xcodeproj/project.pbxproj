@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01005B4E1AE8684B008773F8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01005B4C1AE8684B008773F8 /* EventKit.framework */; };
+		01005B4F1AE8684B008773F8 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01005B4D1AE8684B008773F8 /* EventKitUI.framework */; };
 		010C4DF31AD4C4D800B95B4F /* BLTDealVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 010C4DF21AD4C4D800B95B4F /* BLTDealVC.m */; };
 		011D22E11A9A5E060082143E /* Barlift-login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E01A9A5E060082143E /* Barlift-login-logo.png */; };
 		011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 011D22E61A9AAEE90082143E /* bg-3x.jpg */; };
@@ -201,6 +203,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01005B4C1AE8684B008773F8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		01005B4D1AE8684B008773F8 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		010C4DF11AD4C4D800B95B4F /* BLTDealVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealVC.h; sourceTree = "<group>"; };
 		010C4DF21AD4C4D800B95B4F /* BLTDealVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealVC.m; sourceTree = "<group>"; };
 		011D22E01A9A5E060082143E /* Barlift-login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barlift-login-logo.png"; sourceTree = "<group>"; };
@@ -459,6 +463,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01005B4E1AE8684B008773F8 /* EventKit.framework in Frameworks */,
+				01005B4F1AE8684B008773F8 /* EventKitUI.framework in Frameworks */,
 				017ED67E1AD86D34005BD8BE /* Social.framework in Frameworks */,
 				016729ED1A891D13001A27FF /* CoreTelephony.framework in Frameworks */,
 				01D70FC21A6B6B8C001C29B7 /* libsqlite3.0.dylib in Frameworks */,
@@ -840,6 +846,8 @@
 		01D70FA41A6B6AC9001C29B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01005B4C1AE8684B008773F8 /* EventKit.framework */,
+				01005B4D1AE8684B008773F8 /* EventKitUI.framework */,
 				017ED67D1AD86D34005BD8BE /* Social.framework */,
 				016729EC1A891D13001A27FF /* CoreTelephony.framework */,
 				01D711A11A6B6DE5001C29B7 /* FacebookSDK.framework */,
