@@ -11,5 +11,6 @@
 @interface BLTDealDetailViewController : UICollectionViewController
 @property (strong, nonatomic) NSString *dealID;
 @property (nonatomic, strong) NSIndexPath *reloadCell;
+@property (strong, nonatomic) NSString *day;
 
 @end

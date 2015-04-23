@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (strong, nonatomic) NSString *dealID;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImg;
 @end

@@ -21,6 +21,7 @@
 @property (nonatomic,strong) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionViews;
 @property (weak, nonatomic) IBOutlet UIButton *sideBarButton;
+@property (nonatomic, strong) NSString *weekday;
 typedef void(^myCompletion)(BOOL);
 @end
 
@@ -556,6 +557,10 @@ typedef void(^myCompletion)(BOOL);
             }
         }
     }
+    else{
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
+                                                         forIndexPath:indexPath];
+    }
 
 
     return cell;
@@ -566,19 +571,30 @@ typedef void(^myCompletion)(BOOL);
         DealHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                         withReuseIdentifier:@"sectionHeader"
                                                                  forIndexPath:indexPath];
-        
-        if(![[self.dates objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]]  isEqual: @"Today"]){
-            NSArray *parts = [[self.dates objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]] componentsSeparatedByString:@","];
+        if([self.sortedKeys count] > 0){
+            if(![[self.dates objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]]  isEqual: @"Today"]){
+                NSArray *parts = [[self.dates objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]] componentsSeparatedByString:@","];
+                
+                cell.dateLabel.text = parts[1];
+                self.weekday = parts[0];
+                cell.dayLabel.text = [parts[0] uppercaseString];
+            }
+            else{
+                NSCalendar *cal = [NSCalendar currentCalendar];
+                NSDateFormatter *df = [[NSDateFormatter alloc] init];
+                NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+                NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
+                NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
+                
+                cell.dateLabel.text = [NSString stringWithFormat:@"%@ %@", monthName, dt];
+                cell.dayLabel.text = @"TODAY";
+                self.weekday = @"Today";
+                
+            }
             
-            cell.dateLabel.text = parts[1];
-            cell.dayLabel.text = [parts[0] uppercaseString];
+            cell.numDeals.text = [NSString stringWithFormat:@"%lu",(unsigned long)[[self.sections objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]] count]];
+            
         }
-        else{
-            cell.dateLabel.text = @"";
-            cell.dayLabel.text = @"TODAY";
-        }
-           
-        cell.numDeals.text = [NSString stringWithFormat:@"%lu",(unsigned long)[[self.sections objectForKey:[self.sortedKeys objectAtIndex:indexPath.section]] count]];
         
         return cell;
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
@@ -607,12 +623,15 @@ typedef void(^myCompletion)(BOOL);
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqual:@"toDealDetail"] || [[segue identifier] isEqual:@"toDealInfo"]){
         BLTDealDetailViewController *vc = [segue destinationViewController];
         NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
         NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
         NSString *dealID = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId];
         self.reloadCell = indexPath;
         [vc setDealID:dealID];
+        [vc setDay:self.weekday];
+    }
 }
 
 #pragma mark ScrollView Delegates

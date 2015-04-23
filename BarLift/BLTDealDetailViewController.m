@@ -10,7 +10,7 @@
 #import "BLTNudgeFriendsViewController.h"
 #import <EventKit/EventKit.h>
 #import "CWStatusBarNotification.h"
-
+#import "SCLAlertView.h"
 
 @interface BLTDealDetailViewController ()
 
@@ -24,7 +24,7 @@
 @end
 
 @implementation BLTDealDetailViewController
-@synthesize dealID, reloadCell;
+@synthesize dealID, reloadCell, day;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -128,9 +128,35 @@
                                                                             withReuseIdentifier:@"header"
                                                                                 forIndexPath:indexPath];
         
+        
+        
         if(self.dealDetails != nil){
-            cell.hoursLabel.text = @"6PM - 4AM";
-            cell.dealName.text = [self.dealDetails objectForKey:@"name"];
+            NSDate *startDate = self.dealDetails[@"deal_start_date"];
+            NSDate *endDate =self.dealDetails[@"deal_end_date"];
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startDate];
+            NSInteger start_hour = [components hour];
+            NSString *am1 = @"AM";
+            NSString *am2 = @"AM";
+            components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:endDate];
+            NSInteger end_hour = [components hour];
+            if(start_hour >= 12){
+                am1 = @"PM";
+                start_hour -= 12;
+            }
+            if(start_hour == 0){
+                start_hour += 12;
+            }
+            if(end_hour >= 12){
+                am2 = @"PM";
+                end_hour -= 12;
+            }
+            if(end_hour == 0){
+                end_hour += 12;
+            }
+
+            cell.hoursLabel.text = [NSString stringWithFormat:@"%@ | %d %@ - %d %@",day, start_hour, am1, end_hour, am2];
+            cell.dealName.text = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
             cell.dealID = self.dealID;
         }
         
@@ -141,9 +167,8 @@
 
 - (IBAction)addToCalendarPressed:(id)sender {
     
-    self.calNotification = [CWStatusBarNotification new];
-    self.calNotification.notificationStyle = CWNotificationStyleNavigationBarNotification;
-    
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+
     EKEventStore *store = [EKEventStore new];
     [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
         if (!granted) { return; }
@@ -158,11 +183,10 @@
 
         // self.savedEventId = event.eventIdentifier;  //save the event id if you want to access this later
     }];
-    self.calNotification.notificationLabelBackgroundColor = [UIColor blueColor];
-    [self.calNotification displayNotificationWithMessage:@"Added deal to your calendar."
-                                             forDuration:1.5f];
+    [alert showInfo:self title:@"Calendar Updated" subTitle:@"This deal has been added your calendar." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
 
 }
+
 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

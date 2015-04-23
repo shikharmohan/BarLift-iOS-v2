@@ -45,8 +45,9 @@
 
     
     [self.name setText:[PFUser currentUser][@"profile"][@"name"]];
-    
-    [self.nudgeButton setTitle:[NSString stringWithFormat:@"Nudges (%ld new)",(long)[PFInstallation currentInstallation].badge] forState:UIControlStateNormal];
+    if([PFInstallation currentInstallation].badge >0){
+        [self.nudgeButton setTitle:[NSString stringWithFormat:@"Nudges (%ld new)",(long)[PFInstallation currentInstallation].badge] forState:UIControlStateNormal];
+    }
 
 }
 
