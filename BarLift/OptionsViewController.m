@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UIButton *dismissModal;
 @property (weak, nonatomic) IBOutlet UIButton *nudgeButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *closeButton;
 
 @end
 
@@ -29,7 +30,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    self.navigationController.navigationBarHidden = YES;
+   // self.navigationController.navigationBarHidden = YES;
 
 }
 

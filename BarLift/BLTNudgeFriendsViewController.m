@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sendButton;
 @property (strong, nonatomic) NSMutableArray *recipients;
 @property (nonatomic, strong) NSMutableArray *friendsList;
+@property (nonatomic, strong) NSMutableArray *selectedCells;
 @property (nonatomic, strong) NSMutableArray *sections;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *alphabet;
@@ -38,6 +39,7 @@
 
 
 -(void) setUpTable{
+    self.selectedCells = [[NSMutableArray alloc] initWithCapacity:5];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.allowsMultipleSelection = YES;
@@ -117,7 +119,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nudCell" forIndexPath:indexPath];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(cell == nil){
         return cell;
     }
@@ -129,31 +130,46 @@
     friendPic.contentMode = UIViewContentModeScaleAspectFill;
     friendPic.layer.cornerRadius = friendPic.frame.size.height/2;
     friendPic.clipsToBounds = YES;
-    
+    if ([self.selectedCells containsObject:indexPath])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
     return cell;
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
 {
-    UITableViewCell *tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
-    tableViewCell.accessoryView.hidden = NO;
-    NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ([self.selectedCells containsObject:indexPath])
+    {
+        [self.selectedCells removeObject:indexPath];
+        NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
+        
+        [self.recipients removeObject:fb_id];
 
-    [self.recipients addObject:fb_id];
+    }
+    else
+    {
+        [self.selectedCells addObject:indexPath];
+        NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
+        
+        [self.recipients addObject:fb_id];
 
-    tableViewCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    [self.tableView reloadData];
+    
 }
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
-    tableViewCell.accessoryView.hidden = YES;
-    NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
-    [self.recipients removeObject:fb_id];
-    tableViewCell.accessoryType = UITableViewCellAccessoryNone;
-}
-
 
 
 #pragma mark - Navigation

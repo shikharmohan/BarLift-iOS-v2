@@ -350,7 +350,7 @@ typedef void(^myCompletion)(BOOL);
     NSString *fb_id = [PFUser currentUser][@"fb_id"];
     [pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
     pic.contentMode = UIViewContentModeScaleAspectFill;
-    [pic setFrame:CGRectMake(0, 0, 29, 29)];
+    [pic setFrame:CGRectMake(0, 0, 20, 20)];
     pic.layer.cornerRadius = pic.frame.size.width/2;
     pic.layer.borderWidth = 2.0;
     pic.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -364,7 +364,7 @@ typedef void(^myCompletion)(BOOL);
     pic.userInteractionEnabled = YES;
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
     
-    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 29, 29)];
+    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     [logoBtn setImage:[UIImage imageNamed:@"bltlogo.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
