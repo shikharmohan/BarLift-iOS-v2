@@ -30,8 +30,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.sections = @[
-                          @[@"test"
-                            ]
+                          @[@"test"]
                           ];
 
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
@@ -80,6 +79,7 @@
                         [self.collectionView reloadData];
                     }
                 }];
+                self.navigationController.title = self.dealDetails[@"venue"][@"bar_name"];
             }
             else{
                 NSLog(@"error");
@@ -155,9 +155,15 @@
                 end_hour += 12;
             }
 
-            cell.hoursLabel.text = [NSString stringWithFormat:@"%@ | %d %@ - %d %@",day, start_hour, am1, end_hour, am2];
+            cell.hoursLabel.text = [NSString stringWithFormat:@"%@ | %ld %@ - %ld %@",day, (long)start_hour, am1, (long)end_hour, am2];
             cell.dealName.text = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+            cell.dealHeadline = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+            cell.dealNames = self.dealDetails[@"add_deals"];
             cell.dealID = self.dealID;
+            [cell.backgroundImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dealDetails[@"image_url"]]]];
+            
+            [cell setUpView];
+            //set up scrollview
         }
         
         return cell;

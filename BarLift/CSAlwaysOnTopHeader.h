@@ -8,10 +8,15 @@
 
 #import "CardViewCell.h"
 
-@interface CSAlwaysOnTopHeader : CardViewCell
+@interface CSAlwaysOnTopHeader : CardViewCell <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
+@property (strong, nonatomic) NSString *dealHeadline;
 @property (strong, nonatomic) NSString *dealID;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImg;
+@property (strong, nonatomic) NSArray *dealNames;
+ - (void) setUpView;
 @end
+

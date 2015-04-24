@@ -461,7 +461,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 // Add colors to layer
                 UIColor *centerColor = [UIColor clearColor];
-                UIColor *endColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.88];
+                UIColor *endColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.37];
                 gradient.colors = [NSArray arrayWithObjects:
                                    (id)[endColor CGColor],
                                    (id)[centerColor CGColor],
@@ -566,6 +566,7 @@ typedef void(^myCompletion)(BOOL);
     return cell;
 }
 
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         DealHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
@@ -601,8 +602,6 @@ typedef void(^myCompletion)(BOOL);
         LocationCell *lcell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
                                                                                    forIndexPath:indexPath];
-        
-        
         return lcell;
     }
     return nil;

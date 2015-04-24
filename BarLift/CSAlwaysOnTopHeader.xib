@@ -39,12 +39,12 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dP-Im-gAY">
-                                        <rect key="frame" x="20" y="64" width="280" height="126"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-7n-fG5">
+                                        <rect key="frame" x="0.0" y="42" width="320" height="166"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="-1" id="mvs-B8-EgC"/>
+                                        </connections>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -52,6 +52,9 @@
                                     <constraint firstAttribute="height" priority="999" constant="366" id="jyv-xB-TH3"/>
                                 </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rgQ-lB-bpY">
+                                <rect key="frame" x="141" y="306" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -60,7 +63,7 @@
                             <constraint firstAttribute="centerX" secondItem="A9v-QW-9fF" secondAttribute="centerX" id="yUl-jZ-CoZ"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhM-hK-CzL">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhM-hK-CzL">
                         <rect key="frame" x="40" y="383" width="240" height="44"/>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,8 +107,8 @@
             <size key="customSize" width="320" height="426"/>
             <connections>
                 <outlet property="backgroundImg" destination="3y9-9q-T6E" id="8sc-CV-dcN"/>
-                <outlet property="dealName" destination="5dP-Im-gAY" id="vfn-1r-ubS"/>
                 <outlet property="hoursLabel" destination="b6o-zp-jtZ" id="rUu-OA-YaG"/>
+                <outlet property="scrollView" destination="NMp-7n-fG5" id="ibW-mh-nqq"/>
             </connections>
         </collectionViewCell>
     </objects>

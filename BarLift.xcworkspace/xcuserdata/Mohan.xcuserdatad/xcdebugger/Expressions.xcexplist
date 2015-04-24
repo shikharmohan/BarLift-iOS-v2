@@ -17,6 +17,9 @@
          contextName = "-[CSStickyParallaxHeaderViewController initWithCoder:]:CSStickyParallaxHeaderViewController.m">
       </ContextState>
       <ContextState
+         contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
+      </ContextState>
+      <ContextState
          contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
@@ -87,6 +90,14 @@
          contextName = "-[CSAlwaysOnTopHeader interestedButtonPressed:]:CSAlwaysOnTopHeader.m">
       </ContextState>
       <ContextState
+         contextName = "-[CSAlwaysOnTopHeader setUpView]:CSAlwaysOnTopHeader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "textLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[CSLockedHeaderViewController collectionView:cellForItemAtIndexPath:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -142,6 +153,9 @@
       </ContextState>
       <ContextState
          contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CSAlwaysOnTopHeader awakeFromNib]:CSAlwaysOnTopHeader.m">
       </ContextState>
       <ContextState
          contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">

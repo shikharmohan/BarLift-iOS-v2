@@ -15,8 +15,13 @@
 
 @implementation CSAlwaysOnTopHeader
 
-- (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
 
+-(void)awakeFromNib{
+    self.scrollView.delegate = nil;
+
+}
+- (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
+    
     [UIView beginAnimations:@"" context:nil];
 
     if (layoutAttributes.progressiveness >= 0.58) {
@@ -24,12 +29,7 @@
     } else {
         self.hoursLabel.alpha = 0;
     }
-//
-//    if (layoutAttributes.progressiveness >= 1) {
-//        self.searchBar.alpha = 1;
-//    } else {
-//        self.searchBar.alpha = 0;
-//    }
+    
 
     [UIView commitAnimations];
 }
@@ -38,6 +38,35 @@
     NSDictionary *dict = @{@"deal_objectId":self.dealID, @"user_objectId":[[PFUser currentUser] objectId]};
     [PFCloud callFunctionInBackground:@"notGoing" withParameters:dict];
     NSLog(@"%@", self.dealID);
+}
+
+- (void) setUpView{
+
+    if(self.dealNames != nil && self.dealHeadline != nil){
+        NSInteger numLbl = [self.dealNames count] + 1;
+        [self.scrollView setPagingEnabled:YES];
+        [self.scrollView setContentSize:CGSizeMake(numLbl*320, 166)];
+
+        for(int i =0; i<numLbl; i++)
+        {
+            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(320 * i, 0,320, 166)];
+            textLabel.textColor = [UIColor  whiteColor];
+            textLabel.numberOfLines = 0;
+            [textLabel setFont: [UIFont fontWithName:@"Lato" size:20.0f]];
+            textLabel.textAlignment = NSTextAlignmentCenter;
+
+            if(i == 0){
+                textLabel.text = self.dealHeadline;
+            }
+            else{
+                textLabel.text = self.dealNames[i-1];
+                
+            }
+            [self.scrollView addSubview:textLabel];
+        }
+    }
+
+
 }
 
 @end
