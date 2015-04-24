@@ -611,13 +611,18 @@ typedef void(^myCompletion)(BOOL);
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     
     if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
-        return CGSizeMake(320, 220);
+        return CGSizeMake(296, 220);
     }
     else{
-        return CGSizeMake(320, 125);
+        return CGSizeMake(296, 125);
         
     }
 
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 12;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
