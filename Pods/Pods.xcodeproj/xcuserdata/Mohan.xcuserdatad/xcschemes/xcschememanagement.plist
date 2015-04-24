@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Doppelganger.xcscheme</key>
+		<key>Pods-Canvas.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05E7DFC85262E9CEC248C400</key>
+		<key>0EFD79BBBE9582B899C77F35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>496065D964D6689E6FBEFA84</key>
+		<key>3DEC7972A8492B867C6D369B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F2920BE2E854DD6F8390A1C</key>
+		<key>6117D8B283782C017DD7F350</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F7A029388276A519F94C9C5</key>
+		<key>7D6FC0543A28924349C38E02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC819B775FE4BB8A1D14F8C1</key>
+		<key>8D8A19E3810D8BC03878613E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D788AE7F651DFF862C034EE6</key>
+		<key>B4F7D840275DA128809AF701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDD6B0A82595A74FA7A270D9</key>
+		<key>B9858A12E3F2325A7A835FED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED3A073FBBCAB44EB14012A0</key>
+		<key>CDDCDB27BA681F31D099C9E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

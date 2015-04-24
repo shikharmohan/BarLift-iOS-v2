@@ -10,7 +10,6 @@
 #import "BLTDealDetailViewController.h"
 #import "BBBadgeBarButtonItem.h"
 
-
 @interface BLTDealDashboard ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 

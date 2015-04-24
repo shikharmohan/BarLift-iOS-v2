@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImg;
 @property (strong, nonatomic) NSArray *dealNames;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
  - (void) setUpView;
 @end
 

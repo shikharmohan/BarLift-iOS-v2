@@ -30,11 +30,11 @@
 #define COCOAPODS_VERSION_MINOR_CWStatusBarNotification 2
 #define COCOAPODS_VERSION_PATCH_CWStatusBarNotification 4
 
-// Doppelganger
-#define COCOAPODS_POD_AVAILABLE_Doppelganger
-#define COCOAPODS_VERSION_MAJOR_Doppelganger 1
-#define COCOAPODS_VERSION_MINOR_Doppelganger 3
-#define COCOAPODS_VERSION_PATCH_Doppelganger 0
+// Canvas
+#define COCOAPODS_POD_AVAILABLE_Canvas
+#define COCOAPODS_VERSION_MAJOR_Canvas 0
+#define COCOAPODS_VERSION_MINOR_Canvas 1
+#define COCOAPODS_VERSION_PATCH_Canvas 2
 
 // Mixpanel
 #define COCOAPODS_POD_AVAILABLE_Mixpanel

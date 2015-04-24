@@ -79,7 +79,7 @@
                         [self.collectionView reloadData];
                     }
                 }];
-                self.navigationController.title = self.dealDetails[@"venue"][@"bar_name"];
+                self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
             }
             else{
                 NSLog(@"error");

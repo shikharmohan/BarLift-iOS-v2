@@ -15,11 +15,13 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+BlurredFrame.h"
+
 @interface BLTProfileViewController ()
 
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) NSMutableDictionary *profileInfo;
+@property (nonatomic, strong) NSArray *labelData;
 
 @end
 
@@ -30,8 +32,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.data = @[@"Male, 2016 Northwestern University", @"Favorite drink: Old fashioned", @"Birthday: 06/06/1994",];
-        
+        self.data = @[@"College", @"Year", @"School", @"Affiliation", @"Favorite Drink", @"Most Visited Bar"];
+        self.labelData = @[@"Northwestern University", @"2016", @"McCormick", @"Some Fraternity", @"Long Island Iced Tea", @"World of Beer"];
         self.headerNib = [UINib nibWithNibName:@"ProfileHeader" bundle:nil];
     }
     return self;
@@ -75,7 +77,7 @@
         layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 264);
         layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height);
         
-        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 164);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 230);
     }
 
     // If we want to disable the sticky header effect
@@ -110,7 +112,10 @@
     CardViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"profileCell"
                                     forIndexPath:indexPath];
     
-    [cell.infoLabel setText:self.data[indexPath.row]];
+    UILabel *sectionLabel = (UILabel *)[cell viewWithTag:1];
+    UILabel *lbl = (UILabel *)[cell viewWithTag:2];
+    [lbl setText:self.labelData[indexPath.row]];
+    [sectionLabel setText:[self.data[indexPath.row] uppercaseString]];
     return cell;
 }
 

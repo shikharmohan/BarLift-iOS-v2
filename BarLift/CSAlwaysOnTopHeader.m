@@ -43,29 +43,38 @@
 - (void) setUpView{
 
     if(self.dealNames != nil && self.dealHeadline != nil){
+        self.scrollView.delegate = self;
         NSInteger numLbl = [self.dealNames count] + 1;
         [self.scrollView setPagingEnabled:YES];
         [self.scrollView setContentSize:CGSizeMake(numLbl*320, 166)];
+        self.pageControl.numberOfPages = numLbl;
+        self.pageControl.currentPage = 0;
 
         for(int i =0; i<numLbl; i++)
         {
             UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(320 * i, 0,320, 166)];
             textLabel.textColor = [UIColor  whiteColor];
             textLabel.numberOfLines = 0;
-            [textLabel setFont: [UIFont fontWithName:@"Lato" size:20.0f]];
+            [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];
             textLabel.textAlignment = NSTextAlignmentCenter;
 
             if(i == 0){
                 textLabel.text = self.dealHeadline;
             }
             else{
-                textLabel.text = self.dealNames[i-1];
+                textLabel.text = [self.dealNames[i-1] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
                 
             }
             [self.scrollView addSubview:textLabel];
         }
     }
+}
 
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat pageWidth = self.scrollView.frame.size.width; 
+    float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    self.pageControl.currentPage = page;
 
 }
 

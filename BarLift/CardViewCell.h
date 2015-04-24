@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CardViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end
