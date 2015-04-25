@@ -256,7 +256,7 @@ NSTimer *durationTimer;
     for (SCLButton *btn in _buttons)
     {
         btn.frame = CGRectMake(12.0f, y, _windowWidth - 24.0f, 35.0f);
-        btn.layer.cornerRadius = 3.0f;
+        btn.layer.cornerRadius = 17.5f;
         y += 45.0f;
     }
 }

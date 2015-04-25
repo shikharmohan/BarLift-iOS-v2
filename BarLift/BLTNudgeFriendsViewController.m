@@ -11,16 +11,22 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
+#import "SCLAlertView.h"
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @interface BLTNudgeFriendsViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sendButton;
 @property (strong, nonatomic) NSMutableArray *recipients;
+@property (strong, nonatomic) NSMutableArray *recipientNames;
 @property (nonatomic, strong) NSMutableArray *friendsList;
 @property (nonatomic, strong) NSMutableArray *selectedCells;
 @property (nonatomic, strong) NSMutableArray *sections;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *alphabet;
 @property (strong, nonatomic) NSIndexPath *lastIndexPath;
+@property (weak, nonatomic) IBOutlet UIView *countHeader;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recipientsLabel;
 @property (strong, nonatomic) NSString* fb;
 @end
 
@@ -29,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.sendButton.enabled = NO;
+
     [self setUpTable];
 }
 
@@ -44,7 +52,9 @@
     self.tableView.dataSource = self;
     self.tableView.allowsMultipleSelection = YES;
     self.recipients = [[NSMutableArray alloc] initWithCapacity:10];
-    self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"H",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
+    self.recipientNames = [[NSMutableArray alloc] initWithCapacity:10];
+    self.tableView.tableHeaderView = self.countHeader;
+    self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
     // Do any additional setup after loading the view.
     self.friendsList = [[NSMutableArray alloc] initWithCapacity:30];
     FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?limit=1000"];
@@ -67,6 +77,20 @@
             [self.tableView reloadData];
         }
     }];
+    
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){
+        UIUserNotificationType type = [[[UIApplication sharedApplication] currentUserNotificationSettings] types];
+        if (type == UIUserNotificationTypeNone){
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+        }
+    }
+    else {
+        UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+        if (types == UIRemoteNotificationTypeNone) {
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+        }
+    }
 }
 
 
@@ -103,6 +127,9 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    if([[self.sections objectAtIndex:section] count] == 0){
+        return nil;
+    }
     return [self.alphabet objectAtIndex:section];
 }
 
@@ -118,6 +145,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nudCell" forIndexPath:indexPath];
     if(cell == nil){
         return cell;
@@ -144,9 +172,6 @@
 
 
 
-
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -155,7 +180,8 @@
     {
         [self.selectedCells removeObject:indexPath];
         NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
-        
+        NSString *name = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"name"];
+        [self.recipientNames removeObject:name];
         [self.recipients removeObject:fb_id];
 
     }
@@ -164,12 +190,30 @@
         [self.selectedCells addObject:indexPath];
         NSString *fb_id = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"];
         
+        NSString *name = [[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"name"];
+        [self.recipientNames addObject:name];
+
         [self.recipients addObject:fb_id];
 
+    }
+    if([self.recipients count] >0 && [self.recipientNames count] > 0){
+        self.sendButton.enabled = YES;
+        self.countLabel.text = [NSString stringWithFormat:@"%d",[self.recipients count]];
+        NSMutableString *result = [NSMutableString stringWithString:@""];
+        [result appendString:[self.recipientNames objectAtIndex:0]];
+        for (int i = 1; i < [self.recipientNames count]; i++) {
+            [result appendString:@", "];
+            [result appendString:[self.recipientNames objectAtIndex:i]];
+        }
+        self.recipientsLabel.text = result;
+    }
+    else{
+        self.sendButton.enabled = NO;
     }
     [self.tableView reloadData];
     
 }
+
 
 
 #pragma mark - Navigation
@@ -187,7 +231,7 @@
         NSString *fb = [self.recipients objectAtIndex:i];
         if(self.dealID != nil){
             NSDictionary *dict =  @{@"deal_objectId":self.dealID, @"fb":fb};
-            [PFCloud callFunction:@"nudge_v2" withParameters:dict];
+            [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
         }
     }
     

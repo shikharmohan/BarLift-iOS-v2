@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"H",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
+    self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
     // Do any additional setup after loading the view.
     self.friendsList = [[NSMutableArray alloc] initWithCapacity:30];
     FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?limit=1000"];
@@ -94,6 +94,9 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    if([[self.sections objectAtIndex:section] count] == 0){
+        return nil;
+    }
     return [self.alphabet objectAtIndex:section];
 }
 

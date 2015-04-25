@@ -13,6 +13,9 @@
 #import "UIImageView+WebCache.h"
 #import "BLTProfileViewController.h"
 #import "BLTDealDetailViewController.h"
+#import "SCLAlertView.h"
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 
 
 @interface NudgeHistoryViewController ()
@@ -52,6 +55,19 @@
             }
         }];
         [inst saveEventually];
+    }
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){
+        UIUserNotificationType type = [[[UIApplication sharedApplication] currentUserNotificationSettings] types];
+        if (type == UIUserNotificationTypeNone){
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+        }
+    }
+    else {
+        UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+        if (types == UIRemoteNotificationTypeNone) {
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+        }
     }
     
 }
