@@ -12,7 +12,7 @@
 #import "BLTUserDetailViewController.h"
 #import "Reachability.h"
 
-@interface BLTLoginViewController ()
+@interface BLTLoginViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIButton *login;
 @property (weak, nonatomic) IBOutlet UIButton *aboutBarLift;
@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property BOOL new;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -40,7 +42,7 @@
     
      //Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self updateUserInformation];
+       // [self updateUserInformation];
     }
 }
 
@@ -83,14 +85,16 @@
     [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     webViewBG.userInteractionEnabled = NO;
     [self.view addSubview:webViewBG];
-    [self.view addSubview:self.aboutBarLift];
-    [self.view addSubview:self.logo];
+    [self.scrollView setFrame:CGRectMake(0, 0, iOSScreenSize.width, 0.77*iOSScreenSize.height)];
+    [self.view addSubview:self.scrollView];
     [self.view addSubview:self.login];
     [self.view addSubview:self.indicator];
-    [self.view addSubview:self.welcomeLabel];
-    [self.view addSubview:self.subtitleLabel];
+    [self.view addSubview:self.pageControl];
+    [self.scrollView addSubview:self.logo];
+    [self.scrollView addSubview:self.welcomeLabel];
+    [self.scrollView addSubview:self.subtitleLabel];
     self.indicator.hidden = YES;
-    
+    [self setUpScrollview];
 
 
     self.logo.alpha = 0.0;
@@ -274,6 +278,57 @@
 {
     
 }
+
+
+#pragma mark - Scrollview
+
+-(void) setUpScrollview{
+        self.scrollView.delegate = self;
+        [self.scrollView setPagingEnabled:YES];
+    
+        [self.scrollView setContentSize:CGSizeMake(4*iOSScreenSize.width, 0.77*iOSScreenSize.height)];
+        self.pageControl.numberOfPages = 4;
+        self.pageControl.currentPage = 0;
+    NSArray *titles = @[@"", @"Drink spontaneously", @"Never drink alone", @"Nudge your friends"];
+    NSArray *subtitles=@[@"", @"Stay in the know with daily local drink deals.", @"See friends that are interested in going with less hassle.", @"Invite your friends out with a simple gesture."];
+    NSArray *images = @[@"", @"appdesign-Slide2@3x.jpg", @"appdesign-Slide3@3x.jpg", @"appdesign-Slide4@3x.jpg"];
+
+        for(int i =1; i<4; i++)
+        {
+            //main title
+            UILabel *mainTitle = [[UILabel alloc] initWithFrame:CGRectMake((320 * i) + (0.078*iOSScreenSize.width),0.049*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.16*iOSScreenSize.height)];
+            mainTitle.textColor = [UIColor  whiteColor];
+            mainTitle.numberOfLines = 0;
+            [mainTitle setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];
+            mainTitle.textAlignment = NSTextAlignmentCenter;
+            [mainTitle setText:titles[i]];
+            
+            UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake((320 * i) + (0.078*iOSScreenSize.width), 0.198*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.0809*iOSScreenSize.height)];
+            subTitle.textColor = [UIColor  whiteColor];
+            subTitle.numberOfLines = 2;
+            [subTitle setFont: [UIFont fontWithName:@"Lato-Bold" size:17.0f]];
+            subTitle.textAlignment = NSTextAlignmentCenter;
+            [subTitle setText:subtitles[i]];
+            
+            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((320 * i), 0.33*iOSScreenSize.height, iOSScreenSize.width, 0.475*iOSScreenSize.height)];
+            img.image = [UIImage imageNamed:images[i]];
+            
+            
+            [self.scrollView addSubview:mainTitle];
+            [self.scrollView addSubview:subTitle];
+            [self.scrollView addSubview:img];
+            
+        }
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat pageWidth = self.scrollView.frame.size.width;
+    float fractionalPage = self.scrollView.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    self.pageControl.currentPage = page;
+    
+}
+
 
 #pragma mark - Reachability
 // Checks if we have an internet connection or not
