@@ -350,7 +350,7 @@ typedef void(^myCompletion)(BOOL);
     NSString *fb_id = [PFUser currentUser][@"fb_id"];
     [pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
     pic.contentMode = UIViewContentModeScaleAspectFill;
-    [pic setFrame:CGRectMake(0, 0, 20, 20)];
+    [pic setFrame:CGRectMake(0, 0, 24, 24)];
     pic.layer.cornerRadius = pic.frame.size.width/2;
     pic.layer.borderWidth = 2.0;
     pic.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -364,7 +364,7 @@ typedef void(^myCompletion)(BOOL);
     pic.userInteractionEnabled = YES;
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
     
-    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
     [logoBtn setImage:[UIImage imageNamed:@"bltlogo.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
@@ -444,6 +444,10 @@ typedef void(^myCompletion)(BOOL);
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
                 }
+                else{
+                    moreDeals.hidden = YES;
+                    moreDeals.superview.hidden = YES;
+                }
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:5];
                 location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
@@ -455,19 +459,19 @@ typedef void(^myCompletion)(BOOL);
                 
                 [background sd_setImageWithURL:[NSURL URLWithString:img_url]];
                 
-                CAGradientLayer *gradient = [CAGradientLayer layer];
-                gradient.frame = background.frame;
-                
-                // Add colors to layer
-                UIColor *centerColor = [UIColor clearColor];
-                UIColor *endColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.37];
-                gradient.colors = [NSArray arrayWithObjects:
-                                   (id)[endColor CGColor],
-                                   (id)[centerColor CGColor],
-                                   (id)[centerColor CGColor],
-                                   nil];
-                
-                [background.layer insertSublayer:gradient atIndex:0];
+//                CAGradientLayer *gradient = [CAGradientLayer layer];
+//                gradient.frame = background.frame;
+//                
+//                // Add colors to layer
+//                UIColor *centerColor = [UIColor clearColor];
+//                UIColor *endColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.37];
+//                gradient.colors = [NSArray arrayWithObjects:
+//                                   (id)[endColor CGColor],
+//                                   (id)[centerColor CGColor],
+//                                   (id)[centerColor CGColor],
+//                                   nil];
+//                
+//                [background.layer insertSublayer:gradient atIndex:0];
                 
                 
                 NSArray *whosGoing = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"whosGoing"];
@@ -514,6 +518,13 @@ typedef void(^myCompletion)(BOOL);
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:45];
                 location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
+                
+                UIImageView *background = (UIImageView *)[cell viewWithTag:50];
+                NSString *img_url =[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"image_url"];
+                
+                
+                [background sd_setImageWithURL:[NSURL URLWithString:img_url]];
+
                 
                 //interested
                 NSArray *whosGoing = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"whosGoing"];
@@ -611,10 +622,10 @@ typedef void(^myCompletion)(BOOL);
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     
     if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
-        return CGSizeMake(296, 220);
+        return CGSizeMake(296, 244);
     }
     else{
-        return CGSizeMake(296, 125);
+        return CGSizeMake(296, 152);
         
     }
 

@@ -129,10 +129,11 @@
         
         
         
-        if(self.dealDetails != nil){
+        if(self.dealDetails != nil && self.dealDetails[@"deal_start_date"] != nil && self.dealDetails[@"deal_end_date"] != nil){
             NSDate *startDate = self.dealDetails[@"deal_start_date"];
             NSDate *endDate =self.dealDetails[@"deal_end_date"];
             NSCalendar *calendar = [NSCalendar currentCalendar];
+            
             NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startDate];
             NSInteger start_hour = [components hour];
             NSString *am1 = @"AM";
@@ -153,7 +154,11 @@
             if(end_hour == 0){
                 end_hour += 12;
             }
-
+            if(day == nil){
+                NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                [dateFormat setDateFormat:@"MMM dd"];
+                day = [dateFormat stringFromDate:startDate];
+            }
             cell.hoursLabel.text = [NSString stringWithFormat:@"%@ | %ld %@ - %ld %@",day, (long)start_hour, am1, (long)end_hour, am2];
             cell.dealName.text = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
             cell.dealHeadline = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
