@@ -45,15 +45,16 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [[PFUser currentUser][@"profile"] setObject:self.selectedDays forKey:@"selected_days"];
+    
+    
 }
-*/
+
 
 #pragma mark - Table View Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -109,11 +110,12 @@
         cell.backgroundView = bg_selected;
 
     }
-    [self.tableView reloadData];
-
     if([self.selectedCells count] > 0){
         self.nextButton.enabled = YES;
     }
+    [self.tableView reloadData];
+
+
 }
 
 
