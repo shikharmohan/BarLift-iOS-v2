@@ -15,9 +15,7 @@
 @interface BLTLoginViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIButton *login;
-@property (weak, nonatomic) IBOutlet UIButton *aboutBarLift;
 @property (strong, nonatomic) NSMutableData *imageData;
-- (IBAction)aboutBarLift:(UIButton *)sender;
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
@@ -42,7 +40,7 @@
     
      //Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-       // [self updateUserInformation];
+        [self updateUserInformation];
     }
 }
 
@@ -100,12 +98,10 @@
     self.logo.alpha = 0.0;
     self.login.alpha = 0.0;
     
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         self.logo.alpha = 1.0;
     }];
-    [UIView animateWithDuration:3.5 animations:^{
-        self.login.alpha = 1.0;
-    }];
+
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -115,12 +111,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)aboutBarLift:(UIButton *)sender {
-
-
-    
-    
-}
 
 - (IBAction)loginToFacebook:(UIButton *)sender {
     self.indicator.hidden = NO;
@@ -236,10 +226,12 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                if(self.new){
+                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:@0]){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
+                                  //  [[PFUser currentUser] setObject:@1 forKey:@"newVersion"];
+                                    [[PFUser currentUser] saveInBackground];
                                     [[PFInstallation currentInstallation] saveInBackground];
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
                                 }

@@ -118,6 +118,11 @@
 		01A62E941A99A905004FD855 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A62E931A99A905004FD855 /* SWActionSheet.m */; };
 		01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA471A85D98900DBF49E /* near_me-25.png */; };
 		01C0EA4A1A866D9700DBF49E /* cocktail-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 01C0EA491A866D9700DBF49E /* cocktail-100.png */; };
+		01CDFFBF1AEC4C9700571E71 /* welcome-bg-2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFBE1AEC4C9700571E71 /* welcome-bg-2x.jpg */; };
+		01CDFFC11AEC4CA100571E71 /* welcome-bg-3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFC01AEC4CA100571E71 /* welcome-bg-3x.jpg */; };
+		01CDFFC51AEC4CED00571E71 /* BLTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */; };
+		01CDFFC81AEC631100571E71 /* BLTSelectUnivViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */; };
+		01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */; };
 		01D2116A1AE04E5000F3806D /* BLTFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */; };
 		01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2116C1AE0579E00F3806D /* BLTStats.m */; };
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
@@ -352,6 +357,14 @@
 		01A62E931A99A905004FD855 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		01C0EA471A85D98900DBF49E /* near_me-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "near_me-25.png"; sourceTree = "<group>"; };
 		01C0EA491A866D9700DBF49E /* cocktail-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cocktail-100.png"; sourceTree = "<group>"; };
+		01CDFFBE1AEC4C9700571E71 /* welcome-bg-2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welcome-bg-2x.jpg"; sourceTree = "<group>"; };
+		01CDFFC01AEC4CA100571E71 /* welcome-bg-3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "welcome-bg-3x.jpg"; sourceTree = "<group>"; };
+		01CDFFC31AEC4CED00571E71 /* BLTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSignUpViewController.h; sourceTree = "<group>"; };
+		01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSignUpViewController.m; sourceTree = "<group>"; };
+		01CDFFC61AEC631000571E71 /* BLTSelectUnivViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSelectUnivViewController.h; sourceTree = "<group>"; };
+		01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectUnivViewController.m; sourceTree = "<group>"; };
+		01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSelectJobViewController.h; sourceTree = "<group>"; };
+		01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectJobViewController.m; sourceTree = "<group>"; };
 		01D211681AE04E5000F3806D /* BLTFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendTableViewController.h; sourceTree = "<group>"; };
 		01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendTableViewController.m; sourceTree = "<group>"; };
 		01D2116B1AE0579E00F3806D /* BLTStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTStats.h; sourceTree = "<group>"; };
@@ -785,6 +798,7 @@
 		01A62E861A9990F9004FD855 /* Intro Pages */ = {
 			isa = PBXGroup;
 			children = (
+				01CDFFC21AEC4CCB00571E71 /* Sign Up */,
 				0166EC791A6995C40016E679 /* BLTLoginViewController.h */,
 				0166EC7A1A6995C40016E679 /* BLTLoginViewController.m */,
 			);
@@ -802,6 +816,19 @@
 				01A62E8D1A99A861004FD855 /* ActionSheetStringPicker.m */,
 			);
 			name = ActionPicker;
+			sourceTree = "<group>";
+		};
+		01CDFFC21AEC4CCB00571E71 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				01CDFFC31AEC4CED00571E71 /* BLTSignUpViewController.h */,
+				01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */,
+				01CDFFC61AEC631000571E71 /* BLTSelectUnivViewController.h */,
+				01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */,
+				01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */,
+				01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */,
+			);
+			name = "Sign Up";
 			sourceTree = "<group>";
 		};
 		01D211671AE04E3000F3806D /* FriendList */ = {
@@ -872,6 +899,8 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01CDFFC01AEC4CA100571E71 /* welcome-bg-3x.jpg */,
+				01CDFFBE1AEC4C9700571E71 /* welcome-bg-2x.jpg */,
 				01D211731AE0994F00F3806D /* keyboard53.png */,
 				017E11751ADF230D00306A16 /* coverphoto.png */,
 				012BCBAD1ADDBEDE00C540B2 /* buildings.imageset */,
@@ -1164,6 +1193,7 @@
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */,
 				01A62E061A95CB6D004FD855 /* bg@3x.jpg in Resources */,
+				01CDFFC11AEC4CA100571E71 /* welcome-bg-3x.jpg in Resources */,
 				015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */,
 				011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */,
 				011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */,
@@ -1211,6 +1241,7 @@
 				017E116A1ADE290B00306A16 /* ProfileHeader.xib in Resources */,
 				01A62E261A95DC2E004FD855 /* Lato-BlackItalic.ttf in Resources */,
 				01A62E081A95CD53004FD855 /* bg@2x.png in Resources */,
+				01CDFFBF1AEC4C9700571E71 /* welcome-bg-2x.jpg in Resources */,
 				012BCBB81ADDBEDE00C540B2 /* sun.imageset in Resources */,
 				01A62E551A99052D004FD855 /* bltlogo@3x.png in Resources */,
 				01A62E2D1A95DC2E004FD855 /* Lato-Italic.ttf in Resources */,
@@ -1342,6 +1373,7 @@
 				01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */,
 				01D222091AE44C5900BE4921 /* BLTNudgeFriendsViewController.m in Sources */,
 				01FB803E1ADB0C9300767B01 /* DealCell.m in Sources */,
+				01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */,
 				01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */,
@@ -1350,8 +1382,10 @@
 				016729E81A889282001A27FF /* UIColor+JFMinimalNotificationColors.m in Sources */,
 				0166EC7B1A6995C40016E679 /* BLTLoginViewController.m in Sources */,
 				019F13F01A89ABA20099B3CF /* SDWebImagePrefetcher.m in Sources */,
+				01CDFFC51AEC4CED00571E71 /* BLTSignUpViewController.m in Sources */,
 				016E65C21AE36A7100467C6B /* NudgeHistoryViewController.m in Sources */,
 				019F13F41A89ABA20099B3CF /* UIImage+WebP.m in Sources */,
+				01CDFFC81AEC631100571E71 /* BLTSelectUnivViewController.m in Sources */,
 				019F13EF1A89ABA20099B3CF /* SDWebImageManager.m in Sources */,
 				019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */,
 				01F2CE2B1A9AD27300BEC23D /* SCLAlertView.m in Sources */,

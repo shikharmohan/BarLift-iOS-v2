@@ -3,7 +3,12 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">
+         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentInstallation.badge">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
@@ -47,10 +52,10 @@
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -118,9 +123,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTDealDashboard numberOfSectionsInCollectionView:]:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
          contextName = "-[BLTNudgeFriendsViewController tableView:didSelectRowAtIndexPath:]:BLTNudgeFriendsViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -129,16 +131,19 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[BLTDealDashboard numberOfSectionsInCollectionView:]:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
          contextName = "__34-[BLTDealDashboard refreshMyDeals]_block_invoke_3:BLTDealDashboard.m">
       </ContextState>
       <ContextState
          contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[components1 weekday]">
+               value = "self.sections">
             </PersistentString>
             <PersistentString
-               value = "self.sections">
+               value = "[components1 weekday]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -161,12 +166,15 @@
          contextName = "-[CSAlwaysOnTopHeader awakeFromNib]:CSAlwaysOnTopHeader.m">
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
+         contextName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_3:BLTLoginViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "currentInstallation.badge">
+               value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

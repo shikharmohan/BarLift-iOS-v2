@@ -53,7 +53,6 @@
     self.tableView.allowsMultipleSelection = YES;
     self.recipients = [[NSMutableArray alloc] initWithCapacity:10];
     self.recipientNames = [[NSMutableArray alloc] initWithCapacity:10];
-    self.tableView.tableHeaderView = self.countHeader;
     self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
     // Do any additional setup after loading the view.
     self.friendsList = [[NSMutableArray alloc] initWithCapacity:30];
@@ -208,13 +207,22 @@
         self.recipientsLabel.text = result;
     }
     else{
+        self.recipientsLabel.text = @"Select who you want to nudge";
+        self.countLabel.text = @"0";
         self.sendButton.enabled = NO;
     }
     [self.tableView reloadData];
     
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat sectionHeaderHeight = 22;
+    if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+    }
+}
 
 #pragma mark - Navigation
 
@@ -226,6 +234,7 @@
     
 }
 
+
 - (IBAction)sendButtonPressed:(id)sender {
     for(int i = 0; i < [self.recipients count]; i++){
         NSString *fb = [self.recipients objectAtIndex:i];
@@ -234,6 +243,8 @@
             [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
         }
     }
+    [self.navigationController popViewControllerAnimated:YES];
+
     
 }
 

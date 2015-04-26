@@ -13,7 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "BLTProfileViewController.h"
 
-@interface BLTFriendListViewController ()
+@interface BLTFriendListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *friendsList;
 @property (nonatomic, strong) NSMutableArray *sections;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

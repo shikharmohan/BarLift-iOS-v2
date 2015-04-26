@@ -100,9 +100,9 @@ NSTimer *durationTimer;
         self.backgroundType = Shadow;
         
         // Font
-        _titleFontFamily = @"HelveticaNeue";
-        _bodyTextFontFamily = @"HelveticaNeue";
-        _buttonsFontFamily = @"HelveticaNeue-Bold";
+        _titleFontFamily = @"Lato-Semibold";
+        _bodyTextFontFamily = @"Lato-Regular";
+        _buttonsFontFamily = @"Lato-Bold";
         _titleFontSize = 20.0f;
         _bodyFontSize = 14.0f;
         _buttonsFontSize = 14.0f;

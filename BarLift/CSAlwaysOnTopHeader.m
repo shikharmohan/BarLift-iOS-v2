@@ -52,7 +52,7 @@
 
         for(int i =0; i<numLbl; i++)
         {
-            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(320 * i, 0,300, 166)];
+            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(320 * i + 10, 0,300, 166)];
             textLabel.textColor = [UIColor  whiteColor];
             textLabel.numberOfLines = 0;
             [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];
