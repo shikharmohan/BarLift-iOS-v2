@@ -123,6 +123,8 @@
 		01CDFFC51AEC4CED00571E71 /* BLTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */; };
 		01CDFFC81AEC631100571E71 /* BLTSelectUnivViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */; };
 		01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */; };
+		01CDFFD11AEC895300571E71 /* BLTDaysOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */; };
+		01CDFFD41AEC8DB000571E71 /* BLTAffiliationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */; };
 		01D2116A1AE04E5000F3806D /* BLTFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */; };
 		01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2116C1AE0579E00F3806D /* BLTStats.m */; };
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
@@ -365,6 +367,10 @@
 		01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectUnivViewController.m; sourceTree = "<group>"; };
 		01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSelectJobViewController.h; sourceTree = "<group>"; };
 		01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectJobViewController.m; sourceTree = "<group>"; };
+		01CDFFCF1AEC895300571E71 /* BLTDaysOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDaysOutViewController.h; sourceTree = "<group>"; };
+		01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDaysOutViewController.m; sourceTree = "<group>"; };
+		01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTAffiliationViewController.h; sourceTree = "<group>"; };
+		01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTAffiliationViewController.m; sourceTree = "<group>"; };
 		01D211681AE04E5000F3806D /* BLTFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendTableViewController.h; sourceTree = "<group>"; };
 		01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendTableViewController.m; sourceTree = "<group>"; };
 		01D2116B1AE0579E00F3806D /* BLTStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTStats.h; sourceTree = "<group>"; };
@@ -827,6 +833,10 @@
 				01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */,
 				01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */,
 				01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */,
+				01CDFFCF1AEC895300571E71 /* BLTDaysOutViewController.h */,
+				01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */,
+				01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */,
+				01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */,
 			);
 			name = "Sign Up";
 			sourceTree = "<group>";
@@ -1347,8 +1357,10 @@
 				01D211721AE0947800F3806D /* BLTFriendListViewController.m in Sources */,
 				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
 				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
+				01CDFFD11AEC895300571E71 /* BLTDaysOutViewController.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
 				017E11741ADEB72300306A16 /* ProfileHeader.m in Sources */,
+				01CDFFD41AEC8DB000571E71 /* BLTAffiliationViewController.m in Sources */,
 				01D711AA1A6CC958001C29B7 /* BLTUserDetailViewController.m in Sources */,
 				019F13EB1A89ABA20099B3CF /* SDWebImageCompat.m in Sources */,
 				019F13EA1A89ABA20099B3CF /* SDImageCache.m in Sources */,
