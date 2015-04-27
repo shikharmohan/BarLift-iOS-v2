@@ -15,10 +15,9 @@
 
 @implementation CSAlwaysOnTopHeader
 
-
 -(void)awakeFromNib{
     self.scrollView.delegate = nil;
-
+    self.interested = NO;
 }
 - (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
     
@@ -37,11 +36,16 @@
     
     NSDictionary *dict = @{@"deal_objectId":self.dealID, @"user_objectId":[[PFUser currentUser] objectId]};
     [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict];
+    self.interested = YES;
+    
     NSLog(@"%@", self.dealID);
 }
 
 - (void) setUpView{
-
+    if(self.interested){
+        self.interestedButton.backgroundColor = [UIColor greenColor];
+        [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
+    }
     if(self.dealNames != nil && self.dealHeadline != nil){
         self.scrollView.delegate = self;
         NSInteger numLbl = [self.dealNames count] + 1;

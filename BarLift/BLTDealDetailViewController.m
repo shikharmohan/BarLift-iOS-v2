@@ -164,7 +164,11 @@
             cell.dealNames = self.dealDetails[@"add_deals"];
             cell.dealID = self.dealID;
             [cell.backgroundImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dealDetails[@"image_url"]]]];
-            
+            for(int i = 0; i < [self.dealDetails[@"whosGoing"] count]; i++){
+                if([[PFUser currentUser][@"fb_id"] isEqual:self.dealDetails[@"whosGoing"][0][@"fb_id"]]){
+                    cell.interested = YES;
+                }
+            }
             [cell setUpView];
             //set up scrollview
         }

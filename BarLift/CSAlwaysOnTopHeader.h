@@ -10,6 +10,8 @@
 
 @interface CSAlwaysOnTopHeader : CardViewCell <UIScrollViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *interestedButton;
+@property (nonatomic) BOOL interested;
 @property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dealName;
 @property (strong, nonatomic) NSString *dealHeadline;

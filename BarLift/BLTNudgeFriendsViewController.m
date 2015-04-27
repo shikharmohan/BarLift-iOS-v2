@@ -243,8 +243,16 @@
             [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
         }
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    SCLAlertView *alert2 = [[SCLAlertView alloc] init];
 
+    [alert showWaiting:self title:@"Sending nudges..." subTitle:nil closeButtonTitle:nil duration:2.4f];
+    [alert2 showSuccess:self title:@"Nudges sent!" subTitle:nil closeButtonTitle:@"Done" duration:0.0f];
+    [self.selectedCells removeAllObjects];
+    [self.recipientNames removeAllObjects];
+    [self.recipients removeAllObjects];
+    [self.tableView reloadData];
     
 }
 

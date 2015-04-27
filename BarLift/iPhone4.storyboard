@@ -65,6 +65,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
             <string>Lato-Semibold</string>
@@ -94,13 +95,14 @@
                                 <rect key="frame" x="52" y="504" width="217" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <color key="tintColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="LOGIN WITH FACEBOOK">
                                     <color key="titleColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="28"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -359,9 +361,10 @@
             <objects>
                 <navigationController id="Rr1-uE-SsW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ajX-fe-CEu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aXE-PF-zxn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Icon_Back.png" id="aXE-PF-zxn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -376,7 +379,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tF-c5-K58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="1187"/>
+            <point key="canvasLocation" x="1699" y="1109"/>
         </scene>
         <!--Options View Controller-->
         <scene sceneID="oBu-H7-MNd">
@@ -473,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLJ-Oq-X1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="1302"/>
+            <point key="canvasLocation" x="3046" y="1574"/>
         </scene>
         <!--Nudge Friends View Controller-->
         <scene sceneID="fB6-ng-oq1">
@@ -484,7 +487,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RB0-6p-zya"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5aL-dR-Jzt">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYD-kb-Te3">
@@ -559,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMl-2I-YS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="661"/>
+            <point key="canvasLocation" x="3046" y="931"/>
         </scene>
         <!--Nudges Received-->
         <scene sceneID="tCm-MA-dzp">
@@ -672,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLD-El-JUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="1957"/>
+            <point key="canvasLocation" x="3045" y="2279"/>
         </scene>
         <!--Deal Dashboard-->
         <scene sceneID="uvG-yw-Luq">
@@ -786,7 +789,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="45" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-b3-FiN">
-                                            <rect key="frame" x="8" y="94" width="141" height="21"/>
+                                            <rect key="frame" x="8" y="97" width="141" height="21"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -795,12 +798,6 @@
                                             <rect key="frame" x="0.0" y="86" width="3" height="53"/>
                                             <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Evanston , IL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-Ri-0uS">
-                                            <rect key="frame" x="8" y="110" width="68" height="21"/>
-                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAI-17-vBh">
                                             <rect key="frame" x="196" y="95" width="37" height="37"/>
                                         </imageView>
@@ -846,6 +843,12 @@
                                             <rect key="frame" x="240" y="95" width="37" height="37"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                             <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Evanston , IL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-Ri-0uS">
+                                            <rect key="frame" x="8" y="115" width="68" height="21"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -935,7 +938,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMI-FE-uy4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Rl1-Nn-NQu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="m7W-ZZ-3U0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="Icon_Back.png" backIndicatorTransitionMaskImage="Icon_Back.png" id="m7W-ZZ-3U0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1068,14 +1071,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgN-Aa-mBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3459" y="1257"/>
+            <point key="canvasLocation" x="3517" y="1257"/>
         </scene>
         <!--Always On Top-->
         <scene sceneID="7ho-0T-Qje">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="mPM-dA-jKn" customClass="BLTDealDetailViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="5eo-Bv-vYm">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e6h-ii-639" customClass="CSStickyHeaderFlowLayout">
@@ -1130,7 +1133,7 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1n-Ud-r7E">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
                                             <rect key="frame" x="16" y="19" width="226" height="35"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                             <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1155,10 +1158,21 @@
                                             <rect key="frame" x="206" y="59" width="30" height="30"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-Ez-vrQ">
-                                            <rect key="frame" x="257" y="59" width="49" height="30"/>
-                                            <state key="normal" title="More &gt;">
+                                            <rect key="frame" x="244" y="59" width="68" height="30"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                            <state key="normal" title="MORE &gt;">
+                                                <color key="titleColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="Cph-06-EQa" kind="push" id="oP5-lD-pMh"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1194,6 +1208,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv8-6f-SPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2609" y="592"/>
+        </scene>
+        <!--Preview Friends View Controller-->
+        <scene sceneID="LIm-yR-Jr4">
+            <objects>
+                <viewController id="Cph-06-EQa" customClass="BLTPreviewFriendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lxf-vW-bj4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZZS-Za-YYT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ETS-42-4dj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cyb-Bc-tDN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhg-1m-VAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3045" y="304"/>
         </scene>
         <!--Profile-->
         <scene sceneID="geM-wa-tbJ">
@@ -1625,6 +1658,7 @@
     </scenes>
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
+        <image name="Icon_Back.png" width="27" height="27"/>
         <image name="thex-3x.png" width="45" height="45"/>
         <image name="welcome-bg-2x.jpg" width="750" height="1334"/>
     </resources>
@@ -1634,9 +1668,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="91t-Y3-vn4"/>
-        <segue reference="Xrf-ET-qHk"/>
+        <segue reference="AUY-Ap-5Nd"/>
         <segue reference="GmA-wK-XxK"/>
-        <segue reference="sUi-IK-Bcz"/>
+        <segue reference="Xrf-ET-qHk"/>
+        <segue reference="maT-Zb-ygX"/>
     </inferredMetricsTieBreakers>
 </document>

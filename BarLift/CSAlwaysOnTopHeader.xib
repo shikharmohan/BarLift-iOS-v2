@@ -107,6 +107,7 @@
             <connections>
                 <outlet property="backgroundImg" destination="3y9-9q-T6E" id="8sc-CV-dcN"/>
                 <outlet property="hoursLabel" destination="b6o-zp-jtZ" id="rUu-OA-YaG"/>
+                <outlet property="interestedButton" destination="QhM-hK-CzL" id="KfZ-La-bGZ"/>
                 <outlet property="pageControl" destination="rgQ-lB-bpY" id="29f-7A-6O7"/>
                 <outlet property="scrollView" destination="NMp-7n-fG5" id="ibW-mh-nqq"/>
             </connections>
