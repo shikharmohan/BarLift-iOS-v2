@@ -41,7 +41,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     self.dealDetails = [[NSMutableDictionary alloc] initWithCapacity:10];
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 
@@ -196,7 +195,6 @@
     [alert showInfo:self title:@"Calendar Updated" subTitle:@"This deal has been added your calendar." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
 
 }
-
 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

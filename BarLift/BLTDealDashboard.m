@@ -68,23 +68,21 @@ typedef void(^myCompletion)(BOOL);
     [self.collectionView registerNib:self.headerNib
           forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
                  withReuseIdentifier:@"header"];
-    [self refreshAllDeals:^(BOOL finished) {
-        if(finished){
-            if([self.sortedKeys count] > 0)
-            {
-            
-                [self.collectionView reloadData];
-            }
-        }
-    }];
-    
-    
 }
 
 -(void) viewWillAppear:(BOOL)animated  {
   //  self.navigationController.navigationBarHidden = NO;
    // self.navigationController.navigationBar.alpha = 1;
     [self setProfilePicture];
+    [self refreshAllDeals:^(BOOL finished) {
+        if(finished){
+            if([self.sortedKeys count] > 0)
+            {
+                
+                [self.collectionView reloadData];
+            }
+        }
+    }];
 }
 
 
@@ -152,7 +150,6 @@ typedef void(^myCompletion)(BOOL);
                             [[self.sections objectForKey:self.sortedKeys[j]] sortUsingDescriptors:[NSArray arrayWithObject:Sorter]];
                         }
                         //    }
-                        
                         
 
                         //[self reloadList];
@@ -434,7 +431,7 @@ typedef void(^myCompletion)(BOOL);
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DealCell *cell = nil;
-    if([self.sortedKeys count] > 0){
+    if([self.sortedKeys count] > 0 && [self.sections count] > 0){
         NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
         if(cell == nil){
             if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){

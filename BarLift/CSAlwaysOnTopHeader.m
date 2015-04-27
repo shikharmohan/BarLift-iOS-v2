@@ -36,7 +36,7 @@
 - (IBAction)interestedButtonPressed:(id)sender {
     
     NSDictionary *dict = @{@"deal_objectId":self.dealID, @"user_objectId":[[PFUser currentUser] objectId]};
-    [PFCloud callFunctionInBackground:@"notGoing" withParameters:dict];
+    [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict];
     NSLog(@"%@", self.dealID);
 }
 

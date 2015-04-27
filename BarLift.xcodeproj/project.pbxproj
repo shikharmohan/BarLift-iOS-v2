@@ -125,6 +125,13 @@
 		01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */; };
 		01CDFFD11AEC895300571E71 /* BLTDaysOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */; };
 		01CDFFD41AEC8DB000571E71 /* BLTAffiliationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */; };
+		01CDFFD71AED9AE400571E71 /* BLTLocationSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */; };
+		01CDFFDB1AEE7E2D00571E71 /* deal_intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFD81AEE7E2D00571E71 /* deal_intro.png */; };
+		01CDFFDC1AEE7E2D00571E71 /* going_intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFD91AEE7E2D00571E71 /* going_intro.png */; };
+		01CDFFDD1AEE7E2D00571E71 /* nudge_intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFDA1AEE7E2D00571E71 /* nudge_intro.png */; };
+		01CDFFE01AEE984E00571E71 /* BLTDealTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */; };
+		01CDFFE31AEEB8EC00571E71 /* images@2x in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE11AEEB8EC00571E71 /* images@2x */; };
+		01CDFFE41AEEB8EC00571E71 /* images@3x in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE21AEEB8EC00571E71 /* images@3x */; };
 		01D2116A1AE04E5000F3806D /* BLTFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */; };
 		01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2116C1AE0579E00F3806D /* BLTStats.m */; };
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
@@ -371,6 +378,15 @@
 		01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDaysOutViewController.m; sourceTree = "<group>"; };
 		01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTAffiliationViewController.h; sourceTree = "<group>"; };
 		01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTAffiliationViewController.m; sourceTree = "<group>"; };
+		01CDFFD51AED9AE400571E71 /* BLTLocationSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTLocationSelectViewController.h; sourceTree = "<group>"; };
+		01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTLocationSelectViewController.m; sourceTree = "<group>"; };
+		01CDFFD81AEE7E2D00571E71 /* deal_intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deal_intro.png; sourceTree = "<group>"; };
+		01CDFFD91AEE7E2D00571E71 /* going_intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = going_intro.png; sourceTree = "<group>"; };
+		01CDFFDA1AEE7E2D00571E71 /* nudge_intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nudge_intro.png; sourceTree = "<group>"; };
+		01CDFFDE1AEE984E00571E71 /* BLTDealTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealTypeViewController.h; sourceTree = "<group>"; };
+		01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealTypeViewController.m; sourceTree = "<group>"; };
+		01CDFFE11AEEB8EC00571E71 /* images@2x */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "images@2x"; sourceTree = "<group>"; };
+		01CDFFE21AEEB8EC00571E71 /* images@3x */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "images@3x"; sourceTree = "<group>"; };
 		01D211681AE04E5000F3806D /* BLTFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendTableViewController.h; sourceTree = "<group>"; };
 		01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendTableViewController.m; sourceTree = "<group>"; };
 		01D2116B1AE0579E00F3806D /* BLTStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTStats.h; sourceTree = "<group>"; };
@@ -837,6 +853,10 @@
 				01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */,
 				01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */,
 				01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */,
+				01CDFFD51AED9AE400571E71 /* BLTLocationSelectViewController.h */,
+				01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */,
+				01CDFFDE1AEE984E00571E71 /* BLTDealTypeViewController.h */,
+				01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */,
 			);
 			name = "Sign Up";
 			sourceTree = "<group>";
@@ -909,6 +929,11 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01CDFFE11AEEB8EC00571E71 /* images@2x */,
+				01CDFFE21AEEB8EC00571E71 /* images@3x */,
+				01CDFFD81AEE7E2D00571E71 /* deal_intro.png */,
+				01CDFFD91AEE7E2D00571E71 /* going_intro.png */,
+				01CDFFDA1AEE7E2D00571E71 /* nudge_intro.png */,
 				01CDFFC01AEC4CA100571E71 /* welcome-bg-3x.jpg */,
 				01CDFFBE1AEC4C9700571E71 /* welcome-bg-2x.jpg */,
 				01D211731AE0994F00F3806D /* keyboard53.png */,
@@ -1230,6 +1255,7 @@
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
 				017E11631ADE247B00306A16 /* CSAlwaysOnTopHeader.xib in Resources */,
 				01F3BEB51A9C761B0043F2C2 /* rounded61.png in Resources */,
+				01CDFFDC1AEE7E2D00571E71 /* going_intro.png in Resources */,
 				01A62E2C1A95DC2E004FD855 /* Lato-HeavyItalic.ttf in Resources */,
 				016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */,
 				01A62E351A95DC2E004FD855 /* Lato-Thin.ttf in Resources */,
@@ -1257,7 +1283,10 @@
 				01A62E2D1A95DC2E004FD855 /* Lato-Italic.ttf in Resources */,
 				01A62E5D1A993862004FD855 /* bgblack4.gif in Resources */,
 				0166EC801A6995C40016E679 /* Images.xcassets in Resources */,
+				01CDFFE31AEEB8EC00571E71 /* images@2x in Resources */,
+				01CDFFDB1AEE7E2D00571E71 /* deal_intro.png in Resources */,
 				01A62E711A9945E4004FD855 /* appdesign-Slide2@3x.jpg in Resources */,
+				01CDFFDD1AEE7E2D00571E71 /* nudge_intro.png in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
 				01A62E721A9945E4004FD855 /* appdesign-Slide3@1x.jpg in Resources */,
 				01A252EB1A8962A800BED121 /* upload-32.png in Resources */,
@@ -1269,6 +1298,7 @@
 				01A62E2E1A95DC2E004FD855 /* Lato-Light.ttf in Resources */,
 				01A62E751A9945E4004FD855 /* appdesign-Slide4@1x.jpg in Resources */,
 				01E63BE91A9E9128000425F2 /* theplus-3x.png in Resources */,
+				01CDFFE41AEEB8EC00571E71 /* images@3x in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				012BCBB41ADDBEDE00C540B2 /* icn_1.imageset in Resources */,
 				01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */,
@@ -1355,9 +1385,11 @@
 				01D2220D1AE5459100BE4921 /* BLTPreviewFriendsViewController.m in Sources */,
 				01F2CE2F1A9AD27300BEC23D /* UIImage+ImageEffects.m in Sources */,
 				01D211721AE0947800F3806D /* BLTFriendListViewController.m in Sources */,
+				01CDFFD71AED9AE400571E71 /* BLTLocationSelectViewController.m in Sources */,
 				01A62E851A998FEC004FD855 /* RKCardView.m in Sources */,
 				01EBDB7F1A83023900A9E175 /* SWRevealViewController.m in Sources */,
 				01CDFFD11AEC895300571E71 /* BLTDaysOutViewController.m in Sources */,
+				01CDFFE01AEE984E00571E71 /* BLTDealTypeViewController.m in Sources */,
 				016729E91A889282001A27FF /* UIView+Round.m in Sources */,
 				017E11741ADEB72300306A16 /* ProfileHeader.m in Sources */,
 				01CDFFD41AEC8DB000571E71 /* BLTAffiliationViewController.m in Sources */,

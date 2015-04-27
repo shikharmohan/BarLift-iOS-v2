@@ -39,9 +39,9 @@
     [super viewWillAppear:animated];
     
      //Check if user is cached and linked to Facebook, if so, bypass login
-    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self updateUserInformation];
-    }
+//    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+//        [self updateUserInformation];
+//    }
 }
 
 
@@ -82,6 +82,7 @@
     UIWebView *webViewBG = [[UIWebView alloc] initWithFrame:self.view.frame];
     [webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
     webViewBG.userInteractionEnabled = NO;
+   // [self.login setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [self.view addSubview:webViewBG];
     [self.scrollView setFrame:CGRectMake(0, 0, iOSScreenSize.width, 0.77*iOSScreenSize.height)];
     [self.view addSubview:self.scrollView];
@@ -96,7 +97,6 @@
 
 
     self.logo.alpha = 0.0;
-    self.login.alpha = 0.0;
     
     [UIView animateWithDuration:1.0 animations:^{
         self.logo.alpha = 1.0;
@@ -205,7 +205,7 @@
                 PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
                 [acl setPublicReadAccess:YES];
                 [[PFUser currentUser] setObject:acl forKey:@"ACL"];
-                [[PFUser currentUser] setObject:@"Northwestern" forKey:@"university_name"];
+                [[PFUser currentUser] setObject:@"Northwestern" forKey:@"community_name"];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded){
                         NSLog(@"User saved successfully");
@@ -226,11 +226,10 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:@0]){
+                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
-                                  //  [[PFUser currentUser] setObject:@1 forKey:@"newVersion"];
                                     [[PFUser currentUser] saveInBackground];
                                     [[PFInstallation currentInstallation] saveInBackground];
                                     [self performSegueWithIdentifier:@"toWelcome" sender:self];
@@ -283,7 +282,7 @@
         self.pageControl.currentPage = 0;
     NSArray *titles = @[@"", @"Drink spontaneously", @"Never drink alone", @"Nudge your friends"];
     NSArray *subtitles=@[@"", @"Stay in the know with daily local drink deals.", @"See friends that are interested in going with less hassle.", @"Invite your friends out with a simple gesture."];
-    NSArray *images = @[@"", @"appdesign-Slide2@3x.jpg", @"appdesign-Slide3@3x.jpg", @"appdesign-Slide4@3x.jpg"];
+    NSArray *images = @[@"", @"deal_intro.png", @"going_intro.png", @"nudge_intro.png"];
 
         for(int i =1; i<4; i++)
         {
@@ -302,7 +301,7 @@
             subTitle.textAlignment = NSTextAlignmentCenter;
             [subTitle setText:subtitles[i]];
             
-            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((320 * i), 0.33*iOSScreenSize.height, iOSScreenSize.width, 0.475*iOSScreenSize.height)];
+            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((320 * i), 0.33*iOSScreenSize.height, iOSScreenSize.width, 175)];
             img.image = [UIImage imageNamed:images[i]];
             
             
@@ -349,6 +348,21 @@
     };
     
     [self.internetReachableFoo startNotifier];
+}
+
+#pragma mark Button
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

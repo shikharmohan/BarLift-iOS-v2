@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *arr;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 @end
 
@@ -26,6 +27,12 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.nextButton.enabled = NO;
+    if([[PFUser currentUser][@"is_student"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+        self.headerLabel.text = @"Where do you go to school?";
+    }
+    else{
+        self.headerLabel.text = @"Where did you go to school?";
+    }
     self.arr = [[NSMutableArray alloc] initWithCapacity:5];
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         if (!error) {
@@ -114,7 +121,13 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     return headerView;
 }
 - (IBAction)nextButtonPressed:(id)sender {
-    
+    if([[PFUser currentUser][@"is_student"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+        [self performSegueWithIdentifier:@"toAffiliation" sender:self];
+        
+    }
+    else{
+        [self performSegueWithIdentifier:@"toDays" sender:self];
+    }
     
 }
 

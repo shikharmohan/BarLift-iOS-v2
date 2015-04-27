@@ -37,7 +37,12 @@
                 self.dictionary = [[NSMutableDictionary alloc] initWithCapacity:3];
                 [self.dictionary setObject:object[i][@"from_user"][@"fb_id"] forKey:@"sender"];
                 [self.dictionary setObject:[object[i][@"deal"] objectId] forKey:@"dealID"];
-                [self.dictionary setObject:object[i][@"text"] forKey:@"msg"];
+                if(object[i][@"text"] != nil){
+                    [self.dictionary setObject:object[i][@"text"] forKey:@"msg"];
+                }
+                else{
+                    [self.dictionary setObject:@"" forKey:@"msg"];
+                }
                 [self.array addObject:self.dictionary];
             }
             [self.tableView reloadData];
