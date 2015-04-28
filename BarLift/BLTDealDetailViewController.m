@@ -80,6 +80,7 @@
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
             }
             else{
+                self.header.moreButton.hidden = YES;
                 NSLog(@"error");
             }
         }];
@@ -104,6 +105,8 @@
     img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
 
     self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (+%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]+1];
+    self.header.moreButton.hidden = NO;
+    
 }
 
 -(void)removeGoingImage{
@@ -134,6 +137,7 @@
     }
     else{
         self.header.whosIntLabel.text = @"Who's Interested:";
+        self.header.moreButton.hidden = YES;
     }
     
 }
@@ -165,8 +169,10 @@
         self.header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];
         if(count == 0){
             self.header.whosIntLabel.text = @"Who's Interested:";
+            self.header.moreButton.hidden = YES;
         }
         else{
+            self.header.moreButton.hidden = NO;
             self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", count];
             if(count > 6){
                 imgCount = 6;
