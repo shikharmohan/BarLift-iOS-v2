@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UILaunchImageFile~iphone</key>
-	<string>splash-bg@3x.jpg</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.8</string>
+	<string>2.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -30,7 +28,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.1.8</string>
+	<string>2.0.2</string>
 	<key>FacebookAppID</key>
 	<string>1549337231980066</string>
 	<key>FacebookDisplayName</key>
@@ -60,6 +58,8 @@
 		<string>Lato-Thin.ttf</string>
 		<string>Lato-ThinItalic.ttf</string>
 	</array>
+	<key>UILaunchImageFile~iphone</key>
+	<string>splash-bg@3x</string>
 	<key>UILaunchStoryboardName</key>
 	<string>iPhone4</string>
 	<key>UIMainStoryboardFile</key>

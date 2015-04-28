@@ -21,6 +21,8 @@
 		011D22F81A9AAEE90082143E /* logo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22ED1A9AAEE90082143E /* logo-3x.png */; };
 		011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22EE1A9AAEE90082143E /* martiniv2-3x.png */; };
 		011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */; };
+		012795201AEFC9A800EEBF53 /* Icon_Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0127951E1AEFC9A800EEBF53 /* Icon_Close@2x.png */; };
+		012795211AEFC9A800EEBF53 /* Icon_Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0127951F1AEFC9A800EEBF53 /* Icon_Close@3x.png */; };
 		012BCBB31ADDBEDE00C540B2 /* buildings.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 012BCBAD1ADDBEDE00C540B2 /* buildings.imageset */; };
 		012BCBB41ADDBEDE00C540B2 /* icn_1.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 012BCBAE1ADDBEDE00C540B2 /* icn_1.imageset */; };
 		012BCBB51ADDBEDE00C540B2 /* icn_2.imageset in Resources */ = {isa = PBXBuildFile; fileRef = 012BCBAF1ADDBEDE00C540B2 /* icn_2.imageset */; };
@@ -186,6 +188,10 @@
 		01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120D1A747537001C29B7 /* iPhone4.storyboard */; };
 		01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D7120F1A747544001C29B7 /* iPhone47.storyboard */; };
 		01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D712111A74754F001C29B7 /* iPhone55.storyboard */; };
+		01E4270D1AEFBF1000C58B43 /* splash_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E4270C1AEFBF1000C58B43 /* splash_bg@2x.png */; };
+		01E4270F1AEFBF9000C58B43 /* splash_bgR4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E4270E1AEFBF9000C58B43 /* splash_bgR4@2x.png */; };
+		01E427111AEFBFE400C58B43 /* splash_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E427101AEFBFE400C58B43 /* splash_bg@3x.png */; };
+		01E427131AEFC0B300C58B43 /* splash_bgOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E427121AEFC0B300C58B43 /* splash_bgOS7@2x.png */; };
 		01E63BE51A9E7B84000425F2 /* icon-winfo-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE41A9E7B84000425F2 /* icon-winfo-3x.png */; };
 		01E63BE71A9E9002000425F2 /* thex-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE61A9E9002000425F2 /* thex-3x.png */; };
 		01E63BE91A9E9128000425F2 /* theplus-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01E63BE81A9E9128000425F2 /* theplus-3x.png */; };
@@ -239,6 +245,8 @@
 		011D22ED1A9AAEE90082143E /* logo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-3x.png"; sourceTree = "<group>"; };
 		011D22EE1A9AAEE90082143E /* martiniv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "martiniv2-3x.png"; sourceTree = "<group>"; };
 		011D22F01A9AAEE90082143E /* purchasedrinks-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purchasedrinks-3x.png"; sourceTree = "<group>"; };
+		0127951E1AEFC9A800EEBF53 /* Icon_Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Close@2x.png"; sourceTree = "<group>"; };
+		0127951F1AEFC9A800EEBF53 /* Icon_Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Close@3x.png"; sourceTree = "<group>"; };
 		012BCBAD1ADDBEDE00C540B2 /* buildings.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildings.imageset; sourceTree = "<group>"; };
 		012BCBAE1ADDBEDE00C540B2 /* icn_1.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icn_1.imageset; sourceTree = "<group>"; };
 		012BCBAF1ADDBEDE00C540B2 /* icn_2.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icn_2.imageset; sourceTree = "<group>"; };
@@ -458,6 +466,10 @@
 		01D7120D1A747537001C29B7 /* iPhone4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4.storyboard; sourceTree = "<group>"; };
 		01D7120F1A747544001C29B7 /* iPhone47.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone47.storyboard; sourceTree = "<group>"; };
 		01D712111A74754F001C29B7 /* iPhone55.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone55.storyboard; sourceTree = "<group>"; };
+		01E4270C1AEFBF1000C58B43 /* splash_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bg@2x.png"; sourceTree = "<group>"; };
+		01E4270E1AEFBF9000C58B43 /* splash_bgR4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bgR4@2x.png"; sourceTree = "<group>"; };
+		01E427101AEFBFE400C58B43 /* splash_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bg@3x.png"; sourceTree = "<group>"; };
+		01E427121AEFC0B300C58B43 /* splash_bgOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_bgOS7@2x.png"; sourceTree = "<group>"; };
 		01E63BE41A9E7B84000425F2 /* icon-winfo-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-winfo-3x.png"; sourceTree = "<group>"; };
 		01E63BE61A9E9002000425F2 /* thex-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thex-3x.png"; sourceTree = "<group>"; };
 		01E63BE81A9E9128000425F2 /* theplus-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "theplus-3x.png"; sourceTree = "<group>"; };
@@ -951,6 +963,12 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0127951E1AEFC9A800EEBF53 /* Icon_Close@2x.png */,
+				0127951F1AEFC9A800EEBF53 /* Icon_Close@3x.png */,
+				01E427121AEFC0B300C58B43 /* splash_bgOS7@2x.png */,
+				01E427101AEFBFE400C58B43 /* splash_bg@3x.png */,
+				01E4270E1AEFBF9000C58B43 /* splash_bgR4@2x.png */,
+				01E4270C1AEFBF1000C58B43 /* splash_bg@2x.png */,
 				01CDFFF21AEF5F4900571E71 /* Icon_Address@3x.png */,
 				01CDFFF31AEF5F4900571E71 /* Icon_Back@3x.png */,
 				01CDFFF41AEF5F4900571E71 /* Icon_Dealdetails@3x.png */,
@@ -1276,6 +1294,7 @@
 				01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */,
 				012BCBB51ADDBEDE00C540B2 /* icn_2.imageset in Resources */,
 				01A62E2B1A95DC2E004FD855 /* Lato-Heavy.ttf in Resources */,
+				01E427111AEFBFE400C58B43 /* splash_bg@3x.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01F2CE1F1A9AC6B500BEC23D /* locationarrow-3x.png in Resources */,
 				01A62E611A993BC0004FD855 /* bgblack55.gif in Resources */,
@@ -1300,6 +1319,7 @@
 				01FB80401ADB0C9300767B01 /* CSSearchBarHeader.xib in Resources */,
 				01A62E8A1A99962B004FD855 /* BG1.png in Resources */,
 				011D22F21A9AAEE90082143E /* dealinfo-3x.png in Resources */,
+				01E427131AEFC0B300C58B43 /* splash_bgOS7@2x.png in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01F3BEB31A9C757B0043F2C2 /* add121.png in Resources */,
 				01A62E701A9945E4004FD855 /* appdesign-Slide2@2x.jpg in Resources */,
@@ -1310,6 +1330,7 @@
 				011D22F51A9AAEE90082143E /* interested1-3x.png in Resources */,
 				017E116A1ADE290B00306A16 /* ProfileHeader.xib in Resources */,
 				01A62E261A95DC2E004FD855 /* Lato-BlackItalic.ttf in Resources */,
+				01E4270D1AEFBF1000C58B43 /* splash_bg@2x.png in Resources */,
 				01A62E081A95CD53004FD855 /* bg@2x.png in Resources */,
 				01CDFFBF1AEC4C9700571E71 /* welcome-bg-2x.jpg in Resources */,
 				012BCBB81ADDBEDE00C540B2 /* sun.imageset in Resources */,
@@ -1320,6 +1341,7 @@
 				01CDFFE31AEEB8EC00571E71 /* images@2x in Resources */,
 				01CDFFDB1AEE7E2D00571E71 /* deal_intro.png in Resources */,
 				01A62E711A9945E4004FD855 /* appdesign-Slide2@3x.jpg in Resources */,
+				01E4270F1AEFBF9000C58B43 /* splash_bgR4@2x.png in Resources */,
 				01CDFFDD1AEE7E2D00571E71 /* nudge_intro.png in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
 				01A62E721A9945E4004FD855 /* appdesign-Slide3@1x.jpg in Resources */,
@@ -1345,6 +1367,7 @@
 				01A62E291A95DC2E004FD855 /* Lato-Hairline.ttf in Resources */,
 				01E63BE71A9E9002000425F2 /* thex-3x.png in Resources */,
 				01D712101A747544001C29B7 /* iPhone47.storyboard in Resources */,
+				012795201AEFC9A800EEBF53 /* Icon_Close@2x.png in Resources */,
 				011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */,
 				01A62E271A95DC2E004FD855 /* Lato-Bold.ttf in Resources */,
 				01A62E361A95DC2E004FD855 /* Lato-ThinItalic.ttf in Resources */,
@@ -1363,6 +1386,7 @@
 				012BCBB71ADDBEDE00C540B2 /* sky.imageset in Resources */,
 				01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */,
 				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
+				012795211AEFC9A800EEBF53 /* Icon_Close@3x.png in Resources */,
 				011D22F71A9AAEE90082143E /* interested3-3x.png in Resources */,
 				01D211741AE0994F00F3806D /* keyboard53.png in Resources */,
 			);
@@ -1585,6 +1609,7 @@
 			baseConfigurationReference = 9312A5290727BA494B058377 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1594,7 +1619,7 @@
 					/Users/Mohan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = BarLift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1610,6 +1635,7 @@
 			baseConfigurationReference = C894A88BCA6D6560EA0BD8E6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1619,7 +1645,7 @@
 					/Users/Mohan/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = BarLift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

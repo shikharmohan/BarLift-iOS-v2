@@ -287,21 +287,21 @@
         for(int i =1; i<4; i++)
         {
             //main title
-            UILabel *mainTitle = [[UILabel alloc] initWithFrame:CGRectMake((320 * i) + (0.078*iOSScreenSize.width),0.049*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.16*iOSScreenSize.height)];
+            UILabel *mainTitle = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreenSize.width * i) + (0.078*iOSScreenSize.width),0.049*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.16*iOSScreenSize.height)];
             mainTitle.textColor = [UIColor  whiteColor];
             mainTitle.numberOfLines = 0;
             [mainTitle setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];
             mainTitle.textAlignment = NSTextAlignmentCenter;
             [mainTitle setText:titles[i]];
             
-            UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake((320 * i) + (0.078*iOSScreenSize.width), 0.198*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.0809*iOSScreenSize.height)];
+            UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreenSize.width * i) + (0.078*iOSScreenSize.width), 0.198*iOSScreenSize.height,0.843*iOSScreenSize.width, 0.0809*iOSScreenSize.height)];
             subTitle.textColor = [UIColor  whiteColor];
             subTitle.numberOfLines = 2;
             [subTitle setFont: [UIFont fontWithName:@"Lato-Bold" size:17.0f]];
             subTitle.textAlignment = NSTextAlignmentCenter;
             [subTitle setText:subtitles[i]];
             
-            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((320 * i), 0.33*iOSScreenSize.height, iOSScreenSize.width, 175)];
+            UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake((iOSScreenSize.width * i), 0.33*iOSScreenSize.height, iOSScreenSize.width, 0.308*iOSScreenSize.height)];
             img.image = [UIImage imageNamed:images[i]];
             
             

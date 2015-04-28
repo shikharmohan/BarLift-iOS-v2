@@ -24,7 +24,9 @@
 typedef void(^myCompletion)(BOOL);
 @end
 
-@implementation BLTDealDashboard
+@implementation BLTDealDashboard{
+    CGSize iOSScreenSize;
+}
 @synthesize reloadCell;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -39,7 +41,7 @@ typedef void(^myCompletion)(BOOL);
 {
     [super viewDidLoad];
     [self.collectionView.viewForBaselineLayout.layer setSpeed:0.1f];
-
+    iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
     self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
 
@@ -347,7 +349,7 @@ typedef void(^myCompletion)(BOOL);
     NSString *fb_id = [PFUser currentUser][@"fb_id"];
     [pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
     pic.contentMode = UIViewContentModeScaleAspectFill;
-    [pic setFrame:CGRectMake(0, 0, 24, 24)];
+    [pic setFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
     pic.layer.cornerRadius = pic.frame.size.width/2;
     pic.layer.borderWidth = 2.0;
     pic.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -365,7 +367,7 @@ typedef void(^myCompletion)(BOOL);
 
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
     [pic addGestureRecognizer:tap];
-    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
+    UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
     [logoBtn setImage:[UIImage imageNamed:@"bltlogo.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
@@ -628,10 +630,10 @@ typedef void(^myCompletion)(BOOL);
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     
     if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
-        return CGSizeMake(296, 244);
+        return CGSizeMake(0.925*iOSScreenSize.width, 0.429577465*iOSScreenSize.height);
     }
     else{
-        return CGSizeMake(296, 152);
+        return CGSizeMake(0.925*iOSScreenSize.width, 0.267605634*iOSScreenSize.height);
         
     }
 

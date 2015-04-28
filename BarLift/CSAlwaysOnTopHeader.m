@@ -17,11 +17,14 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@implementation CSAlwaysOnTopHeader
+@implementation CSAlwaysOnTopHeader{
+    CGSize iOSScreensize;
+}
 
 -(void)awakeFromNib{
     self.scrollView.delegate = nil;
     self.interested = NO;
+    iOSScreensize = [[UIScreen mainScreen] bounds].size;
 }
 - (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
     
@@ -72,14 +75,24 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if(self.dealNames != nil && self.dealHeadline != nil){
         self.scrollView.delegate = self;
         NSInteger numLbl = [self.dealNames count] + 1;
+        [self.scrollView setFrame:CGRectMake(0, 44, iOSScreensize.width, 166)];
         [self.scrollView setPagingEnabled:YES];
-        [self.scrollView setContentSize:CGSizeMake(numLbl*320, 166)];
+        [self.scrollView setContentSize:CGSizeMake(numLbl*iOSScreensize.width, 166)];
         self.pageControl.numberOfPages = numLbl;
         self.pageControl.currentPage = 0;
 
         for(int i =0; i<numLbl; i++)
         {
-            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(320 * i + 10, 0,300, 166)];
+            int width = 0;
+            int plus = 10;
+            if(iOSScreensize.width == 320){
+                width = 300;
+            }
+            else{
+                width = 300;
+                plus = 37.5;
+            }
+            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 166)];
             textLabel.textColor = [UIColor  whiteColor];
             textLabel.numberOfLines = 0;
             [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];

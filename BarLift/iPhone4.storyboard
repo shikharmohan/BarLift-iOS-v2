@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="s9u-qE-TNu">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -464,6 +463,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-Sw-Fih">
                                 <rect key="frame" x="16" y="65" width="35" height="35"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_Menu@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="2jX-Zj-i1b">
+                                <rect key="frame" x="16" y="117" width="35" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_Address@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="X8G-mL-SqA">
+                                <rect key="frame" x="16" y="167" width="35" height="35"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="keyboard53.png" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-Os-def">
+                                <rect key="frame" x="283" y="75" width="15" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="keyboard53.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xlm-La-udq">
+                                <rect key="frame" x="283" y="127" width="15" height="15"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="keyboard53.png" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-pu-E9I">
+                                <rect key="frame" x="283" y="177" width="15" height="15"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -485,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLJ-Oq-X1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="1636"/>
+            <point key="canvasLocation" x="3046" y="1580"/>
         </scene>
         <!--Nudge Friends View Controller-->
         <scene sceneID="fB6-ng-oq1">
@@ -948,7 +962,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kMI-FE-uy4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Rl1-Nn-NQu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="Icon_Back.png" backIndicatorTransitionMaskImage="Icon_Back.png" id="m7W-ZZ-3U0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="m7W-ZZ-3U0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1723,7 +1737,10 @@
     </scenes>
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
+        <image name="Icon_Address@3x.png" width="81" height="81"/>
         <image name="Icon_Back.png" width="27" height="27"/>
+        <image name="Icon_Menu@3x.png" width="81" height="81"/>
+        <image name="keyboard53.png" width="64" height="64"/>
         <image name="thex-3x.png" width="25" height="25"/>
         <image name="welcome-bg-2x.jpg" width="750" height="1334"/>
     </resources>
@@ -1733,11 +1750,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="maT-Zb-ygX"/>
         <segue reference="91t-Y3-vn4"/>
         <segue reference="Xrf-ET-qHk"/>
-        <segue reference="GmA-wK-XxK"/>
-        <segue reference="sUi-IK-Bcz"/>
-        <segue reference="a4Y-qk-Jlj"/>
+        <segue reference="kqA-3m-kGR"/>
         <segue reference="Veu-zD-3Qf"/>
+        <segue reference="hJu-cp-P26"/>
     </inferredMetricsTieBreakers>
 </document>

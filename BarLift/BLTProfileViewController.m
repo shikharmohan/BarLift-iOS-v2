@@ -32,8 +32,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.data = @[@"College", @"Year", @"School", @"Affiliation", @"Favorite Drink", @"Most Visited Bar"];
-        self.labelData = @[@"Northwestern University", @"2016", @"McCormick", @"Some Fraternity", @"Long Island Iced Tea", @"World of Beer"];
+        self.data = @[@"College", @"Affiliation", @"Favorite Drink", @"Most Visited Bar"];
+        self.labelData = @[@"Northwestern University", @"Sigma Beta Iota", @"Long Island Iced Tea", @"World of Beer"];
         self.headerNib = [UINib nibWithNibName:@"ProfileHeader" bundle:nil];
     }
     return self;
