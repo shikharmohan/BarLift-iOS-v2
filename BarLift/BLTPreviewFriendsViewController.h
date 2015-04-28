@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BLTPreviewFriendsViewController : UIViewController
-
+@property (strong, nonatomic) NSString *dealID;
 @end

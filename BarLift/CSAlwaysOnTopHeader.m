@@ -41,18 +41,23 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     NSDictionary *dict = @{@"deal_objectId":self.dealID, @"user_objectId":[[PFUser currentUser] objectId]};
     if(self.interested != YES){
-        [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict];
+        [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict block:^(id object, NSError *error) {
+            if(!error){
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"imGoing" object:self];
+            }
+        }];
         self.interested = YES;
         self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"imGoing" object:self];
     }
     else{
-        [PFCloud callFunctionInBackground:@"notGoing" withParameters:dict];
-        self.interested = NO;
+        [PFCloud callFunctionInBackground:@"notGoing" withParameters:dict block:^(id object, NSError *error) {
+            if(!error){
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"notGoing" object:self];
+            }
+        }];        self.interested = NO;
         self.interestedButton.backgroundColor = UIColorFromRGB(0x3D4B63);
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"notGoing" object:self];
     }
     
     NSLog(@"%@", self.dealID);
@@ -62,6 +67,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if(self.interested){
         self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"imGoing" object:self];
     }
     if(self.dealNames != nil && self.dealHeadline != nil){
         self.scrollView.delegate = self;

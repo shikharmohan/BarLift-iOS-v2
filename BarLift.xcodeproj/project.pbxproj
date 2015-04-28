@@ -679,6 +679,7 @@
 		017E115C1ADE246F00306A16 /* Deal View */ = {
 			isa = PBXGroup;
 			children = (
+				01D2220A1AE5455D00BE4921 /* Who' Going */,
 				01D222061AE44BE500BE4921 /* Nudge Friends */,
 				01CDFFEC1AEF273000571E71 /* BLTDealDetailCollectionReusableView.h */,
 				01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */,
@@ -1128,7 +1129,6 @@
 		01FB80281ADB08BD00767B01 /* Deal List View */ = {
 			isa = PBXGroup;
 			children = (
-				01D2220A1AE5455D00BE4921 /* Who' Going */,
 				01FB80371ADB0C9300767B01 /* DealCell.h */,
 				01FB80381ADB0C9300767B01 /* DealCell.m */,
 				01FB80391ADB0C9300767B01 /* DealHeader.h */,

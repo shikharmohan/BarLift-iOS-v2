@@ -13,6 +13,7 @@
 @end
 
 @implementation BLTPreviewFriendsViewController
+@synthesize dealID;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

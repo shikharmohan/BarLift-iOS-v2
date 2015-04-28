@@ -109,6 +109,9 @@
          contextName = "-[BLTDealDetailViewController removeGoingImage]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
+               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
+            </PersistentString>
+            <PersistentString
                value = "img.image">
             </PersistentString>
          </PersistentStrings>

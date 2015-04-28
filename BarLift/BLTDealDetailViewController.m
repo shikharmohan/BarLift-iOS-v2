@@ -11,6 +11,7 @@
 #import <EventKit/EventKit.h>
 #import "CWStatusBarNotification.h"
 #import "SCLAlertView.h"
+#import "BLTPreviewFriendsViewController.h"
 #import "BLTDealDetailCollectionReusableView.h"
 @interface BLTDealDetailViewController ()
 
@@ -104,7 +105,7 @@
     img.layer.borderWidth = 2.0;
     img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
 
-    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (+%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]+1];
+    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]];
     self.header.moreButton.hidden = NO;
     
 }
@@ -118,7 +119,7 @@
     BOOL noImage = YES;
     [UIView commitAnimations];
     if([[self.dealDetails objectForKey:@"whosGoing"] count] > 1){
-        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (+%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]-1];
+        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]];
         NSString *fb_id= [self.dealDetails objectForKey:@"whosGoing"][0][@"fb_id"];
         int i = 0;
         while(fb_id != [PFUser currentUser][@"fb_id"] && noImage){
@@ -153,7 +154,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSString *obj = self.sections[indexPath.section][indexPath.row];
+    //NSString *obj = self.sections[indexPath.section][indexPath.row];
 
     DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                              forIndexPath:indexPath];
@@ -243,12 +244,9 @@
                 if([[PFUser currentUser][@"fb_id"] isEqual:[[[self.dealDetails objectForKey:@"whosGoing"] objectAtIndex:i] objectForKey:@"fb_id"]]){
                     cell.interested = YES;
                     self.interested = YES;
-                 //   [self updateGoingImage];
+                    [self updateGoingImage];
+                    break;
                 }
-            }
-            if(cell.interested != YES){
-                //remove
-                
             }
             [cell setUpView];
             //set up scrollview
@@ -286,8 +284,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    BLTNudgeFriendsViewController *vc = [segue destinationViewController];
-    [vc setDealID:self.dealID];
+    if([[segue identifier] isEqual:@"toNudge"]){
+        BLTNudgeFriendsViewController *vc = [segue destinationViewController];
+        [vc setDealID:self.dealID];
+    }
+    else if ([[segue identifier] isEqual:@"toWhosGoing"]){
+        BLTPreviewFriendsViewController *vc = [segue destinationViewController];
+        [vc setDealID:self.dealID];
+    }
     
 }
 
