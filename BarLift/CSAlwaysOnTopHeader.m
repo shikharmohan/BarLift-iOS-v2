@@ -12,6 +12,10 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation CSAlwaysOnTopHeader
 
@@ -34,16 +38,29 @@
 }
 - (IBAction)interestedButtonPressed:(id)sender {
     
+    
     NSDictionary *dict = @{@"deal_objectId":self.dealID, @"user_objectId":[[PFUser currentUser] objectId]};
-    [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict];
-    self.interested = YES;
+    if(self.interested != YES){
+        [PFCloud callFunctionInBackground:@"imGoing" withParameters:dict];
+        self.interested = YES;
+        self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
+        [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"imGoing" object:self];
+    }
+    else{
+        [PFCloud callFunctionInBackground:@"notGoing" withParameters:dict];
+        self.interested = NO;
+        self.interestedButton.backgroundColor = UIColorFromRGB(0x3D4B63);
+        [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"notGoing" object:self];
+    }
     
     NSLog(@"%@", self.dealID);
 }
 
 - (void) setUpView{
     if(self.interested){
-        self.interestedButton.backgroundColor = [UIColor greenColor];
+        self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
     }
     if(self.dealNames != nil && self.dealHeadline != nil){

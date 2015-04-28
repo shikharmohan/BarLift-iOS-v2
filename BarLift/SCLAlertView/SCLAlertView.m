@@ -645,7 +645,7 @@ NSTimer *durationTimer;
             break;
             
         case Waiting:
-            viewColor = UIColorFromRGB(0x6c125d);
+            viewColor = UIColorFromRGB(0x3D4B63);
             break;
             
         case Custom:

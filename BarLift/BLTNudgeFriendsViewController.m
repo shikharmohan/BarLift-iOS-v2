@@ -245,15 +245,19 @@
     }
     //[self.navigationController popViewControllerAnimated:YES];
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-    SCLAlertView *alert2 = [[SCLAlertView alloc] init];
+    [NSTimer scheduledTimerWithTimeInterval:2.4f target:self selector:@selector(showDoneAlert) userInfo:nil repeats:NO];
 
-    [alert showWaiting:self title:@"Sending nudges..." subTitle:nil closeButtonTitle:nil duration:2.4f];
-    [alert2 showSuccess:self title:@"Nudges sent!" subTitle:nil closeButtonTitle:@"Done" duration:0.0f];
+    [alert showWaiting:self title:@"Sending nudges..." subTitle:@"Please wait while we send your nudges." closeButtonTitle:nil duration:2.4f];
     [self.selectedCells removeAllObjects];
     [self.recipientNames removeAllObjects];
     [self.recipients removeAllObjects];
     [self.tableView reloadData];
     
+}
+
+-(void)showDoneAlert{
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    [alert showSuccess:self title:@"Nudges sent!" subTitle:@"" closeButtonTitle:@"Done" duration:0.0f];
 }
 
 @end

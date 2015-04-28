@@ -3,62 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
-      </ContextState>
-      <ContextState
-         contextName = "__38-[BLTDealDashboard refreshAllMyDeals:]_block_invoke_2:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSStickyParallaxHeaderViewController initWithCoder:]:CSStickyParallaxHeaderViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke307:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTDealDashboard collectionView:cellForItemAtIndexPath:]:BLTDealDashboard.m">
+         contextName = "-[CSAlwaysOnTopHeader setUpView]:CSAlwaysOnTopHeader.m">
          <PersistentStrings>
             <PersistentString
-               value = "cell">
-            </PersistentString>
-            <PersistentString
-               value = "int_count">
-            </PersistentString>
-            <PersistentString
-               value = "[PFUser currentUser][@&quot;fb_id&quot;]">
-            </PersistentString>
-            <PersistentString
-               value = "whosGoing[0]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTFriendListViewController convertArray]:BLTFriendListViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[BLTDealDashboard refreshMyDeals]:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.sections[0]">
-            </PersistentString>
-            <PersistentString
-               value = "self.sections[0].allValues">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[YALSunnyRefreshControl calculateShift]:YALSunnyRefreshControl.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.scrollView.contentOffset.y">
+               value = "textLabel.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -74,23 +22,71 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[YALSunnyRefreshControl shiftInPercents]:YALSunnyRefreshControl.m">
+         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.scrollView.contentOffset.y">
+               value = "currentInstallation.badge">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[CSAlwaysOnTopHeader setUpView]:CSAlwaysOnTopHeader.m">
+         contextName = "-[BLTDealDetailViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "textLabel.text">
+               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;] ">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[CSAlwaysOnTopHeader interestedButtonPressed:]:CSAlwaysOnTopHeader.m">
+         contextName = "-[CSAlwaysOnTopHeader awakeFromNib]:CSAlwaysOnTopHeader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDashboard refreshMyDeals]:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "__38-[BLTDealDashboard refreshAllMyDeals:]_block_invoke_2:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTSelectUnivViewController nextButtonPressed:]:BLTSelectUnivViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSLockedHeaderViewController prepareForSegue:sender:]:CSLockedHeaderViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke307:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "__41-[NudgeHistoryViewController viewDidLoad]_block_invoke:NudgeHistoryViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTSignUpViewController gradButtonPressed:]:BLTSignUpViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[components1 weekday]">
+            </PersistentString>
+            <PersistentString
+               value = "self.sections">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDetailViewController updateGoingImage]:BLTDealDetailViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[CSLockedHeaderViewController collectionView:cellForItemAtIndexPath:]:CSLockedHeaderViewController.m">
@@ -110,12 +106,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTDealDetailViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:BLTDealDetailViewController.m">
+         contextName = "-[BLTDealDetailViewController removeGoingImage]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[self.dealDetails objectForKey:@&quot;name&quot;];">
+               value = "img.image">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSAlwaysOnTopHeader interestedButtonPressed:]:CSAlwaysOnTopHeader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDashboard collectionView:cellForItemAtIndexPath:]:BLTDealDashboard.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell">
+            </PersistentString>
+            <PersistentString
+               value = "int_count">
+            </PersistentString>
+            <PersistentString
+               value = "[PFUser currentUser][@&quot;fb_id&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "whosGoing[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[BLTNudgeFriendsViewController tableView:didSelectRowAtIndexPath:]:BLTNudgeFriendsViewController.m">
@@ -126,50 +145,27 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTDealDashboard numberOfSectionsInCollectionView:]:BLTDealDashboard.m">
+         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
-         contextName = "__41-[NudgeHistoryViewController viewDidLoad]_block_invoke:NudgeHistoryViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "__34-[BLTDealDashboard refreshMyDeals]_block_invoke_3:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
-         contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
+         contextName = "-[YALSunnyRefreshControl shiftInPercents]:YALSunnyRefreshControl.m">
          <PersistentStrings>
             <PersistentString
-               value = "[components1 weekday]">
-            </PersistentString>
-            <PersistentString
-               value = "self.sections">
+               value = "self.scrollView.contentOffset.y">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[CSLockedHeaderViewController prepareForSegue:sender:]:CSLockedHeaderViewController.m">
+         contextName = "-[BLTDealDashboard numberOfSectionsInCollectionView:]:BLTDealDashboard.m">
       </ContextState>
       <ContextState
          contextName = "-[BLTDealDashboard viewWillAppear:]:BLTDealDashboard.m">
       </ContextState>
       <ContextState
-         contextName = "__40-[BLTDealListViewController viewDidLoad]_block_invoke:BLTDealListViewController.m">
+         contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
       </ContextState>
       <ContextState
-         contextName = "-[BLTSignUpViewController gradButtonPressed:]:BLTSignUpViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[PFUser currentUser]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "main:main.m">
-      </ContextState>
-      <ContextState
-         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[CSAlwaysOnTopHeader awakeFromNib]:CSAlwaysOnTopHeader.m">
+         contextName = "-[CSStickyParallaxHeaderViewController initWithCoder:]:CSStickyParallaxHeaderViewController.m">
       </ContextState>
       <ContextState
          contextName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_3:BLTLoginViewController.m">
@@ -180,20 +176,38 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTSelectUnivViewController nextButtonPressed:]:BLTSelectUnivViewController.m">
+         contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser]">
+               value = "self.sections[0]">
+            </PersistentString>
+            <PersistentString
+               value = "self.sections[0].allValues">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
+         contextName = "__49-[BLTDealTypeViewController finishButtonPressed:]_block_invoke:BLTDealTypeViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__35-[BLTDealDashboard refreshAllDeals]_block_invoke_2:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTFriendListViewController convertArray]:BLTFriendListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[YALSunnyRefreshControl calculateShift]:YALSunnyRefreshControl.m">
          <PersistentStrings>
             <PersistentString
-               value = "currentInstallation.badge">
+               value = "self.scrollView.contentOffset.y">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__40-[BLTDealListViewController viewDidLoad]_block_invoke:BLTDealListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__34-[BLTDealDashboard refreshMyDeals]_block_invoke_3:BLTDealDashboard.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

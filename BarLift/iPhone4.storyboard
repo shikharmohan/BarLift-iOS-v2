@@ -361,7 +361,7 @@
             <objects>
                 <navigationController id="Rr1-uE-SsW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ajX-fe-CEu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Icon_Back.png" id="aXE-PF-zxn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="Icon_Back.png" id="aXE-PF-zxn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,6 +462,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eGM-zN-BVT">
                         <barButtonItem key="leftBarButtonItem" image="thex-3x.png" id="zBC-yQ-jeU">
+                            <inset key="imageInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <connections>
                                 <action selector="dismissModalPressed:" destination="OLg-cN-kUd" id="Jhw-8D-N95"/>
                             </connections>
@@ -682,7 +683,7 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="k43-Jr-kha" customClass="BLTDealDashboard" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" id="Dow-Ia-GFS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
@@ -733,14 +734,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ywu-iy-13o">
-                                            <rect key="frame" x="196" y="182" width="40" height="40"/>
+                                            <rect key="frame" x="176" y="182" width="40" height="40"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="31" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wg-dA-SxD">
-                                            <rect key="frame" x="240" y="183" width="40" height="40"/>
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
-                                            <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-8b-kLU">
+                                            <rect key="frame" x="221" y="182" width="40" height="40"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-Ao-nfu">
+                                            <rect key="frame" x="0.0" y="229" width="296" height="3"/>
+                                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
                                             <rect key="frame" x="8" y="24" width="280" height="99"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
@@ -765,10 +767,12 @@
                                             <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-Ao-nfu">
-                                            <rect key="frame" x="0.0" y="229" width="296" height="3"/>
-                                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="31" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wg-dA-SxD">
+                                            <rect key="frame" x="267" y="191" width="21" height="21"/>
+                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                            <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1082,7 +1086,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e6h-ii-639" customClass="CSStickyHeaderFlowLayout">
-                            <size key="itemSize" width="320" height="40"/>
+                            <size key="itemSize" width="320" height="87"/>
                             <size key="headerReferenceSize" width="0.0" height="154"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1092,11 +1096,11 @@
                                 <rect key="frame" x="0.0" y="40" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZQ-Kw-iQ4">
-                                            <rect key="frame" x="20" y="9" width="280" height="21"/>
+                                            <rect key="frame" x="20" y="9" width="66" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -1105,10 +1109,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="customSize" width="320" height="40"/>
+                                <size key="customSize" width="320" height="87"/>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="ANf-Cw-gdq">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="ANf-Cw-gdq" customClass="BLTDealDetailCollectionReusableView">
                             <rect key="frame" x="0.0" y="64" width="320" height="154"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -1133,7 +1137,7 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1n-Ud-r7E">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
                                             <rect key="frame" x="16" y="19" width="226" height="35"/>
                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                             <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1157,7 +1161,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEF-fO-VQ3">
                                             <rect key="frame" x="206" y="59" width="30" height="30"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-Ez-vrQ">
+                                        <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-Ez-vrQ">
                                             <rect key="frame" x="244" y="59" width="68" height="30"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
@@ -1196,6 +1200,16 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="moreButton" destination="p3Q-Ez-vrQ" id="fMN-nQ-v3u"/>
+                                <outlet property="whosIntLabel" destination="da4-mo-lO5" id="wGe-Gi-mLa"/>
+                                <outletCollection property="imageViews" destination="Jc3-K0-zyY" id="ZBr-TY-UUU"/>
+                                <outletCollection property="imageViews" destination="hK7-oP-x5p" id="96I-GA-33g"/>
+                                <outletCollection property="imageViews" destination="Mep-Ms-NmF" id="K8i-wC-eIq"/>
+                                <outletCollection property="imageViews" destination="zjr-yv-nBZ" id="mwW-Xe-cDV"/>
+                                <outletCollection property="imageViews" destination="HYf-t0-Xzb" id="T4F-l8-At3"/>
+                                <outletCollection property="imageViews" destination="kEF-fO-VQ3" id="eSF-oE-LIS"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="mPM-dA-jKn" id="aY2-F5-UWU"/>
@@ -1659,7 +1673,7 @@
     <resources>
         <image name="Barlift-login-logo.png" width="1024" height="1024"/>
         <image name="Icon_Back.png" width="27" height="27"/>
-        <image name="thex-3x.png" width="45" height="45"/>
+        <image name="thex-3x.png" width="25" height="25"/>
         <image name="welcome-bg-2x.jpg" width="750" height="1334"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1671,6 +1685,6 @@
         <segue reference="AUY-Ap-5Nd"/>
         <segue reference="GmA-wK-XxK"/>
         <segue reference="Xrf-ET-qHk"/>
-        <segue reference="maT-Zb-ygX"/>
+        <segue reference="sUi-IK-Bcz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@
 #import <EventKit/EventKit.h>
 #import "CWStatusBarNotification.h"
 #import "SCLAlertView.h"
-
+#import "BLTDealDetailCollectionReusableView.h"
 @interface BLTDealDetailViewController ()
 
 @property (nonatomic, strong) NSArray *sections;
@@ -19,8 +19,9 @@
 @property (nonatomic, strong) NSMutableDictionary *dealDetails;
 @property (nonatomic, strong) NSMutableArray *whosGoing;
 @property (nonatomic, strong) CWStatusBarNotification *calNotification;
+@property (strong, nonatomic) BLTDealDetailCollectionReusableView *header;
 @property (nonatomic, strong) CWStatusBarNotification *intNotification;
-
+@property (nonatomic) BOOL interested;
 @end
 
 @implementation BLTDealDetailViewController
@@ -29,9 +30,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.sections = @[
-                          @[@"test"]
-                          ];
+        self.sections = @[@[@"test"]];
 
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
     }
@@ -41,6 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.interested = NO;
     self.dealDetails = [[NSMutableDictionary alloc] initWithCapacity:10];
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 
@@ -89,9 +89,54 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     //self.navigationController.navigationBar.alpha = 0.0;
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGoingImage) name:@"imGoing" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGoingImage) name:@"notGoing" object:nil];
 }
 
+-(void)updateGoingImage{
+    NSString *fb_id = [PFUser currentUser][@"fb_id"];
+    UIImageView *img = self.header.imageViews[0];
+    [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+    img.contentMode = UIViewContentModeScaleAspectFill;
+    img.layer.cornerRadius = img.frame.size.width/2;
+    img.clipsToBounds = YES;
+    img.layer.borderWidth = 2.0;
+    img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+
+    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (+%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]+1];
+}
+
+-(void)removeGoingImage{
+    UIImageView *img = self.header.imageViews[0];
+    [UIView beginAnimations:nil context:nil];
+    [UIView animateWithDuration:1 animations:nil];
+    img.layer.borderWidth = 0.0f;
+    img.image = nil;
+    BOOL noImage = YES;
+    [UIView commitAnimations];
+    if([[self.dealDetails objectForKey:@"whosGoing"] count] > 1){
+        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (+%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]-1];
+        NSString *fb_id= [self.dealDetails objectForKey:@"whosGoing"][0][@"fb_id"];
+        int i = 0;
+        while(fb_id != [PFUser currentUser][@"fb_id"] && noImage){
+            UIImageView *img = self.header.imageViews[0];
+            [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+            img.contentMode = UIViewContentModeScaleAspectFill;
+            img.layer.cornerRadius = img.frame.size.width/2;
+            img.clipsToBounds = YES;
+            img.layer.borderWidth = 2.0;
+            img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+            noImage = NO;
+            i++;
+            fb_id = [self.dealDetails objectForKey:@"whosGoing"][i][@"fb_id"];
+        }
+
+    }
+    else{
+        self.header.whosIntLabel.text = @"Who's Interested:";
+    }
+    
+}
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -114,12 +159,36 @@
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-
-        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
-                                                          withReuseIdentifier:@"sectionHeader"
-                                                                 forIndexPath:indexPath];
-
-        return cell;
+        int count =[[self.dealDetails objectForKey:@"whosGoing"] count];
+        int imgCount = 0;
+        
+        self.header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];
+        if(count == 0){
+            self.header.whosIntLabel.text = @"Who's Interested:";
+        }
+        else{
+            self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", count];
+            if(count > 6){
+                imgCount = 6;
+            }
+            else{
+                imgCount = count;
+            }
+            for(int i = 0; i < imgCount; i++){
+                NSString *fb_id = [self.dealDetails objectForKey:@"whosGoing"][i][@"fb_id"];
+                if(fb_id != [PFUser currentUser][@"fb_id"]){
+                    UIImageView *img = nil;
+                    img = self.header.imageViews[i];
+                    [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
+                    img.contentMode = UIViewContentModeScaleAspectFill;
+                    img.layer.cornerRadius = img.frame.size.width/2;
+                    img.clipsToBounds = YES;
+//                    img.layer.borderWidth = 2.0;
+//                    img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+                }
+            }
+        }
+        return self.header;
 
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
         CSAlwaysOnTopHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
@@ -164,10 +233,16 @@
             cell.dealNames = self.dealDetails[@"add_deals"];
             cell.dealID = self.dealID;
             [cell.backgroundImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dealDetails[@"image_url"]]]];
-            for(int i = 0; i < [self.dealDetails[@"whosGoing"] count]; i++){
-                if([[PFUser currentUser][@"fb_id"] isEqual:self.dealDetails[@"whosGoing"][0][@"fb_id"]]){
+            for(int i = 0; i < [[self.dealDetails objectForKey:@"whosGoing" ] count]; i++){
+                if([[PFUser currentUser][@"fb_id"] isEqual:[[[self.dealDetails objectForKey:@"whosGoing"] objectAtIndex:i] objectForKey:@"fb_id"]]){
                     cell.interested = YES;
+                    self.interested = YES;
+                 //   [self updateGoingImage];
                 }
+            }
+            if(cell.interested != YES){
+                //remove
+                
             }
             [cell setUpView];
             //set up scrollview

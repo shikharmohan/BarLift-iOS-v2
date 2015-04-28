@@ -53,7 +53,6 @@
 		017E11741ADEB72300306A16 /* ProfileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E11731ADEB72300306A16 /* ProfileHeader.m */; };
 		017E11761ADF230D00306A16 /* coverphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 017E11751ADF230D00306A16 /* coverphoto.png */; };
 		017ED67E1AD86D34005BD8BE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017ED67D1AD86D34005BD8BE /* Social.framework */; };
-		01865F351AE1B0720097BEB6 /* BLTDealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01865F341AE1B0720097BEB6 /* BLTDealDetailViewController.m */; };
 		019F13E81A89ABA20099B3CF /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13C81A89ABA20099B3CF /* MKAnnotationView+WebCache.m */; };
 		019F13E91A89ABA20099B3CF /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13CA1A89ABA20099B3CF /* NSData+ImageContentType.m */; };
 		019F13EA1A89ABA20099B3CF /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 019F13CC1A89ABA20099B3CF /* SDImageCache.m */; };
@@ -132,6 +131,10 @@
 		01CDFFE01AEE984E00571E71 /* BLTDealTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */; };
 		01CDFFE31AEEB8EC00571E71 /* images@2x in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE11AEEB8EC00571E71 /* images@2x */; };
 		01CDFFE41AEEB8EC00571E71 /* images@3x in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE21AEEB8EC00571E71 /* images@3x */; };
+		01CDFFE61AEF119800571E71 /* splash-bg@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE51AEF119800571E71 /* splash-bg@3x.jpg */; };
+		01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE71AEF122400571E71 /* splash-bg@2x.jpg */; };
+		01CDFFEE1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */; };
+		01CDFFF11AEF278200571E71 /* BLTDealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */; };
 		01D2116A1AE04E5000F3806D /* BLTFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */; };
 		01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2116C1AE0579E00F3806D /* BLTStats.m */; };
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
@@ -279,8 +282,6 @@
 		017E11731ADEB72300306A16 /* ProfileHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileHeader.m; sourceTree = "<group>"; };
 		017E11751ADF230D00306A16 /* coverphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coverphoto.png; sourceTree = "<group>"; };
 		017ED67D1AD86D34005BD8BE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		01865F331AE1B0720097BEB6 /* BLTDealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealDetailViewController.h; sourceTree = "<group>"; };
-		01865F341AE1B0720097BEB6 /* BLTDealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDetailViewController.m; sourceTree = "<group>"; };
 		019F13C71A89ABA20099B3CF /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		019F13C81A89ABA20099B3CF /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		019F13C91A89ABA20099B3CF /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -387,6 +388,12 @@
 		01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealTypeViewController.m; sourceTree = "<group>"; };
 		01CDFFE11AEEB8EC00571E71 /* images@2x */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "images@2x"; sourceTree = "<group>"; };
 		01CDFFE21AEEB8EC00571E71 /* images@3x */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "images@3x"; sourceTree = "<group>"; };
+		01CDFFE51AEF119800571E71 /* splash-bg@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-bg@3x.jpg"; sourceTree = "<group>"; };
+		01CDFFE71AEF122400571E71 /* splash-bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-bg@2x.jpg"; sourceTree = "<group>"; };
+		01CDFFEC1AEF273000571E71 /* BLTDealDetailCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealDetailCollectionReusableView.h; sourceTree = "<group>"; };
+		01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDetailCollectionReusableView.m; sourceTree = "<group>"; };
+		01CDFFEF1AEF278200571E71 /* BLTDealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealDetailViewController.h; sourceTree = "<group>"; };
+		01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDetailViewController.m; sourceTree = "<group>"; };
 		01D211681AE04E5000F3806D /* BLTFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendTableViewController.h; sourceTree = "<group>"; };
 		01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendTableViewController.m; sourceTree = "<group>"; };
 		01D2116B1AE0579E00F3806D /* BLTStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTStats.h; sourceTree = "<group>"; };
@@ -673,8 +680,10 @@
 			isa = PBXGroup;
 			children = (
 				01D222061AE44BE500BE4921 /* Nudge Friends */,
-				01865F331AE1B0720097BEB6 /* BLTDealDetailViewController.h */,
-				01865F341AE1B0720097BEB6 /* BLTDealDetailViewController.m */,
+				01CDFFEC1AEF273000571E71 /* BLTDealDetailCollectionReusableView.h */,
+				01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */,
+				01CDFFEF1AEF278200571E71 /* BLTDealDetailViewController.h */,
+				01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */,
 				017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */,
 				017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */,
 				017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */,
@@ -929,6 +938,8 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01CDFFE71AEF122400571E71 /* splash-bg@2x.jpg */,
+				01CDFFE51AEF119800571E71 /* splash-bg@3x.jpg */,
 				01CDFFE11AEEB8EC00571E71 /* images@2x */,
 				01CDFFE21AEEB8EC00571E71 /* images@3x */,
 				01CDFFD81AEE7E2D00571E71 /* deal_intro.png */,
@@ -1241,6 +1252,7 @@
 				01A62E341A95DC2E004FD855 /* Lato-SemiboldItalic.ttf in Resources */,
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */,
+				01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */,
 				012BCBB51ADDBEDE00C540B2 /* icn_2.imageset in Resources */,
 				01A62E2B1A95DC2E004FD855 /* Lato-Heavy.ttf in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
@@ -1248,6 +1260,7 @@
 				01A62E611A993BC0004FD855 /* bgblack55.gif in Resources */,
 				01A31D0F1A76C0260095B3EE /* iPhone35.storyboard in Resources */,
 				01A62E311A95DC2E004FD855 /* Lato-MediumItalic.ttf in Resources */,
+				01CDFFE61AEF119800571E71 /* splash-bg@3x.jpg in Resources */,
 				01A62E761A9945E4004FD855 /* appdesign-Slide4@2x.jpg in Resources */,
 				01A62E381A95DC2E004FD855 /* README.txt in Resources */,
 				012BCBB61ADDBEDE00C540B2 /* icn_3.imageset in Resources */,
@@ -1378,6 +1391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CDFFEE1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m in Sources */,
 				019F13EC1A89ABA20099B3CF /* SDWebImageDecoder.m in Sources */,
 				01F2CE2C1A9AD27300BEC23D /* SCLAlertViewResponder.m in Sources */,
 				016729E51A889282001A27FF /* JFMinimalNotification.m in Sources */,
@@ -1409,9 +1423,9 @@
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
 				017E116E1ADEB63800306A16 /* CardViewCell.m in Sources */,
 				017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */,
-				01865F351AE1B0720097BEB6 /* BLTDealDetailViewController.m in Sources */,
 				01FB80411ADB0C9300767B01 /* BLTDealDashboard.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
+				01CDFFF11AEF278200571E71 /* BLTDealDetailViewController.m in Sources */,
 				017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */,
 				01EBDB871A83134B00A9E175 /* BLTSidebarViewController.m in Sources */,
 				01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */,
