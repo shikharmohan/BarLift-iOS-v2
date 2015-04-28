@@ -129,10 +129,10 @@
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [cell setBackgroundColor:[UIColor whiteColor]];
-//    UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
-//    bg_selected.layer.cornerRadius = 16;
-//    [bg_selected setBackgroundColor:[UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1]];
-//    cell.selectedBackgroundView = bg_selected;
+    UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
+    bg_selected.layer.cornerRadius = 16;
+    [bg_selected setBackgroundColor:[UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1]];
+    cell.selectedBackgroundView = bg_selected;
     
 }
 

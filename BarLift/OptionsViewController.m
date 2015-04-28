@@ -52,6 +52,19 @@
 
 }
 
+- (IBAction)logoutButtonPressed:(id)sender {
+    if ([PFUser currentUser]) {
+        [[PFFacebookUtils session] closeAndClearTokenInformation];
+        [PFUser logOut];
+    } else {
+        NSLog(@"currentUser: %@", [PFUser currentUser]);
+    }
+    
+    [self performSegueWithIdentifier:@"toLogin" sender:self];
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

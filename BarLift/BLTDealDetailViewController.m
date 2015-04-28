@@ -15,7 +15,10 @@
 #import "BLTDealDetailCollectionReusableView.h"
 @interface BLTDealDetailViewController ()
 
-@property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, strong) NSMutableArray *labels;
+
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) NSMutableDictionary *dealDetails;
 @property (nonatomic, strong) NSMutableArray *whosGoing;
@@ -31,8 +34,9 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.sections = @[@[@"test"]];
-
+        self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"Icon_Hours@3x", @"Icon_Uber@3x"];
+        self.data = [[NSMutableArray alloc] initWithCapacity:4];
+        self.labels = [[NSMutableArray alloc] initWithCapacity:4];
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
     }
     return self;
@@ -75,10 +79,21 @@
                 [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                     if(!error){
                         self.dealDetails[@"whosGoing"] = objects;
+                        self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"], self.dealDetails[@"venue"][@"city_state"]];
+                        [self.data addObject:@"DEAL DETAILS"];
+                        [self.data addObject:@"HOURS" ];
+                        [self.data addObject:@"CALL UBER"];
+                        [self.labels addObject:@"Open in Maps"];
+                        [self.labels addObject:@"See more >"];
+                        [self.labels addObject:@"10AM-1AM"];
+                        [self.labels addObject:@"$7, 5-8 min"];
+                        
+                        
                         [self.collectionView reloadData];
                     }
                 }];
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
+                [self.collectionView reloadData];
             }
             else{
                 self.header.moreButton.hidden = YES;
@@ -105,7 +120,7 @@
     img.layer.borderWidth = 2.0;
     img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
 
-    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]];
+    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count] + 1];
     self.header.moreButton.hidden = NO;
     
 }
@@ -119,7 +134,7 @@
     BOOL noImage = YES;
     [UIView commitAnimations];
     if([[self.dealDetails objectForKey:@"whosGoing"] count] > 1){
-        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count]];
+        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count] -1];
         NSString *fb_id= [self.dealDetails objectForKey:@"whosGoing"][0][@"fb_id"];
         int i = 0;
         while(fb_id != [PFUser currentUser][@"fb_id"] && noImage){
@@ -145,11 +160,11 @@
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [self.sections count];
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.sections[section] count];
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,8 +173,51 @@
 
     DealCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                              forIndexPath:indexPath];
-
+    if([self.data count] >0){
+        UIImageView *icon = (UIImageView *)[cell viewWithTag:1];
+        UILabel *mainLabel = (UILabel *)[cell viewWithTag:2];
+        UILabel *sublabel = (UILabel *) [cell viewWithTag:3];
+        UIImage *img = [UIImage imageNamed:self.images[indexPath.row]];
+        [icon setImage:img];
+        mainLabel.text = self.data[indexPath.row];
+        sublabel.text = self.labels[indexPath.row];
+    }
+    
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 3){
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"uber://"]]) {
+            NSString *address = self.data[0];
+            NSString *newString = [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            
+            NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=v_LwNpt8BzPKedHILykv2m2-9o8BbvsW&action=setPickup&dropoff[formatted_address]=%@", newString]];
+            [[UIApplication sharedApplication] openURL:url];
+        }
+        else {
+            // No Uber app! Open Mobile Website.
+            NSURL* appStoreURL = [NSURL URLWithString:@"itms-apps://itunes.apple.com/us/app/uber/id368677368?mt=8"];
+            [[UIApplication sharedApplication] openURL:appStoreURL];
+        }
+    }
+    else if (indexPath.row == 0){
+        if ([[UIApplication sharedApplication] canOpenURL:
+             [NSURL URLWithString:@"comgooglemaps://"]]) {
+            
+            NSString *addr = [self.data[0] stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+            [[UIApplication sharedApplication] openURL:
+             [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%@",addr]]];
+        } else {
+            NSLog(@"Can't use comgooglemaps://");
+        }
+    }
+    else if (indexPath.row == 1){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showInfo:self title:@"Deal Details" subTitle:self.dealDetails[@"description"] closeButtonTitle:@"Close" duration:0.0f];
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {

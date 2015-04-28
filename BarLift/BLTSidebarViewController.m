@@ -73,11 +73,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"uber://"]]) {
         [PFCloud callFunctionInBackground:@"getCurrentDeal" withParameters:@{@"location":@"Northwestern"} block:^(id object, NSError *error) {
             if(!error){
-                NSString *address = object[0][@"user"][@"address"];
-                NSString *newString = [address stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
-                NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=v_LwNpt8BzPKedHILykv2m2-9o8BbvsW&action=setPickup&dropoff[formatted_address]=%@", newString]];
-                [[UIApplication sharedApplication] openURL:url];
             }
             else{
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Couldn't Get Information"

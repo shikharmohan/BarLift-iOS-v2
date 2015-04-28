@@ -135,6 +135,12 @@
 		01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFE71AEF122400571E71 /* splash-bg@2x.jpg */; };
 		01CDFFEE1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */; };
 		01CDFFF11AEF278200571E71 /* BLTDealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */; };
+		01CDFFF81AEF5F4A00571E71 /* Icon_Address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF21AEF5F4900571E71 /* Icon_Address@3x.png */; };
+		01CDFFF91AEF5F4A00571E71 /* Icon_Back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF31AEF5F4900571E71 /* Icon_Back@3x.png */; };
+		01CDFFFA1AEF5F4A00571E71 /* Icon_Dealdetails@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF41AEF5F4900571E71 /* Icon_Dealdetails@3x.png */; };
+		01CDFFFB1AEF5F4A00571E71 /* Icon_Hours@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF51AEF5F4A00571E71 /* Icon_Hours@3x.png */; };
+		01CDFFFC1AEF5F4A00571E71 /* Icon_Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF61AEF5F4A00571E71 /* Icon_Menu@3x.png */; };
+		01CDFFFD1AEF5F4A00571E71 /* Icon_Uber@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFF71AEF5F4A00571E71 /* Icon_Uber@3x.png */; };
 		01D2116A1AE04E5000F3806D /* BLTFriendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */; };
 		01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D2116C1AE0579E00F3806D /* BLTStats.m */; };
 		01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 01D2116E1AE0676A00F3806D /* BarLift BG5.jpeg */; };
@@ -394,6 +400,12 @@
 		01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDetailCollectionReusableView.m; sourceTree = "<group>"; };
 		01CDFFEF1AEF278200571E71 /* BLTDealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDealDetailViewController.h; sourceTree = "<group>"; };
 		01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDealDetailViewController.m; sourceTree = "<group>"; };
+		01CDFFF21AEF5F4900571E71 /* Icon_Address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Address@3x.png"; path = "images@3x/Icon_Address@3x.png"; sourceTree = "<group>"; };
+		01CDFFF31AEF5F4900571E71 /* Icon_Back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Back@3x.png"; path = "images@3x/Icon_Back@3x.png"; sourceTree = "<group>"; };
+		01CDFFF41AEF5F4900571E71 /* Icon_Dealdetails@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Dealdetails@3x.png"; path = "images@3x/Icon_Dealdetails@3x.png"; sourceTree = "<group>"; };
+		01CDFFF51AEF5F4A00571E71 /* Icon_Hours@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Hours@3x.png"; path = "images@3x/Icon_Hours@3x.png"; sourceTree = "<group>"; };
+		01CDFFF61AEF5F4A00571E71 /* Icon_Menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Menu@3x.png"; path = "images@3x/Icon_Menu@3x.png"; sourceTree = "<group>"; };
+		01CDFFF71AEF5F4A00571E71 /* Icon_Uber@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon_Uber@3x.png"; path = "images@3x/Icon_Uber@3x.png"; sourceTree = "<group>"; };
 		01D211681AE04E5000F3806D /* BLTFriendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTFriendTableViewController.h; sourceTree = "<group>"; };
 		01D211691AE04E5000F3806D /* BLTFriendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTFriendTableViewController.m; sourceTree = "<group>"; };
 		01D2116B1AE0579E00F3806D /* BLTStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTStats.h; sourceTree = "<group>"; };
@@ -939,6 +951,12 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				01CDFFF21AEF5F4900571E71 /* Icon_Address@3x.png */,
+				01CDFFF31AEF5F4900571E71 /* Icon_Back@3x.png */,
+				01CDFFF41AEF5F4900571E71 /* Icon_Dealdetails@3x.png */,
+				01CDFFF51AEF5F4A00571E71 /* Icon_Hours@3x.png */,
+				01CDFFF61AEF5F4A00571E71 /* Icon_Menu@3x.png */,
+				01CDFFF71AEF5F4A00571E71 /* Icon_Uber@3x.png */,
 				01CDFFE71AEF122400571E71 /* splash-bg@2x.jpg */,
 				01CDFFE51AEF119800571E71 /* splash-bg@3x.jpg */,
 				01CDFFE11AEEB8EC00571E71 /* images@2x */,
@@ -1243,7 +1261,9 @@
 				015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */,
 				011D22F61A9AAEE90082143E /* interested2-3x.png in Resources */,
 				011D22F11A9AAEE90082143E /* bg-3x.jpg in Resources */,
+				01CDFFFA1AEF5F4A00571E71 /* Icon_Dealdetails@3x.png in Resources */,
 				011D22E11A9A5E060082143E /* Barlift-login-logo.png in Resources */,
+				01CDFFFB1AEF5F4A00571E71 /* Icon_Hours@3x.png in Resources */,
 				01A62E531A990524004FD855 /* bltlogo@2x.png in Resources */,
 				01A62E301A95DC2E004FD855 /* Lato-Medium.ttf in Resources */,
 				01A62E741A9945E4004FD855 /* appdesign-Slide3@3x.jpg in Resources */,
@@ -1251,6 +1271,7 @@
 				01A62E251A95DC2E004FD855 /* Lato-Black.ttf in Resources */,
 				01A62E341A95DC2E004FD855 /* Lato-SemiboldItalic.ttf in Resources */,
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
+				01CDFFFC1AEF5F4A00571E71 /* Icon_Menu@3x.png in Resources */,
 				011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */,
 				01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */,
 				012BCBB51ADDBEDE00C540B2 /* icn_2.imageset in Resources */,
@@ -1316,6 +1337,7 @@
 				012BCBB41ADDBEDE00C540B2 /* icn_1.imageset in Resources */,
 				01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */,
 				011D22F41A9AAEE90082143E /* hamburger-3x.png in Resources */,
+				01CDFFFD1AEF5F4A00571E71 /* Icon_Uber@3x.png in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D712121A74754F001C29B7 /* iPhone55.storyboard in Resources */,
 				01A62E5F1A993ABC004FD855 /* bgblack47.gif in Resources */,
@@ -1326,7 +1348,9 @@
 				011D22F91A9AAEE90082143E /* martiniv2-3x.png in Resources */,
 				01A62E271A95DC2E004FD855 /* Lato-Bold.ttf in Resources */,
 				01A62E361A95DC2E004FD855 /* Lato-ThinItalic.ttf in Resources */,
+				01CDFFF91AEF5F4A00571E71 /* Icon_Back@3x.png in Resources */,
 				01A62E6F1A9945E4004FD855 /* appdesign-Slide2@1x.jpg in Resources */,
+				01CDFFF81AEF5F4A00571E71 /* Icon_Address@3x.png in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
 				01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */,
 				01E63BE51A9E7B84000425F2 /* icon-winfo-3x.png in Resources */,

@@ -359,12 +359,17 @@ typedef void(^myCompletion)(BOOL);
                                          action:@selector(showOptions)];
     [singleTap setNumberOfTapsRequired:1];
     pic.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                         initWithTarget:self
+                                         action:@selector(toProfile:)];
+
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
-    
+    [pic addGestureRecognizer:tap];
     UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, 24)];
     [logoBtn setImage:[UIImage imageNamed:@"bltlogo.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
+
 
     // Set a value for the badge
     NSString *badge;
@@ -378,12 +383,16 @@ typedef void(^myCompletion)(BOOL);
     barButton.badgeOriginX = 22;
     barButton.badgeOriginY = -5;
     // Add it as the leftBarButtonItem of the navigation bar
-    
     [self.navigationItem setLeftBarButtonItem:barButton animated:YES];
     [self.navigationItem setRightBarButtonItem:imageButton animated:YES];
+//    [imageButton setTarget:self];
+//    [imageButton setAction:@selector(toProfile:)];
 
 }
 
+-(void) toProfile:(id) sender{
+    [self performSegueWithIdentifier:@"toMyProfile" sender:self];
+}
 
 
 
@@ -487,7 +496,7 @@ typedef void(^myCompletion)(BOOL);
                     cell.image.contentMode = UIViewContentModeScaleAspectFill;
                     cell.image.layer.cornerRadius = img.frame.size.width/2;
                     cell.image.layer.borderWidth = 2.0;
-                    cell.image.layer.borderColor = [UIColor greenColor].CGColor;
+                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
                     cell.image.clipsToBounds = YES;
                 }
                 else{
