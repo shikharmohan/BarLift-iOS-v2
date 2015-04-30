@@ -91,7 +91,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
 {
-    [[PFUser currentUser][@"profile"] setObject:self.arr[indexPath.section] forKey:@"university_name"];
     [[PFUser currentUser] setObject:self.arr[indexPath.section] forKey:@"university_name"];
     self.nextButton.enabled = YES;
 }

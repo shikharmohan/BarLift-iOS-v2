@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="CEB-39-PFg" customClass="ProfileHeader">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1i-3A-Wk0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3V-v8-JZM">
+                        <rect key="frame" x="96" y="60" width="223" height="223"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="P1i-3A-Wk0" secondAttribute="trailing" id="HbK-pu-Ler"/>
+                <constraint firstItem="P1i-3A-Wk0" firstAttribute="top" secondItem="CEB-39-PFg" secondAttribute="top" id="QcM-KQ-rMp"/>
+                <constraint firstAttribute="bottom" secondItem="P1i-3A-Wk0" secondAttribute="bottom" id="dlb-nf-E0p"/>
+                <constraint firstItem="P1i-3A-Wk0" firstAttribute="leading" secondItem="CEB-39-PFg" secondAttribute="leading" id="p1T-n1-jbr"/>
+            </constraints>
+            <size key="customSize" width="306" height="325"/>
+            <connections>
+                <outlet property="backgroundImg" destination="P1i-3A-Wk0" id="R9v-Am-Dek"/>
+                <outlet property="profilePic" destination="g3V-v8-JZM" id="ige-Kw-OjE"/>
+            </connections>
+            <point key="canvasLocation" x="357" y="83"/>
+        </collectionViewCell>
+    </objects>
+</document>

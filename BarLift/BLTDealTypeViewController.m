@@ -153,7 +153,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     [[UIApplication sharedApplication]  registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication]  registerForRemoteNotifications];
     
-    [[PFUser currentUser][@"profile"] setObject:self.selectedDeals forKey:@"deal_types"];
+    [[PFUser currentUser] setObject:self.selectedDeals forKey:@"deal_types"];
     [PFUser currentUser][@"newVersion"] = [NSNumber numberWithBool:YES];
     [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded){

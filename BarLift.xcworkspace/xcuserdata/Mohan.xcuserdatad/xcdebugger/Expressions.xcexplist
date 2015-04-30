@@ -78,10 +78,10 @@
          contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[components1 weekday]">
+               value = "self.sections">
             </PersistentString>
             <PersistentString
-               value = "self.sections">
+               value = "[components1 weekday]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -109,10 +109,10 @@
          contextName = "-[BLTDealDetailViewController removeGoingImage]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
+               value = "img.image">
             </PersistentString>
             <PersistentString
-               value = "img.image">
+               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -140,15 +140,15 @@
          contextName = "-[CSLockedHeaderViewController collectionView:viewForSupplementaryElementOfKind:atIndexPath:]:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
+         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[BLTNudgeFriendsViewController tableView:didSelectRowAtIndexPath:]:BLTNudgeFriendsViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "indexPath">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__43-[CSLockedHeaderViewController refreshPage]_block_invoke:CSLockedHeaderViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[YALSunnyRefreshControl shiftInPercents]:YALSunnyRefreshControl.m">
@@ -163,6 +163,14 @@
       </ContextState>
       <ContextState
          contextName = "-[BLTDealDashboard viewWillAppear:]:BLTDealDashboard.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealTypeViewController finishButtonPressed:]:BLTDealTypeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
@@ -182,10 +190,18 @@
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTProfileViewController viewDidLoad]:BLTProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

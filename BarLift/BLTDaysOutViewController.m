@@ -50,7 +50,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [[PFUser currentUser][@"profile"] setObject:self.selectedDays forKey:@"selected_days"];
+    [[PFUser currentUser] setObject:self.selectedDays forKey:@"selected_days"];
     
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setObject:self.selectedDays forKey:@"days_out"];

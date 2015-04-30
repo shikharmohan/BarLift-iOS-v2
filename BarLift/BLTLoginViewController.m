@@ -200,7 +200,7 @@
                     [PFUser currentUser][@"new"] = @0;
                 }
                 [[PFUser currentUser] setObject:userProfile[@"fb_id"] forKey:@"fb_id"];
-                
+                [[PFUser currentUser] setObject:userProfile[@"name"] forKey:@"full_name"];
                 [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
                 PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
                 [acl setPublicReadAccess:YES];
@@ -226,7 +226,8 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+                                //self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]
+                                if(YES){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
