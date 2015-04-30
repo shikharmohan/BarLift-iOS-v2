@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property BOOL new;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *overlay;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
@@ -85,6 +86,7 @@
    // [self.login setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [self.view addSubview:webViewBG];
     [self.scrollView setFrame:CGRectMake(0, 0, iOSScreenSize.width, 0.77*iOSScreenSize.height)];
+    [self.view addSubview:self.overlay];
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.login];
     [self.view addSubview:self.indicator];
@@ -226,7 +228,7 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                //self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]
+                               // self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]
                                 if(YES){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];

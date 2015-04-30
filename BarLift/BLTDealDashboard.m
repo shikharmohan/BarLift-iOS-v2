@@ -538,7 +538,6 @@ typedef void(^myCompletion)(BOOL);
                 
                 [background sd_setImageWithURL:[NSURL URLWithString:img_url]];
 
-                
                 //interested
                 NSArray *whosGoing = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"whosGoing"];
                 NSInteger int_count = [[whosGoing objectAtIndex:0] count];
@@ -565,17 +564,15 @@ typedef void(^myCompletion)(BOOL);
                     cell.goingLbl.hidden = NO;
                     cell.goingLbl.text = [NSString stringWithFormat:@"+%ld", (long)int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
-                    cell.goingLbl.layer.borderWidth = 2.0;
-                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;
+//                    cell.goingLbl.layer.borderWidth = 2.0;
+//                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;
                 }
                 else{
                     cell.goingLbl.hidden = YES;
                 }
-                
             }
             if([self.sections objectForKey:obj] != nil){
                 NSString *text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"name"];
-                
                 cell.dealName.text = [text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
             }
         }
@@ -584,8 +581,6 @@ typedef void(^myCompletion)(BOOL);
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
                                                          forIndexPath:indexPath];
     }
-
-
     return cell;
 }
 

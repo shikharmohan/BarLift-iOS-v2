@@ -143,6 +143,10 @@
                                 <rect key="frame" x="142" y="445" width="37" height="37"/>
                                 <color key="color" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFz-6S-AdH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -153,6 +157,7 @@
                         <outlet property="indicator" destination="81e-2R-k8k" id="dC6-2K-CfL"/>
                         <outlet property="login" destination="ElY-JF-yjh" id="iiK-Er-kZ4"/>
                         <outlet property="logo" destination="PEy-7p-FTG" id="ERR-3a-eEb"/>
+                        <outlet property="overlay" destination="mFz-6S-AdH" id="OWT-nH-Oy5"/>
                         <outlet property="pageControl" destination="MN3-mO-U7W" id="Q0B-mA-Vgg"/>
                         <outlet property="scrollView" destination="Mbe-HB-5Ot" id="eeB-mN-Hat"/>
                         <outlet property="subtitleLabel" destination="pS3-Cz-3tE" id="2He-pd-duk"/>

@@ -115,8 +115,8 @@
         else{
             [self.labelData setObject:@"No student affiliation." atIndexedSubscript:1];
         }
-        if([PFUser currentUser][@"visited_bar"]){
-            [self.labelData setObject:[PFUser currentUser][@"visited_bar"] atIndexedSubscript:2];
+        if([PFUser currentUser][@"bar_visited"]){
+            [self.labelData setObject:[PFUser currentUser][@"bar_visited"] atIndexedSubscript:2];
         }
         else{
             [self.labelData setObject:@"Start redeeming some deals!" atIndexedSubscript:2];
@@ -172,9 +172,16 @@
     if([self.labelData count] > 0){
         UILabel *sectionLabel = (UILabel *)[cell viewWithTag:1];
         UILabel *lbl = (UILabel *)[cell viewWithTag:2];
-        [lbl setText:self.labelData[indexPath.row]];
-        if(indexPath.row)
+        if(indexPath.row == 3){
+            NSString *result = [[self.labelData[indexPath.row] valueForKey:@"description"] componentsJoinedByString:@", "];;
+            [lbl setText:result];
+        }
+        else{
+            [lbl setText:self.labelData[indexPath.row]];
+        }
+
         [sectionLabel setText:[self.data[indexPath.row] uppercaseString]];
+
     }
     return cell;
 }
