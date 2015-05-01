@@ -29,13 +29,8 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQM-dq-2oY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rgQ-lB-bpY">
-                                <rect key="frame" x="141" y="215" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9v-QW-9fF">
-                                <rect key="frame" x="0.0" y="60" width="320" height="366"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6o-zp-jtZ">
                                         <rect key="frame" x="36" y="13" width="248" height="21"/>
@@ -43,6 +38,11 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rgQ-lB-bpY">
+                                        <rect key="frame" x="140" y="220" width="39" height="37"/>
+                                        <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMp-7n-fG5">
                                         <rect key="frame" x="0.0" y="44" width="320" height="166"/>
                                     </scrollView>
@@ -56,7 +56,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="A9v-QW-9fF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rQM-dq-2oY" secondAttribute="top" constant="5" id="C0x-sW-mEc"/>
+                            <constraint firstItem="A9v-QW-9fF" firstAttribute="top" secondItem="rQM-dq-2oY" secondAttribute="top" id="C0x-sW-mEc"/>
                             <constraint firstAttribute="bottom" secondItem="A9v-QW-9fF" secondAttribute="bottom" id="Gbg-r5-uK8"/>
                             <constraint firstAttribute="centerX" secondItem="A9v-QW-9fF" secondAttribute="centerX" id="yUl-jZ-CoZ"/>
                         </constraints>

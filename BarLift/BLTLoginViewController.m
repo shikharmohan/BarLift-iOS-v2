@@ -115,15 +115,15 @@
 
 
 - (IBAction)loginToFacebook:(UIButton *)sender {
-    self.indicator.hidden = NO;
+    self.indicator.hidden = YES;
     [self.view bringSubviewToFront:self.indicator];
     [self.indicator startAnimating];
+    self.login.enabled = NO;
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends"];
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
             [self.indicator stopAnimating];
-            self.indicator.hidden = YES;
-
+            
             self.new = false;
             if (!user) {
                 NSString *errorMessage = nil;
@@ -134,6 +134,7 @@
                     NSLog(@"Uh oh. An error occurred: %@", error);
                     errorMessage = [error localizedDescription];
                 }
+                [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser]];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
                                                                 message:errorMessage
                                                                delegate:nil
@@ -228,8 +229,8 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                               // self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]
-                                if(YES){
+                               
+                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
@@ -245,7 +246,6 @@
                                             NSLog(@"Could not reset badges");
                                         }
                                     }];
-                                    [PFQuery clearAllCachedResults];
                                     [self performSegueWithIdentifier:@"toDeals" sender:self];
                                 }
                             }

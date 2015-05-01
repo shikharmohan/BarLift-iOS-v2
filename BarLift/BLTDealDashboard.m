@@ -82,6 +82,7 @@ typedef void(^myCompletion)(BOOL);
   //  self.navigationController.navigationBarHidden = NO;
    // self.navigationController.navigationBar.alpha = 1;
     [self setProfilePicture];
+    [self refreshAllDeals];
     [self.collectionView reloadData];
 
 }
@@ -456,30 +457,33 @@ typedef void(^myCompletion)(BOOL);
 //                
 //                [background.layer insertSublayer:gradient atIndex:0];
                 
-                
-                NSArray *whosGoing = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"whosGoing"];
-                NSInteger int_count = [[whosGoing objectAtIndex:0] count];
-                UIImageView *img = (UIImageView *)[cell viewWithTag:30];
-                BOOL interested = NO;
-                for(int i =0; i< int_count; i++){
-                    if([whosGoing[0][i][@"fb_id"] isEqualToString:[PFUser currentUser][@"fb_id"] ]){
-                        interested = YES;
-                        break;
+                NSDictionary *dict = @{@"dealID":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId]};
+                [PFCloud callFunctionInBackground:@"amIInterested" withParameters:dict block:^(id object, NSError *error) {
+                    if(!error){
+                        UIImageView *img = (UIImageView *)[cell viewWithTag:30];
+                        BOOL interested = NO;
+                        if(interested){
+                            cell.image.hidden = NO;
+                            [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+                            cell.image.contentMode = UIViewContentModeScaleAspectFill;
+                            cell.image.layer.cornerRadius = img.frame.size.width/2;
+                            cell.image.layer.borderWidth = 2.0;
+                            cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+                            cell.image.clipsToBounds = YES;
+                        }
+                        else{
+                            cell.image.hidden = YES;
+                        }
                     }
-                }
-                if(interested){
-                    cell.image.hidden = NO;
-                    [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-                    cell.image.contentMode = UIViewContentModeScaleAspectFill;
-                    cell.image.layer.cornerRadius = img.frame.size.width/2;
-                    cell.image.layer.borderWidth = 2.0;
-                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-                    cell.image.clipsToBounds = YES;
-                }
-                else{
-                    cell.image.hidden = YES;
-                }
-                if(int_count > 0){
+                    else{
+                        NSLog(@"error");
+                        cell.image.hidden = YES;
+                    }
+                }];
+                
+                NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"deals_redeemed"];
+               
+                if([int_count intValue] > 0){
                     cell.goingLabel.hidden = NO;
                     cell.goingLabel.text = [NSString stringWithFormat:@"+%ld", (long)int_count];
                     cell.goingLabel.layer.cornerRadius = cell.goingLabel.frame.size.width/2;
@@ -488,18 +492,21 @@ typedef void(^myCompletion)(BOOL);
                 }
                 else{
                     cell.goingLabel.hidden = YES;
-                    
                 }
             }
             else{
                 cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dealCell"
                                                                  forIndexPath:indexPath];
+                //Set community name
                 UILabel *community = (UILabel *) [cell viewWithTag:37];
                 [community setText:[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"community_name"]];
+                
+                //set num more deals
                 UILabel *moreDeals = (UILabel *)[cell viewWithTag:46];
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
                 }
+                
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:45];
                 location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
@@ -529,7 +536,7 @@ typedef void(^myCompletion)(BOOL);
                 }
                 
                 
-                if([int_count integerValue] > 0){
+                if([int_count intValue] > 0){
                     cell.goingLbl.hidden = NO;
                     cell.goingLbl.text = [NSString stringWithFormat:@"+%ld", (long)int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
