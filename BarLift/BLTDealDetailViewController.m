@@ -71,11 +71,13 @@
         PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
         [query whereKey:@"objectId" equalTo:self.dealID];
         [query includeKey:@"venue"];
+        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if(!error){
                 self.dealDetails = objects[0];
                 PFRelation *relation = [objects[0] relationForKey:@"social"];
                 PFQuery *query2 = [relation query];
+                [query2 setCachePolicy:kPFCachePolicyCacheThenNetwork];
                 [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                     if(!error){
                         self.dealDetails[@"whosGoing"] = objects;

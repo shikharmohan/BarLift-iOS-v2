@@ -240,12 +240,13 @@
                                 else{
                                     [PFCloud callFunctionInBackground:@"resetBadges" withParameters:@{@"fb": [PFUser currentUser][@"fb_id"]} block:^(id object, NSError *error) {
                                         if(!error){
-                                            [self performSegueWithIdentifier:@"toDeals" sender:self];
                                         }
                                         else{
                                             NSLog(@"Could not reset badges");
                                         }
                                     }];
+                                    [PFQuery clearAllCachedResults];
+                                    [self performSegueWithIdentifier:@"toDeals" sender:self];
                                 }
                             }
                         }];
