@@ -90,7 +90,7 @@
                     [self.labelData setObject:objects[0][@"days_out"] atIndexedSubscript:3];
                 }
                 else{
-                    [self.labelData setObject:@"We're not sure yet." atIndexedSubscript:3];
+                    [self.labelData setObject:@[] atIndexedSubscript:3];
                 }
                 
                 [self.collectionView reloadData];
@@ -102,31 +102,36 @@
         
     }
     else{
-        self.navigationItem.title = [PFUser currentUser][@"profile"][@"first_name"];
-        if([PFUser currentUser][@"university_name"]){
-            [self.labelData setObject:[PFUser currentUser][@"university_name"] atIndexedSubscript:0];
-        }
-        else{
-            [self.labelData setObject:@"Get the new version!" atIndexedSubscript:0];
-        }
-        if([PFUser currentUser][@"affiliation"]){
-            [self.labelData setObject:[PFUser currentUser][@"affiliation"] atIndexedSubscript:1];
-        }
-        else{
-            [self.labelData setObject:@"No student affiliation." atIndexedSubscript:1];
-        }
-        if([PFUser currentUser][@"bar_visited"]){
-            [self.labelData setObject:[PFUser currentUser][@"bar_visited"] atIndexedSubscript:2];
-        }
-        else{
-            [self.labelData setObject:@"Start redeeming some deals!" atIndexedSubscript:2];
-        }
-        if([PFUser currentUser][@"selected_days"]){
-            [self.labelData setObject:[PFUser currentUser][@"selected_days"] atIndexedSubscript:3];
-        }
-        else{
-            [self.labelData setObject:@"We're not sure yet." atIndexedSubscript:3];
-        }
+        [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if(!error){
+                NSLog(@"Error");
+            }
+        }];
+                self.navigationItem.title = [PFUser currentUser][@"profile"][@"first_name"];
+                if([PFUser currentUser][@"university_name"]){
+                    [self.labelData setObject:[PFUser currentUser][@"university_name"] atIndexedSubscript:0];
+                }
+                else{
+                    [self.labelData setObject:@"Get the new version!" atIndexedSubscript:0];
+                }
+                if([PFUser currentUser][@"affiliation"]){
+                    [self.labelData setObject:[PFUser currentUser][@"affiliation"] atIndexedSubscript:1];
+                }
+                else{
+                    [self.labelData setObject:@"No student affiliation." atIndexedSubscript:1];
+                }
+                if([PFUser currentUser][@"bar_visited"]){
+                    [self.labelData setObject:[PFUser currentUser][@"bar_visited"] atIndexedSubscript:2];
+                }
+                else{
+                    [self.labelData setObject:@"Start redeeming some deals!" atIndexedSubscript:2];
+                }
+                if([PFUser currentUser][@"selected_days"]){
+                    [self.labelData setObject:[PFUser currentUser][@"selected_days"] atIndexedSubscript:3];
+                }
+                else{
+                    [self.labelData setObject:@[] atIndexedSubscript:3];
+                }
         
     }
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
@@ -173,8 +178,14 @@
         UILabel *sectionLabel = (UILabel *)[cell viewWithTag:1];
         UILabel *lbl = (UILabel *)[cell viewWithTag:2];
         if(indexPath.row == 3){
-            NSString *result = [[self.labelData[indexPath.row] valueForKey:@"description"] componentsJoinedByString:@", "];;
-            [lbl setText:result];
+            if([self.labelData[indexPath.row] count] > 0){
+                NSString *result = [[self.labelData[indexPath.row] valueForKey:@"description"] componentsJoinedByString:@", "];;
+                [lbl setText:result];
+
+            }
+            else{
+                [lbl setText:@"We're not sure yet."];
+            }
         }
         else{
             [lbl setText:self.labelData[indexPath.row]];

@@ -22,6 +22,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[BLTProfileViewController collectionView:cellForItemAtIndexPath:]:BLTProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[AppDelegate applicationDidBecomeActive:]:AppDelegate.m">
          <PersistentStrings>
             <PersistentString
@@ -78,10 +86,10 @@
          contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections">
+               value = "[components1 weekday]">
             </PersistentString>
             <PersistentString
-               value = "[components1 weekday]">
+               value = "self.sections">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -109,10 +117,10 @@
          contextName = "-[BLTDealDetailViewController removeGoingImage]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "img.image">
+               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
             </PersistentString>
             <PersistentString
-               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
+               value = "img.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -162,15 +170,15 @@
          contextName = "-[BLTDealDashboard numberOfSectionsInCollectionView:]:BLTDealDashboard.m">
       </ContextState>
       <ContextState
-         contextName = "-[BLTDealDashboard viewWillAppear:]:BLTDealDashboard.m">
-      </ContextState>
-      <ContextState
          contextName = "-[BLTDealTypeViewController finishButtonPressed:]:BLTDealTypeViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "[PFUser currentUser]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BLTDealDashboard viewWillAppear:]:BLTDealDashboard.m">
       </ContextState>
       <ContextState
          contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
@@ -190,10 +198,10 @@
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -11,6 +11,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
+#import "BLTButton.h"
 @interface OptionsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *name;

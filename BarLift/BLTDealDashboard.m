@@ -11,7 +11,6 @@
 #import "BBBadgeBarButtonItem.h"
 
 @interface BLTDealDashboard ()
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
 @property (nonatomic, strong) NSMutableDictionary *sections;
 @property (nonatomic, strong) NSMutableDictionary *dates;
@@ -47,13 +46,7 @@ typedef void(^myCompletion)(BOOL);
     [super viewDidLoad];
     [self.collectionView.viewForBaselineLayout.layer setSpeed:0.1f];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
-    self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
-    self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
-
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
-//    self.sunnyRefreshControl = [YALSunnyRefreshControl attachToScrollView:self.collectionViews
-//                                                                   target:self
-//                                                            refreshAction:@selector(test)];
 
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
         layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 0);
@@ -64,13 +57,14 @@ typedef void(^myCompletion)(BOOL);
         layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 0);
     }
     self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(test)
+    [self.refreshControl addTarget:self action:@selector(reloadDeals)
              forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
 
     
     // Also insets the scroll indicator so it appears below the search bar
     [self setProfilePicture];
+    [self refreshAllDeals];
     self.collectionView.alwaysBounceVertical = YES;
     [self.collectionView registerNib:self.headerNib
           forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
@@ -78,20 +72,24 @@ typedef void(^myCompletion)(BOOL);
     
 }
 
+-(void) reloadDeals{
+    [self refreshAllDeals];
+    [self.refreshControl endRefreshing];
+}
+
 -(void) viewWillAppear:(BOOL)animated  {
   //  self.navigationController.navigationBarHidden = NO;
    // self.navigationController.navigationBar.alpha = 1;
     [self setProfilePicture];
-    [self refreshAllDeals];
-    [self.collectionView reloadData];
-
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(refreshAllDeals) name: @"UpdateUINotification" object: nil];
 }
 
 
 -(void) refreshAllDeals{
-    self.sections =  [[NSMutableDictionary alloc]initWithCapacity:10];
-    self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
-    self.sortedKeys = [[NSMutableArray alloc]initWithCapacity:7];
+    self.sections = [[NSMutableDictionary alloc] initWithCapacity:7];
+    self.dates = [[NSMutableDictionary alloc] initWithCapacity:7];
+    self.sortedKeys = [[NSMutableArray alloc] initWithCapacity:7];
+
     PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
     NSDate *date = [NSDate date];
     [query whereKey:@"deal_end_date" greaterThanOrEqualTo:date];
@@ -147,176 +145,6 @@ typedef void(^myCompletion)(BOOL);
             NSLog(@"%@", error);
         }
     }];
-}
-
-
--(void)refreshAllMyDeals:(myCompletion) compblock{
-    self.sections =  [[NSMutableDictionary alloc]initWithCapacity:3];
-    self.dates = [[NSMutableDictionary alloc]initWithCapacity:7];
-    self.sortedKeys = [[NSMutableArray alloc]initWithCapacity:7];
-    if([[PFUser currentUser] isDataAvailable]){
-        [[PFUser currentUser] fetchInBackgroundWithBlock:^(PFObject *object, NSError *error1) {
-            if(!error1){
-                PFRelation *relation = [object relationForKey:@"deal_list"];
-                PFQuery *query = [relation query];
-                [query includeKey:@"venue"];
-                [query orderByAscending:@"deal_start_date"];
-                [query orderByDescending:@"main"];
-                [query whereKey:@"deal_end_date" greaterThan:[NSDate date]];
-                [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
-                [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                    if(!error){
-                        for(int i =0; i < [objects count]; i++){
-                            PFRelation *relation2 = [objects[i] relationForKey:@"social"];
-                            PFQuery *query2 = [relation2 query];
-                            [query2 setCachePolicy:kPFCachePolicyCacheThenNetwork];
-                            [query2 findObjectsInBackgroundWithBlock:^(NSArray *objs, NSError *error) {
-                                if(!error){
-                                    [objects[i] addObject:objs forKey:@"whosGoing"];
-                                    NSDate *dealDate = objects[i][@"deal_start_date"];
-                                    NSCalendar *cal = [NSCalendar currentCalendar];
-                                    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
-                                    NSDate *today = [cal dateFromComponents:components];
-                                    NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:dealDate];
-                                    NSDate *otherDate = [cal dateFromComponents:components1];
-                                    
-                                    NSString *key = @"";
-                                    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-                                    NSDateComponents *comp = [cal components:NSWeekdayCalendarUnit fromDate:dealDate];
-                                    NSInteger dayNum = [comp weekday]-1;
-                                    NSString *day = [df weekdaySymbols][dayNum];
-                                    NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
-                                    NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
-                                    NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
-                                    NSString *name = [NSString stringWithFormat:@"%@, %@ %@, %@", day, monthName, dt, year];
-                                    key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
-                                    NSLog(@"%@", key);
-                                    if([self.sections valueForKey:key] != nil) {
-                                        // The key existed...
-                                        [[self.sections valueForKey:key] addObject:objects[i]];
-                                    }
-                                    else {
-                                        NSMutableArray *arr = [NSMutableArray arrayWithObjects:objects[i], nil];
-                                        [self.sections setValue:arr forKey:key];
-                                    }
-                                    if(![self.dates objectForKey:key]){
-                                        NSString *name = [NSString stringWithFormat:@"%@, %@ %@", day, monthName, dt];
-                                        if([today isEqualToDate:otherDate]){
-                                            name = @"Today";
-                                        }
-                                        [self.dates setValue:name forKey:key];
-                                    }
-                                    NSLog(@"%@", self.sections);
-                                    self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
-                                    NSSortDescriptor *Sorter = [[NSSortDescriptor alloc] initWithKey:@"main" ascending:NO];
-                                    for(int j = 0; j < [self.sortedKeys count]; j++){
-                                        [[self.sections objectForKey:self.sortedKeys[j]] sortUsingDescriptors:[NSArray arrayWithObject:Sorter]];
-                                    }
-                                    compblock(YES);
-                                    
-                                }
-                            }];
-                        }
-                        //}
-                    }
-                    else{
-                        NSLog(@"%@", error);
-                    }
-                }];
-            }
-            else{
-                NSLog(@"%@", error1);
-            }
-        }];
-        [self.collectionView reloadData];
-    }
-    else{
-        PFRelation *relation = [[PFUser currentUser] relationForKey:@"deal_list"];
-        PFQuery *query = [relation query];
-        [query orderByAscending:@"deal_start_date"];
-        [query orderByDescending:@"main"];
-        [query includeKey:@"venue"];
-        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if(!error){
-                for(int i =0; i < [objects count]; i++){
-                    PFRelation *relation2 = [objects[i] relationForKey:@"social"];
-                    PFQuery *query2 = [relation2 query];
-                    [query2 whereKey:@"deal_end_date" greaterThan:[NSDate date]];
-                    [query2 setCachePolicy:kPFCachePolicyCacheThenNetwork];
-                    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objs, NSError *error) {
-                        if(!error){
-                            [objects[i] addObject:objs forKey:@"whosGoing"];
-                            NSDate *dealDate = objects[i][@"deal_start_date"];
-                            NSCalendar *cal = [NSCalendar currentCalendar];
-                            NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
-                            NSDate *today = [cal dateFromComponents:components];
-                            NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:dealDate];
-                            NSDate *otherDate = [cal dateFromComponents:components1];
-                            
-                            NSString *key = @"";
-                            NSDateFormatter *df = [[NSDateFormatter alloc] init];
-                            NSDateComponents *comp = [cal components:NSWeekdayCalendarUnit fromDate:dealDate];
-                            NSInteger dayNum = [comp weekday]-1;
-                            NSString *day = [df weekdaySymbols][dayNum];
-                            NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
-                            NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
-                            // NSString *year = [NSString stringWithFormat:@"%ld",  (long)[components1 year]];
-                            //    NSString *name = [NSString stringWithFormat:@"%@, %@ %@", day, monthName, dt];
-                            key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
-                            NSLog(@"%@", key);
-                            if([self.sections valueForKey:key] != nil) {
-                                // The key existed...
-                                [[self.sections valueForKey:key] addObject:objects[i]];
-                            }
-                            else {
-                                NSMutableArray *arr = [NSMutableArray arrayWithObjects:objects[i], nil];
-                                [self.sections setValue:arr forKey:key];
-                            }
-                            if(![self.dates objectForKey:key]){
-                                NSString *name = [NSString stringWithFormat:@"%@, %@ %@", day, monthName, dt];
-                                if([today isEqualToDate:otherDate]){
-                                    name = @"Today";
-                                }
-                                [self.dates setValue:name forKey:key];
-                            }
-                            NSLog(@"%@", self.sections);
-                            self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
-                            NSSortDescriptor *Sorter = [[NSSortDescriptor alloc] initWithKey:@"main" ascending:NO];
-                            for(int j = 0; j < [self.sortedKeys count]; j++){
-                                [[self.sections objectForKey:self.sortedKeys[j]] sortUsingDescriptors:[NSArray arrayWithObject:Sorter]];
-                            }
-                            compblock(YES);
-                            
-                        }
-                    }];
-                }
-                //}
-            }
-            else{
-                NSLog(@"%@", error);
-            }
-        }];
-    }
-    [self.collectionView reloadData];
-}
-
--(void)test{
-   // [self.sections removeAllObjects];
-   // [self.dates removeAllObjects];
-    if([self.segmentControl selectedSegmentIndex] == 0){
-        [self refreshAllDeals];
-    }
-    else{
-        [self refreshAllMyDeals:^(BOOL finished) {
-            if(finished){
-                [self.collectionView reloadData];
-            }
-        }];
-    }
-  //  [self performSelector:@selector(reloadList) withObject:nil afterDelay:3.0f];
-    [self.refreshControl endRefreshing];
-
 }
 
 -(void) showOptions{
@@ -377,34 +205,6 @@ typedef void(^myCompletion)(BOOL);
 
 
 
-
--(void)reloadList {
-
-    [UIView performWithoutAnimation:^{
-        [self.collectionView reloadData];
-    }];
-
-
-}
-#pragma mark Segment Control
-
-- (IBAction)segmentChanged:(id)sender {
-    if([sender selectedSegmentIndex] == 0){
-        [self refreshAllDeals];
-    }
-    else{
-        [self refreshAllMyDeals:^(BOOL finished) {
-            if(finished){
-                [self.collectionView reloadData];
-            }
-        }];
-    }
-    
-    
-}
-
-
-
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -436,6 +236,10 @@ typedef void(^myCompletion)(BOOL);
                 UILabel *location = (UILabel *)[cell viewWithTag:5];
                 location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
                 
+                //set community
+                UILabel *community = (UILabel *) [cell viewWithTag:37];
+                [community setText:[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"community_name"]];
+                
                 //set background image
                 UIImageView *background = (UIImageView *)[cell viewWithTag:10];
                 NSString *img_url =[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"image_url"];
@@ -457,12 +261,11 @@ typedef void(^myCompletion)(BOOL);
 //                
 //                [background.layer insertSublayer:gradient atIndex:0];
                 
-                NSDictionary *dict = @{@"dealID":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId]};
-                [PFCloud callFunctionInBackground:@"amIInterested" withParameters:dict block:^(id object, NSError *error) {
+                NSDictionary *dict = @{@"deal_objectId":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId], @"user_objectId":[[PFUser currentUser] objectId]};
+                [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:dict block:^(id object, NSError *error) {
                     if(!error){
                         UIImageView *img = (UIImageView *)[cell viewWithTag:30];
-                        BOOL interested = NO;
-                        if(interested){
+                        if([object objectAtIndex:1]){
                             cell.image.hidden = NO;
                             [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
                             cell.image.contentMode = UIViewContentModeScaleAspectFill;
@@ -481,11 +284,11 @@ typedef void(^myCompletion)(BOOL);
                     }
                 }];
                 
-                NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"deals_redeemed"];
+                NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                
-                if([int_count intValue] > 0){
+                if([int_count integerValue] > 0){
                     cell.goingLabel.hidden = NO;
-                    cell.goingLabel.text = [NSString stringWithFormat:@"+%ld", (long)int_count];
+                    cell.goingLabel.text = [NSString stringWithFormat:@"%@", int_count];
                     cell.goingLabel.layer.cornerRadius = cell.goingLabel.frame.size.width/2;
                     cell.goingLabel.layer.borderWidth = 2.0;
                     cell.goingLabel.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -498,8 +301,8 @@ typedef void(^myCompletion)(BOOL);
                 cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dealCell"
                                                                  forIndexPath:indexPath];
                 //Set community name
-                UILabel *community = (UILabel *) [cell viewWithTag:37];
-                [community setText:[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"community_name"]];
+                UILabel *community = (UILabel *) [cell viewWithTag:35];
+                [community setText:[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"community_name"]];
                 
                 //set num more deals
                 UILabel *moreDeals = (UILabel *)[cell viewWithTag:46];
@@ -519,7 +322,7 @@ typedef void(^myCompletion)(BOOL);
 
                 //interested
                
-                NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"deals_redeemed"];
+                NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                 BOOL interested = NO;
                 
                 if(interested){
@@ -536,9 +339,9 @@ typedef void(^myCompletion)(BOOL);
                 }
                 
                 
-                if([int_count intValue] > 0){
+                if([int_count integerValue] > 0){
                     cell.goingLbl.hidden = NO;
-                    cell.goingLbl.text = [NSString stringWithFormat:@"+%ld", (long)int_count];
+                    cell.goingLbl.text = [NSString stringWithFormat:@"%@", int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
 //                    cell.goingLbl.layer.borderWidth = 2.0;
 //                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;
@@ -610,7 +413,6 @@ typedef void(^myCompletion)(BOOL);
     }
     else{
         return CGSizeMake(0.925*iOSScreenSize.width, 0.267605634*iOSScreenSize.height);
-        
     }
 
 }

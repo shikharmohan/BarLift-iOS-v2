@@ -11,13 +11,13 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
-
+#import "BLTButton.h"
 @interface BLTDaysOutViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *arr;
 @property (nonatomic, strong) NSMutableArray *selectedCells;
 @property (nonatomic, strong) NSMutableArray *selectedDays;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet BLTButton *nextButton;
 
 @end
 
@@ -51,7 +51,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [[PFUser currentUser] setObject:self.selectedDays forKey:@"selected_days"];
-    
+    [[PFUser currentUser] saveInBackground];
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setObject:self.selectedDays forKey:@"days_out"];
     [currentInstallation saveEventually];

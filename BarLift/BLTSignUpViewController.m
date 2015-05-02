@@ -9,12 +9,12 @@
 #import "BLTSignUpViewController.h"
 #import "UIImageView+WebCache.h"
 #import <Parse/Parse.h>
-
+#import "BLTButton.h"
 @interface BLTSignUpViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *studentButton;
-@property (weak, nonatomic) IBOutlet UIButton *gradButton;
+@property (weak, nonatomic) IBOutlet BLTButton *studentButton;
+@property (weak, nonatomic) IBOutlet BLTButton *gradButton;
 
 @end
 

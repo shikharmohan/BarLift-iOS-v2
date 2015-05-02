@@ -11,10 +11,11 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "BLTUserDetailViewController.h"
 #import "Reachability.h"
+#import "BLTButton.h"
 
 @interface BLTLoginViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
-@property (strong, nonatomic) IBOutlet UIButton *login;
+@property (strong, nonatomic) IBOutlet BLTButton *login;
 @property (strong, nonatomic) NSMutableData *imageData;
 - (IBAction)loginToFacebook:(UIButton *)sender;
 @property (strong,nonatomic) UIImage *profPic;
@@ -117,12 +118,9 @@
 - (IBAction)loginToFacebook:(UIButton *)sender {
     self.indicator.hidden = YES;
     [self.view bringSubviewToFront:self.indicator];
-    [self.indicator startAnimating];
-    self.login.enabled = NO;
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends"];
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-            [self.indicator stopAnimating];
             
             self.new = false;
             if (!user) {
@@ -134,7 +132,7 @@
                     NSLog(@"Uh oh. An error occurred: %@", error);
                     errorMessage = [error localizedDescription];
                 }
-                [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser]];
+               // [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser]];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error"
                                                                 message:errorMessage
                                                                delegate:nil
@@ -211,6 +209,7 @@
                 [[PFUser currentUser] setObject:@"Northwestern" forKey:@"community_name"];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded){
+                        [PFQuery clearAllCachedResults];
                         NSLog(@"User saved successfully");
                         NSLog(@"User with facebook logged in!");
                         FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends?limit=1000"];
@@ -230,7 +229,7 @@
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
                                
-                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:NO]]){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];

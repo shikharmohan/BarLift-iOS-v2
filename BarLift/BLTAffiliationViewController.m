@@ -11,10 +11,10 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
-
+#import "BLTButton.h"
 @interface BLTAffiliationViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray* arr;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet BLTButton *nextButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 

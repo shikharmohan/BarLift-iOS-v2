@@ -11,11 +11,11 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
-
+#import "BLTButton.h"
 @interface BLTSelectUnivViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *arr;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet BLTButton *nextButton;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 @end
