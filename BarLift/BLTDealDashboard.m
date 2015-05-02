@@ -73,6 +73,7 @@ typedef void(^myCompletion)(BOOL);
 }
 
 -(void) reloadDeals{
+    
     [self refreshAllDeals];
     [self.refreshControl endRefreshing];
 }
@@ -86,9 +87,6 @@ typedef void(^myCompletion)(BOOL);
 
 
 -(void) refreshAllDeals{
-    self.sections = [[NSMutableDictionary alloc] initWithCapacity:7];
-    self.dates = [[NSMutableDictionary alloc] initWithCapacity:7];
-    self.sortedKeys = [[NSMutableArray alloc] initWithCapacity:7];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
     NSDate *date = [NSDate date];
@@ -102,7 +100,12 @@ typedef void(^myCompletion)(BOOL);
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error){
+            self.sections = [[NSMutableDictionary alloc] initWithCapacity:7];
+            self.dates = [[NSMutableDictionary alloc] initWithCapacity:7];
+            self.sortedKeys = [[NSMutableArray alloc] initWithCapacity:7];
+
             for(int i =0; i < [objects count]; i++){
+
                         NSDate *dealDate = objects[i][@"deal_start_date"];
                         NSCalendar *cal = [NSCalendar currentCalendar];
                         NSDateComponents *components = [cal components:(NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay) fromDate:[NSDate date]];
@@ -118,6 +121,16 @@ typedef void(^myCompletion)(BOOL);
                         NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
                         key = [NSString stringWithFormat:@"%ld%ld%ld", (long)[components1 month], (long)[components1 day], (long)[components1 year]];
                         NSLog(@"%@", key);
+                        NSArray *whoGoing = [objects[i] objectForKey:@"whos_going"];
+                        BOOL interested = NO;
+                        for(int k = 0; k < [whoGoing count]; k++){
+                            if([whoGoing[k] isEqualToString:[[PFUser currentUser] objectId]]){
+                                interested = YES;
+                                [objects[i] addObject:[NSNumber numberWithBool:interested] forKey:@"im_going"];
+                                break;
+                            }
+                        }
+                
                         if([self.sections valueForKey:key] != nil) {
                             // The key existed...
                             [[self.sections valueForKey:key] addObject:objects[i]];
@@ -133,9 +146,16 @@ typedef void(^myCompletion)(BOOL);
                             }
                             [self.dates setValue:name forKey:key];
                         }
+                
+                
             }
             self.sortedKeys = [[self.dates allKeys] sortedArrayUsingSelector:@selector(compare:)];
             NSSortDescriptor *Sorter = [[NSSortDescriptor alloc] initWithKey:@"main" ascending:NO];
+            
+//            for(int i = 0; i < [self.sortedKeys count]; i++){
+//                NSArray *arr = [[NSSet setWithArray:[self.sections objectForKey:self.sortedKeys[i]]] allObjects];
+//                [self.sections setObject:arr forKey:self.sortedKeys[i]];
+//            }
             for(int j = 0; j < [self.sortedKeys count]; j++){
                 [[self.sections objectForKey:self.sortedKeys[j]] sortUsingDescriptors:[NSArray arrayWithObject:Sorter]];
             }
@@ -249,27 +269,26 @@ typedef void(^myCompletion)(BOOL);
             
                 
                 NSDictionary *dict = @{@"deal_objectId":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId], @"user_objectId":[[PFUser currentUser] objectId]};
-                [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:dict block:^(id object, NSError *error) {
-                    if(!error){
-                        UIImageView *img = (UIImageView *)[cell viewWithTag:30];
-                        if([object objectAtIndex:1]){
-                            cell.image.hidden = NO;
-                            [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-                            cell.image.contentMode = UIViewContentModeScaleAspectFill;
-                            cell.image.layer.cornerRadius = img.frame.size.width/2;
-                            cell.image.layer.borderWidth = 2.0;
-                            cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-                            cell.image.clipsToBounds = YES;
-                        }
-                        else{
-                            cell.image.hidden = YES;
-                        }
-                    }
-                    else{
-                        NSLog(@"error");
-                        cell.image.hidden = YES;
-                    }
-                }];
+
+                
+                UIImageView *img = (UIImageView *)[cell viewWithTag:30];
+                // img.image = nil;
+                NSArray *going = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"im_going"];
+                if([going[0] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+                    cell.image.hidden = NO;
+                    [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+                    cell.image.contentMode = UIViewContentModeScaleAspectFill;
+                    cell.image.layer.cornerRadius = img.frame.size.width/2;
+                    cell.image.layer.borderWidth = 2.0;
+                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+                    cell.image.clipsToBounds = YES;
+                }
+                else{
+                    // cell.image.hidden = YES;
+                    cell.image.image = nil;
+                    cell.image.layer.borderColor = [UIColor whiteColor].CGColor;
+                    
+                }
                 
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                

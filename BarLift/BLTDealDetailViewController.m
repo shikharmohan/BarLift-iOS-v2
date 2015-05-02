@@ -12,6 +12,7 @@
 #import "SCLAlertView.h"
 #import "BLTPreviewFriendsViewController.h"
 #import "BLTDealDetailCollectionReusableView.h"
+
 @interface BLTDealDetailViewController ()
 
 @property (nonatomic, strong) NSArray *images;
