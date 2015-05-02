@@ -143,9 +143,6 @@
         BLTProfileViewController *vc = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     [vc setFb_id:[[self.sections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row][@"fb_id"]];
-
-    
-    
 }
 
 -(void) createBackButton{

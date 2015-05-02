@@ -246,20 +246,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 
                 [background sd_setImageWithURL:[NSURL URLWithString:img_url]];
-                
-//                CAGradientLayer *gradient = [CAGradientLayer layer];
-//                gradient.frame = background.frame;
-//                
-//                // Add colors to layer
-//                UIColor *centerColor = [UIColor clearColor];
-//                UIColor *endColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.37];
-//                gradient.colors = [NSArray arrayWithObjects:
-//                                   (id)[endColor CGColor],
-//                                   (id)[centerColor CGColor],
-//                                   (id)[centerColor CGColor],
-//                                   nil];
-//                
-//                [background.layer insertSublayer:gradient atIndex:0];
+            
                 
                 NSDictionary *dict = @{@"deal_objectId":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId], @"user_objectId":[[PFUser currentUser] objectId]};
                 [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:dict block:^(id object, NSError *error) {

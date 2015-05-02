@@ -12,6 +12,7 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
 #import "BLTButton.h"
+
 @interface BLTDealTypeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray *arr;
 @property (strong, nonatomic) NSMutableArray *selectedCells;
@@ -33,6 +34,7 @@
     self.selectedCells = [[NSMutableArray alloc] initWithCapacity:3];
     self.selectedDeals = [[NSMutableArray alloc] initWithCapacity:3];
     self.tableView.allowsMultipleSelection = YES;
+    
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         if(!error){
             self.arr = config[@"deal_types"];

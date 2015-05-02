@@ -9,7 +9,6 @@
 #import "UIImageView+WebCache.h"
 #import "BLTNudgeFriendsViewController.h"
 #import <EventKit/EventKit.h>
-#import "CWStatusBarNotification.h"
 #import "SCLAlertView.h"
 #import "BLTPreviewFriendsViewController.h"
 #import "BLTDealDetailCollectionReusableView.h"
@@ -22,9 +21,7 @@
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) NSMutableDictionary *dealDetails;
 @property (nonatomic, strong) NSMutableArray *whosGoing;
-@property (nonatomic, strong) CWStatusBarNotification *calNotification;
 @property (strong, nonatomic) BLTDealDetailCollectionReusableView *header;
-@property (nonatomic, strong) CWStatusBarNotification *intNotification;
 @property (nonatomic) BOOL interested;
 @end
 

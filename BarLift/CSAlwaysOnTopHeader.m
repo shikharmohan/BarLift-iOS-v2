@@ -32,8 +32,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
     if (layoutAttributes.progressiveness >= 0.58) {
         self.hoursLabel.alpha = 1;
+        self.scrollView.alpha = 1;
     } else {
         self.hoursLabel.alpha = 0;
+        self.scrollView.alpha = 0;
     }
     
 
@@ -93,9 +95,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
                 plus = 37.5;
             }
             UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 166)];
-            textLabel.textColor = [UIColor  whiteColor];
+            textLabel.textColor = UIColorFromRGB(0xF2F2F2);
             textLabel.numberOfLines = 0;
-            [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:33.0f]];
+            [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:27.0f]];
+            
             textLabel.textAlignment = NSTextAlignmentCenter;
 
             if(i == 0){
