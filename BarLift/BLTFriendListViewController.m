@@ -25,6 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
+      NSFontAttributeName, nil]];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.alphabet = @[@"A", @"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];

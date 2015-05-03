@@ -109,7 +109,7 @@
                         
                     }
                 }];
-                self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"]];
+                self.data[0] = [NSString stringWithFormat:@"%@", self.dealDetails[@"venue"][@"address"]];
                 self.data[1] = @"DEAL DETAILS";
                 self.data[2] = @"DEAL VIRALITY";
                 self.data[3] = @"CALL UBER";

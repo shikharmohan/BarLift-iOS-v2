@@ -24,6 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
+      NSFontAttributeName, nil]];
     // Do any additional setup after loading the view.
     self.selectedCells = [[NSMutableArray alloc] initWithCapacity:1];
     self.arr = [[NSMutableArray alloc] initWithCapacity:1];

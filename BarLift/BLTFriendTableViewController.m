@@ -22,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
+      NSFontAttributeName, nil]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

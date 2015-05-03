@@ -50,7 +50,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
+      NSFontAttributeName, nil]];
     self.profileInfo = [[NSMutableDictionary alloc] initWithCapacity:3];
     if(fb_id != nil){
         PFQuery *query = [PFQuery queryWithClassName:@"_User"];

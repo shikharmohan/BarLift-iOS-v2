@@ -46,8 +46,8 @@ typedef void(^myCompletion)(BOOL);
     [super viewDidLoad];
     [self.navigationController.navigationBar setTitleTextAttributes:
      [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor whiteColor],UITextAttributeTextColor,
-      [UIFont fontWithName:@"Lato-Regular" size:18],
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
       NSFontAttributeName, nil]];
     
     [self.collectionView.viewForBaselineLayout.layer setSpeed:0.1f];
@@ -213,7 +213,7 @@ typedef void(^myCompletion)(BOOL);
         badge =@"0";
     }
     barButton.badgeValue = badge;
-    barButton.badgeOriginX = 22;
+    barButton.badgeOriginX = 21;
     barButton.badgeOriginY = -5;
     // Add it as the leftBarButtonItem of the navigation bar
     [self.navigationItem setLeftBarButtonItem:barButton animated:YES];
@@ -298,10 +298,7 @@ typedef void(^myCompletion)(BOOL);
                
                 if([int_count integerValue] > 0){
                     cell.goingLabel.hidden = NO;
-                    cell.goingLabel.text = [NSString stringWithFormat:@"%@", int_count];
-                    cell.goingLabel.layer.cornerRadius = cell.goingLabel.frame.size.width/2;
-                    cell.goingLabel.layer.borderWidth = 2.0;
-                    cell.goingLabel.layer.borderColor = [UIColor whiteColor].CGColor;
+                    cell.goingLabel.text = [NSString stringWithFormat:@"%@ people interested", int_count];
                 }
                 else{
                     cell.goingLabel.hidden = YES;

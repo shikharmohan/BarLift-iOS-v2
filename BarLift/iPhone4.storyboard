@@ -7,18 +7,6 @@
         <mutableArray key="Lato-Bold.ttf">
             <string>Lato-Bold</string>
             <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-            <string>Lato-Bold</string>
-        </mutableArray>
-        <mutableArray key="Lato-Medium.ttf">
-            <string>Lato-Medium</string>
-            <string>Lato-Medium</string>
         </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
@@ -28,43 +16,8 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
-            <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
         </mutableArray>
@@ -85,7 +38,7 @@
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElY-JF-yjh" customClass="BLTButton">
                                 <rect key="frame" x="52" y="504" width="217" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="LOGIN WITH FACEBOOK">
                                     <color key="titleColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,14 +68,14 @@
                                         <rect key="frame" x="105" y="90" width="111" height="111"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We're glad to have you on board, swipe left to learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS3-Cz-3tE">
-                                        <rect key="frame" x="22" y="305" width="277" height="42"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                        <rect key="frame" x="22" y="305" width="277" height="53"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to BarLift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqb-ZM-ffj">
                                         <rect key="frame" x="52" y="229" width="216" height="30"/>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -137,7 +90,7 @@
                             </activityIndicatorView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFz-6S-AdH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.1058823529" green="0.2156862745" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,25 +146,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcome-bg-2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-1L-qta">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <view alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNG-j3-oy3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's set up your 'going-out' profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzF-im-iRg">
+                                        <rect key="frame" x="31" y="311" width="259" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJk-6D-8dC">
                                 <rect key="frame" x="85" y="88" width="150" height="150"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="PDz-mZ-HeG">
                                 <rect key="frame" x="10" y="253" width="301" height="50"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's set up your 'going-out' profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzF-im-iRg">
-                                <rect key="frame" x="31" y="311" width="259" height="21"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV5-0W-w9L" customClass="BLTButton">
                                 <rect key="frame" x="63" y="356" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="I'M A STUDENT &gt;">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -232,7 +191,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-cc-jed" customClass="BLTButton">
                                 <rect key="frame" x="63" y="419" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="I'VE GRADUATED &gt;">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,7 +244,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipu-AJ-dEO" customClass="BLTButton">
                                 <rect key="frame" x="63" y="470" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="NEXT &gt;">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,7 +263,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsu-Hz-YNd">
                                 <rect key="frame" x="131" y="530" width="49" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="&lt; Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,7 +287,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1a-TE-huT">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -344,7 +303,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you go to school?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-lR-NhW">
                                 <rect key="frame" x="16" y="33" width="288" height="46"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -362,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Na-Qd-F3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="1869"/>
+            <point key="canvasLocation" x="1117" y="1885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GBo-PA-8S6">
@@ -408,7 +367,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-6j-09m" customClass="BLTButton">
                                 <rect key="frame" x="0.0" y="109" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Friends">
@@ -427,7 +386,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHW-ee-Ky8" customClass="BLTButton">
                                 <rect key="frame" x="0.0" y="160" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Nudges">
@@ -446,7 +405,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-0T-EYH" customClass="BLTButton">
                                 <rect key="frame" x="0.0" y="58" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="My Profile">
@@ -465,7 +424,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St0-Mj-n3n" customClass="BLTButton">
                                 <rect key="frame" x="16" y="382" width="288" height="42"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -486,7 +445,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-rI-Rzu" customClass="BLTButton">
                                 <rect key="frame" x="0.0" y="211" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                 <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Change Location">
@@ -574,7 +533,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-5N-MAU">
                                                     <rect key="frame" x="14" y="0.0" width="278" height="43"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -625,7 +584,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="32" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-s3-OyF">
                                                     <rect key="frame" x="82" y="10" width="204" height="56"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -712,7 +671,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-ri-h7t">
                                                     <rect key="frame" x="91" y="21" width="188" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -856,9 +815,9 @@
                                             <rect key="frame" x="0.0" y="31" width="296" height="158"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5MY-gp-nb1">
-                                                    <rect key="frame" x="12" y="122" width="120" height="33"/>
+                                                    <rect key="frame" x="11" y="122" width="120" height="33"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2v-jl-EIN">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2v-jl-EIN">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="33"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -872,14 +831,14 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Z2-NvA">
                                                     <rect key="frame" x="8" y="5" width="280" height="99"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23 people interested" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-3O-g6m">
-                                                    <rect key="frame" x="171" y="122" width="112" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-3O-g6m">
+                                                    <rect key="frame" x="172" y="122" width="112" height="33"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -896,7 +855,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEAL OF THE DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACN-9E-BbQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="296" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -910,7 +869,7 @@
                                 <size key="customSize" width="296" height="255"/>
                                 <connections>
                                     <outlet property="dealName" destination="kep-Z2-NvA" id="XNN-OF-aem"/>
-                                    <outlet property="goingLbl" destination="lVe-3O-g6m" id="hy1-ED-N8u"/>
+                                    <outlet property="goingLabel" destination="lVe-3O-g6m" id="BR8-iS-hhI"/>
                                     <outlet property="image" destination="Ywu-iy-13o" id="evZ-dl-ZNU"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealDetail" id="sUi-IK-Bcz"/>
                                 </connections>
@@ -952,7 +911,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="296" height="92"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="44" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwr-oV-6He">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="44" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwr-oV-6He">
                                             <rect key="frame" x="8" y="8" width="280" height="36"/>
                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -961,7 +920,7 @@
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-YQ-7xc">
                                             <rect key="frame" x="12" y="60" width="102" height="28"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="46" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tn-6O-LIn">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="46" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tn-6O-LIn">
                                                     <rect key="frame" x="0.0" y="0.0" width="102" height="28"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1102,7 +1061,7 @@
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odd-Ls-zsl">
                                             <rect key="frame" x="155" y="8" width="157" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1112,7 +1071,7 @@
                                         </view>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-A0-uqX">
                                             <rect key="frame" x="8" y="16" width="147" height="18"/>
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1149,17 +1108,17 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEALS REDEEMED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUk-XG-KVH">
                                     <rect key="frame" x="8" y="59" width="87" height="21"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PARTY SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plt-ru-Z8M">
                                     <rect key="frame" x="113" y="59" width="85" height="21"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BARLIFT FRIENDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmB-8L-Mud">
                                     <rect key="frame" x="215" y="55" width="97" height="29"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-uR-eRw">
@@ -1211,15 +1170,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open in Maps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-SJ-hnD">
-                                            <rect key="frame" x="241" y="14" width="71" height="46"/>
-                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scu-R3-8gm">
                                             <rect key="frame" x="67" y="16" width="155" height="41"/>
-                                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1230,6 +1183,12 @@
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICg-1e-3a2">
                                             <rect key="frame" x="12" y="17" width="40" height="40"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open in Maps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK0-SJ-hnD">
+                                            <rect key="frame" x="235" y="14" width="77" height="46"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1242,9 +1201,9 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7m-K7-zxJ" customClass="BLTButton">
-                                    <rect key="frame" x="12" y="105" width="125" height="39"/>
+                                    <rect key="frame" x="12" y="105" width="143" height="39"/>
                                     <color key="backgroundColor" red="0.1058823529" green="0.2156862745" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                     <color key="tintColor" red="0.90980392160000001" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="NUDGE FRIENDS">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1267,7 +1226,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
                                             <rect key="frame" x="16" y="11" width="226" height="35"/>
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                             <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1286,13 +1245,10 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYf-t0-Xzb">
                                             <rect key="frame" x="168" y="51" width="30" height="30"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEF-fO-VQ3">
-                                            <rect key="frame" x="206" y="51" width="30" height="30"/>
-                                        </imageView>
                                         <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-Ez-vrQ" customClass="BLTButton">
-                                            <rect key="frame" x="244" y="51" width="68" height="30"/>
+                                            <rect key="frame" x="206" y="46" width="102" height="39"/>
                                             <color key="backgroundColor" red="0.1058823529" green="0.2156862745" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <state key="normal" title="MORE &gt;">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1313,9 +1269,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsB-bX-cSL" customClass="BLTButton">
-                                    <rect key="frame" x="183" y="104" width="125" height="39"/>
+                                    <rect key="frame" x="165" y="105" width="143" height="39"/>
                                     <color key="backgroundColor" red="0.1058823529" green="0.2156862745" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="12"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                     <state key="normal" title="ADD TO CALENDAR">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1342,7 +1298,6 @@
                                 <outletCollection property="imageViews" destination="Mep-Ms-NmF" id="K8i-wC-eIq"/>
                                 <outletCollection property="imageViews" destination="zjr-yv-nBZ" id="mwW-Xe-cDV"/>
                                 <outletCollection property="imageViews" destination="HYf-t0-Xzb" id="T4F-l8-At3"/>
-                                <outletCollection property="imageViews" destination="kEF-fO-VQ3" id="eSF-oE-LIS"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -1386,7 +1341,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elI-Mn-93w">
                                                     <rect key="frame" x="72" y="8" width="215" height="59"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1444,7 +1399,7 @@
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-68-31X">
                                             <rect key="frame" x="155" y="8" width="157" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1454,7 +1409,7 @@
                                         </view>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-kV-YAh">
                                             <rect key="frame" x="8" y="16" width="147" height="18"/>
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1491,17 +1446,17 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEALS REDEEMED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi2-fh-hZq">
                                     <rect key="frame" x="8" y="59" width="87" height="21"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PARTY SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tea-pe-8ji">
                                     <rect key="frame" x="113" y="59" width="85" height="21"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BARLIFT FRIENDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEB-U3-ACw">
                                     <rect key="frame" x="215" y="55" width="97" height="29"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-Mo-274">
@@ -1550,7 +1505,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-XS-iXQ" customClass="BLTButton">
                                 <rect key="frame" x="63" y="470" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="NEXT &gt;">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1569,7 +1524,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-cI-359">
                                 <rect key="frame" x="131" y="530" width="49" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="&lt; Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1593,7 +1548,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rU1-xP-8S4">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1609,7 +1564,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What days do you go out?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lG-bu-tFF">
                                 <rect key="frame" x="37" y="28" width="246" height="46"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1624,7 +1579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbt-4N-iAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="1869"/>
+            <point key="canvasLocation" x="1863" y="1885"/>
         </scene>
         <!--Affiliation View Controller-->
         <scene sceneID="1yj-fG-PMZ">
@@ -1691,7 +1646,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCq-5c-ikU">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1707,14 +1662,14 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you part of any of these organizations?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsu-Dc-B1O">
                                 <rect key="frame" x="41" y="28" width="238" height="63"/>
-                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khh-Aa-qUy" customClass="BLTButton">
                                 <rect key="frame" x="63" y="470" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="NEXT &gt;">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1733,7 +1688,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDE-bt-TEU">
                                 <rect key="frame" x="131" y="530" width="49" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="&lt; Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1754,7 +1709,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJo-GZ-ni0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="1869"/>
+            <point key="canvasLocation" x="1514" y="1885"/>
         </scene>
         <!--Deal Type View Controller-->
         <scene sceneID="ZDI-PX-DTK">
@@ -1774,7 +1729,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Get-aM-hPK" customClass="BLTButton">
                                 <rect key="frame" x="63" y="470" width="195" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="FINISH">
                                     <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1806,7 +1761,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Margarita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="szw-az-pf8">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.20392156859999999" green="0.25098039220000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1822,13 +1777,13 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of deals are you interested in? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLk-80-Oha">
                                 <rect key="frame" x="45" y="28" width="230" height="67"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ev-KU-C01">
                                 <rect key="frame" x="131" y="530" width="49" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="&lt; Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1850,7 +1805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qy-9n-Bnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2259" y="1869"/>
+            <point key="canvasLocation" x="2259" y="1885"/>
         </scene>
     </scenes>
     <resources>
@@ -1867,10 +1822,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sUi-IK-Bcz"/>
         <segue reference="AUY-Ap-5Nd"/>
-        <segue reference="kqA-3m-kGR"/>
+        <segue reference="GmA-wK-XxK"/>
         <segue reference="Xrf-ET-qHk"/>
+        <segue reference="sUi-IK-Bcz"/>
         <segue reference="D4e-dy-Yhk"/>
         <segue reference="a4Y-qk-Jlj"/>
     </inferredMetricsTieBreakers>

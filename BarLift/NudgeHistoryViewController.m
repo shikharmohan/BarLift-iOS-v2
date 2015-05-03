@@ -29,6 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Avenir-Medium" size:18],
+      NSFontAttributeName, nil]];
     // Do any additional setup after loading the view.
     self.array = [[NSMutableArray alloc] initWithCapacity:15];
     [PFCloud callFunctionInBackground:@"getMyNudges" withParameters:@{} block:^(id object, NSError *error) {
