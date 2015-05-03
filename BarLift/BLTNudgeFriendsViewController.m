@@ -257,7 +257,8 @@
 
 -(void)showDoneAlert{
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"Nudges sent!" subTitle:@"" closeButtonTitle:@"Done" duration:0.0f];
+    [alert showSuccess:self title:@"Nudges sent!" subTitle:@"" closeButtonTitle:@"Done" duration:0.5f];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

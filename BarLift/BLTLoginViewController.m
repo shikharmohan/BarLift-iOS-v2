@@ -206,7 +206,7 @@
                 PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
                 [acl setPublicReadAccess:YES];
                 [[PFUser currentUser] setObject:acl forKey:@"ACL"];
-                [[PFUser currentUser] setObject:@"Northwestern" forKey:@"community_name"];
+                [[PFUser currentUser] setObject:@"Dev" forKey:@"community_name"];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded){
                         [PFQuery clearAllCachedResults];

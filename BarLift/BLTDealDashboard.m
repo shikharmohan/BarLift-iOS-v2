@@ -91,7 +91,7 @@ typedef void(^myCompletion)(BOOL);
     PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
     NSDate *date = [NSDate date];
     [query whereKey:@"deal_end_date" greaterThanOrEqualTo:date];
-    [query whereKey:@"community_name" equalTo:@"Dev"];
+    [query whereKey:@"community_name" equalTo:[PFUser currentUser][@"community_name"]];
     [query orderByAscending:@"deal_start_date"];
     [query orderByDescending:@"main"];
     [query includeKey:@"user"];

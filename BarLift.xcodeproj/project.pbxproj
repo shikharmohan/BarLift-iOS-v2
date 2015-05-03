@@ -605,6 +605,8 @@
 			children = (
 				0136AEEC1ADE131700C55397 /* OptionsViewController.h */,
 				0136AEED1ADE131700C55397 /* OptionsViewController.m */,
+				01CDFFD51AED9AE400571E71 /* BLTLocationSelectViewController.h */,
+				01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */,
 			);
 			name = OptionsController;
 			sourceTree = "<group>";
@@ -906,8 +908,6 @@
 				01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */,
 				01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */,
 				01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */,
-				01CDFFD51AED9AE400571E71 /* BLTLocationSelectViewController.h */,
-				01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */,
 				01CDFFDE1AEE984E00571E71 /* BLTDealTypeViewController.h */,
 				01CDFFDF1AEE984E00571E71 /* BLTDealTypeViewController.m */,
 			);
