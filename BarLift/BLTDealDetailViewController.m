@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UINib *headerNib;
 @property (nonatomic, strong) NSMutableDictionary *dealDetails;
 @property (nonatomic, strong) NSMutableArray *whosGoing;
+@property (nonatomic) NSInteger numGoing;
 @property (strong, nonatomic) BLTDealDetailCollectionReusableView *header;
 @property (nonatomic) BOOL interested;
 @end
@@ -32,7 +33,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"Icon_Hours@3x", @"Icon_Uber@3x"];
+        self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"Icon_viral@3x", @"Icon_Uber@3x"];
         self.data = [[NSMutableArray alloc] initWithCapacity:4];
         self.labels = [[NSMutableArray alloc] initWithCapacity:4];
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
@@ -73,23 +74,50 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if(!error){
                 self.dealDetails = objects[0];
-                PFRelation *relation = [objects[0] relationForKey:@"social"];
-                PFQuery *query2 = [relation query];
-                [query2 setCachePolicy:kPFCachePolicyCacheThenNetwork];
-                [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                
+                [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:@{@"deal_objectId":self.dealID} block:^(id object, NSError *error) {
                     if(!error){
-                        self.dealDetails[@"whosGoing"] = objects;
-                        self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"], self.dealDetails[@"venue"][@"city_state"]];
-                        [self.data addObject:@"DEAL DETAILS"];
-                        [self.data addObject:@"HOURS" ];
-                        [self.data addObject:@"CALL UBER"];
-                        [self.labels addObject:@"Open in Maps"];
-                        [self.labels addObject:@"See more >"];
-                        [self.labels addObject:@"10AM-1AM"];
-                        [self.labels addObject:@"$7, 5-8 min"];
-                        [self.collectionView reloadData];
+                        self.whosGoing = object[0];
+                        self.numGoing = [object[0] count];
+                        if([object[1] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+                            self.interested = YES;
+                        }
+                        else{
+                            self.interested = NO;
+                        }
+                        [PFCloud callFunctionInBackground:@"getNumberNudges" withParameters:@{} block:^(id object, NSError *error) {
+                            if(!error){
+                                NSDate *date = [objects[0] createdAt];
+                                NSCalendar *calendar = [NSCalendar currentCalendar];
+                                NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:date];
+                                NSInteger hour = [components hour];
+                                NSInteger total = [object integerValue] + (long)hour;
+                                self.labels[2] = [NSString stringWithFormat:@"%ld nudges sent", (long)total];
+                            }
+                            else{
+                                NSDate *date = [objects[0] createdAt];
+                                NSCalendar *calendar = [NSCalendar currentCalendar];
+                                NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:date];
+                                NSInteger hour = [components hour];
+                                self.labels[2] = [NSString stringWithFormat:@"%ld nudges sent", (long)hour];
+                            }
+                            [self.collectionView reloadData];
+                        }];
+                        
+                    }
+                    else{
+                        
                     }
                 }];
+                self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"], self.dealDetails[@"venue"][@"city_state"]];
+                self.data[1] = @"DEAL DETAILS";
+                self.data[2] = @"DEAL VIRALITY";
+                self.data[3] = @"CALL UBER";
+                self.labels[0] = @"Open in Maps";
+                self.labels[1] = @"See more >";
+                self.labels[2] = @"";
+                self.labels[3] = @"Go to Uber";
+
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
                 [self.collectionView reloadData];
             }
@@ -104,56 +132,17 @@
 
 -(void) viewWillAppear:(BOOL)animated{
     //self.navigationController.navigationBar.alpha = 0.0;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGoingImage) name:@"imGoing" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeGoingImage) name:@"notGoing" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateGoing) name:@"imGoing" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notGoing) name:@"notGoing" object:nil];
 }
 
--(void)updateGoingImage{
-    NSString *fb_id = [PFUser currentUser][@"fb_id"];
-    UIImageView *img = self.header.imageViews[0];
-    [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
-    img.contentMode = UIViewContentModeScaleAspectFill;
-    img.layer.cornerRadius = img.frame.size.width/2;
-    img.clipsToBounds = YES;
-    img.layer.borderWidth = 2.0;
-    img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-
-    self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count] + 1];
-    self.header.moreButton.hidden = NO;
-    
+-(void) updateGoing{
+    self.numGoing++;
+    [self.collectionView reloadData];
 }
-
--(void)removeGoingImage{
-    UIImageView *img = self.header.imageViews[0];
-    [UIView beginAnimations:nil context:nil];
-    [UIView animateWithDuration:1 animations:nil];
-    img.layer.borderWidth = 0.0f;
-    img.image = nil;
-    BOOL noImage = YES;
-    [UIView commitAnimations];
-    if([[self.dealDetails objectForKey:@"whosGoing"] count] > 1){
-        self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", [[self.dealDetails objectForKey:@"whosGoing"] count] -1];
-        NSString *fb_id= [self.dealDetails objectForKey:@"whosGoing"][0][@"fb_id"];
-        int i = 0;
-        while(fb_id != [PFUser currentUser][@"fb_id"] && noImage){
-            UIImageView *img = self.header.imageViews[0];
-            [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
-            img.contentMode = UIViewContentModeScaleAspectFill;
-            img.layer.cornerRadius = img.frame.size.width/2;
-            img.clipsToBounds = YES;
-            img.layer.borderWidth = 2.0;
-            img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-            noImage = NO;
-            i++;
-            fb_id = [self.dealDetails objectForKey:@"whosGoing"][i][@"fb_id"];
-        }
-
-    }
-    else{
-        self.header.whosIntLabel.text = @"Who's Interested:";
-        self.header.moreButton.hidden = YES;
-    }
-    
+-(void) notGoing{
+    self.numGoing--;
+    [self.collectionView reloadData];
 }
 #pragma mark UICollectionViewDataSource
 
@@ -220,7 +209,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        int count =[[self.dealDetails objectForKey:@"whosGoing"] count];
+        int count = [self.whosGoing count];
         int imgCount = 0;
         
         self.header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];
@@ -230,7 +219,9 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         }
         else{
             self.header.moreButton.hidden = NO;
-            self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", count];
+            if(self.numGoing > 1){
+                self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", self.numGoing];
+            }
             if(count > 6){
                 imgCount = 6;
             }
@@ -238,17 +229,13 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
                 imgCount = count;
             }
             for(int i = 0; i < imgCount; i++){
-                NSString *fb_id = [self.dealDetails objectForKey:@"whosGoing"][i][@"fb_id"];
-                if(fb_id != [PFUser currentUser][@"fb_id"]){
+                NSString *fb_id = self.whosGoing[i][@"fb_id"];
                     UIImageView *img = nil;
                     img = self.header.imageViews[i];
                     [img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
                     img.contentMode = UIViewContentModeScaleAspectFill;
                     img.layer.cornerRadius = img.frame.size.width/2;
                     img.clipsToBounds = YES;
-//                    img.layer.borderWidth = 2.0;
-//                    img.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-                }
             }
         }
         return self.header;
@@ -296,13 +283,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
             cell.dealNames = self.dealDetails[@"add_deals"];
             cell.dealID = self.dealID;
             [cell.backgroundImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dealDetails[@"image_url"]]]];
-            for(int i = 0; i < [[self.dealDetails objectForKey:@"whosGoing" ] count]; i++){
-                if([[PFUser currentUser][@"fb_id"] isEqual:[[[self.dealDetails objectForKey:@"whosGoing"] objectAtIndex:i] objectForKey:@"fb_id"]]){
-                    cell.interested = YES;
-                    self.interested = YES;
-                    [self updateGoingImage];
-                    break;
-                }
+            if(self.interested){
+                cell.interested = YES;
             }
             [cell setUpView];
             //set up scrollview
