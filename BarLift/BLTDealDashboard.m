@@ -44,6 +44,12 @@ typedef void(^myCompletion)(BOOL);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],UITextAttributeTextColor,
+      [UIFont fontWithName:@"Lato-Regular" size:18],
+      NSFontAttributeName, nil]];
+    
     [self.collectionView.viewForBaselineLayout.layer setSpeed:0.1f];
     iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
@@ -176,8 +182,8 @@ typedef void(^myCompletion)(BOOL);
     pic.contentMode = UIViewContentModeScaleAspectFill;
     [pic setFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
     pic.layer.cornerRadius = pic.frame.size.width/2;
-    pic.layer.borderWidth = 2.0;
-    pic.layer.borderColor = [UIColor whiteColor].CGColor;
+  //  pic.layer.borderWidth = 2.0;
+   // pic.layer.borderColor = [UIColor whiteColor].CGColor;
 
     pic.clipsToBounds = YES;
     
@@ -413,7 +419,7 @@ typedef void(^myCompletion)(BOOL);
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     
     if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
-        return CGSizeMake(0.925*iOSScreenSize.width, 0.429577465*iOSScreenSize.height);
+        return CGSizeMake(0.925*iOSScreenSize.width, 0.448943662*iOSScreenSize.height);
     }
     else{
         return CGSizeMake(0.925*iOSScreenSize.width, 0.267605634*iOSScreenSize.height);

@@ -109,14 +109,14 @@
                         
                     }
                 }];
-                self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"], self.dealDetails[@"venue"][@"city_state"]];
+                self.data[0] = [NSString stringWithFormat:@"%@ %@", self.dealDetails[@"venue"][@"address"]];
                 self.data[1] = @"DEAL DETAILS";
                 self.data[2] = @"DEAL VIRALITY";
                 self.data[3] = @"CALL UBER";
                 self.labels[0] = @"Open in Maps";
                 self.labels[1] = @"See more >";
                 self.labels[2] = @"";
-                self.labels[3] = @"Go to Uber";
+                self.labels[3] = @"Go to Uber >";
 
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
             }
@@ -143,6 +143,7 @@
 -(void) notGoing{
     self.numGoing = [self.dealDetails[@"num_accepted"] integerValue]-1;
     [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
+    self.interested= NO;
     [self.collectionView reloadData];
 }
 #pragma mark UICollectionViewDataSource
@@ -286,6 +287,9 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
             [cell.backgroundImg sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dealDetails[@"image_url"]]]];
             if(self.interested){
                 cell.interested = YES;
+            }
+            else{
+                cell.interested = NO;
             }
             [cell setUpView];
             //set up scrollview

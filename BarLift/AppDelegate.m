@@ -11,7 +11,7 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <ParseCrashReporting/ParseCrashReporting.h>
 #import <FacebookSDK/FacebookSDK.h>
-//#import "Mixpanel.h"
+#import "Mixpanel.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +27,9 @@
     //[self setupMixpanel];
     [Parse setApplicationId:@"5DZi1FrdZcwBKXIxMplWsqYu3cEEumlmFDB1kKnC"
     clientKey:@"tzrpMCtTU3FWlZAZUHFXBHObk4i9WW5AxAYKHx3E"];
-
+    
+    NSDictionary *notificationPayload = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+    NSString *dealID = launchOptions[@"dealID"];
     
     [PFFacebookUtils initializeFacebook];    
     if (application.applicationState != UIApplicationStateBackground) {
@@ -78,11 +80,11 @@
     return YES;
 }
 
-/*- (void)setupMixpanel {
-    // Initialize Mixpanel
+- (void)setupMixpanel {
+   //  Initialize Mixpanel
     Mixpanel *mixpanel = [Mixpanel sharedInstanceWithToken:@"1f02c2cfc86e3a68a485c0fab0c17c34"];
     
-    // Identify
+  //   Identify
     NSString *mixpanelUUID = [[NSUserDefaults standardUserDefaults] objectForKey:@"MixpanelUUID"];
     
     if (!mixpanelUUID) {
@@ -94,7 +96,7 @@
     NSDictionary *properties = @{@"APIVersion": @"0.1"};
     [mixpanel registerSuperProperties:properties];
 
-} */
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -146,6 +148,12 @@
     [currentInstallation setObject:[PFUser currentUser] forKey:@"user"];
     currentInstallation.channels = @[ @"global", @"Northwestern" ];
     [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
