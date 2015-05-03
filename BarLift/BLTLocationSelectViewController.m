@@ -91,6 +91,7 @@
     [self.selectedCells addObject:[self.arr[indexPath.row] uppercaseString]];
     [[PFUser currentUser] setObject:self.arr[indexPath.row] forKey:@"community_name"];
     [[PFUser currentUser] saveInBackground];
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

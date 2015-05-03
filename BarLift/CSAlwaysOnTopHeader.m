@@ -91,6 +91,12 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         [self.scrollView setPagingEnabled:YES];
         [self.scrollView setContentSize:CGSizeMake(numLbl*iOSScreensize.width, 166)];
         self.pageControl.numberOfPages = numLbl;
+        if(numLbl <= 1){
+            self.pageControl.hidden = YES;
+        }
+        else{
+            self.pageControl.hidden = NO;
+        }
         self.pageControl.currentPage = 0;
 
         for(int i =0; i<numLbl; i++)
@@ -107,7 +113,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 166)];
             textLabel.textColor = UIColorFromRGB(0xF2F2F2);
             textLabel.numberOfLines = 0;
-            [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:27.0f]];
+            [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:23.0f]];
             
             textLabel.textAlignment = NSTextAlignmentCenter;
 

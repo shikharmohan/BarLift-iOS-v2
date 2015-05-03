@@ -33,7 +33,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"Icon_viral@3x", @"Icon_Uber@3x"];
+        self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"icon_viral@3x", @"Icon_Uber@3x"];
         self.data = [[NSMutableArray alloc] initWithCapacity:4];
         self.labels = [[NSMutableArray alloc] initWithCapacity:4];
         self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
@@ -136,11 +136,13 @@
 }
 
 -(void) updateGoing{
-    self.numGoing++;
+    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue]+1;
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
     [self.collectionView reloadData];
 }
 -(void) notGoing{
-    self.numGoing--;
+    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue]-1;
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
     [self.collectionView reloadData];
 }
 #pragma mark UICollectionViewDataSource

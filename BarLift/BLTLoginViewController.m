@@ -116,11 +116,14 @@
 
 
 - (IBAction)loginToFacebook:(UIButton *)sender {
-    self.indicator.hidden = YES;
+    self.indicator.hidden = NO;
     [self.view bringSubviewToFront:self.indicator];
+    [self.indicator startAnimating];
     // Set permissions required from the facebook user account
     NSArray *permissionsArray = @[@"public_profile", @"email", @"user_friends"];
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+            [self.indicator stopAnimating];
+            self.indicator.hidden = YES;
             
             self.new = false;
             if (!user) {

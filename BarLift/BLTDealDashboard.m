@@ -73,7 +73,6 @@ typedef void(^myCompletion)(BOOL);
 }
 
 -(void) reloadDeals{
-    
     [self refreshAllDeals];
     [self.refreshControl endRefreshing];
 }
@@ -87,7 +86,6 @@ typedef void(^myCompletion)(BOOL);
 
 
 -(void) refreshAllDeals{
-
     PFQuery *query = [PFQuery queryWithClassName:@"Deal"];
     NSDate *date = [NSDate date];
     [query whereKey:@"deal_end_date" greaterThanOrEqualTo:date];
@@ -246,11 +244,11 @@ typedef void(^myCompletion)(BOOL);
                                                                  forIndexPath:indexPath];
                 UILabel *moreDeals = (UILabel *)[cell viewWithTag:6];
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
+                    moreDeals.hidden = NO;
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
                 }
                 else{
                     moreDeals.hidden = YES;
-                    moreDeals.superview.hidden = YES;
                 }
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:5];
