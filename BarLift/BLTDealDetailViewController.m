@@ -75,7 +75,7 @@
             if(!error){
                 self.dealDetails = objects[0];
                 
-                [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:@{@"deal_objectId":self.dealID} block:^(id object, NSError *error) {
+                [PFCloud callFunctionInBackground:@"getWhosGoing" withParameters:@{@"deal_objectId":self.dealID, @"user_objectId": [[PFUser currentUser] objectId]} block:^(id object, NSError *error) {
                     if(!error){
                         self.whosGoing = object[0];
                         self.numGoing = [object[0] count];
@@ -85,7 +85,7 @@
                         else{
                             self.interested = NO;
                         }
-                        [PFCloud callFunctionInBackground:@"getNumberNudges" withParameters:@{} block:^(id object, NSError *error) {
+                        [PFCloud callFunctionInBackground:@"getNumberNudges" withParameters:@{@"dealID":self.dealID} block:^(id object, NSError *error) {
                             if(!error){
                                 NSDate *date = [objects[0] createdAt];
                                 NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -119,7 +119,6 @@
                 self.labels[3] = @"Go to Uber";
 
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
-                [self.collectionView reloadData];
             }
             else{
                 self.header.moreButton.hidden = YES;
