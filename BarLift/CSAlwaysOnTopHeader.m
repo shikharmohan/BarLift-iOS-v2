@@ -52,7 +52,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             }
         }];
         self.interested = YES;
-        self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x2ECC71);
+        self.interestedButton.layer.borderWidth = 0.0f;
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
     }
     else{
@@ -60,8 +61,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             if(!error){
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"notGoing" object:self];
             }
-        }];        self.interested = NO;
-        self.interestedButton.backgroundColor = UIColorFromRGB(0x3D4B63);
+        }];
+        self.interested = NO;
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0xFFFFFF);
+        self.interestedButton.layer.borderWidth = 2.0f;
+        self.interestedButton.layer.borderColor = UIColorFromRGB(0xFF613D).CGColor;
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     
@@ -70,9 +74,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void) setUpView{
     if(self.interested){
-        self.interestedButton.backgroundColor = UIColorFromRGB(0x2ECC71);
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x2ECC71);
+        self.interestedButton.layer.borderWidth = 0.0f;
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"imGoing" object:self];
+    }
+    else{
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0xFFFFFF);
+        self.interestedButton.layer.borderWidth = 2.0f;
+        self.interestedButton.layer.borderColor = UIColorFromRGB(0xFF613D).CGColor;
+        [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     if(self.dealNames != nil && self.dealHeadline != nil){
         self.scrollView.delegate = self;

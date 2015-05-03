@@ -274,21 +274,21 @@ typedef void(^myCompletion)(BOOL);
                 UIImageView *img = (UIImageView *)[cell viewWithTag:30];
                 // img.image = nil;
                 NSArray *going = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"im_going"];
-                if([going[0] isEqualToNumber:[NSNumber numberWithBool:YES]]){
-                    cell.image.hidden = NO;
-                    [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-                    cell.image.contentMode = UIViewContentModeScaleAspectFill;
-                    cell.image.layer.cornerRadius = img.frame.size.width/2;
-                    cell.image.layer.borderWidth = 2.0;
-                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-                    cell.image.clipsToBounds = YES;
-                }
-                else{
-                    // cell.image.hidden = YES;
-                    cell.image.image = nil;
-                    cell.image.layer.borderColor = [UIColor whiteColor].CGColor;
-                    
-                }
+//                if([going[0] isEqualToNumber:[NSNumber numberWithBool:YES]]){
+//                    cell.image.hidden = NO;
+//                    [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+//                    cell.image.contentMode = UIViewContentModeScaleAspectFill;
+//                    cell.image.layer.cornerRadius = img.frame.size.width/2;
+//                    cell.image.layer.borderWidth = 2.0;
+//                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
+//                    cell.image.clipsToBounds = YES;
+//                }
+//                else{
+//                    // cell.image.hidden = YES;
+//                    cell.image.image = nil;
+//                    cell.image.layer.borderColor = [UIColor whiteColor].CGColor;
+//                    
+//                }
                 
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                
@@ -329,20 +329,20 @@ typedef void(^myCompletion)(BOOL);
                 //interested
                
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
-                BOOL interested = NO;
-                
-                if(interested){
-                    cell.img.hidden = NO;
-                    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-                    cell.img.contentMode = UIViewContentModeScaleAspectFill;
-                    cell.img.layer.cornerRadius = cell.img.frame.size.width/2;
-                    cell.img.layer.borderWidth = 2.0;
-                    cell.img.layer.borderColor = [UIColor greenColor].CGColor;
-                    cell.img.clipsToBounds = YES;
-                }
-                else{
-                    cell.image.hidden = YES;
-                }
+//                BOOL interested = NO;
+//                
+//                if(interested){
+//                    cell.img.hidden = NO;
+//                    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
+//                    cell.img.contentMode = UIViewContentModeScaleAspectFill;
+//                    cell.img.layer.cornerRadius = cell.img.frame.size.width/2;
+//                    cell.img.layer.borderWidth = 2.0;
+//                    cell.img.layer.borderColor = [UIColor greenColor].CGColor;
+//                    cell.img.clipsToBounds = YES;
+//                }
+//                else{
+//                    cell.image.hidden = YES;
+//                }
                 
                 
                 if([int_count integerValue] > 0){

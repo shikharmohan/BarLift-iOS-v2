@@ -87,8 +87,6 @@
                         [self.labels addObject:@"See more >"];
                         [self.labels addObject:@"10AM-1AM"];
                         [self.labels addObject:@"$7, 5-8 min"];
-                        
-                        
                         [self.collectionView reloadData];
                     }
                 }];

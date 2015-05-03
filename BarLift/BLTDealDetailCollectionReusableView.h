@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BLTButton.h"
 @interface BLTDealDetailCollectionReusableView : UICollectionReusableView
-@property (weak, nonatomic) IBOutlet UIButton *moreButton;
+@property (weak, nonatomic) IBOutlet BLTButton *moreButton;
 @property (weak, nonatomic) IBOutlet UILabel *whosIntLabel;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageViews;
 @end

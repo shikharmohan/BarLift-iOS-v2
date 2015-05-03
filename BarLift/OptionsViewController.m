@@ -15,8 +15,7 @@
 @interface OptionsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UIButton *dismissModal;
-@property (weak, nonatomic) IBOutlet UIButton *nudgeButton;
+@property (weak, nonatomic) IBOutlet BLTButton *nudgeButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *closeButton;
 
 @end
