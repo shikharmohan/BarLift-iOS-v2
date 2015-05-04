@@ -34,13 +34,16 @@
         self.data = @[@"College", @"Affiliation", @"Last Visited Bar", @"Going out days"];
         self.labelData = [[NSMutableArray alloc] initWithCapacity:4];
         iOSScreensize = [UIScreen mainScreen].bounds.size;
-        if(iOSScreensize.width == 320){
-            self.headerNib = [UINib nibWithNibName:@"ProfileHeader4" bundle:nil];
+        if(iOSScreensize.height == 568){
+            self.headerNib = [UINib nibWithNibName:@"BLTTop" bundle:nil];
         }
-        else if(iOSScreensize.width == 375){
+        else if (iOSScreensize.height == 480){
+            self.headerNib = [UINib nibWithNibName:@"ProfileHeader35" bundle:nil];
+        }
+        else if(iOSScreensize.height == 667){
             self.headerNib = [UINib nibWithNibName:@"ProfileHeader47" bundle:nil];
         }
-        else if(iOSScreensize.width == 414){
+        else if(iOSScreensize.height == 736){
             self.headerNib = [UINib nibWithNibName:@"ProfileHeader55" bundle:nil];
         }
     }
@@ -141,10 +144,10 @@
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
     
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
-        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 264);
+        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 0.464788732*iOSScreensize.height);
         layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height);
         
-        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 230);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 0.404929577*iOSScreensize.height);
     }
     
     // If we want to disable the sticky header effect

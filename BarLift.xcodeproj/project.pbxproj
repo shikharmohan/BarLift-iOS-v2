@@ -38,6 +38,7 @@
 		0134F6D71AF65FCB007662EB /* icon_viral@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0134F6D61AF65FCB007662EB /* icon_viral@2x.png */; };
 		0134F6D91AF65FDB007662EB /* icon_viral@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0134F6D81AF65FDB007662EB /* icon_viral@3x.png */; };
 		0136AEEE1ADE131700C55397 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136AEED1ADE131700C55397 /* OptionsViewController.m */; };
+		013D05FB1AF70F560056704C /* BLTTopHeader47.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D05FA1AF70F560056704C /* BLTTopHeader47.xib */; };
 		015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF9751A9D832A00163480 /* nudgeicon-3x.png */; };
 		015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */; };
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
@@ -270,6 +271,7 @@
 		0134F6D81AF65FDB007662EB /* icon_viral@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viral@3x.png"; sourceTree = "<group>"; };
 		0136AEEC1ADE131700C55397 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		0136AEED1ADE131700C55397 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		013D05FA1AF70F560056704C /* BLTTopHeader47.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLTTopHeader47.xib; sourceTree = "<group>"; };
 		015AF9751A9D832A00163480 /* nudgeicon-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nudgeicon-3x.png"; sourceTree = "<group>"; };
 		015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburgerv2-3x.png"; sourceTree = "<group>"; };
 		0166EC6C1A6995C40016E679 /* BarLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -728,6 +730,7 @@
 				017E115D1ADE247B00306A16 /* BLTTopHeader.h */,
 				017E115E1ADE247B00306A16 /* BLTTopHeader.m */,
 				017E115F1ADE247B00306A16 /* BLTTopHeader4.xib */,
+				013D05FA1AF70F560056704C /* BLTTopHeader47.xib */,
 			);
 			name = "Deal View";
 			sourceTree = "<group>";
@@ -1326,6 +1329,7 @@
 				011FD4131AF13AF100EDC3DC /* ProfileHeader47.xib in Resources */,
 				012BCBB51ADDBEDE00C540B2 /* icn_2.imageset in Resources */,
 				01A62E2B1A95DC2E004FD855 /* Lato-Heavy.ttf in Resources */,
+				013D05FB1AF70F560056704C /* BLTTopHeader47.xib in Resources */,
 				01E427111AEFBFE400C58B43 /* splash_bg@3x.png in Resources */,
 				01D711A41A6CC827001C29B7 /* login_background.gif in Resources */,
 				01F2CE1F1A9AC6B500BEC23D /* locationarrow-3x.png in Resources */,

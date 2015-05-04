@@ -36,20 +36,22 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         iOSScreensize = [UIScreen mainScreen].bounds.size;
-        if(iOSScreensize.width == 320){
-            self.headerNib = [UINib nibWithNibName:@"ProfileHeader4" bundle:nil];
+        if(iOSScreensize.height == 568){
+            self.headerNib = [UINib nibWithNibName:@"BLTTopHeader4" bundle:nil];
         }
-        else if(iOSScreensize.width == 375){
-            self.headerNib = [UINib nibWithNibName:@"ProfileHeader47" bundle:nil];
+        else if (iOSScreensize.height == 480){
+            self.headerNib = [UINib nibWithNibName:@"BLTTopHeader35" bundle:nil];
         }
-        else if(iOSScreensize.width == 414){
-            self.headerNib = [UINib nibWithNibName:@"ProfileHeader55" bundle:nil];
+        else if(iOSScreensize.height == 667){
+            self.headerNib = [UINib nibWithNibName:@"BLTTopHeader47" bundle:nil];
+        }
+        else if(iOSScreensize.height == 736){
+            self.headerNib = [UINib nibWithNibName:@"BLTTopHeader55" bundle:nil];
         }
 
         self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"icon_viral@3x", @"Icon_Uber@3x"];
         self.data = [[NSMutableArray alloc] initWithCapacity:4];
         self.labels = [[NSMutableArray alloc] initWithCapacity:4];
-        self.headerNib = [UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil];
     }
     return self;
 }
@@ -236,7 +238,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         else{
             self.header.moreButton.hidden = NO;
             if(self.numGoing > 1){
-                self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%d going):", self.numGoing];
+                self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%ld going):", (long)self.numGoing];
             }
             if(count > 6){
                 imgCount = 6;
@@ -257,7 +259,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
         return self.header;
 
     } else if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
-        CSAlwaysOnTopHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+        BLTTopHeader *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                                             withReuseIdentifier:@"header"
                                                                                 forIndexPath:indexPath];
         
