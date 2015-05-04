@@ -62,8 +62,6 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
-	<key>UILaunchImageFile~iphone</key>
-	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>iPhone4</string>
 	<key>UIMainStoryboardFile</key>

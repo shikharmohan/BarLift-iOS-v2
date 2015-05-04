@@ -13,6 +13,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "Mixpanel.h"
 #import "SCLAlertView/SCLAlertView.h"
+#define MIXPANEL_TOKEN @"c8ecf107a7f4ff594d74841c9147c330"
+
 @interface AppDelegate ()
 
 @end
@@ -24,7 +26,6 @@
         
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [self.window setBackgroundColor:[UIColor whiteColor]];
-    //[self setupMixpanel];
     [Parse setApplicationId:@"5DZi1FrdZcwBKXIxMplWsqYu3cEEumlmFDB1kKnC"
     clientKey:@"tzrpMCtTU3FWlZAZUHFXBHObk4i9WW5AxAYKHx3E"];
     
@@ -74,6 +75,9 @@
         [self.window makeKeyAndVisible];
     }
     
+    [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
 
     
     // Override point for customization after application launch.
@@ -155,8 +159,9 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
     
     
-//    NSString *dealID = userInfo[@"dealID"];
-//    NSString *fbid = userInfo[@"sender"];
+    NSString *dealID = userInfo[@"dealID"];
+    NSString *fbid = userInfo[@"sender"];
+    NSString *reply = userInfo[@"reply"];
     CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSScreenSize.height == 480){
         UIStoryboard *iPhone35Storyboard = [UIStoryboard storyboardWithName:@"iPhone35" bundle:nil];
@@ -171,14 +176,14 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController = initialViewController;
         [self.window makeKeyAndVisible];
-//        if(dealID != nil && fbid != nil && [PFUser currentUser]){
-//            SCLAlertView *alert = [[SCLAlertView alloc] init];
-//            NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1};
-//            [alert addButton:@"Yes, I'm Interested" actionBlock:^{
-//                [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
-//            }];
-//            [alert showInfo:initialViewController title:@"Are you interested" subTitle:@"Tell your friend that you'll be going out" closeButtonTitle:@"Cancel" duration:0.0f];
-//        }
+        if(dealID != nil && fbid != nil && [PFUser currentUser] && ![reply isEqualToString:@"Reply"]){
+            SCLAlertView *alert = [[SCLAlertView alloc] init];
+            NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1, @"reply":@1};
+            [alert addButton:@"Yes, I'm Interested" actionBlock:^{
+                [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
+            }];
+            [alert showInfo:initialViewController title:@"Are you interested?" subTitle:@"Tell your friend that you'll be going out" closeButtonTitle:@"Cancel" duration:0.0f];
+        }
     }
     if (iOSScreenSize.height == 667){
         UIStoryboard *iPhone47Storyboard = [UIStoryboard storyboardWithName:@"iPhone47" bundle:nil];

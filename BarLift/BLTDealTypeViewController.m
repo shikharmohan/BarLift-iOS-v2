@@ -24,11 +24,9 @@
 @end
 
 @implementation BLTDealTypeViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.indicator.hidden =YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.nextButton.enabled = NO;
@@ -36,13 +34,12 @@
     self.selectedCells = [[NSMutableArray alloc] initWithCapacity:3];
     self.selectedDeals = [[NSMutableArray alloc] initWithCapacity:3];
     self.tableView.allowsMultipleSelection = YES;
-    
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         if(!error){
             self.arr = config[@"deal_types"];
             [self.tableView reloadData];
         }
-
+        
     }];
 }
 
@@ -80,7 +77,21 @@
     cell.layer.cornerRadius = 16;
     UILabel *lbl = (UILabel *)[cell viewWithTag:1];
     lbl.text = [self.arr[indexPath.section] uppercaseString];
-    
+    if([self.selectedCells containsObject:indexPath]){
+        [cell setBackgroundColor:[UIColor whiteColor]];
+        UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
+        bg_selected.layer.cornerRadius = 16;
+        [bg_selected setBackgroundColor:[UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1]];
+        cell.backgroundView = bg_selected;
+    }
+    else{
+        [cell setBackgroundColor:[UIColor whiteColor]];
+        UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
+        bg_selected.layer.cornerRadius = 16;
+        [bg_selected setBackgroundColor:[UIColor whiteColor]];
+        
+        cell.backgroundView = bg_selected;
+    }
     
     return cell;
     
@@ -97,22 +108,11 @@
     {
         [self.selectedCells removeObject:indexPath];
         [self.selectedDeals removeObject:self.arr[indexPath.section]];
-        [cell setBackgroundColor:[UIColor whiteColor]];
-        UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
-        bg_selected.layer.cornerRadius = 16;
-        [bg_selected setBackgroundColor:[UIColor whiteColor]];
-        
-        cell.backgroundView = bg_selected;
     }
     else
     {
         [self.selectedCells addObject:indexPath];
         [self.selectedDeals addObject:self.arr[indexPath.section]];
-        [cell setBackgroundColor:[UIColor whiteColor]];
-        UIView *bg_selected = [[UIView alloc] initWithFrame:cell.bounds];
-        bg_selected.layer.cornerRadius = 16;
-        [bg_selected setBackgroundColor:[UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1]];
-        cell.backgroundView = bg_selected;
         
     }
     if([self.selectedCells count] > 0){

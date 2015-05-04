@@ -253,7 +253,7 @@
     for(int i = 0; i < [self.recipients count]; i++){
         NSString *fb = [self.recipients objectAtIndex:i];
         if(self.dealID != nil){
-            NSDictionary *dict =  @{@"deal_objectId":self.dealID, @"fb":fb};
+            NSDictionary *dict =  @{@"deal_objectId":self.dealID, @"fb":fb, @"backMsg":@0, @"reply":@0};
             [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
         }
     }

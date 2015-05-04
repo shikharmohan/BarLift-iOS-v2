@@ -36,22 +36,6 @@
 		0136AEEE1ADE131700C55397 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136AEED1ADE131700C55397 /* OptionsViewController.m */; };
 		013D05FB1AF70F560056704C /* BLTTopHeader47.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D05FA1AF70F560056704C /* BLTTopHeader47.xib */; };
 		013D05FD1AF732370056704C /* BLTTopHeader55.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D05FC1AF732370056704C /* BLTTopHeader55.xib */; };
-		013D062E1AF739430056704C /* icon_beer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D061E1AF739430056704C /* icon_beer@2x.png */; };
-		013D062F1AF739430056704C /* icon_beer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D061F1AF739430056704C /* icon_beer@3x.png */; };
-		013D06301AF739430056704C /* icon_champagne@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06201AF739430056704C /* icon_champagne@2x.png */; };
-		013D06311AF739430056704C /* icon_champagne@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06211AF739430056704C /* icon_champagne@3x.png */; };
-		013D06321AF739430056704C /* icon_club@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06221AF739430056704C /* icon_club@2x.png */; };
-		013D06331AF739430056704C /* icon_club@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06231AF739430056704C /* icon_club@3x.png */; };
-		013D06341AF739430056704C /* icon_cocktail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06241AF739430056704C /* icon_cocktail@2x.png */; };
-		013D06351AF739430056704C /* icon_cocktail@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06251AF739430056704C /* icon_cocktail@3x.png */; };
-		013D06361AF739430056704C /* icon_cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06261AF739430056704C /* icon_cover@2x.png */; };
-		013D06371AF739430056704C /* icon_cover@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06271AF739430056704C /* icon_cover@3x.png */; };
-		013D06381AF739430056704C /* icon_food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06281AF739430056704C /* icon_food@2x.png */; };
-		013D06391AF739430056704C /* icon_food@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06291AF739430056704C /* icon_food@3x.png */; };
-		013D063A1AF739430056704C /* icon_shots@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D062A1AF739430056704C /* icon_shots@2x.png */; };
-		013D063B1AF739430056704C /* icon_shots@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D062B1AF739430056704C /* icon_shots@3x.png */; };
-		013D063C1AF739430056704C /* icon_wine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D062C1AF739430056704C /* icon_wine@2x.png */; };
-		013D063D1AF739430056704C /* icon_wine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D062D1AF739430056704C /* icon_wine@3x.png */; };
 		013D063F1AF73A600056704C /* icon_viral@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D063E1AF73A600056704C /* icon_viral@3x.png */; };
 		013D06411AF73A750056704C /* icon_viral@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06401AF73A750056704C /* icon_viral@2x.png */; };
 		013D06461AF73E130056704C /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06421AF73E130056704C /* Default-375w-667h@2x~iphone.png */; };
@@ -283,22 +267,6 @@
 		0136AEED1ADE131700C55397 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		013D05FA1AF70F560056704C /* BLTTopHeader47.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLTTopHeader47.xib; sourceTree = "<group>"; };
 		013D05FC1AF732370056704C /* BLTTopHeader55.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLTTopHeader55.xib; sourceTree = "<group>"; };
-		013D061E1AF739430056704C /* icon_beer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_beer@2x.png"; sourceTree = "<group>"; };
-		013D061F1AF739430056704C /* icon_beer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_beer@3x.png"; sourceTree = "<group>"; };
-		013D06201AF739430056704C /* icon_champagne@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_champagne@2x.png"; sourceTree = "<group>"; };
-		013D06211AF739430056704C /* icon_champagne@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_champagne@3x.png"; sourceTree = "<group>"; };
-		013D06221AF739430056704C /* icon_club@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_club@2x.png"; sourceTree = "<group>"; };
-		013D06231AF739430056704C /* icon_club@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_club@3x.png"; sourceTree = "<group>"; };
-		013D06241AF739430056704C /* icon_cocktail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_cocktail@2x.png"; sourceTree = "<group>"; };
-		013D06251AF739430056704C /* icon_cocktail@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_cocktail@3x.png"; sourceTree = "<group>"; };
-		013D06261AF739430056704C /* icon_cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_cover@2x.png"; sourceTree = "<group>"; };
-		013D06271AF739430056704C /* icon_cover@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_cover@3x.png"; sourceTree = "<group>"; };
-		013D06281AF739430056704C /* icon_food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_food@2x.png"; sourceTree = "<group>"; };
-		013D06291AF739430056704C /* icon_food@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_food@3x.png"; sourceTree = "<group>"; };
-		013D062A1AF739430056704C /* icon_shots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shots@2x.png"; sourceTree = "<group>"; };
-		013D062B1AF739430056704C /* icon_shots@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_shots@3x.png"; sourceTree = "<group>"; };
-		013D062C1AF739430056704C /* icon_wine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_wine@2x.png"; sourceTree = "<group>"; };
-		013D062D1AF739430056704C /* icon_wine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_wine@3x.png"; sourceTree = "<group>"; };
 		013D063E1AF73A600056704C /* icon_viral@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viral@3x.png"; sourceTree = "<group>"; };
 		013D06401AF73A750056704C /* icon_viral@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viral@2x.png"; sourceTree = "<group>"; };
 		013D06421AF73E130056704C /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -1014,22 +982,6 @@
 				013D06431AF73E130056704C /* Default-414w-736h@3x~iphone.png */,
 				013D06441AF73E130056704C /* Default-568h@2x.png */,
 				013D06451AF73E130056704C /* Default@2x.png */,
-				013D061E1AF739430056704C /* icon_beer@2x.png */,
-				013D061F1AF739430056704C /* icon_beer@3x.png */,
-				013D06201AF739430056704C /* icon_champagne@2x.png */,
-				013D06211AF739430056704C /* icon_champagne@3x.png */,
-				013D06221AF739430056704C /* icon_club@2x.png */,
-				013D06231AF739430056704C /* icon_club@3x.png */,
-				013D06241AF739430056704C /* icon_cocktail@2x.png */,
-				013D06251AF739430056704C /* icon_cocktail@3x.png */,
-				013D06261AF739430056704C /* icon_cover@2x.png */,
-				013D06271AF739430056704C /* icon_cover@3x.png */,
-				013D06281AF739430056704C /* icon_food@2x.png */,
-				013D06291AF739430056704C /* icon_food@3x.png */,
-				013D062A1AF739430056704C /* icon_shots@2x.png */,
-				013D062B1AF739430056704C /* icon_shots@3x.png */,
-				013D062C1AF739430056704C /* icon_wine@2x.png */,
-				013D062D1AF739430056704C /* icon_wine@3x.png */,
 				0127951E1AEFC9A800EEBF53 /* Icon_Close@2x.png */,
 				0127951F1AEFC9A800EEBF53 /* Icon_Close@3x.png */,
 				01CDFFF21AEF5F4900571E71 /* Icon_Address@3x.png */,
@@ -1347,7 +1299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A62E571A990578004FD855 /* hamburger@3x.png in Resources */,
-				013D06311AF739430056704C /* icon_champagne@3x.png in Resources */,
 				01EBDB721A81A2DF00A9E175 /* Contents.json in Resources */,
 				015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */,
 				01A62E061A95CB6D004FD855 /* bg@3x.jpg in Resources */,
@@ -1361,7 +1312,6 @@
 				01A62E531A990524004FD855 /* bltlogo@2x.png in Resources */,
 				01A62E301A95DC2E004FD855 /* Lato-Medium.ttf in Resources */,
 				01A62E741A9945E4004FD855 /* appdesign-Slide3@3x.jpg in Resources */,
-				013D06351AF739430056704C /* icon_cocktail@3x.png in Resources */,
 				01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */,
 				013D06481AF73E130056704C /* Default-568h@2x.png in Resources */,
 				01A62E251A95DC2E004FD855 /* Lato-Black.ttf in Resources */,
@@ -1369,7 +1319,6 @@
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				01CDFFFC1AEF5F4A00571E71 /* Icon_Menu@3x.png in Resources */,
 				013D06461AF73E130056704C /* Default-375w-667h@2x~iphone.png in Resources */,
-				013D062F1AF739430056704C /* icon_beer@3x.png in Resources */,
 				011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */,
 				01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */,
 				011FD4131AF13AF100EDC3DC /* ProfileHeader47.xib in Resources */,
@@ -1384,7 +1333,6 @@
 				01CDFFE61AEF119800571E71 /* splash-bg@3x.jpg in Resources */,
 				01A62E761A9945E4004FD855 /* appdesign-Slide4@2x.jpg in Resources */,
 				011FD4151AF13EC500EDC3DC /* ProfileHeader55.xib in Resources */,
-				013D062E1AF739430056704C /* icon_beer@2x.png in Resources */,
 				01A62E381A95DC2E004FD855 /* README.txt in Resources */,
 				012BCBB61ADDBEDE00C540B2 /* icn_3.imageset in Resources */,
 				01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */,
@@ -1396,25 +1344,19 @@
 				016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */,
 				01A62E351A95DC2E004FD855 /* Lato-Thin.ttf in Resources */,
 				01A62E2F1A95DC2E004FD855 /* Lato-LightItalic.ttf in Resources */,
-				013D063C1AF739430056704C /* icon_wine@2x.png in Resources */,
 				01A62E2A1A95DC2E004FD855 /* Lato-HairlineItalic.ttf in Resources */,
 				01A62E281A95DC2E004FD855 /* Lato-BoldItalic.ttf in Resources */,
 				01D711EC1A6E0E61001C29B7 /* panels.json in Resources */,
-				013D063D1AF739430056704C /* icon_wine@3x.png in Resources */,
 				01FB80401ADB0C9300767B01 /* CSSearchBarHeader.xib in Resources */,
 				01A62E8A1A99962B004FD855 /* BG1.png in Resources */,
-				013D063A1AF739430056704C /* icon_shots@2x.png in Resources */,
 				011D22F21A9AAEE90082143E /* dealinfo-3x.png in Resources */,
 				011FD4111AF1398400EDC3DC /* ProfileHeader4.xib in Resources */,
 				01D711EF1A6E0E61001C29B7 /* Contents.json in Resources */,
-				013D06331AF739430056704C /* icon_club@3x.png in Resources */,
-				013D06321AF739430056704C /* icon_club@2x.png in Resources */,
 				01F3BEB31A9C757B0043F2C2 /* add121.png in Resources */,
 				01A62E701A9945E4004FD855 /* appdesign-Slide2@2x.jpg in Resources */,
 				01F2CE1D1A9AC2CF00BEC23D /* nudge-3x.png in Resources */,
 				01D711FD1A6E0E61001C29B7 /* Contents.json in Resources */,
 				01D7120E1A747537001C29B7 /* iPhone4.storyboard in Resources */,
-				013D06391AF739430056704C /* icon_food@3x.png in Resources */,
 				01A62E0A1A95CDCE004FD855 /* martini@3x.png in Resources */,
 				011D22F51A9AAEE90082143E /* interested1-3x.png in Resources */,
 				01A62E261A95DC2E004FD855 /* Lato-BlackItalic.ttf in Resources */,
@@ -1428,7 +1370,6 @@
 				01CDFFE31AEEB8EC00571E71 /* images@2x in Resources */,
 				01CDFFDB1AEE7E2D00571E71 /* deal_intro.png in Resources */,
 				01A62E711A9945E4004FD855 /* appdesign-Slide2@3x.jpg in Resources */,
-				013D06341AF739430056704C /* icon_cocktail@2x.png in Resources */,
 				01CDFFDD1AEE7E2D00571E71 /* nudge_intro.png in Resources */,
 				01D711F71A6E0E61001C29B7 /* Contents.json in Resources */,
 				01A62E721A9945E4004FD855 /* appdesign-Slide3@1x.jpg in Resources */,
@@ -1443,11 +1384,9 @@
 				01A62E751A9945E4004FD855 /* appdesign-Slide4@1x.jpg in Resources */,
 				01E63BE91A9E9128000425F2 /* theplus-3x.png in Resources */,
 				01CDFFE41AEEB8EC00571E71 /* images@3x in Resources */,
-				013D06301AF739430056704C /* icon_champagne@2x.png in Resources */,
 				01D712001A6E0E61001C29B7 /* Contents.json in Resources */,
 				012BCBB41ADDBEDE00C540B2 /* icn_1.imageset in Resources */,
 				01D2116F1AE0676A00F3806D /* BarLift BG5.jpeg in Resources */,
-				013D063B1AF739430056704C /* icon_shots@3x.png in Resources */,
 				011D22F41A9AAEE90082143E /* hamburger-3x.png in Resources */,
 				01CDFFFD1AEF5F4A00571E71 /* Icon_Uber@3x.png in Resources */,
 				01D711F01A6E0E61001C29B7 /* Contents.json in Resources */,
@@ -1464,7 +1403,6 @@
 				01A62E361A95DC2E004FD855 /* Lato-ThinItalic.ttf in Resources */,
 				01CDFFF91AEF5F4A00571E71 /* Icon_Back@3x.png in Resources */,
 				01A62E6F1A9945E4004FD855 /* appdesign-Slide2@1x.jpg in Resources */,
-				013D06371AF739430056704C /* icon_cover@3x.png in Resources */,
 				01CDFFF81AEF5F4A00571E71 /* Icon_Address@3x.png in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
 				01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */,
@@ -1474,12 +1412,10 @@
 				013D06471AF73E130056704C /* Default-414w-736h@3x~iphone.png in Resources */,
 				017E11761ADF230D00306A16 /* coverphoto.png in Resources */,
 				01A62E731A9945E4004FD855 /* appdesign-Slide3@2x.jpg in Resources */,
-				013D06381AF739430056704C /* icon_food@2x.png in Resources */,
 				01A62E321A95DC2E004FD855 /* Lato-Regular.ttf in Resources */,
 				011D22F31A9AAEE90082143E /* goingslider-3x.png in Resources */,
 				01EBDB901A83364A00A9E175 /* update-32.png in Resources */,
 				012BCBB71ADDBEDE00C540B2 /* sky.imageset in Resources */,
-				013D06361AF739430056704C /* icon_cover@2x.png in Resources */,
 				01A62E771A9945E4004FD855 /* appdesign-Slide4@3x.jpg in Resources */,
 				01D711FA1A6E0E61001C29B7 /* Contents.json in Resources */,
 				012795211AEFC9A800EEBF53 /* Icon_Close@3x.png in Resources */,

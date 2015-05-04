@@ -240,8 +240,8 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
             if(self.numGoing > 1){
                 self.header.whosIntLabel.text = [NSString stringWithFormat:@"Who's Interested (%ld going):", (long)self.numGoing];
             }
-            if(count > 6){
-                imgCount = 6;
+            if(count > 5){
+                imgCount = 5;
             }
             else{
                 imgCount = count;

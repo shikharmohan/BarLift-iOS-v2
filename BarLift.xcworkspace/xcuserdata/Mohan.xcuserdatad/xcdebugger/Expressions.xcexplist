@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[CSAlwaysOnTopHeader setUpView]:CSAlwaysOnTopHeader.m">
+         contextName = "-[BLTProfileViewController collectionView:cellForItemAtIndexPath:]:BLTProfileViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "textLabel.text">
+               value = "[PFUser currentUser] ">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,10 +22,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[BLTProfileViewController collectionView:cellForItemAtIndexPath:]:BLTProfileViewController.m">
+         contextName = "-[CSAlwaysOnTopHeader setUpView]:CSAlwaysOnTopHeader.m">
          <PersistentStrings>
             <PersistentString
-               value = "[PFUser currentUser] ">
+               value = "textLabel.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -86,10 +86,10 @@
          contextName = "__43-[CSLockedHeaderViewController viewDidLoad]_block_invoke:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[components1 weekday]">
+               value = "self.sections">
             </PersistentString>
             <PersistentString
-               value = "self.sections">
+               value = "[components1 weekday]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -117,10 +117,10 @@
          contextName = "-[BLTDealDetailViewController removeGoingImage]:BLTDealDetailViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
+               value = "img.image">
             </PersistentString>
             <PersistentString
-               value = "img.image">
+               value = "[self.dealDetails objectForKey:@&quot;whosGoing&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -181,6 +181,14 @@
          contextName = "-[BLTDealDashboard viewWillAppear:]:BLTDealDashboard.m">
       </ContextState>
       <ContextState
+         contextName = "-[BLTDealTypeViewController tableView:didSelectRowAtIndexPath:]:BLTDealTypeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[CSAlwaysOnTopHeader applyLayoutAttributes:]:CSAlwaysOnTopHeader.m">
       </ContextState>
       <ContextState
@@ -198,10 +206,10 @@
          contextName = "-[CSLockedHeaderViewController collectionView:numberOfItemsInSection:]:CSLockedHeaderViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.sections[0]">
+               value = "self.sections[0].allValues">
             </PersistentString>
             <PersistentString
-               value = "self.sections[0].allValues">
+               value = "self.sections[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

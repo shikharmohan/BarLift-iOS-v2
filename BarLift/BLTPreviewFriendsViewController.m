@@ -115,13 +115,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         return nil;
     }
     UILabel *myLabel = [[UILabel alloc] init];
-    myLabel.frame = CGRectMake(0, 5, iOSScreensize.width, 25);
+    myLabel.frame = CGRectMake(0, 5, iOSScreensize.width, 21);
     myLabel.textAlignment = NSTextAlignmentCenter;
     myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
     myLabel.textColor = UIColorFromRGB(0xF2F2F2);
     [myLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:16.0f]];
 
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iOSScreensize.width, 35)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iOSScreensize.width, 31)];
     headerView.backgroundColor = UIColorFromRGB(0xFF613D);
     [headerView addSubview:myLabel];
     if([[self.data objectForKey:[self.sections objectAtIndex:section]] count] == 0){
@@ -131,6 +131,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         headerView.hidden = NO;
     }
     return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if ([tableView.dataSource tableView:tableView numberOfRowsInSection:section] == 0) {
+        return 0;
+    } else {
+        return 31;
+    }
 }
 
 #pragma mark - Navigation
