@@ -374,6 +374,7 @@ typedef void(^myCompletion)(BOOL);
                     img.image = nil;
                 }
                 
+                
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
 //                BOOL interested = NO;
 //                

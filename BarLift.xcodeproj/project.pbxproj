@@ -54,6 +54,10 @@
 		013D063D1AF739430056704C /* icon_wine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D062D1AF739430056704C /* icon_wine@3x.png */; };
 		013D063F1AF73A600056704C /* icon_viral@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D063E1AF73A600056704C /* icon_viral@3x.png */; };
 		013D06411AF73A750056704C /* icon_viral@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06401AF73A750056704C /* icon_viral@2x.png */; };
+		013D06461AF73E130056704C /* Default-375w-667h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06421AF73E130056704C /* Default-375w-667h@2x~iphone.png */; };
+		013D06471AF73E130056704C /* Default-414w-736h@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06431AF73E130056704C /* Default-414w-736h@3x~iphone.png */; };
+		013D06481AF73E130056704C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06441AF73E130056704C /* Default-568h@2x.png */; };
+		013D06491AF73E130056704C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 013D06451AF73E130056704C /* Default@2x.png */; };
 		015AF9761A9D832A00163480 /* nudgeicon-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF9751A9D832A00163480 /* nudgeicon-3x.png */; };
 		015AF97C1A9E50E200163480 /* hamburgerv2-3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */; };
 		0166EC721A6995C40016E679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0166EC711A6995C40016E679 /* main.m */; };
@@ -297,6 +301,10 @@
 		013D062D1AF739430056704C /* icon_wine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_wine@3x.png"; sourceTree = "<group>"; };
 		013D063E1AF73A600056704C /* icon_viral@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viral@3x.png"; sourceTree = "<group>"; };
 		013D06401AF73A750056704C /* icon_viral@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viral@2x.png"; sourceTree = "<group>"; };
+		013D06421AF73E130056704C /* Default-375w-667h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-375w-667h@2x~iphone.png"; sourceTree = "<group>"; };
+		013D06431AF73E130056704C /* Default-414w-736h@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-414w-736h@3x~iphone.png"; sourceTree = "<group>"; };
+		013D06441AF73E130056704C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		013D06451AF73E130056704C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		015AF9751A9D832A00163480 /* nudgeicon-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nudgeicon-3x.png"; sourceTree = "<group>"; };
 		015AF97B1A9E50E200163480 /* hamburgerv2-3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburgerv2-3x.png"; sourceTree = "<group>"; };
 		0166EC6C1A6995C40016E679 /* BarLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1002,6 +1010,10 @@
 		01D711A51A6CC82F001C29B7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				013D06421AF73E130056704C /* Default-375w-667h@2x~iphone.png */,
+				013D06431AF73E130056704C /* Default-414w-736h@3x~iphone.png */,
+				013D06441AF73E130056704C /* Default-568h@2x.png */,
+				013D06451AF73E130056704C /* Default@2x.png */,
 				013D061E1AF739430056704C /* icon_beer@2x.png */,
 				013D061F1AF739430056704C /* icon_beer@3x.png */,
 				013D06201AF739430056704C /* icon_champagne@2x.png */,
@@ -1351,10 +1363,12 @@
 				01A62E741A9945E4004FD855 /* appdesign-Slide3@3x.jpg in Resources */,
 				013D06351AF739430056704C /* icon_cocktail@3x.png in Resources */,
 				01EBDB8E1A831AEC00A9E175 /* menu-32.png in Resources */,
+				013D06481AF73E130056704C /* Default-568h@2x.png in Resources */,
 				01A62E251A95DC2E004FD855 /* Lato-Black.ttf in Resources */,
 				01A62E341A95DC2E004FD855 /* Lato-SemiboldItalic.ttf in Resources */,
 				016729D51A887A6A001A27FF /* groups-32.png in Resources */,
 				01CDFFFC1AEF5F4A00571E71 /* Icon_Menu@3x.png in Resources */,
+				013D06461AF73E130056704C /* Default-375w-667h@2x~iphone.png in Resources */,
 				013D062F1AF739430056704C /* icon_beer@3x.png in Resources */,
 				011D22FB1A9AAEE90082143E /* purchasedrinks-3x.png in Resources */,
 				01CDFFE81AEF122400571E71 /* splash-bg@2x.jpg in Resources */,
@@ -1454,8 +1468,10 @@
 				01CDFFF81AEF5F4A00571E71 /* Icon_Address@3x.png in Resources */,
 				01D711F31A6E0E61001C29B7 /* Contents.json in Resources */,
 				01F2CE341A9AF23C00BEC23D /* close-3x.png in Resources */,
+				013D06491AF73E130056704C /* Default@2x.png in Resources */,
 				013D063F1AF73A600056704C /* icon_viral@3x.png in Resources */,
 				01A62E041A95CB5F004FD855 /* background.xcassets in Resources */,
+				013D06471AF73E130056704C /* Default-414w-736h@3x~iphone.png in Resources */,
 				017E11761ADF230D00306A16 /* coverphoto.png in Resources */,
 				01A62E731A9945E4004FD855 /* appdesign-Slide3@2x.jpg in Resources */,
 				013D06381AF739430056704C /* icon_food@2x.png in Resources */,
