@@ -335,7 +335,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 
         // self.savedEventId = event.eventIdentifier;  //save the event id if you want to access this later
     }];
-    [alert showInfo:self title:@"Calendar Updated" subTitle:@"This deal has been added your calendar." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+    [alert showSuccess:self title:@"Calendar Updated" subTitle:@"This deal has been added to your calendar" closeButtonTitle:@"Done" duration:0.0f]; // Info
 
 }
 

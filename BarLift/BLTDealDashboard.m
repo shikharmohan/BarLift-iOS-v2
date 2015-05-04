@@ -279,7 +279,7 @@ typedef void(^myCompletion)(BOOL);
                 NSString *dealType = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"deal_type"];
                 
                 if([dealType isEqualToString:@"Cheap Beers"] ||[dealType isEqualToString:@"Craft Beers"]){
-                    img.image = [UIImage imageNamed:@"icon_xx@3x"];
+                    img.image = [UIImage imageNamed:@"icon_beer@3x"];
                 }
                 else  if([dealType isEqualToString:@"Cocktails & Mixed Drinks"]){
                     img.image = [UIImage imageNamed:@"icon_cocktail@3x"];
@@ -290,10 +290,10 @@ typedef void(^myCompletion)(BOOL);
                 else  if([dealType isEqualToString:@"Bar Food"] ||[dealType isEqualToString:@"Weekend Brunch"]){
                     img.image = [UIImage imageNamed:@"icon_food@3x"];
                 }
-                else  if([dealType isEqualToString:@"Wine"]){
+                else if([dealType isEqualToString:@"Wine"]){
                     img.image = [UIImage imageNamed:@"icon_wine@3x"];
                 }
-                else  if([dealType isEqualToString:@"Champagne & Mimosas"]){
+                else if([dealType isEqualToString:@"Champagne & Mimosas"]){
                     img.image = [UIImage imageNamed:@"icon_champagne@3x"];
                 }
                 else  if([dealType isEqualToString:@"Concerts/Shows/Clubbing deals"]){
@@ -307,8 +307,6 @@ typedef void(^myCompletion)(BOOL);
                 }
                 
 
-
-                
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                
                 if([int_count integerValue] > 0){
@@ -344,6 +342,38 @@ typedef void(^myCompletion)(BOOL);
 
                 //interested
                
+                UIImageView *img = (UIImageView *)[cell viewWithTag:30];
+                
+                NSString *dealType = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"deal_type"];
+                
+                if([dealType isEqualToString:@"Cheap Beers"] ||[dealType isEqualToString:@"Craft Beers"]){
+                    img.image = [UIImage imageNamed:@"icon_beer@3x"];
+                }
+                else  if([dealType isEqualToString:@"Cocktails & Mixed Drinks"]){
+                    img.image = [UIImage imageNamed:@"icon_cocktail@3x"];
+                }
+                else  if([dealType isEqualToString:@"Shots"]){
+                    img.image = [UIImage imageNamed:@"icon_shots@3x"];
+                }
+                else  if([dealType isEqualToString:@"Bar Food"] ||[dealType isEqualToString:@"Weekend Brunch"]){
+                    img.image = [UIImage imageNamed:@"icon_food@3x"];
+                }
+                else if([dealType isEqualToString:@"Wine"]){
+                    img.image = [UIImage imageNamed:@"icon_wine@3x"];
+                }
+                else if([dealType isEqualToString:@"Champagne & Mimosas"]){
+                    img.image = [UIImage imageNamed:@"icon_champagne@3x"];
+                }
+                else  if([dealType isEqualToString:@"Concerts/Shows/Clubbing deals"]){
+                    img.image = [UIImage imageNamed:@"icon_club@3x"];
+                }
+                else if([dealType isEqualToString:@"Cover charge deals"] || [dealType isEqualToString:@"Open Bar"]){
+                    img.image = [UIImage imageNamed:@"icon_cover@3x"];
+                }
+                else{
+                    img.image = nil;
+                }
+                
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
 //                BOOL interested = NO;
 //                
