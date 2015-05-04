@@ -100,9 +100,9 @@ NSTimer *durationTimer;
         self.backgroundType = Shadow;
         
         // Font
-        _titleFontFamily = @"Lato-Semibold";
-        _bodyTextFontFamily = @"Lato-Regular";
-        _buttonsFontFamily = @"Lato-Bold";
+        _titleFontFamily = @"Avenir-Medium";
+        _bodyTextFontFamily = @"Avenir-Book";
+        _buttonsFontFamily = @"Avenir-Heavy";
         _titleFontSize = 20.0f;
         _bodyFontSize = 14.0f;
         _buttonsFontSize = 14.0f;
@@ -635,7 +635,7 @@ NSTimer *durationTimer;
             break;
 
         case Info:
-            viewColor = UIColorFromRGB(0xE8613D);
+            viewColor = UIColorFromRGB(0xFF613D);
             iconImage = SCLAlertViewStyleKit.imageOfInfo;
             break;
 

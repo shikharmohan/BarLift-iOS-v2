@@ -175,7 +175,6 @@
 		01D70FBB1A6B6B81001C29B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F831A6B6A8C001C29B7 /* MobileCoreServices.framework */; };
 		01D70FBC1A6B6B81001C29B7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F841A6B6A8C001C29B7 /* QuartzCore.framework */; };
 		01D70FBD1A6B6B81001C29B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F851A6B6A8C001C29B7 /* Security.framework */; };
-		01D70FBE1A6B6B81001C29B7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F861A6B6A8C001C29B7 /* StoreKit.framework */; };
 		01D70FBF1A6B6B81001C29B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F871A6B6A8C001C29B7 /* SystemConfiguration.framework */; };
 		01D70FC01A6B6B81001C29B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70F881A6B6A8C001C29B7 /* UIKit.framework */; };
 		01D70FC21A6B6B8C001C29B7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D70FC11A6B6B8C001C29B7 /* libsqlite3.0.dylib */; };
@@ -455,7 +454,6 @@
 		01D70F831A6B6A8C001C29B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		01D70F841A6B6A8C001C29B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		01D70F851A6B6A8C001C29B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		01D70F861A6B6A8C001C29B7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		01D70F871A6B6A8C001C29B7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		01D70F881A6B6A8C001C29B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01D70FA51A6B6B5B001C29B7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -562,7 +560,6 @@
 				01D70FBB1A6B6B81001C29B7 /* MobileCoreServices.framework in Frameworks */,
 				01D70FBC1A6B6B81001C29B7 /* QuartzCore.framework in Frameworks */,
 				01D70FBD1A6B6B81001C29B7 /* Security.framework in Frameworks */,
-				01D70FBE1A6B6B81001C29B7 /* StoreKit.framework in Frameworks */,
 				01D70FBF1A6B6B81001C29B7 /* SystemConfiguration.framework in Frameworks */,
 				01D70FC01A6B6B81001C29B7 /* UIKit.framework in Frameworks */,
 				62B0379FA5182B6C3E29427C /* libPods.a in Frameworks */,
@@ -971,7 +968,6 @@
 				01D70F831A6B6A8C001C29B7 /* MobileCoreServices.framework */,
 				01D70F841A6B6A8C001C29B7 /* QuartzCore.framework */,
 				01D70F851A6B6A8C001C29B7 /* Security.framework */,
-				01D70F861A6B6A8C001C29B7 /* StoreKit.framework */,
 				01D70F871A6B6A8C001C29B7 /* SystemConfiguration.framework */,
 				01D70F881A6B6A8C001C29B7 /* UIKit.framework */,
 				A8DC0EE9D8E35526029C5589 /* libPods.a */,
@@ -1262,6 +1258,17 @@
 					0166EC6B1A6995C40016E679 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = V7HT6L2HHU;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					0166EC871A6995C40016E679 = {
 						CreatedOnToolsVersion = 6.1.1;

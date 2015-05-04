@@ -58,6 +58,10 @@
 		<string>Lato-Thin.ttf</string>
 		<string>Lato-ThinItalic.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchImageFile~iphone</key>
 	<string>splash-bg@3x</string>
 	<key>UILaunchStoryboardName</key>
