@@ -24,12 +24,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     [UIView beginAnimations:@"" context:nil];
 
-    if (layoutAttributes.progressiveness >= 0.58) {
+    if (layoutAttributes.progressiveness >= 0.40) {
         self.hoursLabel.alpha = 1;
         self.scrollView.alpha = 1;
+        self.pageControl.alpha = 1;
     } else {
         self.hoursLabel.alpha = 0;
         self.scrollView.alpha = 0;
+        self.pageControl.alpha = 0;
     }
     
 
@@ -81,9 +83,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if(self.dealNames != nil && self.dealHeadline != nil){
         self.scrollView.delegate = self;
         NSInteger numLbl = [self.dealNames count] + 1;
-        [self.scrollView setFrame:CGRectMake(0, 44, iOSScreensize.width, 166)];
         [self.scrollView setPagingEnabled:YES];
-        [self.scrollView setContentSize:CGSizeMake(numLbl*iOSScreensize.width, 166)];
+        [self.scrollView setContentSize:CGSizeMake(numLbl*iOSScreensize.width,  0.292253521*iOSScreensize.height)];
         self.pageControl.numberOfPages = numLbl;
         if(numLbl <= 1){
             self.pageControl.hidden = YES;
@@ -100,11 +101,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             if(iOSScreensize.width == 320){
                 width = 300;
             }
-            else{
+            else if (iOSScreensize.width == 375){
                 width = 300;
                 plus = 37.5;
             }
-            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 166)];
+            UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 0.292253521*iOSScreensize.height)];
             textLabel.textColor = UIColorFromRGB(0xF2F2F2);
             textLabel.numberOfLines = 0;
             [textLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:23.0f]];

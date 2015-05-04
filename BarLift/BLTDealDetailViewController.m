@@ -64,8 +64,8 @@
     CSStickyHeaderFlowLayout *layout = (id)self.collectionViewLayout;
 
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
-        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 320);
-        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 100);
+        layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, iOSScreensize.width);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(self.view.frame.size.width, 0.25*iOSScreensize.height);
         layout.itemSize = CGSizeMake(self.view.frame.size.width, layout.itemSize.height);
         layout.parallaxHeaderAlwaysOnTop = YES;
 
