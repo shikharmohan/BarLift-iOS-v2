@@ -12,7 +12,7 @@
 #import <ParseCrashReporting/ParseCrashReporting.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "Mixpanel.h"
-
+#import "SCLAlertView/SCLAlertView.h"
 @interface AppDelegate ()
 
 @end
@@ -154,6 +154,45 @@
 didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
     
+    
+    NSString *dealID = userInfo[@"dealID"];
+    NSString *fbid = userInfo[@"sender"];
+    CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
+    if (iOSScreenSize.height == 480){
+        UIStoryboard *iPhone35Storyboard = [UIStoryboard storyboardWithName:@"iPhone35" bundle:nil];
+        UIViewController *initialViewController = [iPhone35Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
+    if (iOSScreenSize.height == 568){
+        if(dealID != nil && [PFUser currentUser]){
+            SCLAlertView *alert = [[SCLAlertView alloc] init];
+            NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1};
+            [alert addButton:@"NUDGE BACK" actionBlock:^{
+                [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
+            }];
+        }
+        UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"iPhone4" bundle:nil];
+        UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
+    if (iOSScreenSize.height == 667){
+        UIStoryboard *iPhone47Storyboard = [UIStoryboard storyboardWithName:@"iPhone47" bundle:nil];
+        UIViewController *initialViewController = [iPhone47Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
+    if (iOSScreenSize.height == 736){
+        UIStoryboard *iPhone55Storyboard = [UIStoryboard storyboardWithName:@"iPhone55" bundle:nil];
+        UIViewController *initialViewController = [iPhone55Storyboard instantiateInitialViewController];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = initialViewController;
+        [self.window makeKeyAndVisible];
+    }
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {

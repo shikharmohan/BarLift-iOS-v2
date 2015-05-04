@@ -348,7 +348,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 if([int_count integerValue] > 0){
                     cell.goingLbl.hidden = NO;
-                    cell.goingLbl.text = [NSString stringWithFormat:@"%@", int_count];
+                    cell.goingLbl.text = [NSString stringWithFormat:@"%@ people interested", int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
 //                    cell.goingLbl.layer.borderWidth = 2.0;
 //                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;
