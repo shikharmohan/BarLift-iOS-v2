@@ -1,12 +1,6 @@
-//
-//  CSAlwaysOnTopHeader.m
-//  CSStickyHeaderFlowLayoutDemo
-//
-//  Created by James Tang on 6/4/14.
-//  Copyright (c) 2014 Jamz Tang. All rights reserved.
-//
 
-#import "CSAlwaysOnTopHeader.h"
+
+#import "BLTTopHeader.h"
 #import "CSStickyHeaderFlowLayoutAttributes.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -17,7 +11,7 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@implementation CSAlwaysOnTopHeader{
+@implementation BLTTopHeader{
     CGSize iOSScreensize;
 }
 

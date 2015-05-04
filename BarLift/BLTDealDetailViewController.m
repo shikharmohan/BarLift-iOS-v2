@@ -2,7 +2,7 @@
 #import "DealCell.h"
 #import "ProfileHeader.h"
 #import "CSStickyHeaderFlowLayout.h"
-#import "CSAlwaysOnTopHeader.h"
+#import "BLTTopHeader.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "SDWebImage/UIImageView+WebCache.h"
@@ -27,12 +27,25 @@
 @property (nonatomic) BOOL interested;
 @end
 
-@implementation BLTDealDetailViewController
+@implementation BLTDealDetailViewController{
+    CGSize iOSScreensize;
+}
 @synthesize dealID, reloadCell, day;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        iOSScreensize = [UIScreen mainScreen].bounds.size;
+        if(iOSScreensize.width == 320){
+            self.headerNib = [UINib nibWithNibName:@"ProfileHeader4" bundle:nil];
+        }
+        else if(iOSScreensize.width == 375){
+            self.headerNib = [UINib nibWithNibName:@"ProfileHeader47" bundle:nil];
+        }
+        else if(iOSScreensize.width == 414){
+            self.headerNib = [UINib nibWithNibName:@"ProfileHeader55" bundle:nil];
+        }
+
         self.images = @[@"Icon_Address@3x", @"Icon_Dealdetails@3x", @"icon_viral@3x", @"Icon_Uber@3x"];
         self.data = [[NSMutableArray alloc] initWithCapacity:4];
         self.labels = [[NSMutableArray alloc] initWithCapacity:4];

@@ -55,8 +55,8 @@
 		016729EB1A889626001A27FF /* lightning_bolt-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 016729EA1A889626001A27FF /* lightning_bolt-32.png */; };
 		016729ED1A891D13001A27FF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016729EC1A891D13001A27FF /* CoreTelephony.framework */; };
 		016E65C21AE36A7100467C6B /* NudgeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016E65C11AE36A7100467C6B /* NudgeHistoryViewController.m */; };
-		017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */; };
-		017E11631ADE247B00306A16 /* CSAlwaysOnTopHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */; };
+		017E11621ADE247B00306A16 /* BLTTopHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E115E1ADE247B00306A16 /* BLTTopHeader.m */; };
+		017E11631ADE247B00306A16 /* BLTTopHeader4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017E115F1ADE247B00306A16 /* BLTTopHeader4.xib */; };
 		017E11641ADE247B00306A16 /* BLTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E11611ADE247B00306A16 /* BLTProfileViewController.m */; };
 		017E116E1ADEB63800306A16 /* CardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E116D1ADEB63800306A16 /* CardViewCell.m */; };
 		017E11741ADEB72300306A16 /* ProfileHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 017E11731ADEB72300306A16 /* ProfileHeader.m */; };
@@ -299,9 +299,9 @@
 		016729EC1A891D13001A27FF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		016E65C01AE36A7100467C6B /* NudgeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeHistoryViewController.h; sourceTree = "<group>"; };
 		016E65C11AE36A7100467C6B /* NudgeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NudgeHistoryViewController.m; sourceTree = "<group>"; };
-		017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAlwaysOnTopHeader.h; sourceTree = "<group>"; };
-		017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAlwaysOnTopHeader.m; sourceTree = "<group>"; };
-		017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSAlwaysOnTopHeader.xib; sourceTree = "<group>"; };
+		017E115D1ADE247B00306A16 /* BLTTopHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTTopHeader.h; sourceTree = "<group>"; };
+		017E115E1ADE247B00306A16 /* BLTTopHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTTopHeader.m; sourceTree = "<group>"; };
+		017E115F1ADE247B00306A16 /* BLTTopHeader4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BLTTopHeader4.xib; sourceTree = "<group>"; };
 		017E11601ADE247B00306A16 /* BLTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTProfileViewController.h; sourceTree = "<group>"; };
 		017E11611ADE247B00306A16 /* BLTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTProfileViewController.m; sourceTree = "<group>"; };
 		017E116C1ADEB63800306A16 /* CardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewCell.h; sourceTree = "<group>"; };
@@ -725,9 +725,9 @@
 				01CDFFED1AEF273000571E71 /* BLTDealDetailCollectionReusableView.m */,
 				01CDFFEF1AEF278200571E71 /* BLTDealDetailViewController.h */,
 				01CDFFF01AEF278200571E71 /* BLTDealDetailViewController.m */,
-				017E115D1ADE247B00306A16 /* CSAlwaysOnTopHeader.h */,
-				017E115E1ADE247B00306A16 /* CSAlwaysOnTopHeader.m */,
-				017E115F1ADE247B00306A16 /* CSAlwaysOnTopHeader.xib */,
+				017E115D1ADE247B00306A16 /* BLTTopHeader.h */,
+				017E115E1ADE247B00306A16 /* BLTTopHeader.m */,
+				017E115F1ADE247B00306A16 /* BLTTopHeader4.xib */,
 			);
 			name = "Deal View";
 			sourceTree = "<group>";
@@ -1340,7 +1340,7 @@
 				012BCBB61ADDBEDE00C540B2 /* icn_3.imageset in Resources */,
 				01C0EA481A85D98900DBF49E /* near_me-25.png in Resources */,
 				01D712031A6E0E61001C29B7 /* Contents.json in Resources */,
-				017E11631ADE247B00306A16 /* CSAlwaysOnTopHeader.xib in Resources */,
+				017E11631ADE247B00306A16 /* BLTTopHeader4.xib in Resources */,
 				01F3BEB51A9C761B0043F2C2 /* rounded61.png in Resources */,
 				01CDFFDC1AEE7E2D00571E71 /* going_intro.png in Resources */,
 				01A62E2C1A95DC2E004FD855 /* Lato-HeavyItalic.ttf in Resources */,
@@ -1507,7 +1507,7 @@
 				010C4DF31AD4C4D800B95B4F /* BLTDealVC.m in Sources */,
 				019F13F11A89ABA20099B3CF /* UIButton+WebCache.m in Sources */,
 				017E116E1ADEB63800306A16 /* CardViewCell.m in Sources */,
-				017E11621ADE247B00306A16 /* CSAlwaysOnTopHeader.m in Sources */,
+				017E11621ADE247B00306A16 /* BLTTopHeader.m in Sources */,
 				01FB80411ADB0C9300767B01 /* BLTDealDashboard.m in Sources */,
 				016729E71A889282001A27FF /* NSInvocation+Constructors.m in Sources */,
 				01CDFFF11AEF278200571E71 /* BLTDealDetailViewController.m in Sources */,
