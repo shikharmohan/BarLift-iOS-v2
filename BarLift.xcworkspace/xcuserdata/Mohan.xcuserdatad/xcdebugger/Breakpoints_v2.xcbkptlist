@@ -1022,7 +1022,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTSignUpViewController.m"
-            timestampString = "452390930.283044"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -1038,11 +1038,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealTypeViewController.m"
-            timestampString = "452236582.417355"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-finishButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1054,11 +1054,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealTypeViewController.m"
-            timestampString = "452236582.417355"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-finishButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1070,11 +1070,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealTypeViewController.m"
-            timestampString = "452236582.417355"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-finishButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1262,11 +1262,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealTypeViewController.m"
-            timestampString = "452236582.417355"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-finishButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1726,11 +1726,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTDealTypeViewController.m"
-            timestampString = "452377638.822648"
+            timestampString = "452406683.016193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "-finishButtonPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1962,7 +1962,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BarLift/BLTProfileViewController.m"
@@ -2045,14 +2045,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarLift/AppDelegate.m"
-            timestampString = "452397614.656804"
+            filePath = "BarLift/BLTLoginViewController.m"
+            timestampString = "452404249.163977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-updateUserInformation"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_3"
+                  moduleName = "BarLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mohan/Desktop/NUVention/Barlift/BarLift-iOS-v2/BarLift/BLTLoginViewController.m"
+                  timestampString = "452404271.380824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "2388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[BLTLoginViewController updateUserInformation]_block_invoke_4"
+                  moduleName = "BarLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mohan/Desktop/NUVention/Barlift/BarLift-iOS-v2/BarLift/BLTLoginViewController.m"
+                  timestampString = "452404271.381195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

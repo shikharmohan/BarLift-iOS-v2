@@ -258,7 +258,7 @@ typedef void(^myCompletion)(BOOL);
                 }
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:5];
-                location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
+                location.text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"];
                 
                 //set community
                 UILabel *community = (UILabel *) [cell viewWithTag:37];
@@ -272,27 +272,42 @@ typedef void(^myCompletion)(BOOL);
                 [background sd_setImageWithURL:[NSURL URLWithString:img_url]];
             
                 
-                NSDictionary *dict = @{@"deal_objectId":[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId], @"user_objectId":[[PFUser currentUser] objectId]};
 
                 
                 UIImageView *img = (UIImageView *)[cell viewWithTag:30];
-                // img.image = nil;
-                NSArray *going = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"im_going"];
-//                if([going[0] isEqualToNumber:[NSNumber numberWithBool:YES]]){
-//                    cell.image.hidden = NO;
-//                    [cell.image sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-//                    cell.image.contentMode = UIViewContentModeScaleAspectFill;
-//                    cell.image.layer.cornerRadius = img.frame.size.width/2;
-//                    cell.image.layer.borderWidth = 2.0;
-//                    cell.image.layer.borderColor = [UIColor colorWithRed:0.1803 green:0.8 blue:0.443 alpha:1].CGColor;
-//                    cell.image.clipsToBounds = YES;
-//                }
-//                else{
-//                    // cell.image.hidden = YES;
-//                    cell.image.image = nil;
-//                    cell.image.layer.borderColor = [UIColor whiteColor].CGColor;
-//                    
-//                }
+                
+                NSString *dealType = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"deal_type"];
+                
+                if([dealType isEqualToString:@"Cheap Beers"] ||[dealType isEqualToString:@"Craft Beers"]){
+                    img.image = [UIImage imageNamed:@"icon_xx@3x"];
+                }
+                else  if([dealType isEqualToString:@"Cocktails & Mixed Drinks"]){
+                    img.image = [UIImage imageNamed:@"icon_cocktail@3x"];
+                }
+                else  if([dealType isEqualToString:@"Shots"]){
+                    img.image = [UIImage imageNamed:@"icon_shots@3x"];
+                }
+                else  if([dealType isEqualToString:@"Bar Food"] ||[dealType isEqualToString:@"Weekend Brunch"]){
+                    img.image = [UIImage imageNamed:@"icon_food@3x"];
+                }
+                else  if([dealType isEqualToString:@"Wine"]){
+                    img.image = [UIImage imageNamed:@"icon_wine@3x"];
+                }
+                else  if([dealType isEqualToString:@"Champagne & Mimosas"]){
+                    img.image = [UIImage imageNamed:@"icon_champagne@3x"];
+                }
+                else  if([dealType isEqualToString:@"Concerts/Shows/Clubbing deals"]){
+                    img.image = [UIImage imageNamed:@"icon_club@3x"];
+                }
+                else if([dealType isEqualToString:@"Cover charge deals"] || [dealType isEqualToString:@"Open Bar"]){
+                    img.image = [UIImage imageNamed:@"icon_cover@3x"];
+                }
+                else{
+                    img.image = nil;
+                }
+                
+
+
                 
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
                

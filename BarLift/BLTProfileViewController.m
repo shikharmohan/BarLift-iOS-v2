@@ -35,7 +35,7 @@
         self.labelData = [[NSMutableArray alloc] initWithCapacity:4];
         iOSScreensize = [UIScreen mainScreen].bounds.size;
         if(iOSScreensize.height == 568){
-            self.headerNib = [UINib nibWithNibName:@"BLTTop" bundle:nil];
+            self.headerNib = [UINib nibWithNibName:@"ProfileHeader4" bundle:nil];
         }
         else if (iOSScreensize.height == 480){
             self.headerNib = [UINib nibWithNibName:@"ProfileHeader35" bundle:nil];

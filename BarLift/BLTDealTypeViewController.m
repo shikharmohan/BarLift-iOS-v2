@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSMutableArray *selectedDeals;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet BLTButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end
 
@@ -27,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.indicator.hidden =YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.nextButton.enabled = NO;
@@ -158,8 +160,12 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     
     [[PFUser currentUser] setObject:self.selectedDeals forKey:@"deal_types"];
     [PFUser currentUser][@"newVersion"] = [NSNumber numberWithBool:YES];
+    self.indicator.hidden = NO;
+    [self.indicator startAnimating];
     [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded){
+            [self.indicator stopAnimating];
+            self.indicator.hidden = YES;
             [self performSegueWithIdentifier:@"toDealFeed" sender:self];
         }
     }];

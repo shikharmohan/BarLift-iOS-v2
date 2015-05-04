@@ -155,8 +155,8 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
     
     
-    NSString *dealID = userInfo[@"dealID"];
-    NSString *fbid = userInfo[@"sender"];
+//    NSString *dealID = userInfo[@"dealID"];
+//    NSString *fbid = userInfo[@"sender"];
     CGSize iOSScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSScreenSize.height == 480){
         UIStoryboard *iPhone35Storyboard = [UIStoryboard storyboardWithName:@"iPhone35" bundle:nil];
@@ -171,14 +171,14 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController = initialViewController;
         [self.window makeKeyAndVisible];
-        if(dealID != nil && fbid != nil && [PFUser currentUser]){
-            SCLAlertView *alert = [[SCLAlertView alloc] init];
-            NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1};
-            [alert addButton:@"Yes, I'm Interested" actionBlock:^{
-                [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
-            }];
-            [alert showInfo:initialViewController title:@"Are you interested" subTitle:@"Tell your friend that you'll be going out" closeButtonTitle:@"Cancel" duration:0.0f];
-        }
+//        if(dealID != nil && fbid != nil && [PFUser currentUser]){
+//            SCLAlertView *alert = [[SCLAlertView alloc] init];
+//            NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1};
+//            [alert addButton:@"Yes, I'm Interested" actionBlock:^{
+//                [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
+//            }];
+//            [alert showInfo:initialViewController title:@"Are you interested" subTitle:@"Tell your friend that you'll be going out" closeButtonTitle:@"Cancel" duration:0.0f];
+//        }
     }
     if (iOSScreenSize.height == 667){
         UIStoryboard *iPhone47Storyboard = [UIStoryboard storyboardWithName:@"iPhone47" bundle:nil];

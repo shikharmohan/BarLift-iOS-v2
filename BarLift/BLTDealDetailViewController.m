@@ -324,10 +324,11 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
         if (!granted) { return; }
         EKEvent *event = [EKEvent eventWithEventStore:store];
-        event.title = [self.dealDetails objectForKey:@"name"];
+        event.title = [[self.dealDetails objectForKey:@"name"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
         event.location = self.dealDetails[@"venue"][@"bar_name"];
-        event.startDate = self.dealDetails[@"deal_start_date"];
-        event.endDate = self.dealDetails[@"deal_end_date"];
+//        event.startDate = self.dealDetails[@"deal_start_date"];
+//        event.endDate = self.dealDetails[@"deal_end_date"];
+        event.allDay = YES;
         event.calendar = [store defaultCalendarForNewEvents];
         NSError *err = nil;
         [store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];

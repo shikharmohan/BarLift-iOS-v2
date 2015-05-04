@@ -59,6 +59,7 @@
 }
 - (IBAction)gradButtonPressed:(id)sender {
     [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO] forKey:@"is_student"];
+    [[PFUser currentUser] setObject:@"I've graduated" forKey:@"affiliation"];
 }
 
 @end
