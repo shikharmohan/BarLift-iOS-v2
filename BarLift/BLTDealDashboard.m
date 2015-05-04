@@ -298,7 +298,7 @@ typedef void(^myCompletion)(BOOL);
                
                 if([int_count integerValue] > 0){
                     cell.goingLabel.hidden = NO;
-                    cell.goingLabel.text = [NSString stringWithFormat:@"%@ people interested", int_count];
+                    cell.goingLabel.text = [NSString stringWithFormat:@"%@ interested", int_count];
                 }
                 else{
                     cell.goingLabel.hidden = YES;
@@ -348,7 +348,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 if([int_count integerValue] > 0){
                     cell.goingLbl.hidden = NO;
-                    cell.goingLbl.text = [NSString stringWithFormat:@"%@ people interested", int_count];
+                    cell.goingLbl.text = [NSString stringWithFormat:@"%@ interested", int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
 //                    cell.goingLbl.layer.borderWidth = 2.0;
 //                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;
@@ -416,10 +416,20 @@ typedef void(^myCompletion)(BOOL);
     NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
     
     if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
-        return CGSizeMake(0.925*iOSScreenSize.width, 0.448943662*iOSScreenSize.height);
+        if(iOSScreenSize.height==568){
+            return CGSizeMake(0.925*iOSScreenSize.width, 0.448943662*iOSScreenSize.height);
+        }
+        else{
+            return CGSizeMake(346, 261);
+        }
     }
     else{
-        return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
+        if(iOSScreenSize.height==568){
+            return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
+        }
+        else{
+            return CGSizeMake(346, 160);
+        }
     }
 
 }
