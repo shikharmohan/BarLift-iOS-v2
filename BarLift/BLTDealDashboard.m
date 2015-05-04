@@ -319,7 +319,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:45];
-                location.text = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"] uppercaseString];
+                location.text = [[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"venue"][@"bar_name"];
                 
                 UIImageView *background = (UIImageView *)[cell viewWithTag:50];
                 NSString *img_url =[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"image_url"];
@@ -419,7 +419,7 @@ typedef void(^myCompletion)(BOOL);
         return CGSizeMake(0.925*iOSScreenSize.width, 0.448943662*iOSScreenSize.height);
     }
     else{
-        return CGSizeMake(0.925*iOSScreenSize.width, 0.267605634*iOSScreenSize.height);
+        return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
     }
 
 }

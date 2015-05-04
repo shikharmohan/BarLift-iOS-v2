@@ -136,12 +136,13 @@
 }
 
 -(void) updateGoing{
-    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue]+1;
+    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue];
     [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
+    self.interested = YES;
     [self.collectionView reloadData];
 }
 -(void) notGoing{
-    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue]-1;
+    self.numGoing = [self.dealDetails[@"num_accepted"] integerValue];
     [[NSNotificationCenter defaultCenter] postNotificationName: @"UpdateUINotification" object: nil];
     self.interested= NO;
     [self.collectionView reloadData];

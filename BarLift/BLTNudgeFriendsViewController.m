@@ -77,22 +77,36 @@
         }
     }];
     
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]
+                                         initWithTarget:self
+                                         action:@selector(nudgeInfo)];
+    [singleTap setNumberOfTapsRequired:1];
+    self.recipientsLabel.userInteractionEnabled = YES;
+    [self.recipientsLabel addGestureRecognizer:singleTap];
+    
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){
         UIUserNotificationType type = [[[UIApplication sharedApplication] currentUserNotificationSettings] types];
         if (type == UIUserNotificationTypeNone){
-            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges & deals sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
         }
     }
     else {
         UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
         if (types == UIRemoteNotificationTypeNone) {
-            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
+            [alert showInfo:self title:@"Push Notifications Off" subTitle:@"Hey there, we noticed that you currently have push off for BarLift. If you want to know about nudges & deals sooner, turn on push notifications in your phone settings." closeButtonTitle:@"Ok, got it!" duration:0.0f]; // Info
         }
     }
+    
+    
+    
+    
 }
 
-
+-(void) nudgeInfo{
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    [alert showInfo:self title:@"What is a nudge?" subTitle:@"A nudge sends a subtle push notification to your friends letting them know you want to see them out tonight. All you need to do is tap their photo or name, and they will get your notification. " closeButtonTitle:@"Ok, got it!" duration:0.0f];
+}
 - (void)convertArray
 {
     //NSMutableArray *exhibitorArray = [[NSMutableArray alloc] initWithArray:@[@"abra", @"Catabra"]];
@@ -257,8 +271,11 @@
 
 -(void)showDoneAlert{
     SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showSuccess:self title:@"Nudges sent!" subTitle:@"" closeButtonTitle:@"Done" duration:0.5f];
-    [self.navigationController popViewControllerAnimated:YES];
+    [alert addButton:@"Done" actionBlock:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert showSuccess:self title:@"Nudges sent!" subTitle:@"" closeButtonTitle:nil duration:0.0f];
 }
+
 
 @end

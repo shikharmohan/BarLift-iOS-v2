@@ -63,9 +63,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             }
         }];
         self.interested = NO;
-        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0xFFFFFF);
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3B4D63);
         self.interestedButton.layer.borderWidth = 2.0f;
-        self.interestedButton.layer.borderColor = UIColorFromRGB(0xFF613D).CGColor;
+        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     
@@ -79,9 +79,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
     }
     else{
-        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0xFFFFFF);
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3B4D63);
         self.interestedButton.layer.borderWidth = 2.0f;
-        self.interestedButton.layer.borderColor = UIColorFromRGB(0xFF613D).CGColor;
+        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     if(self.dealNames != nil && self.dealHeadline != nil){
