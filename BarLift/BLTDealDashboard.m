@@ -199,7 +199,7 @@ typedef void(^myCompletion)(BOOL);
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
     [pic addGestureRecognizer:tap];
     UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
-    [logoBtn setImage:[UIImage imageNamed:@"bltlogo.png"] forState:UIControlStateNormal];
+    [logoBtn setImage:[UIImage imageNamed:@"icon_hamburger@3x.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
 
@@ -298,7 +298,11 @@ typedef void(^myCompletion)(BOOL);
                 //set num more deals
                 UILabel *moreDeals = (UILabel *)[cell viewWithTag:46];
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
+                    moreDeals.hidden = NO;
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
+                }
+                else{
+                    moreDeals.hidden = YES;
                 }
                 
                 //set deal label + location
@@ -318,20 +322,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 
                 NSNumber *int_count = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"num_accepted"];
-//                BOOL interested = NO;
-//                
-//                if(interested){
-//                    cell.img.hidden = NO;
-//                    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", [PFUser currentUser][@"fb_id"]]]];
-//                    cell.img.contentMode = UIViewContentModeScaleAspectFill;
-//                    cell.img.layer.cornerRadius = cell.img.frame.size.width/2;
-//                    cell.img.layer.borderWidth = 2.0;
-//                    cell.img.layer.borderColor = [UIColor greenColor].CGColor;
-//                    cell.img.clipsToBounds = YES;
-//                }
-//                else{
-//                    cell.image.hidden = YES;
-//                }
+
                 
                 
                 if([int_count integerValue] > 0){

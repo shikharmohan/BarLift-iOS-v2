@@ -231,8 +231,8 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                //self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:NO]]
-                                if(YES){
+                                
+                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:NO]]){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];

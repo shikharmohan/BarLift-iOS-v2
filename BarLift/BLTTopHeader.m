@@ -24,7 +24,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     [UIView beginAnimations:@"" context:nil];
 
-    if (layoutAttributes.progressiveness >= 0.40) {
+    if (layoutAttributes.progressiveness >= 0.60) {
         self.hoursLabel.alpha = 1;
         self.scrollView.alpha = 1;
         self.pageControl.alpha = 1;
@@ -59,9 +59,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
             }
         }];
         self.interested = NO;
-        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3B4D63);
-        self.interestedButton.layer.borderWidth = 2.0f;
-        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3D4B63);
+//        self.interestedButton.layer.borderWidth = 2.0f;
+//        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     
@@ -75,9 +75,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         [self.interestedButton setTitle:@"YOU'RE INTERESTED" forState:UIControlStateNormal];
     }
     else{
-        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3B4D63);
-        self.interestedButton.layer.borderWidth = 2.0f;
-        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
+        self.interestedButton.defaultBackgroundColor = UIColorFromRGB(0x3D4B63);
+//        self.interestedButton.layer.borderWidth = 2.0f;
+//        self.interestedButton.layer.borderColor = UIColorFromRGB(0xEAEAEA).CGColor;
         [self.interestedButton setTitle:@"INTERESTED?" forState:UIControlStateNormal];
     }
     if(self.dealNames != nil && self.dealHeadline != nil){

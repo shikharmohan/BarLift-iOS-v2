@@ -175,15 +175,16 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler{
         UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController = initialViewController;
-        [self.window makeKeyAndVisible];
-        if(dealID != nil && fbid != nil && [PFUser currentUser] && ![reply isEqualToString:@"Reply"]){
+        if(dealID != nil && fbid != nil && [PFUser currentUser] && [reply isEqualToString:@"Reply"]){
             SCLAlertView *alert = [[SCLAlertView alloc] init];
             NSDictionary *dict = @{@"deal_objectId":dealID, @"fb":fbid, @"backMsg":@1, @"reply":@1};
             [alert addButton:@"Yes, I'm Interested" actionBlock:^{
                 [PFCloud callFunctionInBackground:@"nudge_v2" withParameters:dict];
+                [self.window makeKeyAndVisible];
             }];
             [alert showInfo:initialViewController title:@"Are you interested?" subTitle:@"Tell your friend that you'll be going out" closeButtonTitle:@"Cancel" duration:0.0f];
         }
+
     }
     if (iOSScreenSize.height == 667){
         UIStoryboard *iPhone47Storyboard = [UIStoryboard storyboardWithName:@"iPhone47" bundle:nil];

@@ -118,11 +118,11 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     myLabel.frame = CGRectMake(0, 5, iOSScreensize.width, 21);
     myLabel.textAlignment = NSTextAlignmentCenter;
     myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-    myLabel.textColor = UIColorFromRGB(0xF2F2F2);
+    myLabel.textColor = UIColorFromRGB(0x282828);
     [myLabel setFont: [UIFont fontWithName:@"Lato-Bold" size:16.0f]];
 
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, iOSScreensize.width, 31)];
-    headerView.backgroundColor = UIColorFromRGB(0xFF613D);
+    headerView.backgroundColor = UIColorFromRGB(0xEAEAEA);
     [headerView addSubview:myLabel];
     if([[self.data objectForKey:[self.sections objectAtIndex:section]] count] == 0){
         headerView.hidden = YES;
