@@ -484,6 +484,17 @@
                                     <action selector="logoutButtonPressed:" destination="OLg-cN-kUd" eventType="touchUpInside" id="GN3-At-ce6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyx-qP-GIZ">
+                                <rect key="frame" x="115" y="474" width="91" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                <state key="normal" title="Terms of Service">
+                                    <color key="titleColor" red="1" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barlifttermsPressed:" destination="OLg-cN-kUd" eventType="touchUpInside" id="Obv-H0-4er"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1797,11 +1808,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Xrf-ET-qHk"/>
-        <segue reference="91t-Y3-vn4"/>
-        <segue reference="D4e-dy-Yhk"/>
         <segue reference="maT-Zb-ygX"/>
-        <segue reference="a4Y-qk-Jlj"/>
+        <segue reference="91t-Y3-vn4"/>
+        <segue reference="Xrf-ET-qHk"/>
         <segue reference="kqA-3m-kGR"/>
+        <segue reference="Veu-zD-3Qf"/>
+        <segue reference="a4Y-qk-Jlj"/>
     </inferredMetricsTieBreakers>
 </document>
