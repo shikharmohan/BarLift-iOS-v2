@@ -34,11 +34,8 @@
         self.data = @[@"College", @"Affiliation", @"Last Visited Bar", @"Going out days"];
         self.labelData = [[NSMutableArray alloc] initWithCapacity:4];
         iOSScreensize = [UIScreen mainScreen].bounds.size;
-        if(iOSScreensize.height == 568){
+        if(iOSScreensize.height == 568 || iOSScreensize.height == 480){
             self.headerNib = [UINib nibWithNibName:@"ProfileHeader4" bundle:nil];
-        }
-        else if (iOSScreensize.height == 480){
-            self.headerNib = [UINib nibWithNibName:@"ProfileHeader35" bundle:nil];
         }
         else if(iOSScreensize.height == 667){
             self.headerNib = [UINib nibWithNibName:@"ProfileHeader47" bundle:nil];

@@ -615,7 +615,7 @@ NSTimer *durationTimer;
     switch (style)
     {
         case Success:
-            viewColor = UIColorFromRGB(0x22B573);
+            viewColor = UIColorFromRGB(0x2ECC71);
             iconImage = SCLAlertViewStyleKit.imageOfCheckmark;
             break;
 

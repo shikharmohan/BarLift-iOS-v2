@@ -181,6 +181,9 @@ typedef void(^myCompletion)(BOOL);
     [pic sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", fb_id]]];
     pic.contentMode = UIViewContentModeScaleAspectFill;
     [pic setFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
+    if(iOSScreenSize.height == 480){
+        [pic setFrame:CGRectMake(0, 0, 20,20)];
+    }
     pic.layer.cornerRadius = pic.frame.size.width/2;
   //  pic.layer.borderWidth = 2.0;
    // pic.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -199,6 +202,8 @@ typedef void(^myCompletion)(BOOL);
     UIBarButtonItem *imageButton = [[UIBarButtonItem alloc] initWithCustomView:pic];
     [pic addGestureRecognizer:tap];
     UIButton *logoBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0.075*iOSScreenSize.width,0.042253521*iOSScreenSize.height)];
+    
+
     [logoBtn setImage:[UIImage imageNamed:@"icon_hamburger@3x.png"] forState:UIControlStateNormal];
     BBBadgeBarButtonItem *barButton = [[BBBadgeBarButtonItem alloc] initWithCustomUIButton:logoBtn];
     [logoBtn addGestureRecognizer:singleTap];
@@ -405,7 +410,7 @@ typedef void(^myCompletion)(BOOL);
             return CGSizeMake(380, 289);
         }
         else{
-            return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
+            return CGSizeMake(295, 222);
         }
     }
     else{
@@ -419,7 +424,7 @@ typedef void(^myCompletion)(BOOL);
             return CGSizeMake(380, 189);
         }
         else{
-            return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
+            return CGSizeMake(295, 137);
         }
     }
 

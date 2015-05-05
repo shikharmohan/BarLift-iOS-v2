@@ -36,11 +36,8 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         iOSScreensize = [UIScreen mainScreen].bounds.size;
-        if(iOSScreensize.height == 568){
+        if(iOSScreensize.height == 568 || iOSScreensize.height == 480){
             self.headerNib = [UINib nibWithNibName:@"BLTTopHeader4" bundle:nil];
-        }
-        else if (iOSScreensize.height == 480){
-            self.headerNib = [UINib nibWithNibName:@"BLTTopHeader35" bundle:nil];
         }
         else if(iOSScreensize.height == 667){
             self.headerNib = [UINib nibWithNibName:@"BLTTopHeader47" bundle:nil];
@@ -335,7 +332,7 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 
         // self.savedEventId = event.eventIdentifier;  //save the event id if you want to access this later
     }];
-    [alert showSuccess:self title:@"Calendar Updated" subTitle:@"This deal has been added to your calendar" closeButtonTitle:@"Done" duration:0.0f]; // Info
+    [alert showSuccess:self title:@"Calendar Updated" subTitle:@"This deal has been added to your phone calendar" closeButtonTitle:@"Done" duration:0.0f]; // Info
 
 }
 
