@@ -1165,7 +1165,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="dealsRedeemed" destination="cL1-ae-a2P" id="tC8-0L-YOH"/>
                                 <outlet property="friendsCount" destination="gV5-hR-yAt" id="0X9-hU-blb"/>
@@ -1886,11 +1886,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UUM-Ls-ldb"/>
-        <segue reference="zFm-5G-UNH"/>
-        <segue reference="She-PT-7dB"/>
+        <segue reference="5Tl-El-f8C"/>
+        <segue reference="4Pc-bB-vvL"/>
         <segue reference="VdB-g1-cPb"/>
-        <segue reference="LEV-64-ped"/>
+        <segue reference="j0n-8O-OEY"/>
         <segue reference="uuO-LN-wGL"/>
+        <segue reference="88Z-Fu-8sm"/>
     </inferredMetricsTieBreakers>
 </document>
