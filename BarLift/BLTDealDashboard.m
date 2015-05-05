@@ -398,16 +398,28 @@ typedef void(^myCompletion)(BOOL);
         if(iOSScreenSize.height==568){
             return CGSizeMake(0.925*iOSScreenSize.width, 0.448943662*iOSScreenSize.height);
         }
-        else{
+        else if(iOSScreenSize.height == 667){
             return CGSizeMake(346, 261);
+        }
+        else if(iOSScreenSize.height == 736){
+            return CGSizeMake(380, 289);
+        }
+        else{
+            return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
         }
     }
     else{
         if(iOSScreenSize.height==568){
             return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
         }
-        else{
+        else if(iOSScreenSize.height == 667){
             return CGSizeMake(346, 160);
+        }
+        else if(iOSScreenSize.height == 736){
+            return CGSizeMake(380, 189);
+        }
+        else{
+            return CGSizeMake(0.925*iOSScreenSize.width, 0.278169014*iOSScreenSize.height);
         }
     }
 

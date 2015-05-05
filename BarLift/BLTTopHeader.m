@@ -105,6 +105,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
                 width = 300;
                 plus = 37.5;
             }
+            else if (iOSScreensize.width == 414){
+                width = 374;
+                plus = 20;
+            }
             UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((iOSScreensize.width*i) + plus, 0,width, 0.292253521*iOSScreensize.height)];
             textLabel.textColor = UIColorFromRGB(0xF2F2F2);
             textLabel.numberOfLines = 0;
