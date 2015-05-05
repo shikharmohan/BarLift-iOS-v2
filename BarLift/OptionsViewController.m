@@ -46,8 +46,8 @@
     self.profilePic.contentMode = UIViewContentModeScaleAspectFill;
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width/2;
     self.profilePic.clipsToBounds = YES;
-    self.profilePic.layer.borderWidth = 2.0;
-    self.profilePic.layer.borderColor = [UIColor whiteColor].CGColor;
+//    self.profilePic.layer.borderWidth = 2.0;
+//    self.profilePic.layer.borderColor = [UIColor whiteColor].CGColor;
 
     
     [self.name setText:[PFUser currentUser][@"profile"][@"name"]];
@@ -88,5 +88,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)barlifttermsPressed:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.barliftapp.com/#/terms"]];
+    
+}
 
 @end

@@ -209,7 +209,7 @@
                 PFACL *acl = [PFACL ACLWithUser:[PFUser currentUser]];
                 [acl setPublicReadAccess:YES];
                 [[PFUser currentUser] setObject:acl forKey:@"ACL"];
-                [[PFUser currentUser] setObject:@"Dev" forKey:@"community_name"];
+                [[PFUser currentUser] setObject:@"Northwestern" forKey:@"community_name"];
                 [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded){
                         [PFQuery clearAllCachedResults];
@@ -231,8 +231,8 @@
                                 [[PFUser currentUser] setObject:friends forKey:@"friends"];
                                 [[PFUser currentUser] saveInBackground];
                                 NSLog(@"Got friends");
-                                
-                                if(self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:NO]]){
+                                //self.new || [[PFUser currentUser][@"newVersion"] isEqualToNumber:[NSNumber numberWithBool:NO]]
+                                if(YES){
                                     [[PFInstallation currentInstallation] setObject:@0 forKey:@"badge"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
                                     [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];

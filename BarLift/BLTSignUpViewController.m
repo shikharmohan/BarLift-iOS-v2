@@ -32,11 +32,6 @@
     
     self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome, %@", [PFUser currentUser][@"profile"][@"first_name"]];
     
-//    self.studentButton.layer.borderWidth = 2.0;
-//    self.gradButton.layer.borderWidth = 2.0;
-//    self.studentButton.layer.borderColor = [UIColor colorWithRed:0.239 green:0.294 blue:0.288 alpha:1].CGColor;
-//    self.gradButton.layer.borderColor = [UIColor colorWithRed:0.239 green:0.294 blue:0.288 alpha:1].CGColor;
-    
     
 }
 

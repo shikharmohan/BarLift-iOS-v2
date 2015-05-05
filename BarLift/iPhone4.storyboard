@@ -618,7 +618,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.38039215686274508" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -664,15 +664,21 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4pT-jT-m29" id="zgV-Pw-6Kn">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4j-wI-cWG">
-                                                    <rect key="frame" x="8" y="8" width="75" height="75"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJB-ri-h7t">
-                                                    <rect key="frame" x="91" y="21" width="188" height="48"/>
+                                                    <rect key="frame" x="91" y="8" width="188" height="52"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbR-l7-H8n">
+                                                    <rect key="frame" x="91" y="61" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4j-wI-cWG">
+                                                    <rect key="frame" x="16" y="17" width="56" height="56"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -800,9 +806,6 @@
                                                     <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ywu-iy-13o">
-                                                    <rect key="frame" x="255" y="10" width="28" height="28"/>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -868,7 +871,6 @@
                                 <connections>
                                     <outlet property="dealName" destination="kep-Z2-NvA" id="XNN-OF-aem"/>
                                     <outlet property="goingLabel" destination="lVe-3O-g6m" id="BR8-iS-hhI"/>
-                                    <outlet property="image" destination="Ywu-iy-13o" id="evZ-dl-ZNU"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealDetail" id="sUi-IK-Bcz"/>
                                 </connections>
                             </collectionViewCell>
@@ -882,9 +884,6 @@
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yD9-Ik-Kav">
                                             <rect key="frame" x="0.0" y="93" width="296" height="53"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="30" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAI-17-vBh">
-                                                    <rect key="frame" x="255" y="10" width="28" height="28"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="45" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxu-b3-FiN">
                                                     <rect key="frame" x="13" y="10" width="210" height="21"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="13"/>
@@ -947,7 +946,6 @@
                                 <connections>
                                     <outlet property="dealName" destination="rwr-oV-6He" id="awd-Qz-zsY"/>
                                     <outlet property="goingLbl" destination="7fj-3A-gdi" id="WUK-D6-GSW"/>
-                                    <outlet property="img" destination="vAI-17-vBh" id="xpe-tN-yz6"/>
                                     <segue destination="mPM-dA-jKn" kind="push" identifier="toDealInfo" id="CvR-iZ-Azw"/>
                                 </connections>
                             </collectionViewCell>
@@ -1082,9 +1080,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-Ac-oZU">
-                                    <rect key="frame" x="113" y="15" width="85" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-Ac-oZU">
+                                    <rect key="frame" x="103" y="15" width="105" height="33"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -1096,9 +1094,9 @@
                                     <rect key="frame" x="206" y="0.0" width="2" height="98"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-Rb-82k">
-                                    <rect key="frame" x="216" y="15" width="96" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-Rb-82k">
+                                    <rect key="frame" x="206" y="15" width="114" height="33"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -1117,9 +1115,9 @@
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-uR-eRw">
-                                    <rect key="frame" x="8" y="15" width="87" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-uR-eRw">
+                                    <rect key="frame" x="0.0" y="15" width="105" height="33"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -1220,12 +1218,6 @@
                                 <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1n-Ud-r7E">
                                     <rect key="frame" x="0.0" y="8" width="320" height="89"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
-                                            <rect key="frame" x="16" y="11" width="226" height="35"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                            <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jc3-K0-zyY">
                                             <rect key="frame" x="16" y="51" width="30" height="30"/>
                                         </imageView>
@@ -1243,24 +1235,29 @@
                                         </imageView>
                                         <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3Q-Ez-vrQ" customClass="BLTButton">
                                             <rect key="frame" x="217" y="51" width="87" height="30"/>
-                                            <color key="backgroundColor" red="0.23921568627450979" green="0.29411764705882354" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <state key="normal" title="MORE &gt;">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="20"/>
+                                                    <integer key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="_defaultBackgroundColor">
-                                                    <color key="value" red="0.23921568627450981" green="0.29411764705882354" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <segue destination="Cph-06-EQa" kind="push" identifier="toWhosGoing" id="oP5-lD-pMh"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who's Interested:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da4-mo-lO5">
+                                            <rect key="frame" x="16" y="8" width="296" height="35"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                            <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -1393,8 +1390,8 @@
                                             <rect key="frame" x="0.0" y="78" width="320" height="2"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-68-31X">
-                                            <rect key="frame" x="155" y="8" width="157" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-68-31X">
+                                            <rect key="frame" x="151" y="8" width="161" height="34"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1403,8 +1400,8 @@
                                             <rect key="frame" x="0.0" y="48" width="320" height="1"/>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-kV-YAh">
-                                            <rect key="frame" x="8" y="16" width="147" height="18"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqL-kV-YAh">
+                                            <rect key="frame" x="8" y="16" width="144" height="18"/>
                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1420,9 +1417,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-SJ-x49">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="tVu-SJ-x49">
                                     <rect key="frame" x="113" y="15" width="85" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -1434,9 +1431,9 @@
                                     <rect key="frame" x="206" y="0.0" width="2" height="98"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUQ-ik-iHU">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUQ-ik-iHU">
                                     <rect key="frame" x="216" y="15" width="96" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -1455,14 +1452,18 @@
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-Mo-274">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-Mo-274">
                                     <rect key="frame" x="8" y="15" width="87" height="33"/>
-                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="38"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="33"/>
                                     <color key="textColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-qn-emK">
+                                    <rect key="frame" x="0.0" y="1" width="320" height="2"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <outlet property="dealsRedeemed" destination="mfE-Mo-274" id="OW2-J8-5vQ"/>
                                 <outlet property="friendsCount" destination="IUQ-ik-iHU" id="M7M-nX-tYq"/>
@@ -1785,8 +1786,8 @@
         <image name="Icon_Address@3x.png" width="81" height="81"/>
         <image name="Icon_Close.png" width="27" height="27"/>
         <image name="Icon_Menu@3x.png" width="81" height="81"/>
-        <image name="icon_friends@3x.png" width="105" height="105"/>
-        <image name="icon_open@3x.png" width="676" height="1200"/>
+        <image name="icon_friends@3x.png" width="81" height="81"/>
+        <image name="icon_open@3x.png" width="300" height="300"/>
         <image name="keyboard53.png" width="64" height="64"/>
         <image name="welcome-bg-2x.jpg" width="750" height="1334"/>
     </resources>
@@ -1797,10 +1798,10 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Xrf-ET-qHk"/>
-        <segue reference="AUY-Ap-5Nd"/>
-        <segue reference="kqA-3m-kGR"/>
-        <segue reference="sUi-IK-Bcz"/>
+        <segue reference="91t-Y3-vn4"/>
         <segue reference="D4e-dy-Yhk"/>
+        <segue reference="maT-Zb-ygX"/>
         <segue reference="a4Y-qk-Jlj"/>
+        <segue reference="kqA-3m-kGR"/>
     </inferredMetricsTieBreakers>
 </document>

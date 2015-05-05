@@ -45,6 +45,7 @@
                     self.dictionary = [[NSMutableDictionary alloc] initWithCapacity:3];
                     [self.dictionary setObject:object[i][@"from_user"][@"fb_id"] forKey:@"sender"];
                     [self.dictionary setObject:obj_id forKey:@"dealID"];
+                    [self.dictionary setObject:[object[i] createdAt] forKey:@"made"];
                     if(object[i][@"text"] != nil){
                         [self.dictionary setObject:object[i][@"text"] forKey:@"msg"];
                     }
@@ -125,6 +126,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     friendPic.contentMode = UIViewContentModeScaleAspectFill;
     friendPic.layer.cornerRadius = friendPic.frame.size.height/2;
     friendPic.clipsToBounds = YES;
+    
+    //date
+    UILabel *date = (UILabel *)[cell viewWithTag:10];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    NSDateComponents *components1 = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[self.array objectAtIndex:indexPath.row][@"made"]];
+    NSString *dt = [NSString stringWithFormat:@"%ld",(long)[components1 day]];
+    NSString *monthName = [[df monthSymbols] objectAtIndex:([components1 month]-1)];
+
+    date.text = [NSString stringWithFormat:@"%@ %@", monthName, dt];
+    
     return cell;
 }
 
