@@ -253,13 +253,10 @@ typedef void(^myCompletion)(BOOL);
             if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"main"] isEqualToNumber:@1]){
                 cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mainDealCell"
                                                                  forIndexPath:indexPath];
-                UILabel *moreDeals = (UILabel *)[cell viewWithTag:6];
+                UILabel *moreDeals = (UILabel *)[cell viewWithTag:69];
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
                     moreDeals.hidden = NO;
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
-                }
-                else{
-                    moreDeals.hidden = YES;
                 }
                 //set deal label + location
                 UILabel *location = (UILabel *)[cell viewWithTag:5];
@@ -287,10 +284,7 @@ typedef void(^myCompletion)(BOOL);
                
                 if([int_count integerValue] > 0){
                     cell.goingLabel.hidden = NO;
-                    cell.goingLabel.text = [NSString stringWithFormat:@"%@ interested", int_count];
-                }
-                else{
-                    cell.goingLabel.hidden = YES;
+                    cell.goingLabel.text = [NSString stringWithFormat:@"%@", int_count];
                 }
             }
             else{
@@ -301,7 +295,7 @@ typedef void(^myCompletion)(BOOL);
                 [community setText:[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectForKey:@"community_name"]];
                 
                 //set num more deals
-                UILabel *moreDeals = (UILabel *)[cell viewWithTag:46];
+                UILabel *moreDeals = (UILabel *)[cell viewWithTag:49];
                 if([[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count] > 0){
                     moreDeals.hidden = NO;
                     moreDeals.text = [NSString stringWithFormat:@"+%lu more deals",(unsigned long)[[[self.sections objectForKey:obj] objectAtIndex:indexPath.row][@"add_deals"] count]];
@@ -332,7 +326,7 @@ typedef void(^myCompletion)(BOOL);
                 
                 if([int_count integerValue] > 0){
                     cell.goingLbl.hidden = NO;
-                    cell.goingLbl.text = [NSString stringWithFormat:@"%@ interested", int_count];
+                    cell.goingLbl.text = [NSString stringWithFormat:@"%@", int_count];
                     cell.goingLbl.layer.cornerRadius = cell.goingLbl.frame.size.width/2;
 //                    cell.goingLbl.layer.borderWidth = 2.0;
 //                    cell.goingLbl.layer.borderColor = [UIColor blackColor].CGColor;

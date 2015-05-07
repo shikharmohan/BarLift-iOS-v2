@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *goingLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UILabel *goingLbl;
+@property (weak, nonatomic) IBOutlet UILabel *moreLabel;
 
 
 @end
