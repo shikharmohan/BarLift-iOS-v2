@@ -34,6 +34,7 @@
         self.headerLabel.text = @"Where did you go to school?";
     }
     self.arr = [[NSMutableArray alloc] initWithCapacity:5];
+    self.arr = [PFConfig currentConfig][@"universities"];
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         if (!error) {
             self.arr = config[@"universities"];
@@ -43,6 +44,7 @@
             NSLog(@"%@",error);
         }
     }];
+    [self.tableView reloadData];
     // Do any additional setup after loading the view.
 }
 
@@ -92,6 +94,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath   *)indexPath
 {
     [[PFUser currentUser] setObject:self.arr[indexPath.section] forKey:@"university_name"];
+    if([self.arr[indexPath.section]  isEqual: @"Northwestern"]){
+        [[PFUser currentUser] setObject:@"Evanston" forKey:@"community_name"];
+    }
+    else{
+        [[PFUser currentUser] setObject:@"Lincoln Park" forKey:@"community_name"];
+    }
+    [PFInstallation currentInstallation].channels = @[@"global", self.arr[indexPath.section]];
+    [[PFInstallation currentInstallation] saveInBackground];
     self.nextButton.enabled = YES;
 }
 

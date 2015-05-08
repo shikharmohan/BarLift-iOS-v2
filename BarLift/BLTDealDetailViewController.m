@@ -12,6 +12,7 @@
 #import "SCLAlertView.h"
 #import "BLTPreviewFriendsViewController.h"
 #import "BLTDealDetailCollectionReusableView.h"
+#import "Mixpanel.h"
 
 @interface BLTDealDetailViewController ()
 
@@ -120,6 +121,7 @@
                     else{
                         
                     }
+                    [self.collectionView reloadData];
                 }];
                 self.data[0] = [NSString stringWithFormat:@"%@", self.dealDetails[@"venue"][@"address"]];
                 self.data[1] = @"DEAL DETAILS";
@@ -129,7 +131,7 @@
                 self.labels[1] = @"See more >";
                 self.labels[2] = @"";
                 self.labels[3] = @"Go to Uber >";
-
+                [self.collectionView reloadData];
                 self.navigationController.navigationBar.topItem.title = self.dealDetails[@"venue"][@"bar_name"];
             }
             else{
@@ -219,6 +221,10 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     else if (indexPath.row == 1){
         SCLAlertView *alert = [[SCLAlertView alloc] init];
         [alert showInfo:self title:@"Deal Details" subTitle:self.dealDetails[@"description"] closeButtonTitle:@"Close" duration:0.0f];
+    }
+    else if(indexPath.row == 2){
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showInfo:self title:@"Deal Virality" subTitle:@"This is the total number of nudges sent by everyone on BarLift for this deal." closeButtonTitle:@"Close" duration:0.0f];
     }
 }
 
@@ -314,7 +320,14 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 }
 
 - (IBAction)addToCalendarPressed:(id)sender {
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
     
+    [mixpanel track:@"Calendar Updated" properties:@{
+                                                         @"Fb_id": [PFUser currentUser][@"fb_id"],
+                                                         @"DealID": dealID,
+                                                         @"University":[PFUser currentUser][@"university_name"],
+                                                         @"Time": [NSDate date]
+                                                         }];
     SCLAlertView *alert = [[SCLAlertView alloc] init];
 
     EKEventStore *store = [EKEventStore new];

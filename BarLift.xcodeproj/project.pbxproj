@@ -111,7 +111,6 @@
 		01CDFFC11AEC4CA100571E71 /* welcome-bg-3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 01CDFFC01AEC4CA100571E71 /* welcome-bg-3x.jpg */; };
 		01CDFFC51AEC4CED00571E71 /* BLTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */; };
 		01CDFFC81AEC631100571E71 /* BLTSelectUnivViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */; };
-		01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */; };
 		01CDFFD11AEC895300571E71 /* BLTDaysOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */; };
 		01CDFFD41AEC8DB000571E71 /* BLTAffiliationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD31AEC8DAF00571E71 /* BLTAffiliationViewController.m */; };
 		01CDFFD71AED9AE400571E71 /* BLTLocationSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CDFFD61AED9AE400571E71 /* BLTLocationSelectViewController.m */; };
@@ -342,8 +341,6 @@
 		01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSignUpViewController.m; sourceTree = "<group>"; };
 		01CDFFC61AEC631000571E71 /* BLTSelectUnivViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSelectUnivViewController.h; sourceTree = "<group>"; };
 		01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectUnivViewController.m; sourceTree = "<group>"; };
-		01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTSelectJobViewController.h; sourceTree = "<group>"; };
-		01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTSelectJobViewController.m; sourceTree = "<group>"; };
 		01CDFFCF1AEC895300571E71 /* BLTDaysOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTDaysOutViewController.h; sourceTree = "<group>"; };
 		01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLTDaysOutViewController.m; sourceTree = "<group>"; };
 		01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLTAffiliationViewController.h; sourceTree = "<group>"; };
@@ -787,8 +784,6 @@
 				01CDFFC41AEC4CED00571E71 /* BLTSignUpViewController.m */,
 				01CDFFC61AEC631000571E71 /* BLTSelectUnivViewController.h */,
 				01CDFFC71AEC631000571E71 /* BLTSelectUnivViewController.m */,
-				01CDFFC91AEC640C00571E71 /* BLTSelectJobViewController.h */,
-				01CDFFCA1AEC640C00571E71 /* BLTSelectJobViewController.m */,
 				01CDFFCF1AEC895300571E71 /* BLTDaysOutViewController.h */,
 				01CDFFD01AEC895300571E71 /* BLTDaysOutViewController.m */,
 				01CDFFD21AEC8DAF00571E71 /* BLTAffiliationViewController.h */,
@@ -1270,7 +1265,6 @@
 				01D2116D1AE0579E00F3806D /* BLTStats.m in Sources */,
 				01D222091AE44C5900BE4921 /* BLTNudgeFriendsViewController.m in Sources */,
 				01FB803E1ADB0C9300767B01 /* DealCell.m in Sources */,
-				01CDFFCB1AEC640C00571E71 /* BLTSelectJobViewController.m in Sources */,
 				0166EC751A6995C40016E679 /* AppDelegate.m in Sources */,
 				01A62E8E1A99A861004FD855 /* ActionSheetStringPicker.m in Sources */,
 				01F2CE2D1A9AD27300BEC23D /* SCLAlertViewStyleKit.m in Sources */,

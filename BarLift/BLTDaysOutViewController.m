@@ -28,7 +28,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.nextButton.enabled = NO;
-    self.arr = @[@"M", @"TU", @"W", @"TH", @"F", @"SAT", @"SUN"];
+    self.arr = @[@"Everyday", @"M", @"TU", @"W", @"TH", @"F", @"SAT", @"SUN"];
     self.selectedCells = [[NSMutableArray alloc] initWithCapacity:3];
     self.selectedDays = [[NSMutableArray alloc] initWithCapacity:3];
     self.tableView.allowsMultipleSelection = YES;

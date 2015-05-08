@@ -35,6 +35,7 @@
     [self.selectedCells addObject:[[PFUser currentUser][@"community_name"] uppercaseString]];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.arr = [PFConfig currentConfig][@"communities"];
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         self.arr = config[@"communities"];
         [self.tableView reloadData];

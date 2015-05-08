@@ -81,23 +81,6 @@
     return YES;
 }
 
-- (void)setupMixpanel {
-   //  Initialize Mixpanel
-    Mixpanel *mixpanel = [Mixpanel sharedInstanceWithToken:@"c8ecf107a7f4ff594d74841c9147c330"];
-    
-  //   Identify
-    NSString *mixpanelUUID = [[NSUserDefaults standardUserDefaults] objectForKey:@"MixpanelUUID"];
-    
-    if (!mixpanelUUID) {
-        mixpanelUUID = [[NSUUID UUID] UUIDString];
-        [[NSUserDefaults standardUserDefaults] setObject:mixpanelUUID forKey:@"MixpanelUUID"];
-    }
-    
-    [mixpanel identify:mixpanelUUID];
-    NSDictionary *properties = @{@"APIVersion": @"0.1"};
-    [mixpanel registerSuperProperties:properties];
-
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -147,7 +130,7 @@
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation setObject:[PFUser currentUser][@"fb_id"] forKey:@"fb_id"];
     [currentInstallation setObject:[PFUser currentUser] forKey:@"user"];
-    currentInstallation.channels = @[ @"global", @"Northwestern" ];
+    currentInstallation.channels = @[ @"global"];
     [currentInstallation saveInBackground];
 }
 

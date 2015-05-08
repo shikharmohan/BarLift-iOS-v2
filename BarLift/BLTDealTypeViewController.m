@@ -12,6 +12,7 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "UIImageView+WebCache.h"
 #import "BLTButton.h"
+#import "Mixpanel.h"
 
 @interface BLTDealTypeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray *arr;
@@ -34,6 +35,7 @@
     self.selectedCells = [[NSMutableArray alloc] initWithCapacity:3];
     self.selectedDeals = [[NSMutableArray alloc] initWithCapacity:3];
     self.tableView.allowsMultipleSelection = YES;
+    self.arr = [PFConfig currentConfig][@"deal_types"];
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
         if(!error){
             self.arr = config[@"deal_types"];
@@ -41,6 +43,7 @@
         }
         
     }];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -149,7 +152,14 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 - (IBAction)finishButtonPressed:(id)sender {
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
     
+    [mixpanel track:@"Finished sign up" properties:@{
+                                                  @"Fb_id": [PFUser currentUser][@"fb_id"],
+                                                  @"University":[PFUser currentUser][@"university_name"],
+                                                  @"is_student":[PFUser currentUser][@"is_student"]
+                                                  }];
+
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);

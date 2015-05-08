@@ -702,6 +702,10 @@
                                     <outlet property="delegate" destination="nvF-57-Rfq" id="rGK-O4-FIW"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dSE-XP-J7y">
+                                <rect key="frame" x="160" y="242" width="37" height="37"/>
+                                <color key="color" red="1" green="0.3803921569" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -709,6 +713,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="QtX-Up-0F8"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="dSE-XP-J7y" id="LDd-GP-AEN"/>
                         <outlet property="tableView" destination="PZY-PU-2uY" id="JO4-ok-azH"/>
                     </connections>
                 </viewController>
@@ -818,13 +823,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-3O-g6m">
-                                                    <rect key="frame" x="208" y="15" width="43" height="24"/>
+                                                    <rect key="frame" x="204" y="15" width="43" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_friends@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="ltt-Uf-NpH">
-                                                    <rect key="frame" x="259" y="11" width="29" height="31"/>
+                                                    <rect key="frame" x="255" y="11" width="29" height="29"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -905,13 +910,13 @@
                                                     <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="46" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-3A-gdi">
-                                                    <rect key="frame" x="207" y="16" width="43" height="23"/>
+                                                    <rect key="frame" x="204" y="16" width="43" height="23"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" red="0.23921568630000001" green="0.29411764709999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_friends@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="iRR-NJ-gwn">
-                                                    <rect key="frame" x="258" y="12" width="29" height="31"/>
+                                                    <rect key="frame" x="255" y="12" width="29" height="29"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1146,7 +1151,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Profile" id="GyP-Su-P85">
-                        <barButtonItem key="rightBarButtonItem" id="eI2-yj-ynD"/>
+                        <barButtonItem key="rightBarButtonItem" id="rYx-Pq-r2x"/>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgN-Aa-mBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1808,11 +1813,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sUi-IK-Bcz"/>
         <segue reference="91t-Y3-vn4"/>
+        <segue reference="D4e-dy-Yhk"/>
+        <segue reference="CvR-iZ-Azw"/>
         <segue reference="hJu-cp-P26"/>
         <segue reference="Xrf-ET-qHk"/>
         <segue reference="kqA-3m-kGR"/>
-        <segue reference="D4e-dy-Yhk"/>
     </inferredMetricsTieBreakers>
 </document>

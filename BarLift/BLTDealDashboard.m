@@ -10,6 +10,8 @@
 #import "BLTDealDetailViewController.h"
 #import "BBBadgeBarButtonItem.h"
 
+#import "Mixpanel.h"
+
 @interface BLTDealDashboard ()
 
 @property (nonatomic, strong) NSMutableDictionary *sections;
@@ -436,6 +438,14 @@ typedef void(^myCompletion)(BOOL);
         NSString *obj = [self.sortedKeys objectAtIndex:indexPath.section];
         NSString *dealID = [[[self.sections objectForKey:obj] objectAtIndex:indexPath.row] objectId];
         self.reloadCell = indexPath;
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
+        
+        [mixpanel track:@"Deal Click to Detail" properties:@{
+                                                             @"Fb_id": [PFUser currentUser][@"fb_id"],
+                                                         @"DealID": dealID,
+                                                         @"University":[PFUser currentUser][@"university_name"],
+                                                             @"Time": [NSDate date]
+                                                             }];
         [vc setDealID:dealID];
         [vc setDay:self.weekday];
     }

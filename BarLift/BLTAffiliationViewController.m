@@ -26,19 +26,22 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.nextButton.enabled = NO;
+    self.arr = [PFConfig currentConfig][@"fraternities"];
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
-        if([[PFUser currentUser][@"profile"][@"gender"]  isEqual: @"male"]){
+//        if([[PFUser currentUser][@"profile"][@"gender"]  isEqual: @"male"]){
+//            self.arr = config[@"fraternities"];
+//            
+//        }
+//        else if ([[PFUser currentUser][@"profile"][@"gender"]  isEqual: @"female"]){
+//            self.arr = config[@"sororities"];
+//        }
+//        else{
             self.arr = config[@"fraternities"];
-            
-        }
-        else if ([[PFUser currentUser][@"profile"][@"gender"]  isEqual: @"female"]){
-            self.arr = config[@"sororities"];
-        }
-        else{
-            self.arr = config[@"fraternities"];
-        }
+            [self.arr addObjectsFromArray:config[@"sororities"]];
+      //  }
         [self.tableView reloadData];
     }];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

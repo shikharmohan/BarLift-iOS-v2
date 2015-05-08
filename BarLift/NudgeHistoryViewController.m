@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableDictionary *dictionary;
 @property (strong, nonatomic) NSMutableArray *array;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @end
 
 @implementation NudgeHistoryViewController
@@ -36,6 +37,8 @@
       NSFontAttributeName, nil]];
     // Do any additional setup after loading the view.
     self.array = [[NSMutableArray alloc] initWithCapacity:15];
+    self.indicator.hidden = NO;
+    [self.indicator startAnimating];
     [PFCloud callFunctionInBackground:@"getMyNudges" withParameters:@{} block:^(id object, NSError *error) {
         if(!error){
             NSLog(@"%@", object);
@@ -55,6 +58,8 @@
                     [self.array addObject:self.dictionary];
                 }
             }
+            self.indicator.hidden = YES;
+            [self.indicator stopAnimating];
             [self.tableView reloadData];
         }
     }];
